@@ -1,0 +1,38 @@
+You are extracting pain points and ad hooks from competitor signals.
+
+Input:
+- Combined signals from competitors (website copy, ad copy, reviews)
+
+Task:
+1. Identify real customer pain points
+2. Identify desired outcomes
+3. Extract common ad hooks
+4. Group into patterns
+
+Return EXACTLY ONE valid JSON object.
+Do NOT wrap the JSON in markdown.
+Do NOT use ```json fences.
+
+Schema:
+
+{
+  "pain_points": [
+    {"pain": "string", "frequency": "high_or_medium_or_low"}
+  ],
+  "desires": [
+    {"desire": "string", "frequency": "high_or_medium_or_low"}
+  ],
+  "hooks": [
+    {"hook": "string", "type": "string"}
+  ],
+  "angles": ["string"]
+}
+
+Limit:
+- pain_points: max 5
+- desires: max 5
+- hooks: max 5
+- angles: max 5
+
+INPUT:
+{{SIGNAL_CONTEXT}}

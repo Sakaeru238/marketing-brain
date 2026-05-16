@@ -1,0 +1,179 @@
+{
+  "brands": [
+    {
+      "brand_id": "atlas_coffee_club",
+      "brand_name": "Atlas Coffee Club",
+      "domain": "atlascoffeeclub.com",
+      "status": "accepted",
+      "category": "coffee_subscription_gift",
+      "orientation_tags": [
+        "gift",
+        "trial"
+      ],
+      "occasion_tags": [
+        "holiday",
+        "birthday",
+        "mothers_day"
+      ],
+      "created_at": "2026-04-27T00:00:00Z",
+      "updated_at": "2026-04-27T00:00:00Z"
+    },
+    {
+      "brand_id": "bean_box",
+      "brand_name": "Bean Box",
+      "domain": "beanbox.com",
+      "status": "accepted",
+      "category": "coffee_gift_box",
+      "orientation_tags": [
+        "gift",
+        "trial"
+      ],
+      "occasion_tags": [
+        "holiday",
+        "birthday"
+      ],
+      "created_at": "2026-04-27T00:00:00Z",
+      "updated_at": "2026-04-27T00:00:00Z"
+    },
+    {
+      "brand_id": "trade_coffee",
+      "brand_name": "Trade Coffee",
+      "domain": "drinktrade.com",
+      "status": "accepted",
+      "category": "coffee_subscription",
+      "orientation_tags": [
+        "gift"
+      ],
+      "occasion_tags": [
+        "holiday",
+        "birthday",
+        "mothers_day"
+      ],
+      "created_at": "2026-04-27T00:00:00Z",
+      "updated_at": "2026-04-27T00:00:00Z"
+    },
+    {
+      "brand_id": "blue_bottle_coffee",
+      "brand_name": "Blue Bottle Coffee",
+      "domain": "bluebottlecoffee.com",
+      "status": "accepted",
+      "category": "premium_coffee_gift",
+      "orientation_tags": [
+        "gift",
+        "value"
+      ],
+      "occasion_tags": [
+        "holiday"
+      ],
+      "created_at": "2026-04-27T00:00:00Z",
+      "updated_at": "2026-04-27T00:00:00Z"
+    },
+    {
+      "brand_id": "verve_coffee",
+      "brand_name": "Verve Coffee Roasters",
+      "domain": "vervecoffee.com",
+      "status": "accepted",
+      "category": "specialty_coffee",
+      "orientation_tags": [
+        "gift"
+      ],
+      "occasion_tags": [
+        "holiday"
+      ],
+      "created_at": "2026-04-27T00:00:00Z",
+      "updated_at": "2026-04-27T00:00:00Z"
+    },
+    {
+      "brand_id": "death_wish_coffee",
+      "brand_name": "Death Wish Coffee",
+      "domain": "deathwishcoffee.com",
+      "status": "accepted",
+      "category": "high_caffeine",
+      "orientation_tags": [
+        "high_caffeine"
+      ],
+      "occasion_tags": [
+        "daily_use"
+      ],
+      "created_at": "2026-04-27T00:00:00Z",
+      "updated_at": "2026-04-27T00:00:00Z"
+    },
+    {
+      "brand_id": "biohazard_coffee",
+      "brand_name": "Biohazard Coffee",
+      "domain": "biohazardcoffee.com",
+      "status": "accepted",
+      "category": "high_caffeine",
+      "orientation_tags": [
+        "high_caffeine"
+      ],
+      "occasion_tags": [
+        "daily_use"
+      ],
+      "created_at": "2026-04-27T00:00:00Z",
+      "updated_at": "2026-04-27T00:00:00Z"
+    },
+    {
+      "brand_id": "black_insomnia_coffee",
+      "brand_name": "Black Insomnia Coffee",
+      "domain": "blackinsomnia.us",
+      "status": "accepted",
+      "category": "high_caffeine",
+      "orientation_tags": [
+        "high_caffeine"
+      ],
+      "occasion_tags": [
+        "daily_use"
+      ],
+      "created_at": "2026-04-27T00:00:00Z",
+      "updated_at": "2026-04-27T00:00:00Z"
+    },
+    {
+      "brand_id": "cometeer",
+      "brand_name": "Cometeer",
+      "domain": "cometeer.com",
+      "status": "accepted",
+      "category": "premium_convenience",
+      "orientation_tags": [
+        "value",
+        "daily_use"
+      ],
+      "occasion_tags": [
+        "daily_use"
+      ],
+      "created_at": "2026-04-27T00:00:00Z",
+      "updated_at": "2026-04-27T00:00:00Z"
+    },
+    {
+      "brand_id": "jot",
+      "brand_name": "Jot",
+      "domain": "jot.co",
+      "status": "accepted",
+      "category": "coffee_concentrate",
+      "orientation_tags": [
+        "value",
+        "daily_use"
+      ],
+      "occasion_tags": [
+        "daily_use"
+      ],
+      "created_at": "2026-04-27T00:00:00Z",
+      "updated_at": "2026-04-27T00:00:00Z"
+    },
+    {
+      "brand_id": "javy_coffee",
+      "brand_name": "Javy Coffee",
+      "domain": "javycoffee.com",
+      "status": "accepted",
+      "category": "coffee_concentrate",
+      "orientation_tags": [
+        "daily_use"
+      ],
+      "occasion_tags": [
+        "daily_use"
+      ],
+      "created_at": "2026-04-27T00:00:00Z",
+      "updated_at": "2026-04-27T00:00:00Z"
+    }
+  ]
+}

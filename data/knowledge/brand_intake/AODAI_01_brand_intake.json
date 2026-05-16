@@ -1,0 +1,367 @@
+{
+  "timestamp": "2026-04-27T16:42:36.316782",
+  "test_id": "AODAI_01",
+  "objective": "traffic",
+  "claude_mode": NaN,
+  "use_brand_intake": true,
+  "use_alysha_strategy": true,
+  "expected_focus": NaN,
+  "success_check": NaN,
+  "selling_orientation": [
+    "gift"
+  ],
+  "occasion": [
+    "mothers_day"
+  ],
+  "brand": {
+    "brand_id": "AODAI",
+    "brand_name": "AoDai Coffee",
+    "website": "https://nonlacafe.com/",
+    "brand_positioning": "Pure Vietnamese Coffee",
+    "brand_type": "pure coffee",
+    "origin": "Buon Ma Thuot, Dak Lak, Vietnam",
+    "default_market": "US; CA",
+    "brand_story_short": "100% Vietnamese Robusta freeze-dried espresso with strong authentic taste.",
+    "notes": "Do not mix with flavor messaging."
+  },
+  "product": {
+    "product_id": "AD-12-coffee",
+    "product_name": "AODAI Level 1–6 Tasting Set – Freeze-Dried Vietnamese Espresso | 12 Pods",
+    "product_line": "AoDai Pure",
+    "product_type": "pure coffee",
+    "format": "instant pod",
+    "pack_size": "12 pods",
+    "sku": "AD-12-coffee",
+    "list_price_usd": 19.99,
+    "priority_market": "US; CA",
+    "status": "active",
+    "notes": "Entry test SKU"
+  },
+  "offer": {
+    "offer_id": "OFF_AODAI_35",
+    "offer_text": "35% OFF first order",
+    "offer_type": "discount",
+    "market": "US; CA",
+    "status": "active",
+    "notes": "Brand-level new customer offer"
+  },
+  "core_truth": [
+    "100% Vietnamese Robusta",
+    "Pure coffee",
+    "Freeze-dried Vietnamese espresso",
+    "No machine needed",
+    "Strong authentic Vietnamese coffee taste",
+    "Works in hot or cold water"
+  ],
+  "guardrails": [
+    "Do not describe AoDai as flavored coffee.",
+    "Do not mix AoDai positioning with Nonla flavor messaging.",
+    "Keep messaging focused on pure Vietnamese coffee."
+  ],
+  "product_benefits": [],
+  "product_usage_steps": [],
+  "audience_seed": {
+    "audience_id": "AUD_IN_AODAI_01",
+    "audience_name": "Customers in the US",
+    "source_type": "user_input",
+    "pain_point_input": NaN,
+    "desired_outcome_input": NaN,
+    "pain_point_required": false,
+    "desired_outcome_required": false,
+    "notes": "Broad initial audience seed; AI can expand after research"
+  },
+  "audience_ai_expanded": {
+    "expanded_audience_id": "EXP_AODAI_001",
+    "audience_name": "US strong coffee seekers",
+    "pain_point": "Mainstream coffee feels too weak or bland",
+    "desired_outcome": "Wants stronger caffeine and bolder taste",
+    "evidence_source": "to_be_filled_after_research",
+    "confidence": "high",
+    "created_by": "ai"
+  },
+  "positioning_summary": "AoDai Coffee delivers pure Vietnamese coffee excellence through 100% Robusta freeze-dried espresso pods from Buôn Ma Thuột, Đắk Lắk - offering authentic Vietnamese coffee strength and flavor without any machine needed",
+  "audience_core": {
+    "audience_name": "US strong coffee seekers",
+    "pain_point": "Mainstream coffee feels too weak or bland",
+    "desired_outcome": "Wants stronger caffeine and bolder taste"
+  },
+  "differentiation": [
+    "100% Vietnamese Robusta from Đắk Lắk highlands",
+    "Freeze-dried technology preserving authentic Vietnamese flavor",
+    "No machine needed - instant preparation",
+    "Pure coffee with no additives or sugar",
+    "6 roast levels representing Vietnamese cities",
+    "100-150mg caffeine per capsule"
+  ],
+  "message_pillars": [
+    "100% Vietnamese Robusta for authentic strength",
+    "Freeze-dried Vietnamese espresso ready in seconds",
+    "No machine needed - just add hot or cold water",
+    "Pure coffee from Vietnam's Central Highlands",
+    "Strong caffeine content for real energy",
+    "Authentic Vietnamese coffee taste anywhere"
+  ],
+  "creative_angles": [
+    "Mother's Day gift that delivers authentic Vietnamese coffee strength - no machine required",
+    "From Vietnam's coffee capital to Mom's cup - 6 roast levels to discover her perfect strength",
+    "Skip the weak coffee shop - give Mom 100-150mg of pure Vietnamese Robusta energy",
+    "The thoughtful gift that works anywhere - office, home, travel - just add water",
+    "Authentic Vietnamese coffee culture in a convenient gift set - tradition meets modern convenience",
+    "35% off the coffee gift that's stronger than anything she's tried - pure Robusta from Đắk Lắk"
+  ],
+  "research_focus": [
+    "Mother's Day coffee gift market and gifting motivations",
+    "Strong coffee preferences among US consumers vs mainstream options",
+    "Vietnamese coffee awareness and authenticity appeal",
+    "Convenience factor importance for busy mothers",
+    "Premium coffee gifting price sensitivity and discount effectiveness",
+    "Instant/no-machine coffee quality perceptions and barriers"
+  ],
+  "strategy_brief": {
+    "audience_core": "US strong coffee seekers looking for Mother's Day gifts",
+    "pain_point": "Mainstream coffee feels too weak or bland, and finding a meaningful coffee gift that's both strong and convenient",
+    "desired_outcome": "Give Mom stronger caffeine and bolder taste in a thoughtful, convenient gift she can enjoy anywhere",
+    "positioning_summary": "AoDai Coffee delivers pure Vietnamese coffee excellence through 100% Robusta freeze-dried espresso pods from Buôn Ma Thuột, Đắk Lắk - the perfect Mother's Day gift offering authentic Vietnamese coffee strength without any machine needed",
+    "differentiation": [
+      "100% Vietnamese Robusta from Đắk Lắk highlands",
+      "100-150mg caffeine per capsule - significantly stronger than mainstream coffee",
+      "No machine needed - instant preparation anywhere",
+      "6 roast levels representing Vietnamese cities for discovery"
+    ],
+    "message_pillars": [
+      "Perfect Mother's Day gift for coffee-loving moms",
+      "100% Vietnamese Robusta for authentic strength",
+      "No machine needed - just add hot or cold water",
+      "From Vietnam's Central Highlands to her cup",
+      "35% OFF first order makes gifting affordable"
+    ],
+    "creative_angles": [
+      "Mother's Day gift that delivers authentic Vietnamese coffee strength",
+      "6 roast levels to discover Mom's perfect Vietnamese coffee intensity",
+      "The convenient coffee gift that works anywhere - no machine required",
+      "35% off authentic Vietnamese coffee stronger than her usual cup"
+    ],
+    "offer_role": "Makes premium Vietnamese coffee gifting accessible and creates urgency for Mother's Day shopping",
+    "do_not_say": [
+      "Do not describe AoDai as flavored coffee",
+      "Do not mix AoDai positioning with Nonla flavor messaging",
+      "Do not downplay the strength - emphasize the authentic Vietnamese Robusta power"
+    ]
+  },
+  "website_context": {
+    "status": "success",
+    "reason": null,
+    "sources": [
+      "https://nonlacafe.com/",
+      "https://nonlacafe.com/about",
+      "https://nonlacafe.com/shop",
+      "https://nonlacafe.com/faq"
+    ],
+    "pages": {
+      "https://nonlacafe.com/": "HomePage - Nonlacafe Skip to content Everything begins when you try Login Everything begins when you try Shop NONLA Coffee AODAI Coffee Our Story Review FAQ Search for: Cart / &#36; &nbsp;0.00 No products in the cart. Return to shop Cart No products in the cart. Return to shop 🎉 Everything begins when you try Elevated Coﬀee. Eﬀortless Enjoyment. Premium freeze-dried coffee capsules from Buôn Ma Thuột, Đắk Lắk. 6 roast levels, no machine needed. Just pick, pour, and enjoy. Discover Premium Coﬀee → Our Story Cafe-Quality Taste Ready in Seconds No Machine Needed ★★★★★ Rated 4.9/5 by Customers Experience the rich, bold taste of cafe-quality Vietnamese coﬀee, ready inseconds. No machine, no fuss—justexceptional flavor, anytime, anywhere. Experience the rich, bold taste of cafe-quality Vietnamese coﬀee, ready inseconds. No machine, no fuss—justexceptional flavor, anytime, anywhere. 100% Robusta Organic from Local Farms Carefully Selected Craft-Roasted in Vietnam WHY NONLA Premium Coffee, Simplified. From the highlands of Đắk Lắk to your cup experience the full spectrum of Vietnamese coffee. ❄️ True Brewed Flavor, Instantly This isn’t ordinary instant. Our advanced freeze-drying captures the full aroma and rich taste of freshly brewed Vietnamese coffee. ⚡ Your Cafe, Anywhere Enjoy a perfectly balanced cup—hot or iced—in moments. From your desk to the great outdoors, premium coffee is always within reach. ☕ Authentic Vietnamese Excellence Savor the legendary depth and robust character of 100% Robusta beans, ethically sourced from Vietnam’s Central Highlands. 🌱 Uncompromised Quality, Unmatched Ease Forget the machines and the mess. Get a consistently delicious, high-quality coffee experience with ultimate portability. 🛡️ Food Safety Certified Produced in an ISO-certified facility under strict quality standards. 🌍 Sugar-Free &amp; Vegan Pure coffee only. No sugar. No additives. No Sugar No Machine Gluten Free Vegan Friendly Non-GMO HALAL SIMPLE AS 1-2-3 1. Select Your Roast. 2. Add Water (Hot or Cold). 3. Savor the Quality ☕ Pick Your Level Choose from 6 roast levels — from gentle Light to bold Extra Dark. 💧 Pour N Stir Open the capsule, pour into hot or cold water. Dissolves instantly. ✨ Enjoy Your Way Drink it black, add milk, or pour over ice. Perfect anytime. FIND YOUR FLAVOR 6 Roast Levels, 6 Vietnamese Cities Each roast level is named after a Vietnamese city, carrying its unique character and spirit. Level 1 Level 2 Level 3 Level 4 Level 5 Level 6 1 Light Roast · Da Nang Gentle aroma, mild flavor. Perfect for a light, easy-drinking cup. Intensity: 2 Light+ Roast · Sai Gon Smooth taste with a hint of sweetness. Ideal for casual coffee lovers. Intensity: 3 Medium Roast · Dak Lak Balanced flavor with pleasant bitterness and rich aroma. Intensity: 4 Medium+ Roast · Hue Full-bodied with harmonious blend of aroma and strength. Intensity: 5 Dark Roast · Ha Noi Intense aroma and bold taste. Favored by strong coffee drinkers. Intensity: 6 Extra Dark Roast · Nha Trang Deep, robust flavor with lingering notes of dark chocolate. Intensity: OUR COLLECTION Shop Our Coffee 10 premium products across two iconic lines – Nonla Coffee and Aodai Coffee. All Product AoDai Coffee NonLa Coffee Quick View AODAI Coffee Vietnamese Coffee Gift Set for Mom – Freeze-Dried Espresso Pods (No Machine) &#36; &nbsp;7.99 &ndash; &#36; &nbsp;32.99 Price range: &#36;&nbsp;7.99 through &#36;&nbsp;32.99 Quick View AODAI Coffee AODAI 100% Pure Cacao &#8211; Freeze-Dried Unsweetened Dark Chocolate | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View AODAI Coffee AODAI Freeze-Dried Vietnamese Instant Espresso Coffee (50 Pods) &#36; &nbsp;32.99 50 capsules/box &#036;0.66/cup Quick View AODAI Coffee AODAI Level 1–6 Tasting Set &#8211; Freeze-Dried Vietnamese Espresso | 12 Pods &#36; &nbsp;12.99 12 capsules/box &#036;1.08/cup Quick View AODAI Coffee AODAI Level 1–6 Tasting Set &#8211; Freeze-Dried Vietnamese Espresso | 6 Pods &#36; &nbsp;7.99 6 capsules/box &#036;1.33/cup Quick View NONLA Coffee NONLA Level 1–6 Gift Set &#8211; Freeze-Dried Instant Espresso | 24 Pods &#36; &nbsp;35.99 24 capsules/box &#036;1.50/cup Quick View NONLA Coffee NONLA Flavor Mix Set &#8211; Multi Roast &#038; Flavored Instant Espresso | 18 Pods &#36; &nbsp;27.99 18 capsules/box &#036;1.56/cup Quick View NONLA Coffee NONLA Discovery Mix &#8211; Pure Coffee, Cacao &#038; Lemon Espresso | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View NONLA Coffee NONLA Citrus Lemon &#8211; Freeze-Dried Instant Coffee Pods | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View NONLA Coffee NONLA Cacao Mocha &#8211; Freeze-Dried Instant Coffee Pods | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View AODAI Coffee Vietnamese Coffee Gift Set for Mom – Freeze-Dried Espresso Pods (No Machine) &#36; &nbsp;7.99 &ndash; &#36; &nbsp;32.99 Price range: &#36;&nbsp;7.99 through &#36;&nbsp;32.99 Quick View AODAI Coffee AODAI 100% Pure Cacao &#8211; F",
+      "https://nonlacafe.com/about": "About Us - Nonlacafe Skip to content Everything begins when you try Login Everything begins when you try Shop NONLA Coffee AODAI Coffee Our Story Review FAQ Search for: Cart / &#36; &nbsp;0.00 No products in the cart. Return to shop Cart No products in the cart. Return to shop ABOUT US NONLA VIETNAM GLOBAL | Good Coffee for Good Life NONLA VIETNAM GLOBAL is a pioneering Vietnamese coffee brand that applies freeze-drying technology – a modern method that preserves the original flavor of Central Highlands coffee beans . We offer a convenient, sophisticated, and authentically Vietnamese coffee experience, where each small coffee capsule contains a story of Vietnamese identity, creativity, and pride. NONLA VIETNAM GLOBAL aims to spread national pride through every drop of exquisite coffee, so that Vietnamese people can enjoy the taste of Vietnam, and the world can remember Vietnam through the taste of authentic coffee. Beyond simply delivering quality products, NONLA VIETNAM GLOBAL aims for a new lifestyle – where coffee is not just a beverage, but a bridge connecting people, emotions, and cultures. More than just coffee, it&#8217;s a symbol of the connection between tradition and modernity, between refined taste and a dynamic global lifestyle. Coffee Production Process Vision As a pioneering Vietnamese coffee brand in applying freeze-drying technology – a modern method that helps preserve the original flavor of Central Highlands coffee beans. A trusted partner in the international market. A modern coffee culture icon , representing the Vietnamese spirit – simplicity, creativity, and sustainability. Mission &#8220;Spreading the flavors of Vietnam – elevating the Vietnamese coffee experience on the world map.&#8221; NONLA GLOBAL aims to bring Vietnamese coffee closer to international friends with its products: Pure &#8211; Authentic taste &#8211; Easy to prepare (dissolves quickly in cold or hot water). No sugar &#8211; No coffee machine needed &#8211; No waiting – perfect for modern life. Helping people, everywhere, enjoy the authentic taste of Vietnamese coffee in just seconds. Core Values Made from pure Robusta coffee beans from the Central Highlands region – roasted and dried according to international standards. Freeze-drying technology preserves the structure, aroma, and flavor of coffee – ensuring a perfect cup of coffee anytime, anywhere. Each NONLA coffee capsule is designed for easy brewing and portability, perfect for anyone who wants a quick and convenient option. 6 roasting levels – 4 distinctive flavors representing the diversity and creativity in Vietnamese coffee culture. We are committed to using clean raw materials , practicing environmentally friendly production methods , and supporting the sustainable development of coffee farming communities . Certificates &#8211; Certifications International standard for quality management systems ISO 22000:2018 We confirm that the entire production process complies with international Halal standards. 1 Ingredient Robusta coffee beans are sourced from renowned growing regions in Vietnam, ensuring firm beans, high caffeine content, and a rich flavor. Each batch of raw materials is checked for moisture content, aroma, and thoroughly cleaned of impurities before being used in production. 2 Harvest The coffee cherries are harvested selectively. Only ripe, high-quality red cherries are picked. This harvesting method ensures consistent quality in the batch, and allows green cherries more time to ripen. 3 Roasting &amp; Grinding Coffee Each batch of coffee is roasted using a specific temperature profile to highlight the strong and aromatic flavor of Robusta. The coffee is then finely ground to ensure quick dissolution and preserve the full aroma during the freeze-drying process. Coffee Production Process 4 Freeze-drying technology The coffee extract is frozen at extremely low temperatures, then dried in a vacuum to allow water to evaporate directly from solid to vapor without passing through a liquid phase. This process preserves the original aroma, color, and flavor of the coffee, resulting in a dry, porous powder that dissolves quickly in cold water. 5 Quality Control After drying, the product undergoes rigorous testing: moisture content measurement, solubility testing, flavor evaluation, microbiological testing, and sensory evaluation. Only batches that meet the standards are moved to the packaging stage. This step demonstrates NONLA GLOBAL&#8217;s commitment to providing products that are not only delicious but also clean and safe. 6 Packaging &amp; Storage The coffee is packaged in convenient forms – capsules, small boxes, or premium gift sets – suitable for both daily enjoyment and gifting. Finally, the product is stored in a cool, dry environment and is ready for distribution. nonla NONLA VIETNAM GLOBAL is a pioneering Vietnamese coffee brand that applies freeze-drying technology to preserve the original flavor of Central Highlands coffee beans. “Premium Co",
+      "https://nonlacafe.com/shop": "Shop - Nonlacafe Skip to content Everything begins when you try Login Everything begins when you try Shop NONLA Coffee AODAI Coffee Our Story Review FAQ Search for: Cart / &#36; &nbsp;0.00 No products in the cart. Return to shop Cart No products in the cart. Return to shop Home &#47; Shop Filter Showing all 11 results Default sorting Sort by popularity Sort by average rating Sort by latest Sort by price: low to high Sort by price: high to low Browse AODAI Coffee NONLA Coffee Uncategorized Filter by price Min price Max price Filter Price: &mdash; Quick View AODAI Coffee AODAI 100% Pure Cacao &#8211; Freeze-Dried Unsweetened Dark Chocolate | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View AODAI Coffee AODAI Freeze-Dried Vietnamese Instant Espresso Coffee (50 Pods) &#36; &nbsp;32.99 50 capsules/box &#036;0.66/cup Quick View AODAI Coffee AODAI Level 1–6 Tasting Set &#8211; Freeze-Dried Vietnamese Espresso | 12 Pods &#36; &nbsp;12.99 12 capsules/box &#036;1.08/cup Quick View AODAI Coffee AODAI Level 1–6 Tasting Set &#8211; Freeze-Dried Vietnamese Espresso | 6 Pods &#36; &nbsp;7.99 6 capsules/box &#036;1.33/cup Quick View NONLA Coffee NONLA Cacao Mocha &#8211; Freeze-Dried Instant Coffee Pods | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View NONLA Coffee NONLA Citrus Lemon &#8211; Freeze-Dried Instant Coffee Pods | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View NONLA Coffee NONLA Coconut Latte &#8211; Freeze-Dried Instant Coffee Pods | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View NONLA Coffee NONLA Discovery Mix &#8211; Pure Coffee, Cacao &#038; Lemon Espresso | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View NONLA Coffee NONLA Flavor Mix Set &#8211; Multi Roast &#038; Flavored Instant Espresso | 18 Pods &#36; &nbsp;27.99 18 capsules/box &#036;1.56/cup Quick View NONLA Coffee NONLA Level 1–6 Gift Set &#8211; Freeze-Dried Instant Espresso | 24 Pods &#36; &nbsp;35.99 24 capsules/box &#036;1.50/cup Quick View AODAI Coffee Vietnamese Coffee Gift Set for Mom – Freeze-Dried Espresso Pods (No Machine) &#36; &nbsp;7.99 &ndash; &#36; &nbsp;32.99 Price range: &#36;&nbsp;7.99 through &#36;&nbsp;32.99 nonla NONLA VIETNAM GLOBAL is a pioneering Vietnamese coffee brand that applies freeze-drying technology to preserve the original flavor of Central Highlands coffee beans. “Premium Coﬀee. Simplified.” SHOP All Products Nonla Coffee Aodai Coffee COMPANY About Us Our Stories FAQ CONTACT NONLA VIETNAM GLOBAL 74 TL8, Xã Quang Phu, Dak Lak, Vietnam [email&#160;protected] +84 941 482 227 Payment: Visa · PayPal · Stripe · MasterCard © 2026 Nonla Vietnam Global. All rights reserved. Shipping Policy Refund Policy Terms of Service Visa PayPal Stripe MasterCard Cash On Delivery Search for: Shop NONLA Coffee AODAI Coffee Login Login Username or email address&nbsp; * Required Password&nbsp; * Required Remember me Log in Lost your password?",
+      "https://nonlacafe.com/faq": "FAQ - Nonlacafe Skip to content Everything begins when you try Login Everything begins when you try Shop NONLA Coffee AODAI Coffee Our Story Review FAQ Search for: Cart / &#36; &nbsp;0.00 No products in the cart. Return to shop Cart No products in the cart. Return to shop FREQUENTLY ASKED QUESTIONS (FAQ) At nonlacafe , we combine the rich heritage of Vietnamese coffee with modern convenience. We know that the best coffee should be simple, bold, and accessible everywhere. Below are the answers to the most common questions about our brand. ☕ THE &#8220;NO MACHINE&#8221; EXPERIENCE Do I really not need a machine to enjoy nonlacafe? That is correct! Our capsules are designed for ultimate portability and simplicity. You don’t need a Nespresso, Keurig, or any expensive espresso hardware. How it works: Simply peel back the seal of the capsule, pour the premium coffee into a cup, and add 150ml &#8211; 200ml of hot or cold water/milk. Stir and enjoy! Can I use nonlacafe for Iced Coffee? Absolutely. Our coffee dissolves perfectly in cold liquids. To make a traditional Vietnamese Iced Coffee ( Cà Phê Đá ), just pour the capsule over ice, add water, and stir. For a creamier experience, add condensed milk or your favorite plant-based creamer. 🍃 OUR COFFEE &amp; ORIGIN Where is nonlacafe coffee sourced? Our coffee is 100% sourced from the Đắk Lắk highlands of Vietnam. Known as the &#8220;Coffee Capital of Southeast Asia,&#8221; this region’s volcanic soil and ideal altitude produce beans with a deep, complex flavor profile that you won&#8217;t find anywhere else. Is it Arabica or Robusta? We believe in the power of the Signature Vietnamese Blend . While many brands use only Arabica, we use a curated blend of Specialty Grade Arabica and Fine Robusta . Arabica brings delicate acidity and floral aromas. Fine Robusta provides the bold body, chocolatey notes, and the rich &#8220;kick&#8221; that Vietnamese coffee is famous for. How much caffeine is in each capsule? Because we use high-quality Vietnamese Robusta, our capsules pack a punch. Each capsule contains approximately 100mg &#8211; 150mg of caffeine —providing a clean, powerful energy boost that is significantly higher than standard 100% Arabica pods. Are there any additives or sugar? No. Our coffee is 100% pure coffee . The notes of dark chocolate and roasted nuts are the natural flavor characteristics of the beans and our specialized roasting process. No artificial flavors, no GMOs, and no added sugar. Is your packaging eco-friendly? Yes. We are committed to protecting the environment. Our capsules are made from plant-based, home-compostable materials . Unlike traditional aluminum or plastic pods, they are designed to break down naturally in a compost environment. ✈️ SHIPPING &amp; FULFILLMENT Where do you ship from? To ensure the freshest coffee and fastest delivery, we fulfill orders from two locations: Directly from our origin facility in Vietnam. From our Amazon fulfillment centers (FBA) and warehouses in the USA and Canada. What are the shipping costs? We offer free standard shipping on qualifying orders: USA &amp; Canada: FREE on orders over $100 USD . International: FREE on orders over $200 USD . For orders below these amounts, shipping is calculated at checkout based on your location. How long will it take to receive my order? Fulfillment from US/Canada hubs: 3–7 business days. Direct shipping from Vietnam: 10–21 business days. You will receive a tracking number via email as soon as your order is dispatched. 🛍️ ORDERS &amp; REFUNDS Can I return my coffee if I change my mind? 30-Day Money-Back Guarantee Try Nonla Coffee risk-free. If you&#8217;re not satisfied for any reason, you can request a full refund within 30 days of delivery . Just email us with your order number and we’ll take care of the rest. No stress. No risk. Just great coffee. What if my order arrives damaged? If your capsules arrive damaged or if you received the incorrect item, please contact us at [email&#160;protected] within 48 hours of delivery. Please provide your order number and a photo of the damage, and we will arrange a replacement or refund immediately. Can I cancel my order? You can cancel your order for a full refund as long as the shipping label has not yet been created. Once the order has entered our logistics chain (especially for international shipments from Vietnam), we are unable to cancel or recall the package. ☕ AoDai Coffee vs Nonla Coffee Everything you need to know about AoDai Coffee and Nonla Coffee in one place. 🇻🇳 What Do AoDai Coffee &amp; Nonla Coffee Have in Common? Both product lines share the same core benefits: ⚡ Strong Vietnamese Robusta High caffeine for real energy ⏱ Ready in Seconds Just add water and stir 💧 Hot or Cold Ready Works with hot or cold water 🎒 Convenient Anywhere Perfect for office, travel, gym ❄️ Freeze-Dried Technology Better flavor, instant dissolve 🚫 No Machine Needed No brewing equipment required 🔍 What&#8217;s the Difference? 🇻🇳 AoDai Coffe"
+    }
+  },
+  "website_context_file": "E:\\Source\\marketing-brain\\data\\knowledge\\website_context\\AODAI_01_website_context.json",
+  "claude_brand_core": {
+    "status": "success",
+    "raw_response": "{\n  \"positioning_summary\": \"AoDai Coffee delivers pure Vietnamese coffee excellence through 100% Robusta freeze-dried espresso pods from Buôn Ma Thuột, Đắk Lắk - offering authentic Vietnamese coffee strength and flavor without any machine needed\",\n  \"audience_core\": {\n    \"audience_name\": \"US strong coffee seekers\",\n    \"pain_point\": \"Mainstream coffee feels too weak or bland\",\n    \"desired_outcome\": \"Wants stronger caffeine and bolder taste\"\n  },\n  \"differentiation\": [\n    \"100% Vietnamese Robusta from Đắk Lắk highlands\",\n    \"Freeze-dried technology preserving authentic Vietnamese flavor\",\n    \"No machine needed - instant preparation\",\n    \"Pure coffee with no additives or sugar\",\n    \"6 roast levels representing Vietnamese cities\",\n    \"100-150mg caffeine per capsule\"\n  ],\n  \"message_pillars\": [\n    \"100% Vietnamese Robusta for authentic strength\",\n    \"Freeze-dried Vietnamese espresso ready in seconds\",\n    \"No machine needed - just add hot or cold water\",\n    \"Pure coffee from Vietnam's Central Highlands\",\n    \"Strong caffeine content for real energy\",\n    \"Authentic Vietnamese coffee taste anywhere\"\n  ]\n}",
+    "parsed": {
+      "positioning_summary": "AoDai Coffee delivers pure Vietnamese coffee excellence through 100% Robusta freeze-dried espresso pods from Buôn Ma Thuột, Đắk Lắk - offering authentic Vietnamese coffee strength and flavor without any machine needed",
+      "audience_core": {
+        "audience_name": "US strong coffee seekers",
+        "pain_point": "Mainstream coffee feels too weak or bland",
+        "desired_outcome": "Wants stronger caffeine and bolder taste"
+      },
+      "differentiation": [
+        "100% Vietnamese Robusta from Đắk Lắk highlands",
+        "Freeze-dried technology preserving authentic Vietnamese flavor",
+        "No machine needed - instant preparation",
+        "Pure coffee with no additives or sugar",
+        "6 roast levels representing Vietnamese cities",
+        "100-150mg caffeine per capsule"
+      ],
+      "message_pillars": [
+        "100% Vietnamese Robusta for authentic strength",
+        "Freeze-dried Vietnamese espresso ready in seconds",
+        "No machine needed - just add hot or cold water",
+        "Pure coffee from Vietnam's Central Highlands",
+        "Strong caffeine content for real energy",
+        "Authentic Vietnamese coffee taste anywhere"
+      ]
+    },
+    "parse_error": null,
+    "prompt_key": "run_claude_brand_core",
+    "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\brand_intake\\brand_core_prompt.txt"
+  },
+  "claude_brand_strategy": {
+    "status": "success",
+    "raw_response": "{\n  \"creative_angles\": [\n    \"Mother's Day gift that delivers authentic Vietnamese coffee strength - no machine required\",\n    \"From Vietnam's coffee capital to Mom's cup - 6 roast levels to discover her perfect strength\",\n    \"Skip the weak coffee shop - give Mom 100-150mg of pure Vietnamese Robusta energy\",\n    \"The thoughtful gift that works anywhere - office, home, travel - just add water\",\n    \"Authentic Vietnamese coffee culture in a convenient gift set - tradition meets modern convenience\",\n    \"35% off the coffee gift that's stronger than anything she's tried - pure Robusta from Đắk Lắk\"\n  ],\n  \"research_focus\": [\n    \"Mother's Day coffee gift market and gifting motivations\",\n    \"Strong coffee preferences among US consumers vs mainstream options\",\n    \"Vietnamese coffee awareness and authenticity appeal\",\n    \"Convenience factor importance for busy mothers\",\n    \"Premium coffee gifting price sensitivity and discount effectiveness\",\n    \"Instant/no-machine coffee quality perceptions and barriers\"\n  ],\n  \"strategy_brief\": {\n    \"audience_core\": \"US strong coffee seekers looking for Mother's Day gifts\",\n    \"pain_point\": \"Mainstream coffee feels too weak or bland, and finding a meaningful coffee gift that's both strong and convenient\",\n    \"desired_outcome\": \"Give Mom stronger caffeine and bolder taste in a thoughtful, convenient gift she can enjoy anywhere\",\n    \"positioning_summary\": \"AoDai Coffee delivers pure Vietnamese coffee excellence through 100% Robusta freeze-dried espresso pods from Buôn Ma Thuột, Đắk Lắk - the perfect Mother's Day gift offering authentic Vietnamese coffee strength without any machine needed\",\n    \"differentiation\": [\n      \"100% Vietnamese Robusta from Đắk Lắk highlands\",\n      \"100-150mg caffeine per capsule - significantly stronger than mainstream coffee\",\n      \"No machine needed - instant preparation anywhere\",\n      \"6 roast levels representing Vietnamese cities for discovery\"\n    ],\n    \"message_pillars\": [\n      \"Perfect Mother's Day gift for coffee-loving moms\",\n      \"100% Vietnamese Robusta for authentic strength\",\n      \"No machine needed - just add hot or cold water\",\n      \"From Vietnam's Central Highlands to her cup\",\n      \"35% OFF first order makes gifting affordable\"\n    ],\n    \"creative_angles\": [\n      \"Mother's Day gift that delivers authentic Vietnamese coffee strength\",\n      \"6 roast levels to discover Mom's perfect Vietnamese coffee intensity\",\n      \"The convenient coffee gift that works anywhere - no machine required\",\n      \"35% off authentic Vietnamese coffee stronger than her usual cup\"\n    ],\n    \"offer_role\": \"Makes premium Vietnamese coffee gifting accessible and creates urgency for Mother's Day shopping\",\n    \"do_not_say\": [\n      \"Do not describe AoDai as flavored coffee\",\n      \"Do not mix AoDai positioning with Nonla flavor messaging\",\n      \"Do not downplay the strength - emphasize the authentic Vietnamese Robusta power\"\n    ]\n  }\n}",
+    "parsed": {
+      "creative_angles": [
+        "Mother's Day gift that delivers authentic Vietnamese coffee strength - no machine required",
+        "From Vietnam's coffee capital to Mom's cup - 6 roast levels to discover her perfect strength",
+        "Skip the weak coffee shop - give Mom 100-150mg of pure Vietnamese Robusta energy",
+        "The thoughtful gift that works anywhere - office, home, travel - just add water",
+        "Authentic Vietnamese coffee culture in a convenient gift set - tradition meets modern convenience",
+        "35% off the coffee gift that's stronger than anything she's tried - pure Robusta from Đắk Lắk"
+      ],
+      "research_focus": [
+        "Mother's Day coffee gift market and gifting motivations",
+        "Strong coffee preferences among US consumers vs mainstream options",
+        "Vietnamese coffee awareness and authenticity appeal",
+        "Convenience factor importance for busy mothers",
+        "Premium coffee gifting price sensitivity and discount effectiveness",
+        "Instant/no-machine coffee quality perceptions and barriers"
+      ],
+      "strategy_brief": {
+        "audience_core": "US strong coffee seekers looking for Mother's Day gifts",
+        "pain_point": "Mainstream coffee feels too weak or bland, and finding a meaningful coffee gift that's both strong and convenient",
+        "desired_outcome": "Give Mom stronger caffeine and bolder taste in a thoughtful, convenient gift she can enjoy anywhere",
+        "positioning_summary": "AoDai Coffee delivers pure Vietnamese coffee excellence through 100% Robusta freeze-dried espresso pods from Buôn Ma Thuột, Đắk Lắk - the perfect Mother's Day gift offering authentic Vietnamese coffee strength without any machine needed",
+        "differentiation": [
+          "100% Vietnamese Robusta from Đắk Lắk highlands",
+          "100-150mg caffeine per capsule - significantly stronger than mainstream coffee",
+          "No machine needed - instant preparation anywhere",
+          "6 roast levels representing Vietnamese cities for discovery"
+        ],
+        "message_pillars": [
+          "Perfect Mother's Day gift for coffee-loving moms",
+          "100% Vietnamese Robusta for authentic strength",
+          "No machine needed - just add hot or cold water",
+          "From Vietnam's Central Highlands to her cup",
+          "35% OFF first order makes gifting affordable"
+        ],
+        "creative_angles": [
+          "Mother's Day gift that delivers authentic Vietnamese coffee strength",
+          "6 roast levels to discover Mom's perfect Vietnamese coffee intensity",
+          "The convenient coffee gift that works anywhere - no machine required",
+          "35% off authentic Vietnamese coffee stronger than her usual cup"
+        ],
+        "offer_role": "Makes premium Vietnamese coffee gifting accessible and creates urgency for Mother's Day shopping",
+        "do_not_say": [
+          "Do not describe AoDai as flavored coffee",
+          "Do not mix AoDai positioning with Nonla flavor messaging",
+          "Do not downplay the strength - emphasize the authentic Vietnamese Robusta power"
+        ]
+      }
+    },
+    "parse_error": null,
+    "prompt_key": "run_claude_brand_strategy",
+    "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\brand_intake\\brand_strategy_prompt.txt"
+  },
+  "claude_brand_constraints": {
+    "status": "success",
+    "raw_response": "{\n  \"competitors\": [\n    \"Nespresso\",\n    \"Keurig\",\n    \"Traditional instant coffee brands\",\n    \"Premium coffee subscription services\",\n    \"Vietnamese coffee brands in US market\"\n  ],\n  \"constraints\": [\n    {\n      \"constraint\": \"Must maintain clear distinction between AoDai (pure coffee) and Nonla (flavored) product lines\",\n      \"type\": \"confirmed\",\n      \"notes\": \"Website shows both lines - AoDai is pure coffee only, Nonla includes flavored variants like Cacao Mocha and Citrus Lemon\"\n    },\n    {\n      \"constraint\": \"Cannot describe AoDai as flavored coffee or mix with Nonla messaging\",\n      \"type\": \"confirmed\",\n      \"notes\": \"Explicit guardrail in brand data to keep AoDai positioning focused on pure Vietnamese coffee\"\n    },\n    {\n      \"constraint\": \"Must emphasize no machine requirement as key differentiator\",\n      \"type\": \"confirmed\",\n      \"notes\": \"Website FAQ specifically addresses this as major selling point vs Nespresso/Keurig competitors\"\n    },\n    {\n      \"constraint\": \"Shipping times vary significantly by fulfillment location\",\n      \"type\": \"confirmed\",\n      \"notes\": \"US/Canada fulfillment 3-7 days vs Vietnam direct shipping 10-21 days - impacts Mother's Day timing\"\n    },\n    {\n      \"constraint\": \"Free shipping thresholds may limit gift purchase conversion\",\n      \"type\": \"inferred\",\n      \"notes\": \"Requires $100+ for free shipping in US/Canada - target product is $19.99, creating potential friction\"\n    }\n  ],\n  \"messaging_notes\": [\n    \"Emphasize 100-150mg caffeine content as significantly stronger than mainstream coffee\",\n    \"Use Vietnamese city names for roast levels as cultural authenticity proof point\",\n    \"Position freeze-drying technology as premium vs ordinary instant coffee\",\n    \"Highlight convenience for busy mothers - office, home, travel usage\",\n    \"Frame 35% discount as making premium Vietnamese coffee accessible for gifting\"\n  ],\n  \"research_notes\": {\n    \"confidence\": \"medium\",\n    \"gaps\": [\n      \"Actual awareness of Vietnamese coffee culture among US consumers\",\n      \"Price sensitivity for Mother's Day coffee gifts vs everyday purchases\",\n      \"Consumer perception of instant/freeze-dried coffee quality barriers\",\n      \"Competitive landscape of no-machine coffee solutions\",\n      \"Mother's Day gifting timeline constraints vs shipping options\"\n    ]\n  }\n}",
+    "parsed": {
+      "competitors": [
+        "Nespresso",
+        "Keurig",
+        "Traditional instant coffee brands",
+        "Premium coffee subscription services",
+        "Vietnamese coffee brands in US market"
+      ],
+      "constraints": [
+        {
+          "constraint": "Must maintain clear distinction between AoDai (pure coffee) and Nonla (flavored) product lines",
+          "type": "confirmed",
+          "notes": "Website shows both lines - AoDai is pure coffee only, Nonla includes flavored variants like Cacao Mocha and Citrus Lemon"
+        },
+        {
+          "constraint": "Cannot describe AoDai as flavored coffee or mix with Nonla messaging",
+          "type": "confirmed",
+          "notes": "Explicit guardrail in brand data to keep AoDai positioning focused on pure Vietnamese coffee"
+        },
+        {
+          "constraint": "Must emphasize no machine requirement as key differentiator",
+          "type": "confirmed",
+          "notes": "Website FAQ specifically addresses this as major selling point vs Nespresso/Keurig competitors"
+        },
+        {
+          "constraint": "Shipping times vary significantly by fulfillment location",
+          "type": "confirmed",
+          "notes": "US/Canada fulfillment 3-7 days vs Vietnam direct shipping 10-21 days - impacts Mother's Day timing"
+        },
+        {
+          "constraint": "Free shipping thresholds may limit gift purchase conversion",
+          "type": "inferred",
+          "notes": "Requires $100+ for free shipping in US/Canada - target product is $19.99, creating potential friction"
+        }
+      ],
+      "messaging_notes": [
+        "Emphasize 100-150mg caffeine content as significantly stronger than mainstream coffee",
+        "Use Vietnamese city names for roast levels as cultural authenticity proof point",
+        "Position freeze-drying technology as premium vs ordinary instant coffee",
+        "Highlight convenience for busy mothers - office, home, travel usage",
+        "Frame 35% discount as making premium Vietnamese coffee accessible for gifting"
+      ],
+      "research_notes": {
+        "confidence": "medium",
+        "gaps": [
+          "Actual awareness of Vietnamese coffee culture among US consumers",
+          "Price sensitivity for Mother's Day coffee gifts vs everyday purchases",
+          "Consumer perception of instant/freeze-dried coffee quality barriers",
+          "Competitive landscape of no-machine coffee solutions",
+          "Mother's Day gifting timeline constraints vs shipping options"
+        ]
+      }
+    },
+    "parse_error": null,
+    "prompt_key": "run_claude_brand_constraints",
+    "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\brand_intake\\brand_constraints_prompt.txt"
+  },
+  "competitors": [
+    "Nespresso",
+    "Keurig",
+    "Traditional instant coffee brands",
+    "Premium coffee subscription services",
+    "Vietnamese coffee brands in US market"
+  ],
+  "constraints": [
+    {
+      "constraint": "Must maintain clear distinction between AoDai (pure coffee) and Nonla (flavored) product lines",
+      "type": "confirmed",
+      "notes": "Website shows both lines - AoDai is pure coffee only, Nonla includes flavored variants like Cacao Mocha and Citrus Lemon"
+    },
+    {
+      "constraint": "Cannot describe AoDai as flavored coffee or mix with Nonla messaging",
+      "type": "confirmed",
+      "notes": "Explicit guardrail in brand data to keep AoDai positioning focused on pure Vietnamese coffee"
+    },
+    {
+      "constraint": "Must emphasize no machine requirement as key differentiator",
+      "type": "confirmed",
+      "notes": "Website FAQ specifically addresses this as major selling point vs Nespresso/Keurig competitors"
+    },
+    {
+      "constraint": "Shipping times vary significantly by fulfillment location",
+      "type": "confirmed",
+      "notes": "US/Canada fulfillment 3-7 days vs Vietnam direct shipping 10-21 days - impacts Mother's Day timing"
+    },
+    {
+      "constraint": "Free shipping thresholds may limit gift purchase conversion",
+      "type": "inferred",
+      "notes": "Requires $100+ for free shipping in US/Canada - target product is $19.99, creating potential friction"
+    }
+  ],
+  "messaging_notes": [
+    "Emphasize 100-150mg caffeine content as significantly stronger than mainstream coffee",
+    "Use Vietnamese city names for roast levels as cultural authenticity proof point",
+    "Position freeze-drying technology as premium vs ordinary instant coffee",
+    "Highlight convenience for busy mothers - office, home, travel usage",
+    "Frame 35% discount as making premium Vietnamese coffee accessible for gifting"
+  ],
+  "research_notes": {
+    "confidence": "medium",
+    "gaps": [
+      "Actual awareness of Vietnamese coffee culture among US consumers",
+      "Price sensitivity for Mother's Day coffee gifts vs everyday purchases",
+      "Consumer perception of instant/freeze-dried coffee quality barriers",
+      "Competitive landscape of no-machine coffee solutions",
+      "Mother's Day gifting timeline constraints vs shipping options"
+    ]
+  },
+  "brand_intake_file": "E:\\Source\\marketing-brain\\data\\knowledge\\brand_intake\\AODAI_01_brand_intake.json"
+}

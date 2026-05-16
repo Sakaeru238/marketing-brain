@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "AODAI_01",
+    "brand_id": "AODAI",
+    "product_id": "AD-12-coffee",
+    "offer_id": "OFF_AODAI_35",
+    "seed_audience_id": "AUD_IN_AODAI_01",
+    "ai_audience_id": "AUD_AI_AODAI_01",
+    "objective": "traffic",
+    "claude_mode": null,
+    "use_brand_intake": "TRUE",
+    "use_alysha_strategy": "TRUE",
+    "expected_focus": null,
+    "success_check": null
+  },
+  {
+    "test_id": "chun",
+    "brand_id": "AODAI",
+    "product_id": "AODAI_50",
+    "offer_id": "OFF_AODAI_UNDER3",
+    "seed_audience_id": "AUD_IN_AODAI_01",
+    "ai_audience_id": "AUD_AI_AODAI_02",
+    "objective": "conversion",
+    "claude_mode": "api",
+    "use_brand_intake": "TRUE",
+    "use_alysha_strategy": "TRUE",
+    "expected_focus": "strong coffee; value; under $3 per cup",
+    "success_check": "Value math + brand consistency"
+  },
+  {
+    "test_id": "TEST_NONLA_01",
+    "brand_id": "NONLA",
+    "product_id": "NONLA_COCONUT_8",
+    "offer_id": "OFF_NONLA_35",
+    "seed_audience_id": "AUD_IN_NONLA_01",
+    "ai_audience_id": "AUD_AI_NONLA_01",
+    "objective": "traffic",
+    "claude_mode": "pro_manual",
+    "use_brand_intake": "TRUE",
+    "use_alysha_strategy": "TRUE",
+    "expected_focus": "coconut flavor; convenience; trial",
+    "success_check": "Flavor-specific messaging stays correct"
+  },
+  {
+    "test_id": "TEST_NONLA_02",
+    "brand_id": "NONLA",
+    "product_id": "NONLA_PURE_8",
+    "offer_id": "OFF_NONLA_35",
+    "seed_audience_id": "AUD_IN_NONLA_01",
+    "ai_audience_id": "AUD_AI_NONLA_02",
+    "objective": "conversion",
+    "claude_mode": "api",
+    "use_brand_intake": "TRUE",
+    "use_alysha_strategy": "TRUE",
+    "expected_focus": "pure Nonla SKU without flavor drift",
+    "success_check": "Pure SKU separated from flavor lines"
+  }
+]

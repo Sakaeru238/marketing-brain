@@ -1,0 +1,127 @@
+You are extracting INSIGHTS from competitor ad intelligence.
+
+You are NOT summarizing.
+You are NOT repeating hooks.
+You are identifying PATTERNS that can be reused to generate ads.
+
+INPUT:
+{{RESEARCH_DATA}}
+
+---
+
+TASK:
+
+Analyze the data and extract:
+
+1. CORE INSIGHTS
+Deep truths about customer psychology.
+
+2. WINNING ANGLES
+Repeatable ways products are sold.
+
+3. EMOTIONAL DRIVERS
+What emotions actually convert.
+
+4. GIFT PSYCHOLOGY PATTERNS
+How gifting decisions are made.
+
+5. AD PATTERN LIBRARY
+Reusable ad structures (templates, not examples).
+
+---
+
+OUTPUT FORMAT:
+
+{
+  "core_insights": [
+    {
+      "insight": "string",
+      "supporting_brands": ["string"],
+      "based_on_angles": ["string"],
+      "confidence": "high | medium | low",
+      "why_it_matters": "string"
+    }
+  ],
+  "winning_angles": [
+    {
+      "angle": "string",
+      "supporting_brands": ["string"],
+      "based_on_angles": ["string"],
+      "confidence": "high | medium | low",
+      "why_it_works": "string"
+    }
+  ],
+  "emotional_drivers": [
+    {
+      "emotion": "string",
+      "supporting_brands": ["string"],
+      "evidence_from": ["string"],
+      "confidence": "high | medium | low",
+      "why_it_matters": "string"
+    }
+  ],
+  "gift_psychology_patterns": [
+    {
+      "pattern": "string",
+      "supporting_brands": ["string"],
+      "evidence_from": ["string"],
+      "confidence": "high | medium | low",
+      "why_it_works": "string"
+    }
+  ],
+  "ad_pattern_library": [
+    {
+      "pattern": "string",
+      "supporting_brands": ["string"],
+      "evidence_from": ["string"],
+      "confidence": "high | medium | low",
+      "why_it_works": "string"
+    }
+  ]
+}
+
+---
+
+RULES:
+
+- NO generic insights
+- MUST be derived from MULTIPLE ad_findings
+- MUST be reusable for ad creation
+- Each insight must explain WHY it works
+
+- Each insight MUST reference which brands it comes from
+- DO NOT produce abstract insights without evidence
+- Every insight or pattern must be grounded in at least 2 data points
+- Every item in every output array MUST include supporting_brands
+- Every item in every output array MUST include confidence
+- Every item in every output array MUST include either based_on_angles or evidence_from
+- Every item in every output array MUST include either why_it_works or why_it_matters
+- supporting_brands must contain at least 2 brands unless the input has fewer than 2 relevant brands
+- evidence_from and based_on_angles must use concrete hooks, angles, triggers, or source context from the input
+
+- Patterns must be specific enough to turn into ads directly
+- Avoid overly generic placeholders like [product] when obvious
+
+---
+
+EXAMPLES:
+
+BAD:
+"People like good gifts"
+
+GOOD:
+{
+  "insight": "Gift-givers fear their gift will be forgotten or unused",
+  "supporting_brands": ["Bean Box", "Trade Coffee"],
+  "based_on_angles": [
+    "practical gift vs decorative gift",
+    "ongoing value vs one-time gift"
+  ],
+  "confidence": "high"
+}
+
+---
+
+Return ONLY valid JSON.
+No explanation text.
+Do NOT wrap JSON in markdown.

@@ -1,0 +1,48 @@
+You are running RESEARCH STAGE 2: MESSAGING INTELLIGENCE.
+
+Use:
+1. The current brand context
+2. Website excerpts
+3. Manual overrides if present
+4. The research direction, especially selling_orientation and occasion
+5. Seed competitors if provided
+
+Your task:
+Extract the strongest messaging components for downstream creative strategy.
+
+Important:
+- Hooks must match the selling_orientation.
+- If selling_orientation is "gift", hooks should sound like gift ads, not generic coffee ads.
+- If occasion is provided, hooks should include timing, emotional reason to buy, and occasion-specific urgency when appropriate.
+- Claims must stay grounded in the brand/product context.
+- Warnings must protect accuracy and prevent flavor/pure coffee confusion.
+
+Return EXACTLY ONE valid JSON object.
+Do NOT wrap the JSON in markdown.
+Do NOT use ```json fences.
+Do NOT add commentary before or after the JSON.
+
+Schema:
+
+{
+  "hooks": ["string"],
+  "claims": ["string"],
+  "warnings": ["string"],
+  "recommended_focus": ["string"]
+}
+
+Rules:
+- hooks: max 10
+- claims: max 8
+- warnings: max 6
+- recommended_focus: max 8
+- Keep outputs concise and practical.
+- Hooks should be ad-usable.
+- Claims should be grounded in brand/site context.
+- Recommended focus should be specific enough to guide creative generation.
+
+RUN ID:
+{{RUN_ID}}
+
+INPUT BUNDLE:
+{{INPUT_BUNDLE}}

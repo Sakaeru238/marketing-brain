@@ -1,0 +1,96 @@
+You are building the canonical Brand Context Source of Truth for a multi-brand Marketing-Brain system.
+
+Your output MUST follow Alysha Brand Intake requirements 100% at the document-structure level.
+Use the provided Universal Brand Intake fields as the human seed information, then synthesize what can be verified from the fetched website/source excerpts.
+If information is unavailable, do not invent it. Mark gaps and low-confidence areas clearly in Research Notes.
+
+INPUT 1 — UNIVERSAL BRAND INTAKE FIELDS
+{{UNIVERSAL_BRAND_INTAKE_FIELDS}}
+
+INPUT 2 — FETCHED PUBLIC WEBSITE / SOURCE EXCERPTS
+{{FETCHED_SOURCE_EXCERPTS}}
+
+Return STRICT JSON ONLY. Do not use markdown fences around the JSON.
+The JSON object MUST match this schema:
+{
+  "brand_context_source_of_truth_markdown": "# Brand Context: ...",
+  "brand_context_source_of_truth": {
+    "brand_overview": "...",
+    "brand_story_and_origin": "...",
+    "product_catalog": {
+      "summary": "...",
+      "products": [
+        {"product": "...", "key_differentiator": "...", "audience": "...", "notes": "..."}
+      ],
+      "hero_product_if_identifiable": "...",
+      "bundles_if_identifiable": ["..."]
+    },
+    "what_makes_them_different": "...",
+    "competitor_landscape": {
+      "summary": "...",
+      "competitors": [
+        {"competitor": "...", "their_positioning": "...", "how_this_brand_differs": "...", "confidence": "confirmed|inferred|unknown"}
+      ]
+    },
+    "the_alternative_solution": "...",
+    "core_audiences": {
+      "primary": "...",
+      "secondary": "...",
+      "key_signals": ["..."]
+    },
+    "brand_voice_and_tone": {
+      "summary": "...",
+      "adjectives": ["..."],
+      "patterns": ["..."],
+      "copy_examples_if_available": ["..."],
+      "things_the_brand_avoids_if_identifiable": ["..."]
+    },
+    "creative_constraints": [
+      {"constraint": "...", "type": "confirmed|inferred", "notes": "..."}
+    ],
+    "must_know_strategic_context": ["..."]
+  },
+  "brand_research_notes": {
+    "sources_consulted": ["..."],
+    "gaps_or_low_confidence_areas": ["..."],
+    "confirmed_vs_inferred_notes": ["..."]
+  },
+  "alysha_compliance": {
+    "target": "100% Brand Intake structure compliance",
+    "required_sections_present": [
+      "Brand Overview",
+      "Brand Story & Origin",
+      "Product Catalog",
+      "What Makes Them Different",
+      "Competitor Landscape",
+      "The Alternative Solution",
+      "Core Audience(s)",
+      "Brand Voice & Tone",
+      "Creative Constraints",
+      "Must-Know Strategic Context",
+      "Research Notes"
+    ],
+    "missing_sections": [],
+    "status": "pass|fail",
+    "notes": "..."
+  }
+}
+
+The markdown document in `brand_context_source_of_truth_markdown` MUST include, in this exact order:
+1. `# Brand Context: [Brand Name]`
+2. Generated date and focus line
+3. `## Brand Overview`
+4. `## Brand Story & Origin`
+5. `## Product Catalog`
+6. Product table with columns Product | Key Differentiator | Audience
+7. `## What Makes Them Different`
+8. `## Competitor Landscape`
+9. Competitor table with columns Competitor | Their Positioning | How This Brand Differs
+10. `## The Alternative Solution`
+11. `## Core Audience(s)`
+12. `## Brand Voice & Tone`
+13. `## Creative Constraints`
+14. Constraint table with columns Constraint | Type | Notes
+15. `## Must-Know Strategic Context`
+16. `## Research Notes`
+17. Sources consulted and gaps / low-confidence areas.

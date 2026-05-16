@@ -1,0 +1,31 @@
+{
+  "status": "success",
+  "raw_response": "{\n  \"positioning_summary\": \"AoDai Coffee delivers pure Vietnamese coffee excellence through 100% Robusta freeze-dried espresso pods from Buôn Ma Thuột, Đắk Lắk - offering authentic Vietnamese coffee strength and flavor without any machine needed\",\n  \"audience_core\": {\n    \"audience_name\": \"US strong coffee seekers\",\n    \"pain_point\": \"Mainstream coffee feels too weak or bland\",\n    \"desired_outcome\": \"Wants stronger caffeine and bolder taste\"\n  },\n  \"differentiation\": [\n    \"100% Vietnamese Robusta from Đắk Lắk highlands\",\n    \"Freeze-dried technology preserving authentic Vietnamese flavor\",\n    \"No machine needed - instant preparation\",\n    \"Pure coffee with no additives or sugar\",\n    \"6 roast levels representing Vietnamese cities\",\n    \"100-150mg caffeine per capsule\"\n  ],\n  \"message_pillars\": [\n    \"100% Vietnamese Robusta for authentic strength\",\n    \"Freeze-dried Vietnamese espresso ready in seconds\",\n    \"No machine needed - just add hot or cold water\",\n    \"Pure coffee from Vietnam's Central Highlands\",\n    \"Strong caffeine content for real energy\",\n    \"Authentic Vietnamese coffee taste anywhere\"\n  ]\n}",
+  "parsed": {
+    "positioning_summary": "AoDai Coffee delivers pure Vietnamese coffee excellence through 100% Robusta freeze-dried espresso pods from Buôn Ma Thuột, Đắk Lắk - offering authentic Vietnamese coffee strength and flavor without any machine needed",
+    "audience_core": {
+      "audience_name": "US strong coffee seekers",
+      "pain_point": "Mainstream coffee feels too weak or bland",
+      "desired_outcome": "Wants stronger caffeine and bolder taste"
+    },
+    "differentiation": [
+      "100% Vietnamese Robusta from Đắk Lắk highlands",
+      "Freeze-dried technology preserving authentic Vietnamese flavor",
+      "No machine needed - instant preparation",
+      "Pure coffee with no additives or sugar",
+      "6 roast levels representing Vietnamese cities",
+      "100-150mg caffeine per capsule"
+    ],
+    "message_pillars": [
+      "100% Vietnamese Robusta for authentic strength",
+      "Freeze-dried Vietnamese espresso ready in seconds",
+      "No machine needed - just add hot or cold water",
+      "Pure coffee from Vietnam's Central Highlands",
+      "Strong caffeine content for real energy",
+      "Authentic Vietnamese coffee taste anywhere"
+    ]
+  },
+  "parse_error": null,
+  "prompt_key": "run_claude_brand_core",
+  "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\brand_intake\\brand_core_prompt.txt"
+}

@@ -1,0 +1,168 @@
+{
+  "test_id": "chun",
+  "run": {
+    "test_id": "chun",
+    "brand_id": "AODAI",
+    "product_id": "AODAI_50",
+    "offer_id": "OFF_AODAI_UNDER3",
+    "seed_audience_id": "AUD_IN_AODAI_01",
+    "ai_audience_id": "AUD_AI_AODAI_02",
+    "objective": "conversion",
+    "claude_mode": "api",
+    "use_brand_intake": "TRUE",
+    "use_alysha_strategy": "TRUE",
+    "expected_focus": "strong coffee; value; under $3 per cup",
+    "success_check": "Value math + brand consistency"
+  },
+  "brand": {
+    "brand_id": "AODAI",
+    "brand_name": "AoDai Coffee",
+    "brand_positioning": "Pure Vietnamese Coffee",
+    "brand_type": "pure coffee",
+    "origin": "Buon Ma Thuot, Dak Lak, Vietnam",
+    "Brand Type": "Ecommerce",
+    "default_market": "US; CA",
+    "brand_story_short": "100% Vietnamese Robusta freeze-dried espresso with strong authentic taste.",
+    "website": "https://nonlacafe.com/",
+    "notes": "Do not mix with flavor messaging."
+  },
+  "product": {
+    "product_id": "AODAI_50",
+    "brand_id": "AODAI",
+    "product_name": "Freeze-Dried Vietnamese Espresso 50 Pods",
+    "product_line": "AoDai Pure",
+    "product_type": "pure coffee",
+    "format": "instant pod",
+    "pack_size": "50 pods",
+    "sku": "AD-50-coffee",
+    "list_price_usd": 49.99,
+    "priority_market": "US; CA",
+    "status": "active",
+    "notes": "Value SKU"
+  },
+  "offer": null,
+  "audience_core": {
+    "seed_audience": {
+      "audience_id": "AUD_IN_AODAI_01",
+      "brand_id": "AODAI",
+      "audience_name": "Customers in the US",
+      "source_type": "user_input",
+      "pain_point_input": null,
+      "desired_outcome_input": null,
+      "pain_point_required": false,
+      "desired_outcome_required": false,
+      "notes": "Broad initial audience seed; AI can expand after research"
+    },
+    "ai_expanded_audience": {
+      "expanded_audience_id": "EXP_AODAI_001",
+      "source_audience_id": "AUD_IN_AODAI_01",
+      "brand_id": "AODAI",
+      "audience_name": "US strong coffee seekers",
+      "pain_point": "Mainstream coffee feels too weak or bland",
+      "desired_outcome": "Wants stronger caffeine and bolder taste",
+      "evidence_source": "to_be_filled_after_research",
+      "confidence": "high",
+      "created_by": "ai"
+    },
+    "audience_name": "US strong coffee seekers",
+    "pain_point": "Mainstream coffee feels too weak or bland",
+    "desired_outcome": "Wants stronger caffeine and bolder taste"
+  },
+  "core_truth": [
+    {
+      "truth_id": "TRUTH_AODAI_01",
+      "brand_id": "AODAI",
+      "truth_type": "ingredient",
+      "truth_text": "100% Vietnamese Robusta",
+      "priority": "high",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_AODAI_02",
+      "brand_id": "AODAI",
+      "truth_type": "positioning",
+      "truth_text": "Pure coffee",
+      "priority": "high",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_AODAI_03",
+      "brand_id": "AODAI",
+      "truth_type": "format",
+      "truth_text": "Freeze-dried Vietnamese espresso",
+      "priority": "high",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_AODAI_04",
+      "brand_id": "AODAI",
+      "truth_type": "benefit",
+      "truth_text": "No machine needed",
+      "priority": "high",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_AODAI_05",
+      "brand_id": "AODAI",
+      "truth_type": "usage",
+      "truth_text": "Works in hot or cold water",
+      "priority": "medium",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_AODAI_06",
+      "brand_id": "AODAI",
+      "truth_type": "taste",
+      "truth_text": "Strong authentic Vietnamese coffee taste",
+      "priority": "high",
+      "source": "brand"
+    }
+  ],
+  "guardrails": [
+    {
+      "guardrail_id": "GR_AODAI_01",
+      "brand_id": "AODAI",
+      "guardrail_text": "Do not describe AoDai as flavored coffee.",
+      "severity": "critical",
+      "applies_to": "all outputs"
+    },
+    {
+      "guardrail_id": "GR_AODAI_02",
+      "brand_id": "AODAI",
+      "guardrail_text": "Do not mix AoDai positioning with Nonla flavor messaging.",
+      "severity": "critical",
+      "applies_to": "all outputs"
+    },
+    {
+      "guardrail_id": "GR_AODAI_03",
+      "brand_id": "AODAI",
+      "guardrail_text": "Keep messaging focused on pure Vietnamese coffee.",
+      "severity": "high",
+      "applies_to": "all outputs"
+    }
+  ],
+  "product_benefits": [
+    {
+      "benefit_id": "BEN_A50_01",
+      "product_id": "AODAI_50",
+      "brand_id": "AODAI",
+      "benefit_type": "value",
+      "benefit_text": "Under $3 per cup angle possible",
+      "priority": "high"
+    },
+    {
+      "benefit_id": "BEN_A50_02",
+      "product_id": "AODAI_50",
+      "brand_id": "AODAI",
+      "benefit_type": "strength",
+      "benefit_text": "Strong authentic Vietnamese coffee taste",
+      "priority": "high"
+    }
+  ],
+  "product_usage": [],
+  "metadata": {
+    "source_file": "marketing_brain_control_panel_v3.xlsx",
+    "source_type": "excel_export",
+    "notes": "Raw JSON export from legacy Excel control panel."
+  }
+}

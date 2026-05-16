@@ -1,0 +1,13 @@
+Return EXACTLY one JSON.
+
+{
+  "pain_points": ["string"],
+  "desires": ["string"],
+  "hooks": ["string"],
+  "angles": ["string"]
+}
+
+Rules:
+- max 6 items per list
+- concise
+- ad-usable

@@ -1,0 +1,49 @@
+{
+  "_id": "AODAI_01",
+  "generated_at": "2026-04-15T19:51:11.921008",
+  "claude_research_messaging": {
+    "status": "success",
+    "raw_response": "{\n  \"hooks\": [\n    \"Finally, instant coffee for people who actually love strong coffee\",\n    \"The instant coffee that actually tastes like real coffee - because it IS real coffee\",\n    \"No machine, no mess, no weak coffee - just pure Vietnamese Robusta power\",\n    \"Skip the $5 coffee shop - get cafe-quality Vietnamese espresso at home in seconds\",\n    \"6 intensity levels: Find your perfect strength from gentle to extra dark\",\n    \"What if your morning coffee could be as strong as Vietnamese cafe culture demands?\",\n    \"Cafe-quality taste ready in seconds - no machine needed\",\n    \"100% Vietnamese Robusta - maximum strength in every pod\"\n  ],\n  \"claims\": [\n    \"100% Vietnamese Robusta from Buon Ma Thuot for maximum strength\",\n    \"Freeze-dried technology preserves authentic cafe-quality taste\",\n    \"Works in hot or cold water - dissolves instantly\",\n    \"No machine needed - ultimate convenience\",\n    \"Pure coffee with no sugar or additives\",\n    \"6 roast levels from gentle to extra dark intensity\",\n    \"ISO 22000:2018 certified production facility\",\n    \"Rated 4.9/5 by customers\"\n  ],\n  \"warnings\": [\n    \"Do not describe AoDai as flavored coffee - it's pure Vietnamese coffee only\",\n    \"Do not mix AoDai positioning with Nonla flavor messaging\",\n    \"Avoid comparing to regular instant coffee brands - position as cafe-quality\",\n    \"Don't undersell the strength - emphasize Robusta's bold character\",\n    \"Maintain focus on Vietnamese heritage and authenticity\",\n    \"Don't suggest it needs milk or sugar - highlight pure coffee experience\"\n  ],\n  \"recommended_focus\": [\n    \"Target strong coffee seekers frustrated with weak mainstream options\",\n    \"Emphasize convenience without compromising on quality or strength\",\n    \"Highlight Vietnamese coffee heritage as premium differentiator\",\n    \"Lead with tasting set to let customers find their perfect intensity\",\n    \"Use 35% OFF first order as primary conversion driver\",\n    \"Position as upgrade from both weak instant and expensive coffee shops\",\n    \"Focus on pure coffee credentials - no additives or artificial flavors\",\n    \"Leverage freeze-dried technology as quality preservation story\"\n  ]\n}",
+    "parse_error": null,
+    "prompt_key": "run_claude_research_messaging",
+    "prompt_file": "/Users/Sakaeru/Source/marketing-brain/data/prompts/research/research_messaging_prompt.txt"
+  },
+  "hooks": [
+    "Finally, instant coffee for people who actually love strong coffee",
+    "The instant coffee that actually tastes like real coffee - because it IS real coffee",
+    "No machine, no mess, no weak coffee - just pure Vietnamese Robusta power",
+    "Skip the $5 coffee shop - get cafe-quality Vietnamese espresso at home in seconds",
+    "6 intensity levels: Find your perfect strength from gentle to extra dark",
+    "What if your morning coffee could be as strong as Vietnamese cafe culture demands?",
+    "Cafe-quality taste ready in seconds - no machine needed",
+    "100% Vietnamese Robusta - maximum strength in every pod"
+  ],
+  "claims": [
+    "100% Vietnamese Robusta from Buon Ma Thuot for maximum strength",
+    "Freeze-dried technology preserves authentic cafe-quality taste",
+    "Works in hot or cold water - dissolves instantly",
+    "No machine needed - ultimate convenience",
+    "Pure coffee with no sugar or additives",
+    "6 roast levels from gentle to extra dark intensity",
+    "ISO 22000:2018 certified production facility",
+    "Rated 4.9/5 by customers"
+  ],
+  "warnings": [
+    "Do not describe AoDai as flavored coffee - it's pure Vietnamese coffee only",
+    "Do not mix AoDai positioning with Nonla flavor messaging",
+    "Avoid comparing to regular instant coffee brands - position as cafe-quality",
+    "Don't undersell the strength - emphasize Robusta's bold character",
+    "Maintain focus on Vietnamese heritage and authenticity",
+    "Don't suggest it needs milk or sugar - highlight pure coffee experience"
+  ],
+  "recommended_focus": [
+    "Target strong coffee seekers frustrated with weak mainstream options",
+    "Emphasize convenience without compromising on quality or strength",
+    "Highlight Vietnamese coffee heritage as premium differentiator",
+    "Lead with tasting set to let customers find their perfect intensity",
+    "Use 35% OFF first order as primary conversion driver",
+    "Position as upgrade from both weak instant and expensive coffee shops",
+    "Focus on pure coffee credentials - no additives or artificial flavors",
+    "Leverage freeze-dried technology as quality preservation story"
+  ]
+}

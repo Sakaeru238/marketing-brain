@@ -1,0 +1,36 @@
+# Organic Planning Prompt Addendum — Timeframe KPI V7
+
+Campaign timeframe is mandatory.
+
+Read from Page_Channel_Library:
+start_day
+end_day
+duration
+current_followers
+current_likes
+target_followers
+target_likes
+primary_growth_metric
+growth_goal
+
+Before creating a content plan, calculate:
+days_elapsed
+days_remaining
+campaign_progress_percent
+follower_gap
+like_gap
+required_followers_per_day
+required_likes_per_day
+kpi_status
+content_intensity
+future_queue_needed
+
+If KPI is behind:
+increase humor, relatable, shareable emotional, identity, light debate, hot_take, self_recognition, comment triggers, tagging prompts.
+
+Reduce:
+low-reaction product-heavy posts
+overly soft vague emotional posts
+generic education without interaction
+
+Return campaign_kpi_context in output.

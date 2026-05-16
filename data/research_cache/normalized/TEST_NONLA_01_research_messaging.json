@@ -1,0 +1,16 @@
+{
+  "_id": "TEST_NONLA_01",
+  "generated_at": "2026-04-27T09:27:44.964964",
+  "claude_research_messaging": {
+    "status": "skipped",
+    "reason": "Claude research messaging not attempted.",
+    "raw_response": null,
+    "parse_error": null,
+    "prompt_key": "run_claude_research_messaging",
+    "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\research\\research_messaging_prompt.txt"
+  },
+  "hooks": [],
+  "claims": [],
+  "warnings": [],
+  "recommended_focus": []
+}

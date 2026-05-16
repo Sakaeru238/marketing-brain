@@ -1,0 +1,26 @@
+[
+  {
+    "brand_id": "AODAI",
+    "brand_name": "AoDai Coffee",
+    "brand_positioning": "Pure Vietnamese Coffee",
+    "brand_type": "pure coffee",
+    "origin": "Buon Ma Thuot, Dak Lak, Vietnam",
+    "Brand Type": "Ecommerce",
+    "default_market": "US; CA",
+    "brand_story_short": "100% Vietnamese Robusta freeze-dried espresso with strong authentic taste.",
+    "website": "https://nonlacafe.com/",
+    "notes": "Do not mix with flavor messaging."
+  },
+  {
+    "brand_id": "NONLA",
+    "brand_name": "Nonla Coffee",
+    "brand_positioning": "Vietnamese coffee with flavor-forward convenience lines",
+    "brand_type": "mix/flavor + selected pure SKUs",
+    "origin": "Buon Ma Thuot, Dak Lak, Vietnam",
+    "Brand Type": "Ecommerce",
+    "default_market": "US; CA",
+    "brand_story_short": "Convenient Vietnamese coffee with flavored and lifestyle-friendly variants.",
+    "website": "https://nonlacafe.com/",
+    "notes": "Need clear separation between flavor lines and pure lines."
+  }
+]

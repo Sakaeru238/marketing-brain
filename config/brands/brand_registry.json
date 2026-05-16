@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "brands": [
+    {
+      "brand_id": "BRAND0001",
+      "brand_name": "sportivestyle",
+      "status": "active",
+      "brand_root": "data/brands/BRAND0001",
+      "config_root": "config/brands/BRAND0001",
+      "enabled_modules": {
+        "brand_intake": true,
+        "brand_learning": true,
+        "organic": true,
+        "paid_ads": false,
+        "pod": true
+      }
+    },
+    {
+      "brand_id": "AODAI",
+      "brand_name": "AODAI",
+      "status": "active",
+      "brand_root": "data/brands/AODAI",
+      "config_root": "config/brands/AODAI",
+      "enabled_modules": {
+        "brand_intake": true,
+        "brand_learning": true,
+        "organic": true,
+        "paid_ads": false,
+        "pod": true
+      }
+    }
+  ]
+}

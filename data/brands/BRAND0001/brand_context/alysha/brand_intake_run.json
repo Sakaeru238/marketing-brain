@@ -1,0 +1,92 @@
+{
+  "status": "success",
+  "brand_id": "BRAND0001",
+  "generated_at": "2026-05-14T11:08:33.846587+00:00",
+  "dry_run": false,
+  "paths": {
+    "brand_id": "BRAND0001",
+    "brand": {
+      "brand_id": "BRAND0001",
+      "brand_name": "sportivestyle",
+      "status": "active",
+      "brand_root": "data/brands/BRAND0001",
+      "config_root": "config/brands/BRAND0001",
+      "enabled_modules": {
+        "brand_intake": true,
+        "brand_learning": true,
+        "organic": true,
+        "paid_ads": false,
+        "pod": true
+      }
+    },
+    "brand_data_root": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001",
+    "brand_config_root": "/Users/Sakaeru/Source/marketing-brain/config/brands/BRAND0001",
+    "brand_context_root": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context",
+    "intake_root": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/intake",
+    "alysha_root": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/alysha",
+    "alysha_history_root": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/alysha/history",
+    "learning_root": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/learning",
+    "organic_root": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/organic",
+    "paid_ads_root": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/paid_ads",
+    "pod_root": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/pod",
+    "brand_intake_raw_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/intake/brand_intake_raw.json",
+    "brand_intake_normalized_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/intake/brand_intake_normalized.json",
+    "brand_context_markdown_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/alysha/brand_context_source_of_truth.md",
+    "brand_context_json_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/alysha/brand_context_source_of_truth.json",
+    "brand_research_notes_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/alysha/brand_research_notes.json",
+    "brand_intake_run_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/alysha/brand_intake_run.json",
+    "brand_learning_log_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/learning/brand_learning_log.jsonl",
+    "brand_learning_summary_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/learning/brand_learning_summary.json",
+    "learning_review_queue_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/learning/learning_review_queue.json",
+    "context_update_history_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/brand_context/learning/context_update_history.json"
+  },
+  "validation": {
+    "status": "pass",
+    "missing_required_fields": [],
+    "required_fields_total": 8,
+    "required_fields_filled": 8
+  },
+  "fetched_sources": {
+    "status": "success",
+    "sources": [
+      "https://sportivestyle.com/",
+      "https://sportivestyle.com/collections/all",
+      "https://sportivestyle.com/shop",
+      "https://sportivestyle.com/faq"
+    ],
+    "pages": {
+      "https://sportivestyle.com/": "HomePage - sportivestyle.com Skip to content FREE SHIPPING On orders over $99 FREE SHIPPING On orders over $99 Search for: Shop Login Cart / &#36; 0.00 0 No products in the cart. Return to shop 0 Cart No products in the cart. Return to shop NLL • EPL • ENGLISH PREMIER LEAGUE • OHL • ONTARIO HOCKEY LEAGUE • NLL • EPL • ENGLISH PREMIER LEAGUE • OHL • ONTARIO HOCKEY LEAGUE SS25 COLLECTION — FAN MERCHANDISE FAN GEAR DROPS Jerseys, hoodies, mugs, and posters printed in accurate team colors for NLL, EPL, and OHL. No inventory needed. Nationwide delivery in 7–12 days. SHOP NOW VIEW ALL SHOP BY LEAGUE NLL EPL OHL ALL NLL Custom Starting from $39 EPL Fan Custom Starting from $45 OHL Custom Starting from $39 ☆ PREMIUM QUALITY Color-matched by team ⌘ 7–12 DAY SHIPPING Across the country 500+ PRODUCTS ✓ FREE SHIPPING $99+ No hidden fees ＋ 100% REFUND If there is a design issue new arrivals New arrivals — explore the latest additions to our collection Sale! Quick View Flint Firebirds Flint Firebirds x Super Mario 2026 Night Celebartion Hoodie T-Shirt &#36; 72.99 Original price was: &#036;72.99. &#36; 45.99 Current price is: &#036;45.99. Sale! Quick View Flint Firebirds Flint Firebirds Healthcare Appreciation Night 2026 Hoodie T-Shirt &#36; 72.99 Original price was: &#036;72.99. &#36; 45.99 Current price is: &#036;45.99. Sale! Quick View Flint Firebirds Flint Firebirds Coney Dogs 2026 Hockey Jersey &#36; 139.99 Original price was: &#036;139.99. &#36; 54.99 Current price is: &#036;54.99. Sale! Quick View Arsenal Personalised Arsenal Anime Banter Card – Funny Football Gift for Gunners &#36; 59.99 Original price was: &#036;59.99. &#36; 34.99 Current price is: &#036;34.99. Sale! Quick View Saskatchewan Rush Saskatchewan Rush Personalized Names And Numbers 250804 &#36; 72.99 Original price was: &#036;72.99. &#36; 45.99 Current price is: &#036;45.99. Sale! Quick View Vancouver Warriors Vancouver Warriors Special Ugly Christmas Cardigan Personalized Letters Number &#36; 89.99 Original price was: &#036;89.99. &#36; 54.99 Current price is: &#036;54.99. Sale! Quick View Toronto Rock Toronto Rock Special Ugly Christmas Cardigan Personalized Letters Number &#36; 89.99 Original price was: &#036;89.99. &#36; 54.99 Current price is: &#036;54.99. Sale! Quick View Saskatchewan Rush Saskatchewan Rush Special Ugly Christmas Cardigan Personalized Letters Number &#36; 89.99 Original price was: &#036;89.99. &#36; 54.99 Current price is: &#036;54.99. Sale! Quick View San Diego Seals San Diego Seals Special Ugly Christmas Cardigan Personalized Letters Number &#36; 89.99 Original price was: &#036;89.99. &#36; 54.99 Current price is: &#036;54.99. Sale! Quick View Rochester Knighthawks Rochester Knighthawks Special Ugly Christmas Cardigan Personalized Letters Number &#36; 89.99 Original price was: &#036;89.99. &#36; 54.99 Current price is: &#036;54.99. Sale! Quick View Philadelphia Wings Philadelphia Wings Special Ugly Christmas Cardigan Personalized Letters Number &#36; 89.99 Original price was: &#036;89.99. &#36; 54.99 Current price is: &#036;54.99. Sale! Quick View Ottawa Black Bears Ottawa Black Bears Special Ugly Christmas Cardigan Personalized Letters Number &#36; 89.99 Original price was: &#036;89.99. &#36; 54.99 Current price is: &#036;54.99. SHOP BY CATEGORY Explore jerseys, hoodies, mugs, posters, and more Bournemouth 1 products Shop → Brentford 4 products Shop → Brighton &amp; Hove Albion 2 products Shop → Colorado Avalanche 5 products Shop → Everton 4 products Shop → Fulham 4 products Shop → Ipswich Town 1 products Shop → Southampton 1 products Shop → West Ham United 4 products Shop → Wolverhampton Wanderers 4 products Shop → Albany FireWolves 85 products Shop → Anaheim Ducks 4 products Shop → Arsenal 8 products Shop → Aston Villa 7 products Shop → Barrie Colts 40 products Shop → Boston Bruins 7 products Shop → Brampton Steelheads 15 products Shop → Brantford Bulldogs 39 products Shop → Buffalo Bandits 122 products Shop → Buffalo Sabres 6 products Shop → Calgary Flames 6 products Shop → Calgary Roughnecks 89 products Shop → Calgary Roughnecks 1 products Shop → Cap 18 products Shop → Carolina Hurricanes 6 products Shop → Chelsea 11 products Shop → Chicago BlackHawks 6 products Shop → Colorado Mammoth 84 products Shop → Columbus Blue Jackets 6 products Shop → Crystal Palace 4 products Shop → Dallas Stars 5 products Shop → Detroit Red Wings 5 products Shop → Edmonton Oilers 5 products Shop → EPL 120 products Shop → Erie Otters 62 products Shop → Flint Firebirds 53 products Shop → Florida Panther 4 products Shop → Florida Panthers 1 products Shop → Georgia Swarm 78 products Shop → Georgia Swarm 1 products Shop → Guelph Storm 48 products Shop → Halifax Thunderbirds 80 products Shop → Kingston Frontenacs 42 products Shop → Kitchener Rangers 38 products Shop → Lacrosse 4 products Shop → Las Vegas Desert Dogs 78 products Shop → Leeds United 4 products Shop → Leicester City 4 products Shop → Liverpool 19 products Shop → London Knights 49 products Shop → Los Angeles Kings 5 products Shop → Manchester City 7 products Shop → Manchester United 11 products Shop → Minnesota Wild 6 products Shop → Mississauga Steelheads 29 products Shop → Montreal Canadiens 5 products Shop → Nashville Predators 5 products Shop → New Jersey Devils 5 products Shop → New York Islanders 5 products Shop → New York Rangers 5 products Shop → New York Riptide 37 products Shop → New York Riptide 1 products Shop → Newcastle United 4 products Shop → NHL 171 products Shop → Niagara IceDogs 44 products Shop → NLL 1192 products Shop → NLL Canada 448 products Shop → NLL Canada 1 products Shop → NLL Patric 2 products Shop → NLL USA 744 products Shop → NLL USA 1 products Shop → North Bay Battalion 43 products Shop → Nottingham Forest 4 products Shop → NYI 1 products Shop → NYR 1 products Shop → OHL 910 products Shop → OHL Canada 744 products Shop → OHL USA 166 products Shop → Oshawa Generals 47 products Shop → Ottawa 67&#039;s 44 products Shop → Ottawa Black Bears ",
+      "https://sportivestyle.com/collections/all": "All Leauge - sportivestyle.com Skip to content FREE SHIPPING On orders over $99 FREE SHIPPING On orders over $99 Search for: Shop Login Cart / &#36; 0.00 0 No products in the cart. Return to shop 0 Cart No products in the cart. Return to shop EPL 120 products NLL 1192 products OHL 910 products PITCHSIDE WEAR Fan merchandise for NLL, EPL, and OHL. Made to order, no inventory, nationwide delivery in 7–12 days. IG FB X TT SHOP NLL Collection EPL Collection OHL Collection Flash Sale All Products SUPPORT How to Order Shipping Policy Return Policy FAQ Contact Support COMPANY About Us Our Story Blog Track Order Contact POLICIES Privacy Policy Terms &amp; Conditions Refund Policy Shipping &amp; Delivery Cookies Policy © 2025 sportivestyle. All rights reserved. VISA MC AMEX PAYPAL Visa PayPal Stripe MasterCard Cash On Delivery Copyright 2026 © sportivestyle Search for: Shop Login Login Username or email address&nbsp; * Required Password&nbsp; * Required Remember me Log in Lost your password?",
+      "https://sportivestyle.com/shop": "Shop - sportivestyle.com Skip to content FREE SHIPPING On orders over $99 FREE SHIPPING On orders over $99 Search for: Shop Login Cart / &#36; 0.00 0 No products in the cart. Return to shop 0 Cart No products in the cart. Return to shop Home &#47; Shop Filter Showing 1&ndash;12 of 2398 results Default sorting Sort by popularity Sort by average rating Sort by latest Sort by price: low to high Sort by price: high to low You need to assign Widgets to \"Shop Sidebar\" in Appearance > Widgets to show anything here Sale! Quick View Ottawa Black Bears Ottawa Black Bears Albany FireWolves Lacrosse Jersey – Breathable Athletic Game Day Apparel for Men &#038; Women Fans &#36; 72.99 Original price was: &#036;72.99. &#36; 45.99 Current price is: &#036;45.99. Sale! Quick View Ottawa Black Bears Ottawa Black Bears Baseball Jersey x Starwar Personalized Name &#038; Numbers &#36; 99.99 Original price was: &#036;99.99. &#36; 49.99 Current price is: &#036;49.99. Sale! Quick View Ottawa Black Bears Ottawa Black Bears Christmas in July Hoodie NLL Holiday Pullover for Lacrosse Fans &#36; 72.99 Original price was: &#036;72.99. &#36; 45.99 Current price is: &#036;45.99. Sale! Quick View Ottawa Black Bears Ottawa Black Bears Christmas in July Hoodie Santa Belt Design Funny Holiday Pullover for Lacrosse Fans Men and Women &#36; 72.99 Original price was: &#036;72.99. &#36; 45.99 Current price is: &#036;45.99. Sale! Quick View Ottawa Black Bears Ottawa Black Bears Hawaiian Shirt Men’s Aloha Beach Shirt with Team Print Summer Vacation Button Down Fan Apparel Gift &#36; 89.99 Original price was: &#036;89.99. &#36; 44.99 Current price is: &#036;44.99. Sale! Quick View Ottawa Black Bears Ottawa Black Bears Hoodie Grateful Dead Collaboration Pullover Sweatshirt for Men Women Fans NLL Lacrosse Streetwear Gift &#36; 72.99 Original price was: &#036;72.99. &#36; 45.99 Current price is: &#036;45.99. Sale! Quick View Ottawa Black Bears Ottawa Black Bears Hoodie/Shirt/Mask hoodie &#36; 72.99 Original price was: &#036;72.99. &#36; 45.99 Current price is: &#036;45.99. Sale! Quick View Ottawa Black Bears Ottawa Black Bears Hoodie/Tee/Long SleevePersonalized Numbers &#36; 72.99 Original price was: &#036;72.99. &#36; 45.99 Current price is: &#036;45.99. Sale! Quick View Ottawa Black Bears Ottawa Black Bears Jersey Personalized Names And Numbers for Lacrosse Fans Men and Women &#36; 99.99 Original price was: &#036;99.99. &#36; 54.99 Current price is: &#036;54.99. Quick View Ottawa Black Bears Ottawa Black Bears Men Boxer &#36; 34.99 Sale! Quick View Ottawa Black Bears Ottawa Black Bears Slide Sandals for Men and Women Comfortable Football Team Slippers for Game Day Gifts &#038; Everyday Wear &#36; 69.99 Original price was: &#036;69.99. &#36; 39.99 Current price is: &#036;39.99. Sale! Quick View Ottawa Black Bears Ottawa Black Bears Special Camo Personalized Letters And Numbers &#36; 72.99 Original price was: &#036;72.99. &#36; 45.99 Current price is: &#036;45.99. 1 2 3 4 &hellip; 198 199 200 PITCHSIDE WEAR Fan merchandise for NLL, EPL, and OHL. Made to order, no inventory, nationwide delivery in 7–12 days. IG FB X TT SHOP NLL Collection EPL Collection OHL Collection Flash Sale All Products SUPPORT How to Order Shipping Policy Return Policy FAQ Contact Support COMPANY About Us Our Story Blog Track Order Contact POLICIES Privacy Policy Terms &amp; Conditions Refund Policy Shipping &amp; Delivery Cookies Policy © 2025 sportivestyle. All rights reserved. VISA MC AMEX PAYPAL Visa PayPal Stripe MasterCard Cash On Delivery Copyright 2026 © sportivestyle Search for: Shop Login Login Username or email address&nbsp; * Required Password&nbsp; * Required Remember me Log in Lost your password?",
+      "https://sportivestyle.com/faq": "FAQ - sportivestyle.com Skip to content FREE SHIPPING On orders over $99 FREE SHIPPING On orders over $99 Search for: Shop Login Cart / &#36; 0.00 0 No products in the cart. Return to shop 0 Cart No products in the cart. Return to shop HELP CENTER Frequently Asked Questions Quick answers about ordering, customization, shipping, returns, and made-to-order fan gear. Ordering How do I place an order? Choose your league, select a product, customize it if available, then complete checkout. We start production after your order is confirmed. Do I need an account to order? No. You can checkout as a guest and still receive order updates by email. Can I change my order after checkout? You can request changes within 12 hours after purchase. Once production starts, changes may no longer be possible. Customization Can I add my name or number? Yes, selected products allow custom name, number, or personal details. Please review your customization carefully before checkout. Will the final product look exactly like the preview? We aim to match the preview as closely as possible. Minor color differences may occur due to screen settings and production materials. Shipping How long does delivery take? Most orders are delivered within 7–12 business days, including production and shipping time. Do you offer free shipping? Yes. We offer free shipping on orders over $99. Will I receive tracking? Yes. Once your order ships, you will receive a tracking link by email. Returns &#038; Refunds Can I return a made-to-order item? Because each item is made after purchase, we do not accept returns for change of mind, incorrect size choice, or personal preference. What if my item has a defect? If there is a confirmed manufacturing or design issue, we will offer a replacement or refund. How soon should I report a problem? Please contact us within 7 days of delivery with your order number and clear photos of the issue. STILL NEED HELP? Contact our support team Send us your order number and question. We’ll help you as quickly as possible. CONTACT SUPPORT → PITCHSIDE WEAR Fan merchandise for NLL, EPL, and OHL. Made to order, no inventory, nationwide delivery in 7–12 days. IG FB X TT SHOP NLL Collection EPL Collection OHL Collection Flash Sale All Products SUPPORT How to Order Shipping Policy Return Policy FAQ Contact Support COMPANY About Us Our Story Blog Track Order Contact POLICIES Privacy Policy Terms &amp; Conditions Refund Policy Shipping &amp; Delivery Cookies Policy © 2025 sportivestyle. All rights reserved. VISA MC AMEX PAYPAL Visa PayPal Stripe MasterCard Cash On Delivery Copyright 2026 © sportivestyle Search for: Shop Login Login Username or email address&nbsp; * Required Password&nbsp; * Required Remember me Log in Lost your password?"
+    },
+    "candidate_urls": [
+      "https://sportivestyle.com/",
+      "https://sportivestyle.com/about",
+      "https://sportivestyle.com/pages/about",
+      "https://sportivestyle.com/collections/all",
+      "https://sportivestyle.com/shop",
+      "https://sportivestyle.com/faq"
+    ],
+    "notes": "This engine fetches direct public pages and user-provided source URLs. Search-engine style competitor discovery remains a separate research capability."
+  },
+  "alysha_compliance": {
+    "target": "100% Brand Intake structure compliance",
+    "required_sections_present": [
+      "Brand Overview",
+      "Brand Story & Origin",
+      "Product Catalog",
+      "What Makes Them Different",
+      "Competitor Landscape",
+      "The Alternative Solution",
+      "Core Audience(s)",
+      "Brand Voice & Tone",
+      "Creative Constraints",
+      "Must-Know Strategic Context",
+      "Research Notes"
+    ],
+    "missing_sections": [],
+    "status": "pass",
+    "notes": "All required sections present with appropriate structure. Research gaps clearly identified where information was unavailable from sources."
+  }
+}

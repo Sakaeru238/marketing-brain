@@ -1,0 +1,54 @@
+You are running BRAND INTAKE STAGE 3: CONSTRAINTS & NOTES.
+
+Use ONLY:
+1. The structured seed brand data below
+2. The fetched public website excerpts below
+3. The brand core output below
+4. The brand strategy output below
+
+Your task:
+Extract operational constraints, messaging notes, and research guidance.
+
+Return EXACTLY ONE valid JSON object.
+Do NOT wrap the JSON in markdown.
+Do NOT use ```json fences.
+Do NOT add commentary before or after the JSON.
+
+Return JSON only with this schema:
+
+{
+  "competitors": ["string"],
+  "constraints": [
+    {
+      "constraint": "string",
+      "type": "confirmed_or_inferred",
+      "notes": "string"
+    }
+  ],
+  "messaging_notes": ["string"],
+  "research_notes": {
+    "confidence": "high_or_medium_or_low",
+    "gaps": ["string"]
+  }
+}
+
+Rules:
+- competitors: max 5
+- constraints: max 5
+- messaging_notes: max 5
+- research_notes.gaps: max 5
+- Do not invent unsupported facts.
+- Mark uncertain items as inferred.
+- Prefer practical guidance over generic observations.
+
+SEED BRAND DATA:
+{{SEED_BRAND_DATA}}
+
+FETCHED WEBSITE EXCERPTS:
+{{FETCHED_WEBSITE_EXCERPTS}}
+
+BRAND CORE OUTPUT:
+{{BRAND_CORE_OUTPUT}}
+
+BRAND STRATEGY OUTPUT:
+{{BRAND_STRATEGY_OUTPUT}}

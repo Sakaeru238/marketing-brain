@@ -1,0 +1,57 @@
+[
+  {
+    "expanded_audience_id": "EXP_AODAI_001",
+    "source_audience_id": "AUD_IN_AODAI_01",
+    "brand_id": "AODAI",
+    "audience_name": "US strong coffee seekers",
+    "pain_point": "Mainstream coffee feels too weak or bland",
+    "desired_outcome": "Wants stronger caffeine and bolder taste",
+    "evidence_source": "to_be_filled_after_research",
+    "confidence": "high",
+    "created_by": "ai"
+  },
+  {
+    "expanded_audience_id": "EXP_AODAI_002",
+    "source_audience_id": "AUD_IN_AODAI_02",
+    "brand_id": "AODAI",
+    "audience_name": "Vietnamese diaspora missing home coffee taste",
+    "pain_point": "Cannot easily find authentic Vietnamese coffee in the US",
+    "desired_outcome": "Wants familiar robusta taste and cultural authenticity at home",
+    "evidence_source": "to_be_filled_after_research",
+    "confidence": "high",
+    "created_by": "ai"
+  },
+  {
+    "expanded_audience_id": "EXP_AODAI_003",
+    "source_audience_id": "AUD_IN_AODAI_01",
+    "brand_id": "AODAI",
+    "audience_name": "Busy professionals who want convenience",
+    "pain_point": "No time or equipment for cafe-style coffee routines",
+    "desired_outcome": "Wants strong coffee fast with no machine needed",
+    "evidence_source": "to_be_filled_after_research",
+    "confidence": "medium",
+    "created_by": "ai"
+  },
+  {
+    "expanded_audience_id": "EXP_NONLA_001",
+    "source_audience_id": "AUD_IN_NONLA_01",
+    "brand_id": "NONLA",
+    "audience_name": "Flavor-seeking coffee drinkers",
+    "pain_point": "Standard coffee feels repetitive and less exciting",
+    "desired_outcome": "Wants novelty flavors with easy preparation",
+    "evidence_source": "to_be_filled_after_research",
+    "confidence": "medium",
+    "created_by": "ai"
+  },
+  {
+    "expanded_audience_id": "EXP_NONLA_002",
+    "source_audience_id": "AUD_IN_NONLA_01",
+    "brand_id": "NONLA",
+    "audience_name": "Young convenience-first coffee shoppers",
+    "pain_point": "Needs quick drinks that feel fun and shareable",
+    "desired_outcome": "Wants easy prep plus taste variety",
+    "evidence_source": "to_be_filled_after_research",
+    "confidence": "medium",
+    "created_by": "ai"
+  }
+]

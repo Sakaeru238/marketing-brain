@@ -1,0 +1,190 @@
+{
+  "test_id": "TEST_NONLA_01",
+  "run": {
+    "test_id": "TEST_NONLA_01",
+    "brand_id": "NONLA",
+    "product_id": "NONLA_COCONUT_8",
+    "offer_id": "OFF_NONLA_35",
+    "seed_audience_id": "AUD_IN_NONLA_01",
+    "ai_audience_id": "AUD_AI_NONLA_01",
+    "objective": "traffic",
+    "claude_mode": "pro_manual",
+    "use_brand_intake": "TRUE",
+    "use_alysha_strategy": "TRUE",
+    "expected_focus": "coconut flavor; convenience; trial",
+    "success_check": "Flavor-specific messaging stays correct"
+  },
+  "brand": {
+    "brand_id": "NONLA",
+    "brand_name": "Nonla Coffee",
+    "brand_positioning": "Vietnamese coffee with flavor-forward convenience lines",
+    "brand_type": "mix/flavor + selected pure SKUs",
+    "origin": "Buon Ma Thuot, Dak Lak, Vietnam",
+    "Brand Type": "Ecommerce",
+    "default_market": "US; CA",
+    "brand_story_short": "Convenient Vietnamese coffee with flavored and lifestyle-friendly variants.",
+    "website": "https://nonlacafe.com/",
+    "notes": "Need clear separation between flavor lines and pure lines."
+  },
+  "product": {
+    "product_id": "NONLA_COCONUT_8",
+    "brand_id": "NONLA",
+    "product_name": "Nonla Coconut Coffee 8 Pods",
+    "product_line": "Nonla Flavor",
+    "product_type": "flavored coffee",
+    "format": "instant pod",
+    "pack_size": "8 pods",
+    "sku": "NON-8-coconut",
+    "list_price_usd": 19.99,
+    "priority_market": "US; CA",
+    "status": "active",
+    "notes": "Flavor SKU"
+  },
+  "offer": {
+    "offer_id": "OFF_NONLA_35",
+    "brand_id": "NONLA",
+    "product_id": "ALL",
+    "offer_text": "35% OFF first order",
+    "offer_type": "discount",
+    "market": "US; CA",
+    "status": "active",
+    "notes": "Brand-level new customer offer"
+  },
+  "audience_core": {
+    "seed_audience": {
+      "audience_id": "AUD_IN_NONLA_01",
+      "brand_id": "NONLA",
+      "audience_name": "Customers in the US",
+      "source_type": "user_input",
+      "pain_point_input": null,
+      "desired_outcome_input": null,
+      "pain_point_required": false,
+      "desired_outcome_required": false,
+      "notes": "Broad initial audience seed; AI can expand after research"
+    },
+    "ai_expanded_audience": {
+      "expanded_audience_id": "EXP_NONLA_001",
+      "source_audience_id": "AUD_IN_NONLA_01",
+      "brand_id": "NONLA",
+      "audience_name": "Flavor-seeking coffee drinkers",
+      "pain_point": "Standard coffee feels repetitive and less exciting",
+      "desired_outcome": "Wants novelty flavors with easy preparation",
+      "evidence_source": "to_be_filled_after_research",
+      "confidence": "medium",
+      "created_by": "ai"
+    },
+    "audience_name": "Flavor-seeking coffee drinkers",
+    "pain_point": "Standard coffee feels repetitive and less exciting",
+    "desired_outcome": "Wants novelty flavors with easy preparation"
+  },
+  "core_truth": [
+    {
+      "truth_id": "TRUTH_NONLA_01",
+      "brand_id": "NONLA",
+      "truth_type": "positioning",
+      "truth_text": "Vietnamese coffee brand with flavor-forward product lines",
+      "priority": "high",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_NONLA_02",
+      "brand_id": "NONLA",
+      "truth_type": "benefit",
+      "truth_text": "Convenient instant coffee format",
+      "priority": "high",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_NONLA_03",
+      "brand_id": "NONLA",
+      "truth_type": "usage",
+      "truth_text": "Works in hot or cold water",
+      "priority": "medium",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_NONLA_04",
+      "brand_id": "NONLA",
+      "truth_type": "product_scope",
+      "truth_text": "Includes flavored lines and selected pure lines",
+      "priority": "high",
+      "source": "brand"
+    }
+  ],
+  "guardrails": [
+    {
+      "guardrail_id": "GR_NONLA_01",
+      "brand_id": "NONLA",
+      "guardrail_text": "Do not present all Nonla products as pure coffee.",
+      "severity": "critical",
+      "applies_to": "all outputs"
+    },
+    {
+      "guardrail_id": "GR_NONLA_02",
+      "brand_id": "NONLA",
+      "guardrail_text": "For flavored SKUs, clearly mention the flavor variant.",
+      "severity": "high",
+      "applies_to": "product-level outputs"
+    },
+    {
+      "guardrail_id": "GR_NONLA_03",
+      "brand_id": "NONLA",
+      "guardrail_text": "For pure Nonla SKUs, do not inherit flavor claims from coconut/lemon lines.",
+      "severity": "high",
+      "applies_to": "pure SKU outputs"
+    }
+  ],
+  "product_benefits": [
+    {
+      "benefit_id": "BEN_NC_01",
+      "product_id": "NONLA_COCONUT_8",
+      "brand_id": "NONLA",
+      "benefit_type": "flavor",
+      "benefit_text": "Coconut flavor profile",
+      "priority": "high"
+    },
+    {
+      "benefit_id": "BEN_NC_02",
+      "product_id": "NONLA_COCONUT_8",
+      "brand_id": "NONLA",
+      "benefit_type": "convenience",
+      "benefit_text": "No machine needed",
+      "priority": "high"
+    }
+  ],
+  "product_usage": [
+    {
+      "usage_id": "USE_NONLA_01",
+      "product_id": "NONLA_COCONUT_8",
+      "step_no": 1,
+      "usage_text": "Open pod/capsule",
+      "applies_to": "all channels"
+    },
+    {
+      "usage_id": "USE_NONLA_02",
+      "product_id": "NONLA_COCONUT_8",
+      "step_no": 2,
+      "usage_text": "Pour powder into cup or bottle",
+      "applies_to": "all channels"
+    },
+    {
+      "usage_id": "USE_NONLA_03",
+      "product_id": "NONLA_COCONUT_8",
+      "step_no": 3,
+      "usage_text": "Add hot or cold water",
+      "applies_to": "all channels"
+    },
+    {
+      "usage_id": "USE_NONLA_04",
+      "product_id": "NONLA_COCONUT_8",
+      "step_no": 4,
+      "usage_text": "Shake or stir for 5 to 10 seconds",
+      "applies_to": "all channels"
+    }
+  ],
+  "metadata": {
+    "source_file": "marketing_brain_control_panel_v3.xlsx",
+    "source_type": "excel_export",
+    "notes": "Raw JSON export from legacy Excel control panel."
+  }
+}

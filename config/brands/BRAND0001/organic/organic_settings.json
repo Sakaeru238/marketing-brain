@@ -1,0 +1,6 @@
+{
+  "brand_id": "BRAND0001",
+  "module": "organic",
+  "enabled": true,
+  "notes": "Brand-specific organic settings can be extended here without changing global config."
+}

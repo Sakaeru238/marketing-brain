@@ -1,0 +1,15 @@
+{
+  "_id": "TEST_NONLA_01",
+  "generated_at": "2026-04-27T09:27:44.964964",
+  "claude_research_core": {
+    "status": "skipped",
+    "reason": "Claude research core not attempted.",
+    "raw_response": null,
+    "parse_error": null,
+    "prompt_key": "run_claude_research_core",
+    "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\research\\research_core_prompt.txt"
+  },
+  "research_summary": {},
+  "trend_findings": [],
+  "note_findings": []
+}

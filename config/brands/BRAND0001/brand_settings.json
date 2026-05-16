@@ -1,0 +1,15 @@
+{
+  "brand_id": "BRAND0001",
+  "brand_name": "sportivestyle",
+  "status": "active",
+  "default_language": "en",
+  "default_market": "US,CA,ENG,GER",
+  "default_timezone": "America/New_York",
+  "enabled_modules": {
+    "brand_intake": true,
+    "brand_learning": true,
+    "organic": true,
+    "paid_ads": true,
+    "pod": true
+  }
+}

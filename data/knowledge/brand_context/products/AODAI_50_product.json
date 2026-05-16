@@ -1,0 +1,132 @@
+{
+  "product": {
+    "product_id": "AODAI_50",
+    "brand_id": "AODAI",
+    "product_name": "Freeze-Dried Vietnamese Espresso 50 Pods",
+    "product_line": "AoDai Pure",
+    "product_type": "pure coffee",
+    "format": "instant pod",
+    "pack_size": "50 pods",
+    "sku": "AD-50-coffee",
+    "list_price_usd": 49.99,
+    "priority_market": "US; CA",
+    "status": "active",
+    "notes": "Value SKU"
+  },
+  "brand": {
+    "brand_id": "AODAI",
+    "brand_name": "AoDai Coffee",
+    "brand_positioning": "Pure Vietnamese Coffee",
+    "brand_type": "pure coffee",
+    "origin": "Buon Ma Thuot, Dak Lak, Vietnam",
+    "Brand Type": "Ecommerce",
+    "default_market": "US; CA",
+    "brand_story_short": "100% Vietnamese Robusta freeze-dried espresso with strong authentic taste.",
+    "website": "https://nonlacafe.com/",
+    "notes": "Do not mix with flavor messaging."
+  },
+  "benefits": [
+    {
+      "benefit_id": "BEN_A50_01",
+      "product_id": "AODAI_50",
+      "brand_id": "AODAI",
+      "benefit_type": "value",
+      "benefit_text": "Under $3 per cup angle possible",
+      "priority": "high"
+    },
+    {
+      "benefit_id": "BEN_A50_02",
+      "product_id": "AODAI_50",
+      "brand_id": "AODAI",
+      "benefit_type": "strength",
+      "benefit_text": "Strong authentic Vietnamese coffee taste",
+      "priority": "high"
+    }
+  ],
+  "usage": [],
+  "brand_guardrails": [
+    {
+      "guardrail_id": "GR_AODAI_01",
+      "brand_id": "AODAI",
+      "guardrail_text": "Do not describe AoDai as flavored coffee.",
+      "severity": "critical",
+      "applies_to": "all outputs"
+    },
+    {
+      "guardrail_id": "GR_AODAI_02",
+      "brand_id": "AODAI",
+      "guardrail_text": "Do not mix AoDai positioning with Nonla flavor messaging.",
+      "severity": "critical",
+      "applies_to": "all outputs"
+    },
+    {
+      "guardrail_id": "GR_AODAI_03",
+      "brand_id": "AODAI",
+      "guardrail_text": "Keep messaging focused on pure Vietnamese coffee.",
+      "severity": "high",
+      "applies_to": "all outputs"
+    }
+  ],
+  "brand_core_truth": [
+    {
+      "truth_id": "TRUTH_AODAI_01",
+      "brand_id": "AODAI",
+      "truth_type": "ingredient",
+      "truth_text": "100% Vietnamese Robusta",
+      "priority": "high",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_AODAI_02",
+      "brand_id": "AODAI",
+      "truth_type": "positioning",
+      "truth_text": "Pure coffee",
+      "priority": "high",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_AODAI_03",
+      "brand_id": "AODAI",
+      "truth_type": "format",
+      "truth_text": "Freeze-dried Vietnamese espresso",
+      "priority": "high",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_AODAI_04",
+      "brand_id": "AODAI",
+      "truth_type": "benefit",
+      "truth_text": "No machine needed",
+      "priority": "high",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_AODAI_05",
+      "brand_id": "AODAI",
+      "truth_type": "usage",
+      "truth_text": "Works in hot or cold water",
+      "priority": "medium",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_AODAI_06",
+      "brand_id": "AODAI",
+      "truth_type": "taste",
+      "truth_text": "Strong authentic Vietnamese coffee taste",
+      "priority": "high",
+      "source": "brand"
+    }
+  ],
+  "offers": [
+    {
+      "offer_id": "OFF_AODAI_35",
+      "brand_id": "AODAI",
+      "product_id": "ALL",
+      "offer_text": "35% OFF first order",
+      "offer_type": "discount",
+      "market": "US; CA",
+      "status": "active",
+      "notes": "Brand-level new customer offer"
+    }
+  ]
+}

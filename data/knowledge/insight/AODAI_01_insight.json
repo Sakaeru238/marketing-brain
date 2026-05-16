@@ -1,0 +1,32 @@
+{
+  "stage": "insight",
+  "status": "ready",
+  "input_stage": "research",
+  "data": {
+    "insight_summary": {
+      "total_items": 0,
+      "categories": {},
+      "research_overview": null,
+      "top_findings_count": 0,
+      "key_risks_count": 0,
+      "key_opportunities_count": 0,
+      "hooks_count": 0,
+      "claims_count": 0,
+      "warnings_count": 0,
+      "recommended_focus_count": 0
+    },
+    "categorized_items": {},
+    "research_summary": {},
+    "top_findings": [],
+    "key_risks": [],
+    "key_opportunities": [],
+    "competitor_findings": [],
+    "trend_findings": [],
+    "ad_findings": [],
+    "note_findings": [],
+    "hooks": [],
+    "claims": [],
+    "warnings": [],
+    "recommended_focus": []
+  }
+}

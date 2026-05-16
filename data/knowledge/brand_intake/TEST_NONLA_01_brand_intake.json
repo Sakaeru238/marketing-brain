@@ -1,0 +1,207 @@
+{
+  "timestamp": "2026-04-27T16:40:57.464051",
+  "test_id": "TEST_NONLA_01",
+  "objective": "traffic",
+  "claude_mode": "api",
+  "use_brand_intake": true,
+  "use_alysha_strategy": true,
+  "expected_focus": "coconut flavor; convenience; trial",
+  "success_check": "Flavor-specific messaging stays correct",
+  "selling_orientation": [
+    "gift"
+  ],
+  "occasion": [
+    "mothers_day"
+  ],
+  "brand": {
+    "brand_id": "NONLA",
+    "brand_name": "Nonla Coffee",
+    "website": "https://nonlacafe.com/",
+    "brand_positioning": "Vietnamese coffee with flavor-forward convenience lines",
+    "brand_type": "mix/flavor + selected pure SKUs",
+    "origin": "Buon Ma Thuot, Dak Lak, Vietnam",
+    "default_market": "US; CA",
+    "brand_story_short": "Convenient Vietnamese coffee with flavored and lifestyle-friendly variants.",
+    "notes": "Need clear separation between flavor lines and pure lines."
+  },
+  "product": {
+    "product_id": "NONLA_COCONUT_8",
+    "product_name": "Nonla Coconut Coffee 8 Pods",
+    "product_line": "Nonla Flavor",
+    "product_type": "flavored coffee",
+    "format": "instant pod",
+    "pack_size": "8 pods",
+    "sku": "NON-8-coconut",
+    "list_price_usd": 19.99,
+    "priority_market": "US; CA",
+    "status": "active",
+    "notes": "Flavor SKU"
+  },
+  "offer": {
+    "offer_id": "OFF_NONLA_35",
+    "offer_text": "35% OFF first order",
+    "offer_type": "discount",
+    "market": "US; CA",
+    "status": "active",
+    "notes": "Brand-level new customer offer"
+  },
+  "core_truth": [
+    "Vietnamese coffee brand with flavor-forward product lines",
+    "Convenient instant coffee format",
+    "Includes flavored lines and selected pure lines",
+    "Works in hot or cold water"
+  ],
+  "guardrails": [
+    "Do not present all Nonla products as pure coffee.",
+    "For flavored SKUs, clearly mention the flavor variant.",
+    "For pure Nonla SKUs, do not inherit flavor claims from coconut/lemon lines."
+  ],
+  "product_benefits": [
+    "Coconut flavor profile",
+    "No machine needed"
+  ],
+  "product_usage_steps": [
+    "Open pod/capsule",
+    "Pour powder into cup or bottle",
+    "Add hot or cold water",
+    "Shake or stir for 5 to 10 seconds"
+  ],
+  "audience_seed": {
+    "audience_id": "AUD_IN_NONLA_01",
+    "audience_name": "Customers in the US",
+    "source_type": "user_input",
+    "pain_point_input": NaN,
+    "desired_outcome_input": NaN,
+    "pain_point_required": false,
+    "desired_outcome_required": false,
+    "notes": "Broad initial audience seed; AI can expand after research"
+  },
+  "audience_ai_expanded": {
+    "expanded_audience_id": "EXP_NONLA_001",
+    "audience_name": "Flavor-seeking coffee drinkers",
+    "pain_point": "Standard coffee feels repetitive and less exciting",
+    "desired_outcome": "Wants novelty flavors with easy preparation",
+    "evidence_source": "to_be_filled_after_research",
+    "confidence": "medium",
+    "created_by": "ai"
+  },
+  "positioning_summary": "Nonla Coffee | Vietnamese coffee with flavor-forward convenience lines | Nonla Coconut Coffee 8 Pods",
+  "audience_core": {
+    "audience_name": "Flavor-seeking coffee drinkers",
+    "pain_point": "Standard coffee feels repetitive and less exciting",
+    "desired_outcome": "Wants novelty flavors with easy preparation"
+  },
+  "differentiation": [
+    "Vietnamese coffee with flavor-forward convenience lines",
+    "Category focus: mix/flavor + selected pure SKUs",
+    "Origin: Buon Ma Thuot, Dak Lak, Vietnam",
+    "Vietnamese coffee brand with flavor-forward product lines",
+    "Convenient instant coffee format",
+    "Includes flavored lines and selected pure lines"
+  ],
+  "message_pillars": [
+    "Vietnamese coffee brand with flavor-forward product lines",
+    "Convenient instant coffee format",
+    "Includes flavored lines and selected pure lines",
+    "Works in hot or cold water",
+    "Coconut flavor profile",
+    "No machine needed"
+  ],
+  "creative_angles": [
+    "Turn 'Standard coffee feels repetitive and less exciting' into 'Wants novelty flavors with easy preparation' for Flavor-seeking coffee drinkers.",
+    "Lead with vietnamese coffee with flavor-forward convenience lines instead of generic coffee messaging.",
+    "Use Vietnamese coffee brand with flavor-forward product lines as the primary proof point.",
+    "Show convenience clearly with the instant pod and simple usage.",
+    "Use 35% OFF first order to reduce trial friction and create a clear reason to act now."
+  ],
+  "research_focus": [
+    "Selling orientation: gift",
+    "Occasion: mothers_day",
+    "Audience: Flavor-seeking coffee drinkers",
+    "Pain point: Standard coffee feels repetitive and less exciting",
+    "Desired outcome: Wants novelty flavors with easy preparation",
+    "Differentiate with: Vietnamese coffee brand with flavor-forward product lines",
+    "Offer role: 35% OFF first order"
+  ],
+  "strategy_brief": {
+    "selling_orientation": [
+      "gift"
+    ],
+    "occasion": [
+      "mothers_day"
+    ],
+    "audience_core": "Flavor-seeking coffee drinkers",
+    "pain_point": "Standard coffee feels repetitive and less exciting",
+    "desired_outcome": "Wants novelty flavors with easy preparation",
+    "positioning_summary": "Nonla Coffee | Vietnamese coffee with flavor-forward convenience lines | Nonla Coconut Coffee 8 Pods",
+    "differentiation": [
+      "Vietnamese coffee with flavor-forward convenience lines",
+      "Category focus: mix/flavor + selected pure SKUs",
+      "Origin: Buon Ma Thuot, Dak Lak, Vietnam",
+      "Vietnamese coffee brand with flavor-forward product lines"
+    ],
+    "message_pillars": [
+      "Vietnamese coffee brand with flavor-forward product lines",
+      "Convenient instant coffee format",
+      "Includes flavored lines and selected pure lines",
+      "Works in hot or cold water",
+      "Coconut flavor profile",
+      "No machine needed"
+    ],
+    "creative_angles": [
+      "Turn 'Standard coffee feels repetitive and less exciting' into 'Wants novelty flavors with easy preparation' for Flavor-seeking coffee drinkers.",
+      "Lead with vietnamese coffee with flavor-forward convenience lines instead of generic coffee messaging.",
+      "Use Vietnamese coffee brand with flavor-forward product lines as the primary proof point.",
+      "Show convenience clearly with the instant pod and simple usage.",
+      "Use 35% OFF first order to reduce trial friction and create a clear reason to act now."
+    ],
+    "offer_role": "35% OFF first order",
+    "do_not_say": [
+      "Do not present all Nonla products as pure coffee.",
+      "For flavored SKUs, clearly mention the flavor variant.",
+      "For pure Nonla SKUs, do not inherit flavor claims from coconut/lemon lines."
+    ]
+  },
+  "website_context": {
+    "status": "success",
+    "reason": null,
+    "sources": [
+      "https://nonlacafe.com/",
+      "https://nonlacafe.com/about",
+      "https://nonlacafe.com/pages/about",
+      "https://nonlacafe.com/shop"
+    ],
+    "pages": {
+      "https://nonlacafe.com/": "HomePage - Nonlacafe Skip to content Everything begins when you try Login Everything begins when you try Shop NONLA Coffee AODAI Coffee Our Story Review FAQ Search for: Cart / &#36; &nbsp;0.00 No products in the cart. Return to shop Cart No products in the cart. Return to shop 🎉 Everything begins when you try Elevated Coﬀee. Eﬀortless Enjoyment. Premium freeze-dried coffee capsules from Buôn Ma Thuột, Đắk Lắk. 6 roast levels, no machine needed. Just pick, pour, and enjoy. Discover Premium Coﬀee → Our Story Cafe-Quality Taste Ready in Seconds No Machine Needed ★★★★★ Rated 4.9/5 by Customers Experience the rich, bold taste of cafe-quality Vietnamese coﬀee, ready inseconds. No machine, no fuss—justexceptional flavor, anytime, anywhere. Experience the rich, bold taste of cafe-quality Vietnamese coﬀee, ready inseconds. No machine, no fuss—justexceptional flavor, anytime, anywhere. 100% Robusta Organic from Local Farms Carefully Selected Craft-Roasted in Vietnam WHY NONLA Premium Coffee, Simplified. From the highlands of Đắk Lắk to your cup experience the full spectrum of Vietnamese coffee. ❄️ True Brewed Flavor, Instantly This isn’t ordinary instant. Our advanced freeze-drying captures the full aroma and rich taste of freshly brewed Vietnamese coffee. ⚡ Your Cafe, Anywhere Enjoy a perfectly balanced cup—hot or iced—in moments. From your desk to the great outdoors, premium coffee is always within reach. ☕ Authentic Vietnamese Excellence Savor the legendary depth and robust character of 100% Robusta beans, ethically sourced from Vietnam’s Central Highlands. 🌱 Uncompromised Quality, Unmatched Ease Forget the machines and the mess. Get a consistently delicious, high-quality coffee experience with ultimate portability. 🛡️ Food Safety Certified Produced in an ISO-certified facility under strict quality standards. 🌍 Sugar-Free &amp; Vegan Pure coffee only. No sugar. No additives. No Sugar No Machine Gluten Free Vegan Friendly Non-GMO HALAL SIMPLE AS 1-2-3 1. Select Your Roast. 2. Add Water (Hot or Cold). 3. Savor the Quality ☕ Pick Your Level Choose from 6 roast levels — from gentle Light to bold Extra Dark. 💧 Pour N Stir Open the capsule, pour into hot or cold water. Dissolves instantly. ✨ Enjoy Your Way Drink it black, add milk, or pour over ice. Perfect anytime. FIND YOUR FLAVOR 6 Roast Levels, 6 Vietnamese Cities Each roast level is named after a Vietnamese city, carrying its unique character and spirit. Level 1 Level 2 Level 3 Level 4 Level 5 Level 6 1 Light Roast · Da Nang Gentle aroma, mild flavor. Perfect for a light, easy-drinking cup. Intensity: 2 Light+ Roast · Sai Gon Smooth taste with a hint of sweetness. Ideal for casual coffee lovers. Intensity: 3 Medium Roast · Dak Lak Balanced flavor with pleasant bitterness and rich aroma. Intensity: 4 Medium+ Roast · Hue Full-bodied with harmonious blend of aroma and strength. Intensity: 5 Dark Roast · Ha Noi Intense aroma and bold taste. Favored by strong coffee drinkers. Intensity: 6 Extra Dark Roast · Nha Trang Deep, robust flavor with lingering notes of dark chocolate. Intensity: OUR COLLECTION Shop Our Coffee 10 premium products across two iconic lines – Nonla Coffee and Aodai Coffee. All Product AoDai Coffee NonLa Coffee Quick View AODAI Coffee Vietnamese Coffee Gift Set for Mom – Freeze-Dried Espresso Pods (No Machine) &#36; &nbsp;7.99 &ndash; &#36; &nbsp;32.99 Price range: &#36;&nbsp;7.99 through &#36;&nbsp;32.99 Quick View AODAI Coffee AODAI 100% Pure Cacao &#8211; Freeze-Dried Unsweetened Dark Chocolate | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View AODAI Coffee AODAI Freeze-Dried Vietnamese Instant Espresso Coffee (50 Pods) &#36; &nbsp;32.99 50 capsules/box &#036;0.66/cup Quick View AODAI Coffee AODAI Level 1–6 Tasting Set &#8211; Freeze-Dried Vietnamese Espresso | 12 Pods &#36; &nbsp;12.99 12 capsules/box &#036;1.08/cup Quick View AODAI Coffee AODAI Level 1–6 Tasting Set &#8211; Freeze-Dried Vietnamese Espresso | 6 Pods &#36; &nbsp;7.99 6 capsules/box &#036;1.33/cup Quick View NONLA Coffee NONLA Level 1–6 Gift Set &#8211; Freeze-Dried Instant Espresso | 24 Pods &#36; &nbsp;35.99 24 capsules/box &#036;1.50/cup Quick View NONLA Coffee NONLA Flavor Mix Set &#8211; Multi Roast &#038; Flavored Instant Espresso | 18 Pods &#36; &nbsp;27.99 18 capsules/box &#036;1.56/cup Quick View NONLA Coffee NONLA Discovery Mix &#8211; Pure Coffee, Cacao &#038; Lemon Espresso | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View NONLA Coffee NONLA Citrus Lemon &#8211; Freeze-Dried Instant Coffee Pods | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View NONLA Coffee NONLA Cacao Mocha &#8211; Freeze-Dried Instant Coffee Pods | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View AODAI Coffee Vietnamese Coffee Gift Set for Mom – Freeze-Dried Espresso Pods (No Machine) &#36; &nbsp;7.99 &ndash; &#36; &nbsp;32.99 Price range: &#36;&nbsp;7.99 through &#36;&nbsp;32.99 Quick View AODAI Coffee AODAI 100% Pure Cacao &#8211; F",
+      "https://nonlacafe.com/about": "About Us - Nonlacafe Skip to content Everything begins when you try Login Everything begins when you try Shop NONLA Coffee AODAI Coffee Our Story Review FAQ Search for: Cart / &#36; &nbsp;0.00 No products in the cart. Return to shop Cart No products in the cart. Return to shop ABOUT US NONLA VIETNAM GLOBAL | Good Coffee for Good Life NONLA VIETNAM GLOBAL is a pioneering Vietnamese coffee brand that applies freeze-drying technology – a modern method that preserves the original flavor of Central Highlands coffee beans . We offer a convenient, sophisticated, and authentically Vietnamese coffee experience, where each small coffee capsule contains a story of Vietnamese identity, creativity, and pride. NONLA VIETNAM GLOBAL aims to spread national pride through every drop of exquisite coffee, so that Vietnamese people can enjoy the taste of Vietnam, and the world can remember Vietnam through the taste of authentic coffee. Beyond simply delivering quality products, NONLA VIETNAM GLOBAL aims for a new lifestyle – where coffee is not just a beverage, but a bridge connecting people, emotions, and cultures. More than just coffee, it&#8217;s a symbol of the connection between tradition and modernity, between refined taste and a dynamic global lifestyle. Coffee Production Process Vision As a pioneering Vietnamese coffee brand in applying freeze-drying technology – a modern method that helps preserve the original flavor of Central Highlands coffee beans. A trusted partner in the international market. A modern coffee culture icon , representing the Vietnamese spirit – simplicity, creativity, and sustainability. Mission &#8220;Spreading the flavors of Vietnam – elevating the Vietnamese coffee experience on the world map.&#8221; NONLA GLOBAL aims to bring Vietnamese coffee closer to international friends with its products: Pure &#8211; Authentic taste &#8211; Easy to prepare (dissolves quickly in cold or hot water). No sugar &#8211; No coffee machine needed &#8211; No waiting – perfect for modern life. Helping people, everywhere, enjoy the authentic taste of Vietnamese coffee in just seconds. Core Values Made from pure Robusta coffee beans from the Central Highlands region – roasted and dried according to international standards. Freeze-drying technology preserves the structure, aroma, and flavor of coffee – ensuring a perfect cup of coffee anytime, anywhere. Each NONLA coffee capsule is designed for easy brewing and portability, perfect for anyone who wants a quick and convenient option. 6 roasting levels – 4 distinctive flavors representing the diversity and creativity in Vietnamese coffee culture. We are committed to using clean raw materials , practicing environmentally friendly production methods , and supporting the sustainable development of coffee farming communities . Certificates &#8211; Certifications International standard for quality management systems ISO 22000:2018 We confirm that the entire production process complies with international Halal standards. 1 Ingredient Robusta coffee beans are sourced from renowned growing regions in Vietnam, ensuring firm beans, high caffeine content, and a rich flavor. Each batch of raw materials is checked for moisture content, aroma, and thoroughly cleaned of impurities before being used in production. 2 Harvest The coffee cherries are harvested selectively. Only ripe, high-quality red cherries are picked. This harvesting method ensures consistent quality in the batch, and allows green cherries more time to ripen. 3 Roasting &amp; Grinding Coffee Each batch of coffee is roasted using a specific temperature profile to highlight the strong and aromatic flavor of Robusta. The coffee is then finely ground to ensure quick dissolution and preserve the full aroma during the freeze-drying process. Coffee Production Process 4 Freeze-drying technology The coffee extract is frozen at extremely low temperatures, then dried in a vacuum to allow water to evaporate directly from solid to vapor without passing through a liquid phase. This process preserves the original aroma, color, and flavor of the coffee, resulting in a dry, porous powder that dissolves quickly in cold water. 5 Quality Control After drying, the product undergoes rigorous testing: moisture content measurement, solubility testing, flavor evaluation, microbiological testing, and sensory evaluation. Only batches that meet the standards are moved to the packaging stage. This step demonstrates NONLA GLOBAL&#8217;s commitment to providing products that are not only delicious but also clean and safe. 6 Packaging &amp; Storage The coffee is packaged in convenient forms – capsules, small boxes, or premium gift sets – suitable for both daily enjoyment and gifting. Finally, the product is stored in a cool, dry environment and is ready for distribution. nonla NONLA VIETNAM GLOBAL is a pioneering Vietnamese coffee brand that applies freeze-drying technology to preserve the original flavor of Central Highlands coffee beans. “Premium Co",
+      "https://nonlacafe.com/pages/about": "About Us - Nonlacafe Skip to content Everything begins when you try Login Everything begins when you try Shop NONLA Coffee AODAI Coffee Our Story Review FAQ Search for: Cart / &#36; &nbsp;0.00 No products in the cart. Return to shop Cart No products in the cart. Return to shop ABOUT US NONLA VIETNAM GLOBAL | Good Coffee for Good Life NONLA VIETNAM GLOBAL is a pioneering Vietnamese coffee brand that applies freeze-drying technology – a modern method that preserves the original flavor of Central Highlands coffee beans . We offer a convenient, sophisticated, and authentically Vietnamese coffee experience, where each small coffee capsule contains a story of Vietnamese identity, creativity, and pride. NONLA VIETNAM GLOBAL aims to spread national pride through every drop of exquisite coffee, so that Vietnamese people can enjoy the taste of Vietnam, and the world can remember Vietnam through the taste of authentic coffee. Beyond simply delivering quality products, NONLA VIETNAM GLOBAL aims for a new lifestyle – where coffee is not just a beverage, but a bridge connecting people, emotions, and cultures. More than just coffee, it&#8217;s a symbol of the connection between tradition and modernity, between refined taste and a dynamic global lifestyle. Coffee Production Process Vision As a pioneering Vietnamese coffee brand in applying freeze-drying technology – a modern method that helps preserve the original flavor of Central Highlands coffee beans. A trusted partner in the international market. A modern coffee culture icon , representing the Vietnamese spirit – simplicity, creativity, and sustainability. Mission &#8220;Spreading the flavors of Vietnam – elevating the Vietnamese coffee experience on the world map.&#8221; NONLA GLOBAL aims to bring Vietnamese coffee closer to international friends with its products: Pure &#8211; Authentic taste &#8211; Easy to prepare (dissolves quickly in cold or hot water). No sugar &#8211; No coffee machine needed &#8211; No waiting – perfect for modern life. Helping people, everywhere, enjoy the authentic taste of Vietnamese coffee in just seconds. Core Values Made from pure Robusta coffee beans from the Central Highlands region – roasted and dried according to international standards. Freeze-drying technology preserves the structure, aroma, and flavor of coffee – ensuring a perfect cup of coffee anytime, anywhere. Each NONLA coffee capsule is designed for easy brewing and portability, perfect for anyone who wants a quick and convenient option. 6 roasting levels – 4 distinctive flavors representing the diversity and creativity in Vietnamese coffee culture. We are committed to using clean raw materials , practicing environmentally friendly production methods , and supporting the sustainable development of coffee farming communities . Certificates &#8211; Certifications International standard for quality management systems ISO 22000:2018 We confirm that the entire production process complies with international Halal standards. 1 Ingredient Robusta coffee beans are sourced from renowned growing regions in Vietnam, ensuring firm beans, high caffeine content, and a rich flavor. Each batch of raw materials is checked for moisture content, aroma, and thoroughly cleaned of impurities before being used in production. 2 Harvest The coffee cherries are harvested selectively. Only ripe, high-quality red cherries are picked. This harvesting method ensures consistent quality in the batch, and allows green cherries more time to ripen. 3 Roasting &amp; Grinding Coffee Each batch of coffee is roasted using a specific temperature profile to highlight the strong and aromatic flavor of Robusta. The coffee is then finely ground to ensure quick dissolution and preserve the full aroma during the freeze-drying process. Coffee Production Process 4 Freeze-drying technology The coffee extract is frozen at extremely low temperatures, then dried in a vacuum to allow water to evaporate directly from solid to vapor without passing through a liquid phase. This process preserves the original aroma, color, and flavor of the coffee, resulting in a dry, porous powder that dissolves quickly in cold water. 5 Quality Control After drying, the product undergoes rigorous testing: moisture content measurement, solubility testing, flavor evaluation, microbiological testing, and sensory evaluation. Only batches that meet the standards are moved to the packaging stage. This step demonstrates NONLA GLOBAL&#8217;s commitment to providing products that are not only delicious but also clean and safe. 6 Packaging &amp; Storage The coffee is packaged in convenient forms – capsules, small boxes, or premium gift sets – suitable for both daily enjoyment and gifting. Finally, the product is stored in a cool, dry environment and is ready for distribution. nonla NONLA VIETNAM GLOBAL is a pioneering Vietnamese coffee brand that applies freeze-drying technology to preserve the original flavor of Central Highlands coffee beans. “Premium Co",
+      "https://nonlacafe.com/shop": "Shop - Nonlacafe Skip to content Everything begins when you try Login Everything begins when you try Shop NONLA Coffee AODAI Coffee Our Story Review FAQ Search for: Cart / &#36; &nbsp;0.00 No products in the cart. Return to shop Cart No products in the cart. Return to shop Home &#47; Shop Filter Showing all 11 results Default sorting Sort by popularity Sort by average rating Sort by latest Sort by price: low to high Sort by price: high to low Browse AODAI Coffee NONLA Coffee Uncategorized Filter by price Min price Max price Filter Price: &mdash; Quick View AODAI Coffee AODAI 100% Pure Cacao &#8211; Freeze-Dried Unsweetened Dark Chocolate | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View AODAI Coffee AODAI Freeze-Dried Vietnamese Instant Espresso Coffee (50 Pods) &#36; &nbsp;32.99 50 capsules/box &#036;0.66/cup Quick View AODAI Coffee AODAI Level 1–6 Tasting Set &#8211; Freeze-Dried Vietnamese Espresso | 12 Pods &#36; &nbsp;12.99 12 capsules/box &#036;1.08/cup Quick View AODAI Coffee AODAI Level 1–6 Tasting Set &#8211; Freeze-Dried Vietnamese Espresso | 6 Pods &#36; &nbsp;7.99 6 capsules/box &#036;1.33/cup Quick View NONLA Coffee NONLA Cacao Mocha &#8211; Freeze-Dried Instant Coffee Pods | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View NONLA Coffee NONLA Citrus Lemon &#8211; Freeze-Dried Instant Coffee Pods | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View NONLA Coffee NONLA Coconut Latte &#8211; Freeze-Dried Instant Coffee Pods | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View NONLA Coffee NONLA Discovery Mix &#8211; Pure Coffee, Cacao &#038; Lemon Espresso | 8 Pods &#36; &nbsp;12.99 8 capsules/box &#036;1.62/cup Quick View NONLA Coffee NONLA Flavor Mix Set &#8211; Multi Roast &#038; Flavored Instant Espresso | 18 Pods &#36; &nbsp;27.99 18 capsules/box &#036;1.56/cup Quick View NONLA Coffee NONLA Level 1–6 Gift Set &#8211; Freeze-Dried Instant Espresso | 24 Pods &#36; &nbsp;35.99 24 capsules/box &#036;1.50/cup Quick View AODAI Coffee Vietnamese Coffee Gift Set for Mom – Freeze-Dried Espresso Pods (No Machine) &#36; &nbsp;7.99 &ndash; &#36; &nbsp;32.99 Price range: &#36;&nbsp;7.99 through &#36;&nbsp;32.99 nonla NONLA VIETNAM GLOBAL is a pioneering Vietnamese coffee brand that applies freeze-drying technology to preserve the original flavor of Central Highlands coffee beans. “Premium Coﬀee. Simplified.” SHOP All Products Nonla Coffee Aodai Coffee COMPANY About Us Our Stories FAQ CONTACT NONLA VIETNAM GLOBAL 74 TL8, Xã Quang Phu, Dak Lak, Vietnam [email&#160;protected] +84 941 482 227 Payment: Visa · PayPal · Stripe · MasterCard © 2026 Nonla Vietnam Global. All rights reserved. Shipping Policy Refund Policy Terms of Service Visa PayPal Stripe MasterCard Cash On Delivery Search for: Shop NONLA Coffee AODAI Coffee Login Login Username or email address&nbsp; * Required Password&nbsp; * Required Remember me Log in Lost your password?"
+    }
+  },
+  "website_context_file": "E:\\Source\\marketing-brain\\data\\knowledge\\website_context\\TEST_NONLA_01_website_context.json",
+  "claude_brand_core": {
+    "status": "skipped",
+    "raw_response": null,
+    "parsed": null,
+    "parse_error": null,
+    "prompt_key": "run_claude_brand_core",
+    "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\brand_intake\\brand_core_prompt.txt"
+  },
+  "claude_brand_strategy": {
+    "status": "skipped",
+    "raw_response": null,
+    "parsed": null,
+    "parse_error": null,
+    "prompt_key": "run_claude_brand_strategy",
+    "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\brand_intake\\brand_strategy_prompt.txt"
+  },
+  "claude_brand_constraints": {
+    "status": "skipped",
+    "raw_response": null,
+    "parsed": null,
+    "parse_error": null,
+    "prompt_key": "run_claude_brand_constraints",
+    "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\brand_intake\\brand_constraints_prompt.txt"
+  },
+  "brand_intake_file": "E:\\Source\\marketing-brain\\data\\knowledge\\brand_intake\\TEST_NONLA_01_brand_intake.json"
+}

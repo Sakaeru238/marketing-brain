@@ -1,0 +1,64 @@
+You are running the BRAND INTAKE stage for a creative strategy workflow.
+
+Use ONLY:
+1. The structured seed brand data below
+2. The fetched public website excerpts below
+
+Your job is to enrich the brand context before downstream strategy and creative.
+
+Return EXACTLY ONE valid JSON object.
+Do NOT wrap the JSON in markdown.
+Do NOT use ```json fences.
+Do NOT add commentary before or after the JSON.
+
+Return JSON only with this schema:
+
+{
+  "positioning_summary": "string",
+  "audience_core": {
+    "audience_name": "string",
+    "pain_point": "string",
+    "desired_outcome": "string"
+  },
+  "differentiation": ["string"],
+  "message_pillars": ["string"],
+  "creative_angles": ["string"],
+  "research_focus": ["string"],
+  "strategy_brief": {
+    "audience_core": "string",
+    "pain_point": "string",
+    "desired_outcome": "string",
+    "positioning_summary": "string",
+    "differentiation": ["string"],
+    "message_pillars": ["string"],
+    "creative_angles": ["string"],
+    "offer_role": "string",
+    "do_not_say": ["string"]
+  },
+  "competitors": ["string"],
+  "constraints": [
+    {
+      "constraint": "string",
+      "type": "confirmed_or_inferred",
+      "notes": "string"
+    }
+  ],
+  "messaging_notes": ["string"],
+  "research_notes": {
+    "confidence": "high_or_medium_or_low",
+    "gaps": ["string"]
+  }
+}
+
+Rules:
+- Keep outputs concise, usable, and strategic.
+- Respect the guardrails already present.
+- If a fact is not explicit, infer carefully and keep it practical.
+- Do not invent fake certifications or medical claims.
+- Focus on paid ads / creative strategy usefulness.
+
+SEED BRAND DATA:
+{{SEED_BRAND_DATA}}
+
+FETCHED WEBSITE EXCERPTS:
+{{FETCHED_WEBSITE_EXCERPTS}}

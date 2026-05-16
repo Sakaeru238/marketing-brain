@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0",
+  "project_root": "marketing-brain",
+  "brand_context_source_of_truth_root": "data/brands",
+  "brand_registry_file": "config/brands/brand_registry.json",
+  "notes": "Global settings for the brand-centric Marketing-Brain architecture."
+}

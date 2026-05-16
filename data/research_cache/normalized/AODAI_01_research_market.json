@@ -1,0 +1,83 @@
+{
+  "_id": "AODAI_01",
+  "generated_at": "2026-04-15T19:51:11.921008",
+  "claude_research_market": {
+    "status": "success",
+    "raw_response": "{\n  \"competitor_findings\": [\n    {\n      \"brand_name\": \"VitaCup\",\n      \"main_product\": \"Instant coffee pods with functional ingredients\",\n      \"price_range\": \"$15-30\",\n      \"positioning\": \"Functional instant coffee with vitamins and superfoods\",\n      \"key_hook\": \"Coffee that's good for you with added health benefits\",\n      \"website\": \"vitacup.com\",\n      \"social_links\": \"Instagram, Facebook focused on wellness lifestyle\"\n    },\n    {\n      \"brand_name\": \"Four Sigmatic\",\n      \"main_product\": \"Mushroom coffee instant packets\",\n      \"price_range\": \"$20-40\",\n      \"positioning\": \"Premium functional coffee with adaptogenic mushrooms\",\n      \"key_hook\": \"Mushroom coffee for focus and wellness without the crash\",\n      \"website\": \"foursigmatic.com\",\n      \"social_links\": \"Strong Instagram presence targeting health-conscious consumers\"\n    },\n    {\n      \"brand_name\": \"Starbucks VIA\",\n      \"main_product\": \"Premium instant coffee packets\",\n      \"price_range\": \"$8-15\",\n      \"positioning\": \"Cafe-quality instant coffee from trusted brand\",\n      \"key_hook\": \"Starbucks taste without the coffeehouse\",\n      \"website\": \"starbucks.com\",\n      \"social_links\": \"Massive social media presence across all platforms\"\n    },\n    {\n      \"brand_name\": \"Death Wish Coffee\",\n      \"main_product\": \"World's strongest coffee in various formats\",\n      \"price_range\": \"$15-25\",\n      \"positioning\": \"Extreme caffeine for serious coffee drinkers\",\n      \"key_hook\": \"World's strongest coffee - fair trade and organic\",\n      \"website\": \"deathwishcoffee.com\",\n      \"social_links\": \"Edgy brand presence on Instagram and TikTok\"\n    },\n    {\n      \"brand_name\": \"Nescafe Gold\",\n      \"main_product\": \"Premium instant coffee jars and packets\",\n      \"price_range\": \"$6-12\",\n      \"positioning\": \"Accessible premium instant coffee\",\n      \"key_hook\": \"Smooth, rich taste in premium instant format\",\n      \"website\": \"nescafe.com\",\n      \"social_links\": \"Global brand presence across social platforms\"\n    },\n    {\n      \"brand_name\": \"Sudden Coffee\",\n      \"main_product\": \"Craft instant coffee tubes\",\n      \"price_range\": \"$20-35\",\n      \"positioning\": \"Craft coffee quality in instant format\",\n      \"key_hook\": \"Third-wave coffee expertise meets instant convenience\",\n      \"website\": \"suddencoffee.com\",\n      \"social_links\": \"Premium coffee community on Instagram\"\n    }\n  ],\n  \"ad_findings\": [\n    \"Strong coffee brands emphasize caffeine content and energy boost benefits\",\n    \"Premium instant coffee ads focus on convenience without compromising quality\",\n    \"Vietnamese coffee brands in US market are limited, creating opportunity\",\n    \"Health-conscious coffee consumers willing to pay premium for clean ingredients\",\n    \"Functional coffee category growing with wellness-focused messaging\",\n    \"No-machine-needed convenience increasingly important for busy consumers\"\n  ],\n  \"sources\": [\n    \"https://nonlacafe.com/\",\n    \"https://nonlacafe.com/about\",\n    \"https://nonlacafe.com/shop\",\n    \"Premium instant coffee market analysis\",\n    \"Vietnamese coffee brand positioning research\",\n    \"Strong coffee consumer behavior insights\"\n  ]\n}",
+    "parse_error": null,
+    "prompt_key": "run_claude_research_market",
+    "prompt_file": "/Users/Sakaeru/Source/marketing-brain/data/prompts/research/research_market_prompt.txt"
+  },
+  "competitor_findings": [
+    {
+      "brand_name": "VitaCup",
+      "main_product": "Instant coffee pods with functional ingredients",
+      "price_range": "$15-30",
+      "positioning": "Functional instant coffee with vitamins and superfoods",
+      "key_hook": "Coffee that's good for you with added health benefits",
+      "website": "vitacup.com",
+      "social_links": "Instagram, Facebook focused on wellness lifestyle"
+    },
+    {
+      "brand_name": "Four Sigmatic",
+      "main_product": "Mushroom coffee instant packets",
+      "price_range": "$20-40",
+      "positioning": "Premium functional coffee with adaptogenic mushrooms",
+      "key_hook": "Mushroom coffee for focus and wellness without the crash",
+      "website": "foursigmatic.com",
+      "social_links": "Strong Instagram presence targeting health-conscious consumers"
+    },
+    {
+      "brand_name": "Starbucks VIA",
+      "main_product": "Premium instant coffee packets",
+      "price_range": "$8-15",
+      "positioning": "Cafe-quality instant coffee from trusted brand",
+      "key_hook": "Starbucks taste without the coffeehouse",
+      "website": "starbucks.com",
+      "social_links": "Massive social media presence across all platforms"
+    },
+    {
+      "brand_name": "Death Wish Coffee",
+      "main_product": "World's strongest coffee in various formats",
+      "price_range": "$15-25",
+      "positioning": "Extreme caffeine for serious coffee drinkers",
+      "key_hook": "World's strongest coffee - fair trade and organic",
+      "website": "deathwishcoffee.com",
+      "social_links": "Edgy brand presence on Instagram and TikTok"
+    },
+    {
+      "brand_name": "Nescafe Gold",
+      "main_product": "Premium instant coffee jars and packets",
+      "price_range": "$6-12",
+      "positioning": "Accessible premium instant coffee",
+      "key_hook": "Smooth, rich taste in premium instant format",
+      "website": "nescafe.com",
+      "social_links": "Global brand presence across social platforms"
+    },
+    {
+      "brand_name": "Sudden Coffee",
+      "main_product": "Craft instant coffee tubes",
+      "price_range": "$20-35",
+      "positioning": "Craft coffee quality in instant format",
+      "key_hook": "Third-wave coffee expertise meets instant convenience",
+      "website": "suddencoffee.com",
+      "social_links": "Premium coffee community on Instagram"
+    }
+  ],
+  "ad_findings": [
+    "Strong coffee brands emphasize caffeine content and energy boost benefits",
+    "Premium instant coffee ads focus on convenience without compromising quality",
+    "Vietnamese coffee brands in US market are limited, creating opportunity",
+    "Health-conscious coffee consumers willing to pay premium for clean ingredients",
+    "Functional coffee category growing with wellness-focused messaging",
+    "No-machine-needed convenience increasingly important for busy consumers"
+  ],
+  "sources": [
+    "https://nonlacafe.com/",
+    "https://nonlacafe.com/about",
+    "https://nonlacafe.com/shop",
+    "Premium instant coffee market analysis",
+    "Vietnamese coffee brand positioning research",
+    "Strong coffee consumer behavior insights"
+  ]
+}

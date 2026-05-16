@@ -1,0 +1,52 @@
+{
+  "_id": "AODAI_01",
+  "generated_at": "2026-04-15T19:51:11.921008",
+  "claude_research_core": {
+    "status": "success",
+    "raw_response": "{\n  \"research_summary\": {\n    \"overview\": \"AoDai Coffee is a Vietnamese freeze-dried instant coffee brand targeting US consumers seeking stronger coffee experiences. The brand leverages 100% Robusta beans from Buon Ma Thuot and advanced freeze-drying technology to deliver cafe-quality Vietnamese espresso without machines. They offer 6 intensity levels and position against weak mainstream coffee with authentic Vietnamese heritage.\",\n    \"top_findings\": [\n      \"Brand uses advanced freeze-drying technology that preserves original coffee structure, aroma, and flavor unlike traditional instant coffee\",\n      \"Six roast levels (named after Vietnamese cities) allow customization from gentle to extra dark intensity\",\n      \"100% Robusta beans from Central Highlands provide higher caffeine content and stronger flavor than typical Arabica blends\",\n      \"No-machine convenience with instant dissolution in hot or cold water addresses modern lifestyle needs\",\n      \"ISO 22000:2018 certified production facility with Halal certification ensures quality standards\",\n      \"35% first order discount creates low-friction trial opportunity for premium-priced instant coffee\"\n    ],\n    \"key_risks\": [\n      \"Premium pricing ($1+ per pod) significantly higher than mass market instant coffee may limit adoption\",\n      \"Robusta beans traditionally associated with lower quality coffee in US market perception\",\n      \"Instant coffee category faces strong negative perceptions among coffee enthusiasts\",\n      \"Limited brand awareness competing against established coffee brands with larger marketing budgets\",\n      \"Single origin dependency on Vietnamese suppliers creates supply chain vulnerability\"\n    ],\n    \"key_opportunities\": [\n      \"Growing US interest in authentic international food experiences favors Vietnamese coffee positioning\",\n      \"Remote work trends increase demand for convenient premium coffee solutions\",\n      \"Health-conscious consumers appreciate sugar-free, additive-free pure coffee formulation\",\n      \"Gift market potential with culturally-themed roast levels and premium packaging\",\n      \"Cold brew trend aligns with product's ability to dissolve in cold water\"\n    ]\n  },\n  \"trend_findings\": [\n    \"Freeze-drying technology advancement allows premium instant coffee to compete with traditional brewing methods\",\n    \"Convenience-focused coffee consumption driven by busy lifestyles and remote work patterns\",\n    \"Authenticity and origin story becoming key differentiators in crowded coffee market\",\n    \"Customizable intensity levels respond to growing demand for personalized beverage experiences\",\n    \"Sugar-free and clean label products align with health and wellness movement\",\n    \"Vietnamese coffee culture gaining recognition in US specialty coffee scene\"\n  ],\n  \"note_findings\": [\n    \"Company operates two distinct lines: AoDai (pure coffee) and NonLa (flavored varieties) requiring careful positioning separation\",\n    \"Selective harvesting process using only ripe red cherries demonstrates quality commitment above commodity coffee\",\n    \"Vacuum freeze-drying preserves coffee without liquid phase transition, maintaining cellular structure\",\n    \"City-named roast levels create cultural storytelling opportunity and memorable product differentiation\",\n    \"ISO certification and quality control testing address food safety concerns in imported products\",\n    \"Packaging designed for portability appeals to travelers and outdoor enthusiasts\"\n  ]\n}",
+    "parse_error": null,
+    "prompt_key": "run_claude_research_core",
+    "prompt_file": "/Users/Sakaeru/Source/marketing-brain/data/prompts/research/research_core_prompt.txt"
+  },
+  "research_summary": {
+    "overview": "AoDai Coffee is a Vietnamese freeze-dried instant coffee brand targeting US consumers seeking stronger coffee experiences. The brand leverages 100% Robusta beans from Buon Ma Thuot and advanced freeze-drying technology to deliver cafe-quality Vietnamese espresso without machines. They offer 6 intensity levels and position against weak mainstream coffee with authentic Vietnamese heritage.",
+    "top_findings": [
+      "Brand uses advanced freeze-drying technology that preserves original coffee structure, aroma, and flavor unlike traditional instant coffee",
+      "Six roast levels (named after Vietnamese cities) allow customization from gentle to extra dark intensity",
+      "100% Robusta beans from Central Highlands provide higher caffeine content and stronger flavor than typical Arabica blends",
+      "No-machine convenience with instant dissolution in hot or cold water addresses modern lifestyle needs",
+      "ISO 22000:2018 certified production facility with Halal certification ensures quality standards",
+      "35% first order discount creates low-friction trial opportunity for premium-priced instant coffee"
+    ],
+    "key_risks": [
+      "Premium pricing ($1+ per pod) significantly higher than mass market instant coffee may limit adoption",
+      "Robusta beans traditionally associated with lower quality coffee in US market perception",
+      "Instant coffee category faces strong negative perceptions among coffee enthusiasts",
+      "Limited brand awareness competing against established coffee brands with larger marketing budgets",
+      "Single origin dependency on Vietnamese suppliers creates supply chain vulnerability"
+    ],
+    "key_opportunities": [
+      "Growing US interest in authentic international food experiences favors Vietnamese coffee positioning",
+      "Remote work trends increase demand for convenient premium coffee solutions",
+      "Health-conscious consumers appreciate sugar-free, additive-free pure coffee formulation",
+      "Gift market potential with culturally-themed roast levels and premium packaging",
+      "Cold brew trend aligns with product's ability to dissolve in cold water"
+    ]
+  },
+  "trend_findings": [
+    "Freeze-drying technology advancement allows premium instant coffee to compete with traditional brewing methods",
+    "Convenience-focused coffee consumption driven by busy lifestyles and remote work patterns",
+    "Authenticity and origin story becoming key differentiators in crowded coffee market",
+    "Customizable intensity levels respond to growing demand for personalized beverage experiences",
+    "Sugar-free and clean label products align with health and wellness movement",
+    "Vietnamese coffee culture gaining recognition in US specialty coffee scene"
+  ],
+  "note_findings": [
+    "Company operates two distinct lines: AoDai (pure coffee) and NonLa (flavored varieties) requiring careful positioning separation",
+    "Selective harvesting process using only ripe red cherries demonstrates quality commitment above commodity coffee",
+    "Vacuum freeze-drying preserves coffee without liquid phase transition, maintaining cellular structure",
+    "City-named roast levels create cultural storytelling opportunity and memorable product differentiation",
+    "ISO certification and quality control testing address food safety concerns in imported products",
+    "Packaging designed for portability appeals to travelers and outdoor enthusiasts"
+  ]
+}

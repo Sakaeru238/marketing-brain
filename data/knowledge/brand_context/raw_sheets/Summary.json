@@ -1,0 +1,58 @@
+[
+  {
+    "entity_type": "brand",
+    "entity_id": "AODAI",
+    "brand_id": "AODAI",
+    "name": "AoDai Coffee",
+    "status": "active",
+    "notes": "Pure coffee brand"
+  },
+  {
+    "entity_type": "brand",
+    "entity_id": "NONLA",
+    "brand_id": "NONLA",
+    "name": "Nonla Coffee",
+    "status": "active",
+    "notes": "Flavor/mix + some pure SKUs"
+  },
+  {
+    "entity_type": "product",
+    "entity_id": "AODAI_12",
+    "brand_id": "AODAI",
+    "name": "Freeze-Dried Vietnamese Espresso 12 Pods",
+    "status": "active",
+    "notes": null
+  },
+  {
+    "entity_type": "product",
+    "entity_id": "AODAI_50",
+    "brand_id": "AODAI",
+    "name": "Freeze-Dried Vietnamese Espresso 50 Pods",
+    "status": "active",
+    "notes": null
+  },
+  {
+    "entity_type": "product",
+    "entity_id": "NONLA_COCONUT_8",
+    "brand_id": "NONLA",
+    "name": "Nonla Coconut Coffee 8 Pods",
+    "status": "active",
+    "notes": null
+  },
+  {
+    "entity_type": "product",
+    "entity_id": "NONLA_LEMON_8",
+    "brand_id": "NONLA",
+    "name": "Nonla Lemon Coffee 8 Pods",
+    "status": "active",
+    "notes": null
+  },
+  {
+    "entity_type": "product",
+    "entity_id": "NONLA_PURE_8",
+    "brand_id": "NONLA",
+    "name": "Nonla Pure Coffee 8 Pods",
+    "status": "active",
+    "notes": null
+  }
+]

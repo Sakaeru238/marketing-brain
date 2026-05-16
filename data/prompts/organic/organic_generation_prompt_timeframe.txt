@@ -1,0 +1,36 @@
+# Organic Generation Prompt Addendum — Timeframe KPI V7
+
+Every generated organic post must consider campaign timeframe.
+
+Read from Page_Channel_Library:
+start_day
+end_day
+duration
+current_followers
+target_followers
+current_likes
+target_likes
+
+AI must use KPI pacing to choose:
+content_archetype
+interaction_trigger_type
+desired_action
+posting intensity
+behavioral schedule
+
+If campaign is behind KPI, prioritize:
+share
+tag_someone
+comment
+debate
+self_recognition
+humor_tagging
+identity
+hot_take
+relatable
+
+Each post output should include:
+campaign_kpi_influence:
+- kpi_status
+- content_intensity
+- why_this_post_fits_kpi

@@ -1,0 +1,50 @@
+You are running BRAND INTAKE STAGE 2: STRATEGY LAYER.
+
+Use ONLY:
+1. The structured seed brand data below
+2. The fetched public website excerpts below
+3. The brand core output below
+
+Your task:
+Generate strategic angles and downstream-useful strategy framing.
+
+Return EXACTLY ONE valid JSON object.
+Do NOT wrap the JSON in markdown.
+Do NOT use ```json fences.
+Do NOT add commentary before or after the JSON.
+
+Return JSON only with this schema:
+
+{
+  "creative_angles": ["string"],
+  "research_focus": ["string"],
+  "strategy_brief": {
+    "audience_core": "string",
+    "pain_point": "string",
+    "desired_outcome": "string",
+    "positioning_summary": "string",
+    "differentiation": ["string"],
+    "message_pillars": ["string"],
+    "creative_angles": ["string"],
+    "offer_role": "string",
+    "do_not_say": ["string"]
+  }
+}
+
+Rules:
+- creative_angles: max 6
+- research_focus: max 6
+- strategy_brief.differentiation: max 4
+- strategy_brief.message_pillars: max 5
+- strategy_brief.creative_angles: max 4
+- Keep it useful for paid ads and creative testing.
+- Respect brand guardrails.
+
+SEED BRAND DATA:
+{{SEED_BRAND_DATA}}
+
+FETCHED WEBSITE EXCERPTS:
+{{FETCHED_WEBSITE_EXCERPTS}}
+
+BRAND CORE OUTPUT:
+{{BRAND_CORE_OUTPUT}}

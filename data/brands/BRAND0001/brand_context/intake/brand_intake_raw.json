@@ -1,0 +1,273 @@
+{
+  "brand_id": "BRAND0001",
+  "source": {
+    "source_type": "google_sheet",
+    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1oBUlZJTPR5irx1_9LjyUx-X6UMswzMqSFaVa0VtWwwI/edit?gid=12404976#gid=12404976",
+    "worksheet_name": "01_POD_Brand_Intake",
+    "config_file": "/Users/Sakaeru/Source/marketing-brain/config/brands/BRAND0001/gsheet_settings.json"
+  },
+  "fields": {
+    "brand_name": "sportivestyle",
+    "brand_website_url": "https://sportivestyle.com/",
+    "products_in_scope": "all",
+    "context_focus_scope": "full brand",
+    "known_brand_and_audience_context": "Store POD hướng tới thị trường Mỹ, Canada, Anh và Đức, tập trung vào nhóm khách hàng là người hâm mộ thể thao, đặc biệt là fan của các giải đấu và cộng đồng như NFL, NHL, OHL, NLL, EPL, DEL, MLB, NBA và các môn thể thao phổ biến khác.\n\nAudience của brand có thể khá rộng và sẽ được thu hẹp cụ thể hơn ở từng campaign/SKU, nhưng ở cấp brand có thể nhận diện các nhóm chính như sau:\n\nĐộ tuổi phổ biến: khoảng 18–55 tuổi, trong đó nhóm mua POD mạnh thường rơi vào 25–45 tuổi.\nGiới tính: cả nam và nữ, tuy nhiên nhiều dòng thiết kế fan gear, jersey-inspired, vintage sports, golf club hoặc streetwear có thể thiên về nam tùy campaign.\nLifestyle: yêu thể thao, theo dõi đội bóng/giải đấu thường xuyên, thích thể hiện fandom và bản sắc cá nhân qua quần áo, hoodie, jersey-style apparel, hat, poster hoặc các sản phẩm graphic.\nĐộng lực mua hàng: muốn sở hữu thiết kế khác biệt hơn merch đại trà; thích các mẫu thể hiện tinh thần đội bóng, thành phố, giải đấu hoặc văn hóa fan theo cách sáng tạo, thời trang và có tính sưu tầm hơn.\nPain points: merchandise chính thức thường quá phổ thông, ít cá tính hoặc không đúng gu thời trang; nhiều thiết kế trên thị trường trông generic, lặp lại, thiếu chiều sâu concept; một số fan muốn sản phẩm vừa thể hiện tình yêu thể thao vừa đủ đẹp để mặc hằng ngày.\nValues: loyalty với đội bóng/cộng đồng fan, niềm tự hào địa phương, nostalgia, tinh thần heritage, cá tính riêng, sự khác biệt, tính thẩm mỹ và cảm giác “thuộc về một cộng đồng”.",
+    "known_competitors": "Các đối thủ cạnh tranh đã biết gồm:\n\n1. Fanatics / Fanatics International\n- Nền tảng lớn về licensed sports fan gear, bao phủ nhiều giải đấu như NFL, NBA, NHL, MLB, football/soccer và nhiều thị trường quốc tế.\n- Cạnh tranh mạnh ở độ phủ sản phẩm, đội bóng, giải đấu và khả năng cung cấp merch chính thức.\n\n2. FOCO\n- Bán licensed fan merchandise cho MLB, NFL, NBA, NHL, Premier League, college teams và nhiều dòng quà tặng/fan products.\n- Cạnh tranh ở mảng fan gift, collectible, novelty product và licensed lifestyle merchandise.\n\n3. BreakingT\n- Tập trung vào sports fan gear với các thiết kế mang tính thời điểm, sự kiện, khoảnh khắc viral hoặc cultural sports moments.\n- Có sản phẩm như áo, hoodie, mug, art print và các dòng merch hướng đến fan muốn thiết kế khác biệt hơn merch đại trà.\n\n4. Rally House\n- Bán sports apparel, fan gear và local merchandise cho nhiều giải lớn như NFL, MLB, NBA, NHL.\n- Cạnh tranh ở mảng assortment rộng, local/team fandom và quà tặng thể thao.\n\n5. Mitchell & Ness\n- Mạnh về vintage sportswear, throwback jerseys, classic fan apparel và heritage aesthetics.\n- Là đối thủ tham chiếu quan trọng nếu brand muốn phát triển các thiết kế thể thao có cảm giác retro, nostalgic hoặc elevated hơn merch phổ thông.\n\nNgoài ra, ở tầng cạnh tranh gián tiếp còn có:\n- các cửa hàng Etsy / marketplace bán thiết kế fan-inspired hoặc sports-themed POD,\n- các store POD nhỏ chuyên làm niche fan gear theo đội, thành phố, giải đấu hoặc mùa sự kiện,\n- các brand thể thao/lifestyle hướng tới sports-fashion crossover thay vì merch truyền thống.\n\nAI có thể research sâu thêm sau để xác định:\n- đối thủ trực tiếp nhất theo từng campaign,\n- đối thủ theo từng giải đấu / từng thị trường,\n- khoảng trống giữa official merch và thiết kế POD sáng tạo hơn.",
+    "known_brand_constraints": "none known",
+    "existing_creative_or_messaging_to_remember": "none",
+    "known_brand_origin_notes": "",
+    "known_founder_story": "",
+    "known_brand_stage": "",
+    "known_product_catalog_sources": "",
+    "_aliases": {
+      "known_product_catalog": "known_product_catalog_sources",
+      "known_hero_product": "known_hero_product_notes"
+    },
+    "known_hero_product_notes": "",
+    "known_bundles": "",
+    "known_product_differentiators": "",
+    "known_unique_mechanism": "",
+    "known_supported_claims": "",
+    "competitor_urls_or_notes": "",
+    "known_alternative_solution": "",
+    "known_primary_audience": "",
+    "known_secondary_audience": "",
+    "known_audience_signals": "",
+    "known_brand_voice": "",
+    "known_language_patterns": "",
+    "known_category_constraints": "",
+    "known_tone_or_price_constraints": "",
+    "known_purchase_behavior": "",
+    "known_seasonality": "",
+    "known_community_ugc_press": "",
+    "known_source_links_or_docs": ""
+  },
+  "required_fields": [
+    "brand_name",
+    "brand_website_url",
+    "products_in_scope",
+    "context_focus_scope",
+    "known_brand_and_audience_context",
+    "known_competitors",
+    "known_brand_constraints",
+    "existing_creative_or_messaging_to_remember"
+  ],
+  "validation": {
+    "status": "pass",
+    "missing_required_fields": [],
+    "required_fields_total": 8,
+    "required_fields_filled": 8
+  },
+  "raw_field_rows": [
+    {
+      "field_id": "brand_name",
+      "answer": "sportivestyle",
+      "question": "Tên brand là gì?",
+      "level": "BẮT BUỘC ĐIỀN",
+      "group": "Brand basics"
+    },
+    {
+      "field_id": "brand_website_url",
+      "answer": "https://sportivestyle.com/",
+      "question": "Website URL của brand là gì?",
+      "level": "BẮT BUỘC ĐIỀN",
+      "group": "Brand basics"
+    },
+    {
+      "field_id": "products_in_scope",
+      "answer": "all",
+      "question": "Đang chạy paid ads / creative strategy cho sản phẩm nào? Nếu nhiều thì liệt kê; nếu toàn brand thì ghi 'all'.",
+      "level": "BẮT BUỘC ĐIỀN",
+      "group": "Brand basics"
+    },
+    {
+      "field_id": "context_focus_scope",
+      "answer": "full brand",
+      "question": "Context document này tập trung vào 1 sản phẩm, 1 product line hay toàn brand?",
+      "level": "BẮT BUỘC ĐIỀN",
+      "group": "Brand basics"
+    },
+    {
+      "field_id": "known_brand_and_audience_context",
+      "answer": "Store POD hướng tới thị trường Mỹ, Canada, Anh và Đức, tập trung vào nhóm khách hàng là người hâm mộ thể thao, đặc biệt là fan của các giải đấu và cộng đồng như NFL, NHL, OHL, NLL, EPL, DEL, MLB, NBA và các môn thể thao phổ biến khác.\n\nAudience của brand có thể khá rộng và sẽ được thu hẹp cụ thể hơn ở từng campaign/SKU, nhưng ở cấp brand có thể nhận diện các nhóm chính như sau:\n\nĐộ tuổi phổ biến: khoảng 18–55 tuổi, trong đó nhóm mua POD mạnh thường rơi vào 25–45 tuổi.\nGiới tính: cả nam và nữ, tuy nhiên nhiều dòng thiết kế fan gear, jersey-inspired, vintage sports, golf club hoặc streetwear có thể thiên về nam tùy campaign.\nLifestyle: yêu thể thao, theo dõi đội bóng/giải đấu thường xuyên, thích thể hiện fandom và bản sắc cá nhân qua quần áo, hoodie, jersey-style apparel, hat, poster hoặc các sản phẩm graphic.\nĐộng lực mua hàng: muốn sở hữu thiết kế khác biệt hơn merch đại trà; thích các mẫu thể hiện tinh thần đội bóng, thành phố, giải đấu hoặc văn hóa fan theo cách sáng tạo, thời trang và có tính sưu tầm hơn.\nPain points: merchandise chính thức thường quá phổ thông, ít cá tính hoặc không đúng gu thời trang; nhiều thiết kế trên thị trường trông generic, lặp lại, thiếu chiều sâu concept; một số fan muốn sản phẩm vừa thể hiện tình yêu thể thao vừa đủ đẹp để mặc hằng ngày.\nValues: loyalty với đội bóng/cộng đồng fan, niềm tự hào địa phương, nostalgia, tinh thần heritage, cá tính riêng, sự khác biệt, tính thẩm mỹ và cảm giác “thuộc về một cộng đồng”.",
+      "question": "Bạn đã biết gì về brand và audience mà AI cần dùng? (tuổi, giới tính, lifestyle, pain points, values...)",
+      "level": "BẮT BUỘC ĐIỀN",
+      "group": "What you already know"
+    },
+    {
+      "field_id": "known_competitors",
+      "answer": "Các đối thủ cạnh tranh đã biết gồm:\n\n1. Fanatics / Fanatics International\n- Nền tảng lớn về licensed sports fan gear, bao phủ nhiều giải đấu như NFL, NBA, NHL, MLB, football/soccer và nhiều thị trường quốc tế.\n- Cạnh tranh mạnh ở độ phủ sản phẩm, đội bóng, giải đấu và khả năng cung cấp merch chính thức.\n\n2. FOCO\n- Bán licensed fan merchandise cho MLB, NFL, NBA, NHL, Premier League, college teams và nhiều dòng quà tặng/fan products.\n- Cạnh tranh ở mảng fan gift, collectible, novelty product và licensed lifestyle merchandise.\n\n3. BreakingT\n- Tập trung vào sports fan gear với các thiết kế mang tính thời điểm, sự kiện, khoảnh khắc viral hoặc cultural sports moments.\n- Có sản phẩm như áo, hoodie, mug, art print và các dòng merch hướng đến fan muốn thiết kế khác biệt hơn merch đại trà.\n\n4. Rally House\n- Bán sports apparel, fan gear và local merchandise cho nhiều giải lớn như NFL, MLB, NBA, NHL.\n- Cạnh tranh ở mảng assortment rộng, local/team fandom và quà tặng thể thao.\n\n5. Mitchell & Ness\n- Mạnh về vintage sportswear, throwback jerseys, classic fan apparel và heritage aesthetics.\n- Là đối thủ tham chiếu quan trọng nếu brand muốn phát triển các thiết kế thể thao có cảm giác retro, nostalgic hoặc elevated hơn merch phổ thông.\n\nNgoài ra, ở tầng cạnh tranh gián tiếp còn có:\n- các cửa hàng Etsy / marketplace bán thiết kế fan-inspired hoặc sports-themed POD,\n- các store POD nhỏ chuyên làm niche fan gear theo đội, thành phố, giải đấu hoặc mùa sự kiện,\n- các brand thể thao/lifestyle hướng tới sports-fashion crossover thay vì merch truyền thống.\n\nAI có thể research sâu thêm sau để xác định:\n- đối thủ trực tiếp nhất theo từng campaign,\n- đối thủ theo từng giải đấu / từng thị trường,\n- khoảng trống giữa official merch và thiết kế POD sáng tạo hơn.",
+      "question": "Bạn có biết đối thủ chính của brand là ai không?",
+      "level": "BẮT BUỘC ĐIỀN",
+      "group": "What you already know"
+    },
+    {
+      "field_id": "known_brand_constraints",
+      "answer": "none known",
+      "question": "Có brand constraints nào đã biết trước không? (claim cấm, tone family-friendly, sensitive topic, regulated category...)",
+      "level": "BẮT BUỘC ĐIỀN",
+      "group": "What you already know"
+    },
+    {
+      "field_id": "existing_creative_or_messaging_to_remember",
+      "answer": "none",
+      "question": "Có creative / messaging / visual direction nào của brand đã thấy và muốn AI giữ trong đầu không?",
+      "level": "BẮT BUỘC ĐIỀN",
+      "group": "Creative context"
+    },
+    {
+      "field_id": "known_brand_origin_notes",
+      "answer": "",
+      "question": "Bạn có ghi chú nào về brand origin / brand bắt đầu như thế nào không?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Brand Story & Origin"
+    },
+    {
+      "field_id": "known_founder_story",
+      "answer": "",
+      "question": "Có founder story / mission nào đã biết không?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Brand Story & Origin"
+    },
+    {
+      "field_id": "known_brand_stage",
+      "answer": "",
+      "question": "Brand đang ở giai đoạn startup, scaling hay established?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Brand Story & Origin"
+    },
+    {
+      "field_id": "known_product_catalog",
+      "answer": "",
+      "question": "Bạn có danh sách sản phẩm / product lines nào đã biết không?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Product Catalog"
+    },
+    {
+      "field_id": "known_hero_product",
+      "answer": "",
+      "question": "Hero product / primary revenue driver nếu đã biết là gì?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Product Catalog"
+    },
+    {
+      "field_id": "known_bundles",
+      "answer": "",
+      "question": "Brand có bundle / set / combo nào đáng chú ý không?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Product Catalog"
+    },
+    {
+      "field_id": "known_product_differentiators",
+      "answer": "",
+      "question": "Điểm khác biệt sản phẩm nào bạn đã biết?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Differentiation"
+    },
+    {
+      "field_id": "known_unique_mechanism",
+      "answer": "",
+      "question": "Có unique mechanism / proprietary ingredient / method nào đã biết không?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Differentiation"
+    },
+    {
+      "field_id": "known_supported_claims",
+      "answer": "",
+      "question": "Brand có claim nào đã biết và có bằng chứng hỗ trợ không?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Differentiation"
+    },
+    {
+      "field_id": "competitor_urls_or_notes",
+      "answer": "",
+      "question": "Có URL hoặc ghi chú về competitor nào nên research không?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Competitors"
+    },
+    {
+      "field_id": "known_alternative_solution",
+      "answer": "",
+      "question": "Khách hàng đang làm gì trước khi dùng sản phẩm này? 'Old way' nào đang được thay thế?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Alternative Solution"
+    },
+    {
+      "field_id": "known_primary_audience",
+      "answer": "",
+      "question": "Primary audience nếu đã biết là ai?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Core Audience(s)"
+    },
+    {
+      "field_id": "known_secondary_audience",
+      "answer": "",
+      "question": "Secondary audiences nếu đã biết?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Core Audience(s)"
+    },
+    {
+      "field_id": "known_audience_signals",
+      "answer": "",
+      "question": "Có tín hiệu nào về audience từ imagery, language, price point, lifestyle cues không?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Core Audience(s)"
+    },
+    {
+      "field_id": "known_brand_voice",
+      "answer": "",
+      "question": "Brand voice/tone nào đã biết?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Brand Voice & Tone"
+    },
+    {
+      "field_id": "known_language_patterns",
+      "answer": "",
+      "question": "Có vocabulary/copy pattern nào brand hay dùng hoặc tránh dùng không?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Brand Voice & Tone"
+    },
+    {
+      "field_id": "known_category_constraints",
+      "answer": "",
+      "question": "Có category/platform restrictions hoặc claim sensitivity nào đã biết?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Inferred Creative Constraints"
+    },
+    {
+      "field_id": "known_tone_or_price_constraints",
+      "answer": "",
+      "question": "Có tone constraints / price point constraints nào cần biết không?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Inferred Creative Constraints"
+    },
+    {
+      "field_id": "known_purchase_behavior",
+      "answer": "",
+      "question": "Có purchase behavior nào đáng chú ý? (subscription, one-time, bundle-heavy...)",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Must-Know Strategic Context"
+    },
+    {
+      "field_id": "known_seasonality",
+      "answer": "",
+      "question": "Brand/category có seasonality quan trọng nào không?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Must-Know Strategic Context"
+    },
+    {
+      "field_id": "known_community_ugc_press",
+      "answer": "",
+      "question": "Có community/UGC/press/cultural moment nào đáng chú ý không?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Must-Know Strategic Context"
+    },
+    {
+      "field_id": "known_source_links_or_docs",
+      "answer": "",
+      "question": "Có link/tài liệu nội bộ nào AI nên xem thêm không?",
+      "level": "CÓ THỂ ĐIỀN",
+      "group": "Sources"
+    }
+  ]
+}

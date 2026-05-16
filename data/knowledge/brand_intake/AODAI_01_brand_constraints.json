@@ -1,0 +1,60 @@
+{
+  "status": "success",
+  "raw_response": "{\n  \"competitors\": [\n    \"Nespresso\",\n    \"Keurig\",\n    \"Traditional instant coffee brands\",\n    \"Premium coffee subscription services\",\n    \"Vietnamese coffee brands in US market\"\n  ],\n  \"constraints\": [\n    {\n      \"constraint\": \"Must maintain clear distinction between AoDai (pure coffee) and Nonla (flavored) product lines\",\n      \"type\": \"confirmed\",\n      \"notes\": \"Website shows both lines - AoDai is pure coffee only, Nonla includes flavored variants like Cacao Mocha and Citrus Lemon\"\n    },\n    {\n      \"constraint\": \"Cannot describe AoDai as flavored coffee or mix with Nonla messaging\",\n      \"type\": \"confirmed\",\n      \"notes\": \"Explicit guardrail in brand data to keep AoDai positioning focused on pure Vietnamese coffee\"\n    },\n    {\n      \"constraint\": \"Must emphasize no machine requirement as key differentiator\",\n      \"type\": \"confirmed\",\n      \"notes\": \"Website FAQ specifically addresses this as major selling point vs Nespresso/Keurig competitors\"\n    },\n    {\n      \"constraint\": \"Shipping times vary significantly by fulfillment location\",\n      \"type\": \"confirmed\",\n      \"notes\": \"US/Canada fulfillment 3-7 days vs Vietnam direct shipping 10-21 days - impacts Mother's Day timing\"\n    },\n    {\n      \"constraint\": \"Free shipping thresholds may limit gift purchase conversion\",\n      \"type\": \"inferred\",\n      \"notes\": \"Requires $100+ for free shipping in US/Canada - target product is $19.99, creating potential friction\"\n    }\n  ],\n  \"messaging_notes\": [\n    \"Emphasize 100-150mg caffeine content as significantly stronger than mainstream coffee\",\n    \"Use Vietnamese city names for roast levels as cultural authenticity proof point\",\n    \"Position freeze-drying technology as premium vs ordinary instant coffee\",\n    \"Highlight convenience for busy mothers - office, home, travel usage\",\n    \"Frame 35% discount as making premium Vietnamese coffee accessible for gifting\"\n  ],\n  \"research_notes\": {\n    \"confidence\": \"medium\",\n    \"gaps\": [\n      \"Actual awareness of Vietnamese coffee culture among US consumers\",\n      \"Price sensitivity for Mother's Day coffee gifts vs everyday purchases\",\n      \"Consumer perception of instant/freeze-dried coffee quality barriers\",\n      \"Competitive landscape of no-machine coffee solutions\",\n      \"Mother's Day gifting timeline constraints vs shipping options\"\n    ]\n  }\n}",
+  "parsed": {
+    "competitors": [
+      "Nespresso",
+      "Keurig",
+      "Traditional instant coffee brands",
+      "Premium coffee subscription services",
+      "Vietnamese coffee brands in US market"
+    ],
+    "constraints": [
+      {
+        "constraint": "Must maintain clear distinction between AoDai (pure coffee) and Nonla (flavored) product lines",
+        "type": "confirmed",
+        "notes": "Website shows both lines - AoDai is pure coffee only, Nonla includes flavored variants like Cacao Mocha and Citrus Lemon"
+      },
+      {
+        "constraint": "Cannot describe AoDai as flavored coffee or mix with Nonla messaging",
+        "type": "confirmed",
+        "notes": "Explicit guardrail in brand data to keep AoDai positioning focused on pure Vietnamese coffee"
+      },
+      {
+        "constraint": "Must emphasize no machine requirement as key differentiator",
+        "type": "confirmed",
+        "notes": "Website FAQ specifically addresses this as major selling point vs Nespresso/Keurig competitors"
+      },
+      {
+        "constraint": "Shipping times vary significantly by fulfillment location",
+        "type": "confirmed",
+        "notes": "US/Canada fulfillment 3-7 days vs Vietnam direct shipping 10-21 days - impacts Mother's Day timing"
+      },
+      {
+        "constraint": "Free shipping thresholds may limit gift purchase conversion",
+        "type": "inferred",
+        "notes": "Requires $100+ for free shipping in US/Canada - target product is $19.99, creating potential friction"
+      }
+    ],
+    "messaging_notes": [
+      "Emphasize 100-150mg caffeine content as significantly stronger than mainstream coffee",
+      "Use Vietnamese city names for roast levels as cultural authenticity proof point",
+      "Position freeze-drying technology as premium vs ordinary instant coffee",
+      "Highlight convenience for busy mothers - office, home, travel usage",
+      "Frame 35% discount as making premium Vietnamese coffee accessible for gifting"
+    ],
+    "research_notes": {
+      "confidence": "medium",
+      "gaps": [
+        "Actual awareness of Vietnamese coffee culture among US consumers",
+        "Price sensitivity for Mother's Day coffee gifts vs everyday purchases",
+        "Consumer perception of instant/freeze-dried coffee quality barriers",
+        "Competitive landscape of no-machine coffee solutions",
+        "Mother's Day gifting timeline constraints vs shipping options"
+      ]
+    }
+  },
+  "parse_error": null,
+  "prompt_key": "run_claude_brand_constraints",
+  "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\brand_intake\\brand_constraints_prompt.txt"
+}

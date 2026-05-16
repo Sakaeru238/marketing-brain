@@ -1,0 +1,11 @@
+{
+  "audience_id": "AUD_IN_AODAI_02",
+  "brand_id": "AODAI",
+  "audience_name": "Vietnamese diaspora in the US",
+  "source_type": "user_input",
+  "pain_point_input": null,
+  "desired_outcome_input": "Authentic Vietnamese coffee experience",
+  "pain_point_required": false,
+  "desired_outcome_required": false,
+  "notes": "Initial audience seed from brand intuition"
+}

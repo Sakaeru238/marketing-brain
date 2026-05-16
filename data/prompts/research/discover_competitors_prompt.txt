@@ -1,0 +1,105 @@
+You are running competitor discovery for a marketing intelligence workflow.
+
+Your task:
+Identify realistic competitors for the current brand.
+
+Important:
+- Do NOT automatically treat Starbucks, Nescafe, or other giant brands as direct competitors.
+- Classify competitors carefully by layer.
+- Prefer commercially realistic competitors for the current market, format, price level, and coffee style.
+- If a brand is only a substitute or broad category competitor, label it that way.
+
+Competitor layers:
+1. same_target_market
+2. same_format
+3. same_coffee_type
+4. same_origin
+5. market_signal
+6. price_range
+
+Selection standards:
+- Same target market matters most.
+- Same product format matters strongly.
+- Similar price range matters strongly.
+- Similar coffee type / strength / origin matters strongly.
+- Market-signal brands should be brands that are visible, talked about, followed, or commercially active in relevant channels.
+- If evidence is uncertain, keep confidence lower instead of inventing certainty.
+
+For each competitor, return:
+- brand
+- website
+- why_competitor
+- competitor_layers
+- positioning
+- voice
+- hooks
+- selling_points
+- hot_products
+- price_range
+- social
+- top_posts
+- confidence
+
+Rules for fields:
+- website: brand website if reasonably inferable, otherwise empty string
+- voice: explain in normal language, not just one adjective
+- hooks: short readable examples
+- selling_points: concrete selling points
+- hot_products: specific products if known or inferable from brand/category logic
+- price_range: short practical range, or empty if unknown
+- social: include facebook / instagram / tiktok / youtube if known, otherwise empty strings
+- top_posts: can be empty if not known; do NOT invent fake URLs or fake engagement stats
+- confidence must be one of: high, medium, low
+
+Return STRICT JSON only in this schema:
+
+{
+  "competitors": [
+    {
+      "brand": "",
+      "website": "",
+      "why_competitor": "",
+      "competitor_layers": [],
+      "positioning": "",
+      "voice": "",
+      "hooks": [],
+      "selling_points": [],
+      "hot_products": [],
+      "price_range": "",
+      "social": {
+        "facebook": "",
+        "instagram": "",
+        "tiktok": "",
+        "youtube": ""
+      },
+      "top_posts": [],
+      "confidence": ""
+    }
+  ]
+}
+
+CRITICAL RULES:
+
+- Return ONLY valid JSON
+- Do NOT include explanations
+- Keep each field SHORT (max 15–20 words)
+- Limit total competitors to MAX_COMPETITORS
+- DO NOT exceed concise output
+- Avoid long descriptions
+- Prefer short bullet-style strings
+
+Each competitor must include:
+
+- brand (short)
+- product (short)
+- website (short URL)
+- why_competitor (max 15 words)
+- price_range (short)
+
+Do NOT write long paragraphs.
+
+INPUT BUNDLE:
+{{INPUT_BUNDLE}}
+
+MAX COMPETITORS:
+{{MAX_COMPETITORS}}

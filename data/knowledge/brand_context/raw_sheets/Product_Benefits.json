@@ -1,0 +1,82 @@
+[
+  {
+    "benefit_id": "BEN_A12_01",
+    "product_id": "AODAI_12",
+    "brand_id": "AODAI",
+    "benefit_type": "strength",
+    "benefit_text": "Strong Vietnamese Robusta coffee",
+    "priority": "high"
+  },
+  {
+    "benefit_id": "BEN_A12_02",
+    "product_id": "AODAI_12",
+    "brand_id": "AODAI",
+    "benefit_type": "convenience",
+    "benefit_text": "No machine needed",
+    "priority": "high"
+  },
+  {
+    "benefit_id": "BEN_A12_03",
+    "product_id": "AODAI_12",
+    "brand_id": "AODAI",
+    "benefit_type": "usage",
+    "benefit_text": "Hot or cold ready",
+    "priority": "medium"
+  },
+  {
+    "benefit_id": "BEN_A50_01",
+    "product_id": "AODAI_50",
+    "brand_id": "AODAI",
+    "benefit_type": "value",
+    "benefit_text": "Under $3 per cup angle possible",
+    "priority": "high"
+  },
+  {
+    "benefit_id": "BEN_A50_02",
+    "product_id": "AODAI_50",
+    "brand_id": "AODAI",
+    "benefit_type": "strength",
+    "benefit_text": "Strong authentic Vietnamese coffee taste",
+    "priority": "high"
+  },
+  {
+    "benefit_id": "BEN_NC_01",
+    "product_id": "NONLA_COCONUT_8",
+    "brand_id": "NONLA",
+    "benefit_type": "flavor",
+    "benefit_text": "Coconut flavor profile",
+    "priority": "high"
+  },
+  {
+    "benefit_id": "BEN_NC_02",
+    "product_id": "NONLA_COCONUT_8",
+    "brand_id": "NONLA",
+    "benefit_type": "convenience",
+    "benefit_text": "No machine needed",
+    "priority": "high"
+  },
+  {
+    "benefit_id": "BEN_NL_01",
+    "product_id": "NONLA_LEMON_8",
+    "brand_id": "NONLA",
+    "benefit_type": "flavor",
+    "benefit_text": "Lemon flavor profile",
+    "priority": "high"
+  },
+  {
+    "benefit_id": "BEN_NCA_01",
+    "product_id": "NONLA_CACAO_8",
+    "brand_id": "NONLA",
+    "benefit_type": "flavor",
+    "benefit_text": "Cacao flavor profile",
+    "priority": "high"
+  },
+  {
+    "benefit_id": "BEN_NP_01",
+    "product_id": "NONLA_PURE_8",
+    "brand_id": "NONLA",
+    "benefit_type": "pure",
+    "benefit_text": "Pure coffee option under Nonla",
+    "priority": "high"
+  }
+]

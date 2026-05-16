@@ -1,0 +1,88 @@
+{
+  "brand_id": "BRAND0001",
+  "loaded_at": "2026-05-14T11:07:17.434196+00:00",
+  "source": {
+    "source_type": "google_sheet",
+    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1oBUlZJTPR5irx1_9LjyUx-X6UMswzMqSFaVa0VtWwwI/edit?gid=12404976#gid=12404976",
+    "worksheet_name": "01_POD_Brand_Intake",
+    "config_file": "/Users/Sakaeru/Source/marketing-brain/config/brands/BRAND0001/gsheet_settings.json"
+  },
+  "validation": {
+    "status": "pass",
+    "missing_required_fields": [],
+    "required_fields_total": 8,
+    "required_fields_filled": 8
+  },
+  "fields": {
+    "brand_name": "sportivestyle",
+    "brand_website_url": "https://sportivestyle.com/",
+    "products_in_scope": "all",
+    "context_focus_scope": "full brand",
+    "known_brand_and_audience_context": "Store POD hướng tới thị trường Mỹ, Canada, Anh và Đức, tập trung vào nhóm khách hàng là người hâm mộ thể thao, đặc biệt là fan của các giải đấu và cộng đồng như NFL, NHL, OHL, NLL, EPL, DEL, MLB, NBA và các môn thể thao phổ biến khác.\n\nAudience của brand có thể khá rộng và sẽ được thu hẹp cụ thể hơn ở từng campaign/SKU, nhưng ở cấp brand có thể nhận diện các nhóm chính như sau:\n\nĐộ tuổi phổ biến: khoảng 18–55 tuổi, trong đó nhóm mua POD mạnh thường rơi vào 25–45 tuổi.\nGiới tính: cả nam và nữ, tuy nhiên nhiều dòng thiết kế fan gear, jersey-inspired, vintage sports, golf club hoặc streetwear có thể thiên về nam tùy campaign.\nLifestyle: yêu thể thao, theo dõi đội bóng/giải đấu thường xuyên, thích thể hiện fandom và bản sắc cá nhân qua quần áo, hoodie, jersey-style apparel, hat, poster hoặc các sản phẩm graphic.\nĐộng lực mua hàng: muốn sở hữu thiết kế khác biệt hơn merch đại trà; thích các mẫu thể hiện tinh thần đội bóng, thành phố, giải đấu hoặc văn hóa fan theo cách sáng tạo, thời trang và có tính sưu tầm hơn.\nPain points: merchandise chính thức thường quá phổ thông, ít cá tính hoặc không đúng gu thời trang; nhiều thiết kế trên thị trường trông generic, lặp lại, thiếu chiều sâu concept; một số fan muốn sản phẩm vừa thể hiện tình yêu thể thao vừa đủ đẹp để mặc hằng ngày.\nValues: loyalty với đội bóng/cộng đồng fan, niềm tự hào địa phương, nostalgia, tinh thần heritage, cá tính riêng, sự khác biệt, tính thẩm mỹ và cảm giác “thuộc về một cộng đồng”.",
+    "known_competitors": "Các đối thủ cạnh tranh đã biết gồm:\n\n1. Fanatics / Fanatics International\n- Nền tảng lớn về licensed sports fan gear, bao phủ nhiều giải đấu như NFL, NBA, NHL, MLB, football/soccer và nhiều thị trường quốc tế.\n- Cạnh tranh mạnh ở độ phủ sản phẩm, đội bóng, giải đấu và khả năng cung cấp merch chính thức.\n\n2. FOCO\n- Bán licensed fan merchandise cho MLB, NFL, NBA, NHL, Premier League, college teams và nhiều dòng quà tặng/fan products.\n- Cạnh tranh ở mảng fan gift, collectible, novelty product và licensed lifestyle merchandise.\n\n3. BreakingT\n- Tập trung vào sports fan gear với các thiết kế mang tính thời điểm, sự kiện, khoảnh khắc viral hoặc cultural sports moments.\n- Có sản phẩm như áo, hoodie, mug, art print và các dòng merch hướng đến fan muốn thiết kế khác biệt hơn merch đại trà.\n\n4. Rally House\n- Bán sports apparel, fan gear và local merchandise cho nhiều giải lớn như NFL, MLB, NBA, NHL.\n- Cạnh tranh ở mảng assortment rộng, local/team fandom và quà tặng thể thao.\n\n5. Mitchell & Ness\n- Mạnh về vintage sportswear, throwback jerseys, classic fan apparel và heritage aesthetics.\n- Là đối thủ tham chiếu quan trọng nếu brand muốn phát triển các thiết kế thể thao có cảm giác retro, nostalgic hoặc elevated hơn merch phổ thông.\n\nNgoài ra, ở tầng cạnh tranh gián tiếp còn có:\n- các cửa hàng Etsy / marketplace bán thiết kế fan-inspired hoặc sports-themed POD,\n- các store POD nhỏ chuyên làm niche fan gear theo đội, thành phố, giải đấu hoặc mùa sự kiện,\n- các brand thể thao/lifestyle hướng tới sports-fashion crossover thay vì merch truyền thống.\n\nAI có thể research sâu thêm sau để xác định:\n- đối thủ trực tiếp nhất theo từng campaign,\n- đối thủ theo từng giải đấu / từng thị trường,\n- khoảng trống giữa official merch và thiết kế POD sáng tạo hơn.",
+    "known_brand_constraints": "none known",
+    "existing_creative_or_messaging_to_remember": "none",
+    "known_brand_origin_notes": "",
+    "known_founder_story": "",
+    "known_brand_stage": "",
+    "known_product_catalog_sources": "",
+    "_aliases": {
+      "known_product_catalog": "known_product_catalog_sources",
+      "known_hero_product": "known_hero_product_notes"
+    },
+    "known_hero_product_notes": "",
+    "known_bundles": "",
+    "known_product_differentiators": "",
+    "known_unique_mechanism": "",
+    "known_supported_claims": "",
+    "competitor_urls_or_notes": "",
+    "known_alternative_solution": "",
+    "known_primary_audience": "",
+    "known_secondary_audience": "",
+    "known_audience_signals": "",
+    "known_brand_voice": "",
+    "known_language_patterns": "",
+    "known_category_constraints": "",
+    "known_tone_or_price_constraints": "",
+    "known_purchase_behavior": "",
+    "known_seasonality": "",
+    "known_community_ugc_press": "",
+    "known_source_links_or_docs": ""
+  },
+  "field_groups": {
+    "alysha_required_seed": {
+      "brand_name": "sportivestyle",
+      "brand_website_url": "https://sportivestyle.com/",
+      "products_in_scope": "all",
+      "context_focus_scope": "full brand",
+      "known_brand_and_audience_context": "Store POD hướng tới thị trường Mỹ, Canada, Anh và Đức, tập trung vào nhóm khách hàng là người hâm mộ thể thao, đặc biệt là fan của các giải đấu và cộng đồng như NFL, NHL, OHL, NLL, EPL, DEL, MLB, NBA và các môn thể thao phổ biến khác.\n\nAudience của brand có thể khá rộng và sẽ được thu hẹp cụ thể hơn ở từng campaign/SKU, nhưng ở cấp brand có thể nhận diện các nhóm chính như sau:\n\nĐộ tuổi phổ biến: khoảng 18–55 tuổi, trong đó nhóm mua POD mạnh thường rơi vào 25–45 tuổi.\nGiới tính: cả nam và nữ, tuy nhiên nhiều dòng thiết kế fan gear, jersey-inspired, vintage sports, golf club hoặc streetwear có thể thiên về nam tùy campaign.\nLifestyle: yêu thể thao, theo dõi đội bóng/giải đấu thường xuyên, thích thể hiện fandom và bản sắc cá nhân qua quần áo, hoodie, jersey-style apparel, hat, poster hoặc các sản phẩm graphic.\nĐộng lực mua hàng: muốn sở hữu thiết kế khác biệt hơn merch đại trà; thích các mẫu thể hiện tinh thần đội bóng, thành phố, giải đấu hoặc văn hóa fan theo cách sáng tạo, thời trang và có tính sưu tầm hơn.\nPain points: merchandise chính thức thường quá phổ thông, ít cá tính hoặc không đúng gu thời trang; nhiều thiết kế trên thị trường trông generic, lặp lại, thiếu chiều sâu concept; một số fan muốn sản phẩm vừa thể hiện tình yêu thể thao vừa đủ đẹp để mặc hằng ngày.\nValues: loyalty với đội bóng/cộng đồng fan, niềm tự hào địa phương, nostalgia, tinh thần heritage, cá tính riêng, sự khác biệt, tính thẩm mỹ và cảm giác “thuộc về một cộng đồng”.",
+      "known_competitors": "Các đối thủ cạnh tranh đã biết gồm:\n\n1. Fanatics / Fanatics International\n- Nền tảng lớn về licensed sports fan gear, bao phủ nhiều giải đấu như NFL, NBA, NHL, MLB, football/soccer và nhiều thị trường quốc tế.\n- Cạnh tranh mạnh ở độ phủ sản phẩm, đội bóng, giải đấu và khả năng cung cấp merch chính thức.\n\n2. FOCO\n- Bán licensed fan merchandise cho MLB, NFL, NBA, NHL, Premier League, college teams và nhiều dòng quà tặng/fan products.\n- Cạnh tranh ở mảng fan gift, collectible, novelty product và licensed lifestyle merchandise.\n\n3. BreakingT\n- Tập trung vào sports fan gear với các thiết kế mang tính thời điểm, sự kiện, khoảnh khắc viral hoặc cultural sports moments.\n- Có sản phẩm như áo, hoodie, mug, art print và các dòng merch hướng đến fan muốn thiết kế khác biệt hơn merch đại trà.\n\n4. Rally House\n- Bán sports apparel, fan gear và local merchandise cho nhiều giải lớn như NFL, MLB, NBA, NHL.\n- Cạnh tranh ở mảng assortment rộng, local/team fandom và quà tặng thể thao.\n\n5. Mitchell & Ness\n- Mạnh về vintage sportswear, throwback jerseys, classic fan apparel và heritage aesthetics.\n- Là đối thủ tham chiếu quan trọng nếu brand muốn phát triển các thiết kế thể thao có cảm giác retro, nostalgic hoặc elevated hơn merch phổ thông.\n\nNgoài ra, ở tầng cạnh tranh gián tiếp còn có:\n- các cửa hàng Etsy / marketplace bán thiết kế fan-inspired hoặc sports-themed POD,\n- các store POD nhỏ chuyên làm niche fan gear theo đội, thành phố, giải đấu hoặc mùa sự kiện,\n- các brand thể thao/lifestyle hướng tới sports-fashion crossover thay vì merch truyền thống.\n\nAI có thể research sâu thêm sau để xác định:\n- đối thủ trực tiếp nhất theo từng campaign,\n- đối thủ theo từng giải đấu / từng thị trường,\n- khoảng trống giữa official merch và thiết kế POD sáng tạo hơn.",
+      "known_brand_constraints": "none known",
+      "existing_creative_or_messaging_to_remember": "none"
+    },
+    "optional_human_context": {
+      "known_brand_origin_notes": "",
+      "known_founder_story": "",
+      "known_brand_stage": "",
+      "known_product_catalog_sources": "",
+      "known_hero_product_notes": "",
+      "known_bundles": "",
+      "known_product_differentiators": "",
+      "known_unique_mechanism": "",
+      "known_supported_claims": "",
+      "competitor_urls_or_notes": "",
+      "known_alternative_solution": "",
+      "known_primary_audience": "",
+      "known_secondary_audience": "",
+      "known_audience_signals": "",
+      "known_brand_voice": "",
+      "known_language_patterns": "",
+      "known_category_constraints": "",
+      "known_tone_or_price_constraints": "",
+      "known_purchase_behavior": "",
+      "known_seasonality": "",
+      "known_community_ugc_press": "",
+      "known_source_links_or_docs": ""
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "status": "success",
+  "raw_response": "{\n  \"creative_angles\": [\n    \"Mother's Day gift that delivers authentic Vietnamese coffee strength - no machine required\",\n    \"From Vietnam's coffee capital to Mom's cup - 6 roast levels to discover her perfect strength\",\n    \"Skip the weak coffee shop - give Mom 100-150mg of pure Vietnamese Robusta energy\",\n    \"The thoughtful gift that works anywhere - office, home, travel - just add water\",\n    \"Authentic Vietnamese coffee culture in a convenient gift set - tradition meets modern convenience\",\n    \"35% off the coffee gift that's stronger than anything she's tried - pure Robusta from Đắk Lắk\"\n  ],\n  \"research_focus\": [\n    \"Mother's Day coffee gift market and gifting motivations\",\n    \"Strong coffee preferences among US consumers vs mainstream options\",\n    \"Vietnamese coffee awareness and authenticity appeal\",\n    \"Convenience factor importance for busy mothers\",\n    \"Premium coffee gifting price sensitivity and discount effectiveness\",\n    \"Instant/no-machine coffee quality perceptions and barriers\"\n  ],\n  \"strategy_brief\": {\n    \"audience_core\": \"US strong coffee seekers looking for Mother's Day gifts\",\n    \"pain_point\": \"Mainstream coffee feels too weak or bland, and finding a meaningful coffee gift that's both strong and convenient\",\n    \"desired_outcome\": \"Give Mom stronger caffeine and bolder taste in a thoughtful, convenient gift she can enjoy anywhere\",\n    \"positioning_summary\": \"AoDai Coffee delivers pure Vietnamese coffee excellence through 100% Robusta freeze-dried espresso pods from Buôn Ma Thuột, Đắk Lắk - the perfect Mother's Day gift offering authentic Vietnamese coffee strength without any machine needed\",\n    \"differentiation\": [\n      \"100% Vietnamese Robusta from Đắk Lắk highlands\",\n      \"100-150mg caffeine per capsule - significantly stronger than mainstream coffee\",\n      \"No machine needed - instant preparation anywhere\",\n      \"6 roast levels representing Vietnamese cities for discovery\"\n    ],\n    \"message_pillars\": [\n      \"Perfect Mother's Day gift for coffee-loving moms\",\n      \"100% Vietnamese Robusta for authentic strength\",\n      \"No machine needed - just add hot or cold water\",\n      \"From Vietnam's Central Highlands to her cup\",\n      \"35% OFF first order makes gifting affordable\"\n    ],\n    \"creative_angles\": [\n      \"Mother's Day gift that delivers authentic Vietnamese coffee strength\",\n      \"6 roast levels to discover Mom's perfect Vietnamese coffee intensity\",\n      \"The convenient coffee gift that works anywhere - no machine required\",\n      \"35% off authentic Vietnamese coffee stronger than her usual cup\"\n    ],\n    \"offer_role\": \"Makes premium Vietnamese coffee gifting accessible and creates urgency for Mother's Day shopping\",\n    \"do_not_say\": [\n      \"Do not describe AoDai as flavored coffee\",\n      \"Do not mix AoDai positioning with Nonla flavor messaging\",\n      \"Do not downplay the strength - emphasize the authentic Vietnamese Robusta power\"\n    ]\n  }\n}",
+  "parsed": {
+    "creative_angles": [
+      "Mother's Day gift that delivers authentic Vietnamese coffee strength - no machine required",
+      "From Vietnam's coffee capital to Mom's cup - 6 roast levels to discover her perfect strength",
+      "Skip the weak coffee shop - give Mom 100-150mg of pure Vietnamese Robusta energy",
+      "The thoughtful gift that works anywhere - office, home, travel - just add water",
+      "Authentic Vietnamese coffee culture in a convenient gift set - tradition meets modern convenience",
+      "35% off the coffee gift that's stronger than anything she's tried - pure Robusta from Đắk Lắk"
+    ],
+    "research_focus": [
+      "Mother's Day coffee gift market and gifting motivations",
+      "Strong coffee preferences among US consumers vs mainstream options",
+      "Vietnamese coffee awareness and authenticity appeal",
+      "Convenience factor importance for busy mothers",
+      "Premium coffee gifting price sensitivity and discount effectiveness",
+      "Instant/no-machine coffee quality perceptions and barriers"
+    ],
+    "strategy_brief": {
+      "audience_core": "US strong coffee seekers looking for Mother's Day gifts",
+      "pain_point": "Mainstream coffee feels too weak or bland, and finding a meaningful coffee gift that's both strong and convenient",
+      "desired_outcome": "Give Mom stronger caffeine and bolder taste in a thoughtful, convenient gift she can enjoy anywhere",
+      "positioning_summary": "AoDai Coffee delivers pure Vietnamese coffee excellence through 100% Robusta freeze-dried espresso pods from Buôn Ma Thuột, Đắk Lắk - the perfect Mother's Day gift offering authentic Vietnamese coffee strength without any machine needed",
+      "differentiation": [
+        "100% Vietnamese Robusta from Đắk Lắk highlands",
+        "100-150mg caffeine per capsule - significantly stronger than mainstream coffee",
+        "No machine needed - instant preparation anywhere",
+        "6 roast levels representing Vietnamese cities for discovery"
+      ],
+      "message_pillars": [
+        "Perfect Mother's Day gift for coffee-loving moms",
+        "100% Vietnamese Robusta for authentic strength",
+        "No machine needed - just add hot or cold water",
+        "From Vietnam's Central Highlands to her cup",
+        "35% OFF first order makes gifting affordable"
+      ],
+      "creative_angles": [
+        "Mother's Day gift that delivers authentic Vietnamese coffee strength",
+        "6 roast levels to discover Mom's perfect Vietnamese coffee intensity",
+        "The convenient coffee gift that works anywhere - no machine required",
+        "35% off authentic Vietnamese coffee stronger than her usual cup"
+      ],
+      "offer_role": "Makes premium Vietnamese coffee gifting accessible and creates urgency for Mother's Day shopping",
+      "do_not_say": [
+        "Do not describe AoDai as flavored coffee",
+        "Do not mix AoDai positioning with Nonla flavor messaging",
+        "Do not downplay the strength - emphasize the authentic Vietnamese Robusta power"
+      ]
+    }
+  },
+  "parse_error": null,
+  "prompt_key": "run_claude_brand_strategy",
+  "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\brand_intake\\brand_strategy_prompt.txt"
+}

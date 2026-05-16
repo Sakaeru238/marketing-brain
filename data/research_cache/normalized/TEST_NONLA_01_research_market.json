@@ -1,0 +1,15 @@
+{
+  "_id": "TEST_NONLA_01",
+  "generated_at": "2026-04-27T09:27:44.964964",
+  "claude_research_market": {
+    "status": "skipped",
+    "reason": "Claude research market not attempted.",
+    "raw_response": null,
+    "parse_error": null,
+    "prompt_key": "run_claude_research_market",
+    "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\research\\research_market_prompt.txt"
+  },
+  "competitor_findings": [],
+  "ad_findings": [],
+  "sources": []
+}

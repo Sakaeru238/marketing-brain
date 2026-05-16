@@ -1,0 +1,65 @@
+[
+  {
+    "usage_id": "USE_AODAI_01",
+    "product_id": "AODAI_12",
+    "step_no": 1,
+    "usage_text": "Open pod/capsule",
+    "applies_to": "all channels"
+  },
+  {
+    "usage_id": "USE_AODAI_02",
+    "product_id": "AODAI_12",
+    "step_no": 2,
+    "usage_text": "Pour powder into cup or bottle",
+    "applies_to": "all channels"
+  },
+  {
+    "usage_id": "USE_AODAI_03",
+    "product_id": "AODAI_12",
+    "step_no": 3,
+    "usage_text": "Add hot or cold water",
+    "applies_to": "all channels"
+  },
+  {
+    "usage_id": "USE_AODAI_04",
+    "product_id": "AODAI_12",
+    "step_no": 4,
+    "usage_text": "Shake or stir for 5 to 10 seconds",
+    "applies_to": "all channels"
+  },
+  {
+    "usage_id": "USE_AODAI_05",
+    "product_id": "AODAI_12",
+    "step_no": 5,
+    "usage_text": "Adjust water or add ice to taste",
+    "applies_to": "all channels"
+  },
+  {
+    "usage_id": "USE_NONLA_01",
+    "product_id": "NONLA_COCONUT_8",
+    "step_no": 1,
+    "usage_text": "Open pod/capsule",
+    "applies_to": "all channels"
+  },
+  {
+    "usage_id": "USE_NONLA_02",
+    "product_id": "NONLA_COCONUT_8",
+    "step_no": 2,
+    "usage_text": "Pour powder into cup or bottle",
+    "applies_to": "all channels"
+  },
+  {
+    "usage_id": "USE_NONLA_03",
+    "product_id": "NONLA_COCONUT_8",
+    "step_no": 3,
+    "usage_text": "Add hot or cold water",
+    "applies_to": "all channels"
+  },
+  {
+    "usage_id": "USE_NONLA_04",
+    "product_id": "NONLA_COCONUT_8",
+    "step_no": 4,
+    "usage_text": "Shake or stir for 5 to 10 seconds",
+    "applies_to": "all channels"
+  }
+]

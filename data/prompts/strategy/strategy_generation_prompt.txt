@@ -1,0 +1,583 @@
+You are generating MARKETING STRATEGY from brand context, insight data, campaign direction, and optional customer feedback / Voice of Customer data.
+
+You are NOT writing ads yet.
+You are deciding what the campaign should say, who it should target, why it will convert, and how the Creative Engine should turn the strategy into real ads, organic posts, video concepts, and image concepts.
+
+Your output must be ALYSHA-READY:
+- deep enough for creative production
+- specific enough for direct-response execution
+- structured enough for downstream Creative Engine parsing
+- grounded in research, insight, brand truth, product truth, campaign direction, and VOC when available
+
+INPUT:
+{{STRATEGY_INPUT}}
+
+---
+
+CAMPAIGN DIRECTION SOURCE OF TRUTH RULES:
+
+The input contains a field named campaign_direction.
+
+campaign_direction is the source of truth for campaign intent.
+
+You must follow:
+- campaign_direction.campaign_objective
+- campaign_direction.campaign_direction
+- campaign_direction.primary_audience
+- campaign_direction.primary_angle_family
+- campaign_direction.secondary_angle_family
+- campaign_direction.occasion
+- campaign_direction.content_intent
+- campaign_direction.must_use_direction
+- campaign_direction.do_not_focus
+
+If research or insight suggests multiple directions, prioritize:
+1. campaign_direction.must_use_direction
+2. campaign_direction.primary_angle_family
+3. campaign_direction.primary_audience
+4. campaign_direction.occasion
+5. campaign_direction.campaign_objective
+
+Research and insight should support the selected campaign direction.
+Research and insight must NOT override the campaign direction.
+
+Use secondary_angle_family only as supporting angles.
+Do not let secondary angles become the main campaign direction.
+
+If campaign_direction.do_not_focus is provided, treat it as a hard guardrail.
+
+Also include campaign direction in:
+- campaign_direction_alignment
+- target_persona
+- strategy_map
+- priority_angles
+- hook_guidance
+- core_message
+- creative_mechanics
+- visual_formats
+- do_not_do
+
+---
+
+TASK:
+
+Use the brand context, campaign direction, insight output, research findings, and customer feedback if provided to build a HIGH-CONVERTING STRATEGY.
+
+You must define:
+
+1. CAMPAIGN DIRECTION ALIGNMENT
+2. TARGET PERSONA
+3. CUSTOMER PSYCHOLOGY
+4. STRATEGY MAP
+5. PRIORITY ANGLES
+6. HOOK GUIDANCE
+7. CORE MESSAGE
+8. OFFER STRATEGY
+9. REASON TO BELIEVE
+10. MECHANISM
+11. VOC SUMMARY
+12. CREATIVE MECHANICS
+13. VISUAL FORMATS
+14. CREATIVE DIRECTION
+15. DO NOT DO
+
+---
+
+CUSTOMER FEEDBACK / VOC HANDLING:
+
+If customer_feedback_raw is provided:
+- Treat it as Voice of Customer data.
+- Extract exact customer language when useful.
+- Identify pains, objections, buying triggers, desired outcomes, and reusable phrases.
+- Use VOC to sharpen strategy, hooks, belief shift, objections, and creative direction.
+- Do NOT invent customer feedback.
+- If a field is unclear, write "unclear".
+
+If customer_feedback_raw is empty:
+- Return an empty array for voc_summary.
+- Do not fabricate VOC.
+
+---
+
+OUTPUT REQUIREMENTS:
+
+Return EXACTLY ONE valid JSON object.
+
+STRICT RULES:
+- Output MUST be valid JSON
+- Use DOUBLE QUOTES for all keys and string values
+- NO trailing commas
+- NO explanation text
+- NO text before or after JSON
+- DO NOT wrap JSON in markdown or ``` blocks
+
+---
+
+OUTPUT FORMAT:
+
+{
+  "campaign_direction_alignment": [
+    {
+      "campaign_direction": "string",
+      "primary_angle_family": "string",
+      "must_use_direction": "string",
+      "how_strategy_follows_direction": "string",
+      "what_was_deprioritized": "string"
+    }
+  ],
+
+  "target_persona": [
+    {
+      "persona": "string",
+      "why_this_persona": "string",
+      "source_insights": ["string"],
+      "priority": "high | medium | low"
+    }
+  ],
+
+  "customer_psychology": [
+    {
+      "problem": "string",
+      "tension": "string",
+      "current_belief": "string",
+      "desired_belief": "string"
+    }
+  ],
+
+  "strategy_map": [
+    {
+      "persona": "string",
+      "pain_bucket": "string",
+      "desire_bucket": "string",
+      "awareness_stage": "unaware | problem_aware | solution_aware | product_aware | most_aware",
+      "funnel_role": "cold | warm | retargeting",
+      "message_role": "educate | reframe | compare | convert"
+    }
+  ],
+
+  "priority_angles": [
+    {
+      "angle": "string",
+      "why_it_should_work": "string",
+      "supporting_insights": ["string"],
+      "supporting_brands": ["string"],
+      "ad_expression": "string",
+      "priority": "high | medium | low"
+    }
+  ],
+
+  "hook_guidance": [
+    {
+      "hook_tactic": "direct_callout | problem_callout | contrast | belief_shift | specific_observation | failed_solution | before_after | status_identity | curiosity_gap | emotional_truth",
+      "hook_voice": "direct_response | native_social | ugc | emotional_story | educational | contrarian | relatable",
+      "awareness_stage": "unaware | problem_aware | solution_aware | product_aware | most_aware",
+      "why_it_stops_scroll": "string"
+    }
+  ],
+
+  "core_message": [
+    {
+      "message": "string",
+      "why_it_matters": "string",
+      "emotional_driver": "string",
+      "belief_shift_embedded": "string"
+    }
+  ],
+
+  "offer_strategy": [
+    {
+      "offer_use": "string",
+      "why_it_works": "string",
+      "risk_reduced": "string"
+    }
+  ],
+
+  "reason_to_believe": [
+    {
+      "proof_point": "string",
+      "why_believable": "string",
+      "source": "brand | product | research | insight | voc"
+    }
+  ],
+
+  "mechanism": [
+    {
+      "mechanism": "string",
+      "why_it_solves_problem": "string"
+    }
+  ],
+
+  "voc_summary": [
+    {
+      "customer_phrase": "string",
+      "pain": "string",
+      "objection": "string",
+      "buying_trigger": "string",
+      "desired_outcome": "string",
+      "how_to_use_in_creative": "string"
+    }
+  ],
+
+  "creative_mechanics": [
+    {
+      "mechanic": "split_screen | before_after | pov | listicle | testimonial | product_demo | problem_solution | comparison | morning_routine | gift_reveal | comment_reply | myth_busting",
+      "why_this_mechanic": "string",
+      "paired_angle": "string"
+    }
+  ],
+
+  "visual_formats": [
+    {
+      "format": "static_image | carousel | ugc_video | product_demo_video | reels_script | short_form_video | meme_post | comparison_static | testimonial_static | landing_page_section",
+      "best_for": "ads | organic | retargeting | awareness | conversion",
+      "production_notes": "string"
+    }
+  ],
+
+  "creative_direction": [
+    {
+      "concept": "string",
+      "visual_direction": "string",
+      "hook_direction": "string",
+      "best_for": "image | video | landing_page | email | ad_copy"
+    }
+  ],
+
+  "do_not_do": [
+    "string"
+  ]
+}
+
+---
+
+BLOCK INSTRUCTIONS:
+
+1. CAMPAIGN DIRECTION ALIGNMENT
+
+This block proves that the strategy followed the Campaign_Control direction.
+
+You must explain:
+- campaign_direction used
+- primary_angle_family used
+- must_use_direction followed
+- how the strategy follows campaign direction
+- what research/insight directions were deprioritized to prevent drift
+
+Example:
+{
+  "campaign_direction": "mothers_day_gift",
+  "primary_angle_family": "gift_utility",
+  "must_use_direction": "Position AODAI as a Mother's Day gift that strong-coffee moms will actually use every morning.",
+  "how_strategy_follows_direction": "The strategy makes gift usefulness the main idea and uses coffee strength only as support.",
+  "what_was_deprioritized": "Pure caffeine-strength messaging was deprioritized so the campaign does not become a generic strong coffee ad."
+}
+
+---
+
+2. TARGET PERSONA
+
+Persona must be usable as a direct ad callout.
+
+GOOD:
+"For sons and daughters buying Mother's Day gifts"
+
+BAD:
+"Adults aged 25–45"
+
+The persona must connect to:
+- campaign_direction.primary_audience
+- campaign_direction.occasion if present
+- campaign_direction.primary_angle_family
+- insight
+- pain/desire
+- product relevance
+
+---
+
+3. CUSTOMER PSYCHOLOGY
+
+Define:
+- problem: what the audience struggles with
+- tension: the emotional conflict
+- current_belief: what they believe now
+- desired_belief: what they need to believe to buy
+
+This is the psychological core of the campaign.
+
+If campaign_direction exists, belief shift must follow campaign_direction.must_use_direction.
+
+---
+
+4. STRATEGY MAP
+
+Map each major persona or angle to:
+- pain_bucket
+- desire_bucket
+- awareness_stage
+- funnel_role
+- message_role
+
+Use this to make downstream creative easier to generate.
+
+Definitions:
+- unaware: does not realize the problem
+- problem_aware: feels the problem but does not know the solution
+- solution_aware: knows possible solutions but not why this product
+- product_aware: knows the product but needs confidence
+- most_aware: ready to buy, needs offer/urgency
+
+---
+
+5. PRIORITY ANGLES
+
+Each angle must be strategic, not generic.
+
+Each angle must include:
+- why it should work
+- supporting insights
+- supporting brands
+- ad_expression
+- priority
+
+The ad_expression must be usable immediately as a hook or creative direction.
+
+The first priority angle should follow campaign_direction.primary_angle_family.
+Secondary angles can support the campaign but must not override the main direction.
+
+---
+
+6. HOOK GUIDANCE
+
+Do not write full ads yet.
+Give the Creative Engine hook direction.
+
+Each hook guidance item should explain:
+- what hook tactic to use
+- what voice it should use
+- what awareness stage it fits
+- why it will stop scroll
+
+Hook guidance must reflect campaign_direction.content_intent and campaign_direction.primary_angle_family.
+
+---
+
+7. CORE MESSAGE
+
+Core message must embed the belief shift.
+
+BAD:
+"AODAI is strong Vietnamese coffee."
+
+GOOD:
+"A good coffee gift is not the prettiest thing on the table. It is the thing she reaches for every morning."
+
+If campaign_direction.must_use_direction is provided, core message must directly support it.
+
+---
+
+8. OFFER STRATEGY
+
+Explain how the offer reduces risk or increases confidence.
+
+Do not make the offer the entire strategy.
+The offer supports the belief shift.
+
+---
+
+9. REASON TO BELIEVE
+
+Use concrete proof.
+
+Sources can be:
+- brand
+- product
+- research
+- insight
+- voc
+
+Avoid vague claims like "high quality" unless there is a concrete proof point.
+
+---
+
+10. MECHANISM
+
+Mechanism connects product feature to problem solved.
+
+Example:
+{
+  "mechanism": "6 roast levels tasting set",
+  "why_it_solves_problem": "Removes guesswork and lets the recipient find their preferred strength"
+}
+
+---
+
+11. VOC SUMMARY
+
+If customer feedback exists, extract:
+- exact phrase
+- pain
+- objection
+- trigger
+- desired outcome
+- how to use it in creative
+
+Do not over-polish customer language.
+Keep useful raw phrasing when possible.
+
+---
+
+12. CREATIVE MECHANICS
+
+Creative mechanics are execution structures.
+
+Examples:
+- comparison
+- product_demo
+- pov
+- morning_routine
+- gift_reveal
+- testimonial
+- comment_reply
+- before_after
+
+Pair each mechanic with a strategy angle.
+
+Creative mechanics must support campaign_direction.content_intent and primary_angle_family.
+
+---
+
+13. VISUAL FORMATS
+
+Visual formats define production-ready containers.
+
+Examples:
+- static_image
+- carousel
+- ugc_video
+- reels_script
+- comparison_static
+- testimonial_static
+
+Each must include production_notes that a designer/video editor can understand.
+
+---
+
+14. CREATIVE DIRECTION
+
+Creative direction should be specific enough for the next stage to produce content.
+
+It should answer:
+- What is the concept?
+- What should the viewer see?
+- What hook direction should be used?
+- What format is best?
+
+---
+
+15. DO NOT DO
+
+Use brand guardrails.
+Add strategy-specific guardrails.
+Add campaign direction guardrails from campaign_direction.do_not_focus.
+
+Examples:
+- Do not describe AODAI as flavored coffee.
+- Do not mix AODAI positioning with Nonla flavor messaging.
+- Do not make the product feel like generic instant coffee.
+- Do not focus only on discount without emotional reason to buy.
+- Do not let secondary coffee-strength messaging override the Mother's Day gift direction.
+
+---
+
+QUALITY RULES:
+
+- Strategy MUST be based on insight, not generic marketing logic.
+- Campaign direction is the source of truth.
+- Research and insight support campaign direction; they must not override it.
+- Every strategy must include a clear tension that can be felt immediately.
+- Explicitly define belief shift.
+- Core message MUST embed the belief shift.
+- Persona must be expressible as a direct ad callout.
+- Every priority angle MUST include an ad_expression.
+- Every angle must reference supporting insights and supporting brands.
+- Offer strategy must reduce risk or increase confidence.
+- Reason to believe must be concrete.
+- Mechanism must clearly connect product feature to problem solved.
+- Creative mechanics must be executable.
+- Visual formats must be production-ready.
+- VOC must be used if provided.
+- Avoid generic marketing language.
+- Respect brand guardrails strictly.
+- Respect campaign_direction.do_not_focus strictly.
+
+---
+
+EXAMPLES:
+
+PSYCHOLOGY EXAMPLE:
+
+{
+  "problem": "People don't know what gift mom will actually use",
+  "tension": "They want to be thoughtful but usually end up buying something generic",
+  "current_belief": "A nice-looking gift is enough",
+  "desired_belief": "A good gift is something she actually uses every day"
+}
+
+---
+
+ANGLE + EXPRESSION EXAMPLE:
+
+{
+  "angle": "Practical gift vs useless gift",
+  "ad_expression": "Not another gift that sits on a shelf. Something she actually uses every morning."
+}
+
+---
+
+HOOK GUIDANCE EXAMPLE:
+
+{
+  "hook_tactic": "specific_observation",
+  "hook_voice": "native_social",
+  "awareness_stage": "problem_aware",
+  "why_it_stops_scroll": "It starts from a daily behavior the buyer has already seen, making the gift idea feel obvious but overlooked."
+}
+
+---
+
+VOC SUMMARY EXAMPLE:
+
+{
+  "customer_phrase": "I need coffee that actually wakes me up",
+  "pain": "Current coffee feels too weak",
+  "objection": "Worried stronger coffee may taste harsh",
+  "buying_trigger": "Needs reliable morning energy",
+  "desired_outcome": "Strong coffee that is easy to prepare",
+  "how_to_use_in_creative": "Use as a direct hook for strength-focused ads."
+}
+
+---
+
+CREATIVE MECHANIC EXAMPLE:
+
+{
+  "mechanic": "comparison",
+  "why_this_mechanic": "Shows the difference between generic gifts and daily-use coffee gifts instantly.",
+  "paired_angle": "Practical gift vs useless gift"
+}
+
+---
+
+VISUAL FORMAT EXAMPLE:
+
+{
+  "format": "comparison_static",
+  "best_for": "ads",
+  "production_notes": "Show flowers/chocolate/gift card on one side and AODAI coffee in a morning routine on the other side."
+}
+
+---
+
+Return ONLY valid JSON.
+No explanation text.
+Do NOT wrap JSON in markdown.

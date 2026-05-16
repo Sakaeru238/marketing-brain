@@ -1,0 +1,79 @@
+{
+  "_id": "TEST_NONLA_01",
+  "generated_at": "2026-04-27T09:27:44.964964",
+  "manual_overrides": null,
+  "brand_filter": {
+    "brand_name": "Nonla Coffee",
+    "website": "https://nonlacafe.com/",
+    "brand_positioning": "Vietnamese coffee with flavor-forward convenience lines",
+    "brand_type": "mix/flavor + selected pure SKUs",
+    "origin": "Buon Ma Thuot, Dak Lak, Vietnam",
+    "product_name": "Nonla Coconut Coffee 8 Pods",
+    "product_type": "flavored coffee",
+    "format": "instant pod",
+    "offer_text": "35% OFF first order",
+    "core_truth": [
+      "Vietnamese coffee brand with flavor-forward product lines",
+      "Convenient instant coffee format",
+      "Includes flavored lines and selected pure lines",
+      "Works in hot or cold water"
+    ],
+    "guardrails": [
+      "Do not present all Nonla products as pure coffee.",
+      "For flavored SKUs, clearly mention the flavor variant.",
+      "For pure Nonla SKUs, do not inherit flavor claims from coconut/lemon lines."
+    ],
+    "audience_core": {
+      "audience_name": "Flavor-seeking coffee drinkers",
+      "pain_point": "Standard coffee feels repetitive and less exciting",
+      "desired_outcome": "Wants novelty flavors with easy preparation"
+    },
+    "message_pillars": [
+      "Vietnamese coffee brand with flavor-forward product lines",
+      "Convenient instant coffee format",
+      "Includes flavored lines and selected pure lines",
+      "Works in hot or cold water",
+      "Coconut flavor profile",
+      "No machine needed"
+    ],
+    "creative_angles": [
+      "Turn 'Standard coffee feels repetitive and less exciting' into 'Wants novelty flavors with easy preparation' for Flavor-seeking coffee drinkers.",
+      "Lead with vietnamese coffee with flavor-forward convenience lines instead of generic coffee messaging.",
+      "Use Vietnamese coffee brand with flavor-forward product lines as the primary proof point.",
+      "Show convenience clearly with the instant pod and simple usage.",
+      "Use 35% OFF first order to reduce trial friction and create a clear reason to act now."
+    ]
+  },
+  "website_context_status": "success",
+  "website_sources": [
+    "https://nonlacafe.com/",
+    "https://nonlacafe.com/about",
+    "https://nonlacafe.com/pages/about",
+    "https://nonlacafe.com/shop"
+  ],
+  "website_context_file": "E:\\Source\\marketing-brain\\data\\knowledge\\website_context\\TEST_NONLA_01_website_context.json",
+  "claude_research_core": {
+    "status": "skipped",
+    "reason": "Claude research core not attempted.",
+    "raw_response": null,
+    "parse_error": null,
+    "prompt_key": "run_claude_research_core",
+    "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\research\\research_core_prompt.txt"
+  },
+  "claude_research_messaging": {
+    "status": "skipped",
+    "reason": "Claude research messaging not attempted.",
+    "raw_response": null,
+    "parse_error": null,
+    "prompt_key": "run_claude_research_messaging",
+    "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\research\\research_messaging_prompt.txt"
+  },
+  "claude_research_market": {
+    "status": "skipped",
+    "reason": "Claude research market not attempted.",
+    "raw_response": null,
+    "parse_error": null,
+    "prompt_key": "run_claude_research_market",
+    "prompt_file": "E:\\Source\\marketing-brain\\data\\prompts\\research\\research_market_prompt.txt"
+  }
+}

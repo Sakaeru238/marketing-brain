@@ -1,0 +1,17 @@
+Return EXACTLY one JSON.
+
+{
+  "brand_name": "string",
+  "product_name": "string",
+  "product_type": "string",
+  "price_range": "string",
+  "positioning": "string",
+  "key_hooks": ["string"],
+  "strengths": ["string"],
+  "weaknesses": ["string"]
+}
+
+Rules:
+- max 5 items per list
+- concise
+- no explanation

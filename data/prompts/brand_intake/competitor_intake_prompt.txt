@@ -1,0 +1,48 @@
+You are running COMPETITOR INTAKE for one competitor product.
+
+Use ONLY the provided competitor product context.
+
+Return EXACTLY ONE valid JSON object.
+Do NOT wrap the JSON in markdown.
+Do NOT use ```json fences.
+
+Schema:
+
+{
+  "brand_name": "string",
+  "product_name": "string",
+  "product_type": "string",
+  "product_link": "string",
+  "price_range": "string",
+  "positioning_summary": "string",
+  "audience_core": {
+    "audience_name": "string",
+    "pain_point": "string",
+    "desired_outcome": "string"
+  },
+  "differentiation": ["string"],
+  "message_pillars": ["string"],
+  "top_products": ["string"],
+  "key_hooks": ["string"],
+  "ad_angles": ["string"],
+  "signals": {
+    "website_copy": ["string"],
+    "ad_copy": ["string"],
+    "reviews": ["string"]
+  }
+}
+
+Rules:
+- differentiation: max 5
+- message_pillars: max 5
+- top_products: max 5
+- key_hooks: max 5
+- ad_angles: max 5
+- website_copy: max 5
+- ad_copy: max 5
+- reviews: max 5
+- Keep concise and practical.
+- If uncertain, infer cautiously.
+
+INPUT:
+{{COMPETITOR_CONTEXT}}

@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-04-27T16:41:02.909614",
+  "seed_competitors": [
+    {
+      "brand_name": "Atlas Coffee Club",
+      "domain": "atlascoffeeclub.com",
+      "category": "coffee_subscription_gift",
+      "source": "competitor_registry"
+    },
+    {
+      "brand_name": "Bean Box",
+      "domain": "beanbox.com",
+      "category": "coffee_gift_box",
+      "source": "competitor_registry"
+    },
+    {
+      "brand_name": "Trade Coffee",
+      "domain": "drinktrade.com",
+      "category": "coffee_subscription",
+      "source": "competitor_registry"
+    },
+    {
+      "brand_name": "Blue Bottle Coffee",
+      "domain": "bluebottlecoffee.com",
+      "category": "premium_coffee_gift",
+      "source": "competitor_registry"
+    },
+    {
+      "brand_name": "Verve Coffee Roasters",
+      "domain": "vervecoffee.com",
+      "category": "specialty_coffee",
+      "source": "competitor_registry"
+    }
+  ],
+  "competitor_findings": [],
+  "hooks": [],
+  "claims": []
+}

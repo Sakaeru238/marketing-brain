@@ -1,0 +1,241 @@
+{
+  "source": "ai_research",
+  "generated_at": "2026-04-15T19:51:11.921008",
+  "_id": "AODAI_01",
+  "manual_overrides": null,
+  "brand_filter": {
+    "brand_name": "AoDai Coffee",
+    "website": "https://nonlacafe.com/",
+    "brand_positioning": "Pure Vietnamese Coffee",
+    "brand_type": "pure coffee",
+    "origin": "Buon Ma Thuot, Dak Lak, Vietnam",
+    "product_name": "AODAI Level 1–6 Tasting Set – Freeze-Dried Vietnamese Espresso | 12 Pods",
+    "product_type": "pure coffee",
+    "format": "instant pod",
+    "offer_text": "35% OFF first order",
+    "core_truth": [
+      "100% Vietnamese Robusta",
+      "Pure coffee",
+      "Freeze-dried Vietnamese espresso",
+      "No machine needed",
+      "Strong authentic Vietnamese coffee taste",
+      "Works in hot or cold water"
+    ],
+    "guardrails": [
+      "Do not describe AoDai as flavored coffee.",
+      "Do not mix AoDai positioning with Nonla flavor messaging.",
+      "Keep messaging focused on pure Vietnamese coffee."
+    ],
+    "audience_core": {
+      "audience_name": "US strong coffee seekers",
+      "pain_point": "Mainstream coffee feels too weak or bland",
+      "desired_outcome": "Wants stronger caffeine and bolder taste"
+    },
+    "message_pillars": [
+      "100% Vietnamese Robusta for maximum strength",
+      "Cafe-quality taste ready in seconds",
+      "No machine needed - ultimate convenience",
+      "Authentic Vietnamese coffee heritage",
+      "Pure coffee with no sugar or additives",
+      "35% OFF first order"
+    ],
+    "creative_angles": [
+      "What if your morning coffee could be as strong as Vietnamese cafe culture demands?",
+      "The instant coffee that actually tastes like real coffee - because it IS real coffee",
+      "Skip the $5 coffee shop - get cafe-quality Vietnamese espresso at home in seconds",
+      "Finally, instant coffee for people who actually love strong coffee",
+      "6 intensity levels: Find your perfect strength from gentle to extra dark",
+      "No machine, no mess, no weak coffee - just pure Vietnamese Robusta power"
+    ]
+  },
+  "website_context_status": "success",
+  "website_sources": [
+    "https://nonlacafe.com/",
+    "https://nonlacafe.com/about",
+    "https://nonlacafe.com/pages/about",
+    "https://nonlacafe.com/shop"
+  ],
+  "website_context_file": "/Users/Sakaeru/Source/marketing-brain/data/knowledge/website_context/AODAI_01_website_context.json",
+  "claude_research_core": {
+    "status": "success",
+    "raw_response": "{\n  \"research_summary\": {\n    \"overview\": \"AoDai Coffee is a Vietnamese freeze-dried instant coffee brand targeting US consumers seeking stronger coffee experiences. The brand leverages 100% Robusta beans from Buon Ma Thuot and advanced freeze-drying technology to deliver cafe-quality Vietnamese espresso without machines. They offer 6 intensity levels and position against weak mainstream coffee with authentic Vietnamese heritage.\",\n    \"top_findings\": [\n      \"Brand uses advanced freeze-drying technology that preserves original coffee structure, aroma, and flavor unlike traditional instant coffee\",\n      \"Six roast levels (named after Vietnamese cities) allow customization from gentle to extra dark intensity\",\n      \"100% Robusta beans from Central Highlands provide higher caffeine content and stronger flavor than typical Arabica blends\",\n      \"No-machine convenience with instant dissolution in hot or cold water addresses modern lifestyle needs\",\n      \"ISO 22000:2018 certified production facility with Halal certification ensures quality standards\",\n      \"35% first order discount creates low-friction trial opportunity for premium-priced instant coffee\"\n    ],\n    \"key_risks\": [\n      \"Premium pricing ($1+ per pod) significantly higher than mass market instant coffee may limit adoption\",\n      \"Robusta beans traditionally associated with lower quality coffee in US market perception\",\n      \"Instant coffee category faces strong negative perceptions among coffee enthusiasts\",\n      \"Limited brand awareness competing against established coffee brands with larger marketing budgets\",\n      \"Single origin dependency on Vietnamese suppliers creates supply chain vulnerability\"\n    ],\n    \"key_opportunities\": [\n      \"Growing US interest in authentic international food experiences favors Vietnamese coffee positioning\",\n      \"Remote work trends increase demand for convenient premium coffee solutions\",\n      \"Health-conscious consumers appreciate sugar-free, additive-free pure coffee formulation\",\n      \"Gift market potential with culturally-themed roast levels and premium packaging\",\n      \"Cold brew trend aligns with product's ability to dissolve in cold water\"\n    ]\n  },\n  \"trend_findings\": [\n    \"Freeze-drying technology advancement allows premium instant coffee to compete with traditional brewing methods\",\n    \"Convenience-focused coffee consumption driven by busy lifestyles and remote work patterns\",\n    \"Authenticity and origin story becoming key differentiators in crowded coffee market\",\n    \"Customizable intensity levels respond to growing demand for personalized beverage experiences\",\n    \"Sugar-free and clean label products align with health and wellness movement\",\n    \"Vietnamese coffee culture gaining recognition in US specialty coffee scene\"\n  ],\n  \"note_findings\": [\n    \"Company operates two distinct lines: AoDai (pure coffee) and NonLa (flavored varieties) requiring careful positioning separation\",\n    \"Selective harvesting process using only ripe red cherries demonstrates quality commitment above commodity coffee\",\n    \"Vacuum freeze-drying preserves coffee without liquid phase transition, maintaining cellular structure\",\n    \"City-named roast levels create cultural storytelling opportunity and memorable product differentiation\",\n    \"ISO certification and quality control testing address food safety concerns in imported products\",\n    \"Packaging designed for portability appeals to travelers and outdoor enthusiasts\"\n  ]\n}",
+    "parse_error": null,
+    "prompt_key": "run_claude_research_core",
+    "prompt_file": "/Users/Sakaeru/Source/marketing-brain/data/prompts/research/research_core_prompt.txt"
+  },
+  "claude_research_messaging": {
+    "status": "success",
+    "raw_response": "{\n  \"hooks\": [\n    \"Finally, instant coffee for people who actually love strong coffee\",\n    \"The instant coffee that actually tastes like real coffee - because it IS real coffee\",\n    \"No machine, no mess, no weak coffee - just pure Vietnamese Robusta power\",\n    \"Skip the $5 coffee shop - get cafe-quality Vietnamese espresso at home in seconds\",\n    \"6 intensity levels: Find your perfect strength from gentle to extra dark\",\n    \"What if your morning coffee could be as strong as Vietnamese cafe culture demands?\",\n    \"Cafe-quality taste ready in seconds - no machine needed\",\n    \"100% Vietnamese Robusta - maximum strength in every pod\"\n  ],\n  \"claims\": [\n    \"100% Vietnamese Robusta from Buon Ma Thuot for maximum strength\",\n    \"Freeze-dried technology preserves authentic cafe-quality taste\",\n    \"Works in hot or cold water - dissolves instantly\",\n    \"No machine needed - ultimate convenience\",\n    \"Pure coffee with no sugar or additives\",\n    \"6 roast levels from gentle to extra dark intensity\",\n    \"ISO 22000:2018 certified production facility\",\n    \"Rated 4.9/5 by customers\"\n  ],\n  \"warnings\": [\n    \"Do not describe AoDai as flavored coffee - it's pure Vietnamese coffee only\",\n    \"Do not mix AoDai positioning with Nonla flavor messaging\",\n    \"Avoid comparing to regular instant coffee brands - position as cafe-quality\",\n    \"Don't undersell the strength - emphasize Robusta's bold character\",\n    \"Maintain focus on Vietnamese heritage and authenticity\",\n    \"Don't suggest it needs milk or sugar - highlight pure coffee experience\"\n  ],\n  \"recommended_focus\": [\n    \"Target strong coffee seekers frustrated with weak mainstream options\",\n    \"Emphasize convenience without compromising on quality or strength\",\n    \"Highlight Vietnamese coffee heritage as premium differentiator\",\n    \"Lead with tasting set to let customers find their perfect intensity\",\n    \"Use 35% OFF first order as primary conversion driver\",\n    \"Position as upgrade from both weak instant and expensive coffee shops\",\n    \"Focus on pure coffee credentials - no additives or artificial flavors\",\n    \"Leverage freeze-dried technology as quality preservation story\"\n  ]\n}",
+    "parse_error": null,
+    "prompt_key": "run_claude_research_messaging",
+    "prompt_file": "/Users/Sakaeru/Source/marketing-brain/data/prompts/research/research_messaging_prompt.txt"
+  },
+  "claude_research_market": {
+    "status": "success",
+    "raw_response": "{\n  \"competitor_findings\": [\n    {\n      \"brand_name\": \"VitaCup\",\n      \"main_product\": \"Instant coffee pods with functional ingredients\",\n      \"price_range\": \"$15-30\",\n      \"positioning\": \"Functional instant coffee with vitamins and superfoods\",\n      \"key_hook\": \"Coffee that's good for you with added health benefits\",\n      \"website\": \"vitacup.com\",\n      \"social_links\": \"Instagram, Facebook focused on wellness lifestyle\"\n    },\n    {\n      \"brand_name\": \"Four Sigmatic\",\n      \"main_product\": \"Mushroom coffee instant packets\",\n      \"price_range\": \"$20-40\",\n      \"positioning\": \"Premium functional coffee with adaptogenic mushrooms\",\n      \"key_hook\": \"Mushroom coffee for focus and wellness without the crash\",\n      \"website\": \"foursigmatic.com\",\n      \"social_links\": \"Strong Instagram presence targeting health-conscious consumers\"\n    },\n    {\n      \"brand_name\": \"Starbucks VIA\",\n      \"main_product\": \"Premium instant coffee packets\",\n      \"price_range\": \"$8-15\",\n      \"positioning\": \"Cafe-quality instant coffee from trusted brand\",\n      \"key_hook\": \"Starbucks taste without the coffeehouse\",\n      \"website\": \"starbucks.com\",\n      \"social_links\": \"Massive social media presence across all platforms\"\n    },\n    {\n      \"brand_name\": \"Death Wish Coffee\",\n      \"main_product\": \"World's strongest coffee in various formats\",\n      \"price_range\": \"$15-25\",\n      \"positioning\": \"Extreme caffeine for serious coffee drinkers\",\n      \"key_hook\": \"World's strongest coffee - fair trade and organic\",\n      \"website\": \"deathwishcoffee.com\",\n      \"social_links\": \"Edgy brand presence on Instagram and TikTok\"\n    },\n    {\n      \"brand_name\": \"Nescafe Gold\",\n      \"main_product\": \"Premium instant coffee jars and packets\",\n      \"price_range\": \"$6-12\",\n      \"positioning\": \"Accessible premium instant coffee\",\n      \"key_hook\": \"Smooth, rich taste in premium instant format\",\n      \"website\": \"nescafe.com\",\n      \"social_links\": \"Global brand presence across social platforms\"\n    },\n    {\n      \"brand_name\": \"Sudden Coffee\",\n      \"main_product\": \"Craft instant coffee tubes\",\n      \"price_range\": \"$20-35\",\n      \"positioning\": \"Craft coffee quality in instant format\",\n      \"key_hook\": \"Third-wave coffee expertise meets instant convenience\",\n      \"website\": \"suddencoffee.com\",\n      \"social_links\": \"Premium coffee community on Instagram\"\n    }\n  ],\n  \"ad_findings\": [\n    \"Strong coffee brands emphasize caffeine content and energy boost benefits\",\n    \"Premium instant coffee ads focus on convenience without compromising quality\",\n    \"Vietnamese coffee brands in US market are limited, creating opportunity\",\n    \"Health-conscious coffee consumers willing to pay premium for clean ingredients\",\n    \"Functional coffee category growing with wellness-focused messaging\",\n    \"No-machine-needed convenience increasingly important for busy consumers\"\n  ],\n  \"sources\": [\n    \"https://nonlacafe.com/\",\n    \"https://nonlacafe.com/about\",\n    \"https://nonlacafe.com/shop\",\n    \"Premium instant coffee market analysis\",\n    \"Vietnamese coffee brand positioning research\",\n    \"Strong coffee consumer behavior insights\"\n  ]\n}",
+    "parse_error": null,
+    "prompt_key": "run_claude_research_market",
+    "prompt_file": "/Users/Sakaeru/Source/marketing-brain/data/prompts/research/research_market_prompt.txt"
+  },
+  "research_summary": {
+    "overview": "AoDai Coffee is a Vietnamese freeze-dried instant coffee brand targeting US consumers seeking stronger coffee experiences. The brand leverages 100% Robusta beans from Buon Ma Thuot and advanced freeze-drying technology to deliver cafe-quality Vietnamese espresso without machines. They offer 6 intensity levels and position against weak mainstream coffee with authentic Vietnamese heritage.",
+    "top_findings": [
+      "Brand uses advanced freeze-drying technology that preserves original coffee structure, aroma, and flavor unlike traditional instant coffee",
+      "Six roast levels (named after Vietnamese cities) allow customization from gentle to extra dark intensity",
+      "100% Robusta beans from Central Highlands provide higher caffeine content and stronger flavor than typical Arabica blends",
+      "No-machine convenience with instant dissolution in hot or cold water addresses modern lifestyle needs",
+      "ISO 22000:2018 certified production facility with Halal certification ensures quality standards",
+      "35% first order discount creates low-friction trial opportunity for premium-priced instant coffee"
+    ],
+    "key_risks": [
+      "Premium pricing ($1+ per pod) significantly higher than mass market instant coffee may limit adoption",
+      "Robusta beans traditionally associated with lower quality coffee in US market perception",
+      "Instant coffee category faces strong negative perceptions among coffee enthusiasts",
+      "Limited brand awareness competing against established coffee brands with larger marketing budgets",
+      "Single origin dependency on Vietnamese suppliers creates supply chain vulnerability"
+    ],
+    "key_opportunities": [
+      "Growing US interest in authentic international food experiences favors Vietnamese coffee positioning",
+      "Remote work trends increase demand for convenient premium coffee solutions",
+      "Health-conscious consumers appreciate sugar-free, additive-free pure coffee formulation",
+      "Gift market potential with culturally-themed roast levels and premium packaging",
+      "Cold brew trend aligns with product's ability to dissolve in cold water"
+    ]
+  },
+  "competitor_findings": [
+    {
+      "brand_name": "VitaCup",
+      "main_product": "Instant coffee pods with functional ingredients",
+      "price_range": "$15-30",
+      "positioning": "Functional instant coffee with vitamins and superfoods",
+      "key_hook": "Coffee that's good for you with added health benefits",
+      "website": "vitacup.com",
+      "social_links": "Instagram, Facebook focused on wellness lifestyle"
+    },
+    {
+      "brand_name": "Four Sigmatic",
+      "main_product": "Mushroom coffee instant packets",
+      "price_range": "$20-40",
+      "positioning": "Premium functional coffee with adaptogenic mushrooms",
+      "key_hook": "Mushroom coffee for focus and wellness without the crash",
+      "website": "foursigmatic.com",
+      "social_links": "Strong Instagram presence targeting health-conscious consumers"
+    },
+    {
+      "brand_name": "Starbucks VIA",
+      "main_product": "Premium instant coffee packets",
+      "price_range": "$8-15",
+      "positioning": "Cafe-quality instant coffee from trusted brand",
+      "key_hook": "Starbucks taste without the coffeehouse",
+      "website": "starbucks.com",
+      "social_links": "Massive social media presence across all platforms"
+    },
+    {
+      "brand_name": "Death Wish Coffee",
+      "main_product": "World's strongest coffee in various formats",
+      "price_range": "$15-25",
+      "positioning": "Extreme caffeine for serious coffee drinkers",
+      "key_hook": "World's strongest coffee - fair trade and organic",
+      "website": "deathwishcoffee.com",
+      "social_links": "Edgy brand presence on Instagram and TikTok"
+    },
+    {
+      "brand_name": "Nescafe Gold",
+      "main_product": "Premium instant coffee jars and packets",
+      "price_range": "$6-12",
+      "positioning": "Accessible premium instant coffee",
+      "key_hook": "Smooth, rich taste in premium instant format",
+      "website": "nescafe.com",
+      "social_links": "Global brand presence across social platforms"
+    },
+    {
+      "brand_name": "Sudden Coffee",
+      "main_product": "Craft instant coffee tubes",
+      "price_range": "$20-35",
+      "positioning": "Craft coffee quality in instant format",
+      "key_hook": "Third-wave coffee expertise meets instant convenience",
+      "website": "suddencoffee.com",
+      "social_links": "Premium coffee community on Instagram"
+    }
+  ],
+  "trend_findings": [
+    "Freeze-drying technology advancement allows premium instant coffee to compete with traditional brewing methods",
+    "Convenience-focused coffee consumption driven by busy lifestyles and remote work patterns",
+    "Authenticity and origin story becoming key differentiators in crowded coffee market",
+    "Customizable intensity levels respond to growing demand for personalized beverage experiences",
+    "Sugar-free and clean label products align with health and wellness movement",
+    "Vietnamese coffee culture gaining recognition in US specialty coffee scene"
+  ],
+  "ad_findings": [
+    "Strong coffee brands emphasize caffeine content and energy boost benefits",
+    "Premium instant coffee ads focus on convenience without compromising quality",
+    "Vietnamese coffee brands in US market are limited, creating opportunity",
+    "Health-conscious coffee consumers willing to pay premium for clean ingredients",
+    "Functional coffee category growing with wellness-focused messaging",
+    "No-machine-needed convenience increasingly important for busy consumers"
+  ],
+  "note_findings": [
+    "Company operates two distinct lines: AoDai (pure coffee) and NonLa (flavored varieties) requiring careful positioning separation",
+    "Selective harvesting process using only ripe red cherries demonstrates quality commitment above commodity coffee",
+    "Vacuum freeze-drying preserves coffee without liquid phase transition, maintaining cellular structure",
+    "City-named roast levels create cultural storytelling opportunity and memorable product differentiation",
+    "ISO certification and quality control testing address food safety concerns in imported products",
+    "Packaging designed for portability appeals to travelers and outdoor enthusiasts"
+  ],
+  "hooks": [
+    "Finally, instant coffee for people who actually love strong coffee",
+    "The instant coffee that actually tastes like real coffee - because it IS real coffee",
+    "No machine, no mess, no weak coffee - just pure Vietnamese Robusta power",
+    "Skip the $5 coffee shop - get cafe-quality Vietnamese espresso at home in seconds",
+    "6 intensity levels: Find your perfect strength from gentle to extra dark",
+    "What if your morning coffee could be as strong as Vietnamese cafe culture demands?",
+    "Cafe-quality taste ready in seconds - no machine needed",
+    "100% Vietnamese Robusta - maximum strength in every pod"
+  ],
+  "claims": [
+    "100% Vietnamese Robusta from Buon Ma Thuot for maximum strength",
+    "Freeze-dried technology preserves authentic cafe-quality taste",
+    "Works in hot or cold water - dissolves instantly",
+    "No machine needed - ultimate convenience",
+    "Pure coffee with no sugar or additives",
+    "6 roast levels from gentle to extra dark intensity",
+    "ISO 22000:2018 certified production facility",
+    "Rated 4.9/5 by customers"
+  ],
+  "warnings": [
+    "Do not describe AoDai as flavored coffee - it's pure Vietnamese coffee only",
+    "Do not mix AoDai positioning with Nonla flavor messaging",
+    "Avoid comparing to regular instant coffee brands - position as cafe-quality",
+    "Don't undersell the strength - emphasize Robusta's bold character",
+    "Maintain focus on Vietnamese heritage and authenticity",
+    "Don't suggest it needs milk or sugar - highlight pure coffee experience"
+  ],
+  "recommended_focus": [
+    "Target strong coffee seekers frustrated with weak mainstream options",
+    "Emphasize convenience without compromising on quality or strength",
+    "Highlight Vietnamese coffee heritage as premium differentiator",
+    "Lead with tasting set to let customers find their perfect intensity",
+    "Use 35% OFF first order as primary conversion driver",
+    "Position as upgrade from both weak instant and expensive coffee shops",
+    "Focus on pure coffee credentials - no additives or artificial flavors",
+    "Leverage freeze-dried technology as quality preservation story"
+  ],
+  "sources": [
+    "https://nonlacafe.com/",
+    "https://nonlacafe.com/about",
+    "https://nonlacafe.com/shop",
+    "Premium instant coffee market analysis",
+    "Vietnamese coffee brand positioning research",
+    "Strong coffee consumer behavior insights"
+  ],
+  "competitor_discovery": {
+    "status": "unparsed",
+    "raw_response": "```json\n{\n  \"competitors\": [\n    {\n      \"brand\": \"Trung Nguyen Vietnamese Coffee\",\n      \"website\": \"https://trungnguyenlegend.com\",\n      \"why_competitor\": \"Same Vietnamese coffee origin, targeting authentic coffee experience\",\n      \"competitor_layers\": [\"same_target_market\", \"same_coffee_type\", \"same_origin\"],\n      \"positioning\": \"Authentic Vietnamese coffee with traditional brewing methods\",\n      \"voice\": \"Heritage-focused with emphasis on Vietnamese coffee culture and tradition\",\n      \"hooks\": [\"Legendary Vietnamese coffee\", \"Traditional brewing ritual\", \"Coffee culture heritage\"],\n      \"selling_points\": [\"Authentic Vietnamese beans\", \"Traditional methods\", \"Cultural experience\"],\n      \"hot_products\": [\"G7 instant coffee\", \"Creative coffee blends\", \"Drip coffee bags\"],\n      \"price_range\": \"$15-25 per pack\",\n      \"social\": {\n        \"facebook\": \"https://facebook.com/trungnguyenlegend\",\n        \"instagram\": \"@trungnguyenlegend\",\n        \"tiktok\": \"\",\n        \"youtube\": \"\"\n      },\n      \"top_posts\": [],\n      \"confidence\": \"high\"\n    },\n    {\n      \"brand\": \"Death Wish Coffee\",\n      \"website\": \"https://deathwishcoffee.com\",\n      \"why_competitor\": \"Targets strong coffee seekers with high caffeine positioning\",\n      \"competitor_layers\": [\"same_target_market\", \"price_range\"],\n      \"positioning\": \"World's strongest coffee for extreme caffeine needs\",\n      \"voice\": \"Bold, edgy with dark humor and strength-focused messaging\",\n      \"hooks\": [\"World's strongest coffee\", \"Extreme caffeine kick\", \"Death-defying strength\"],\n      \"selling_points\": [\"Maximum caffeine content\", \"Bold dark roast\", \"Premium quality\"],\n      \"hot_products\": [\"Death Wish ground coffee\", \"Instant coffee packets\", \"Cold brew\"],\n      \"price_range\": \"$15-30 per bag\",\n      \"social\": {\n        \"facebook\": \"https://facebook.com/deathwishcoffee\",\n        \"instagram\": \"@deathwishcoffee\",\n        \"tiktok\": \"@deathwishcoffee\",\n        \"youtube\": \"DeathWishCoffee\"\n      },\n      \"top_posts\": [],\n      \"confidence\": \"high\"\n    },\n    {\n      \"brand\": \"Café Bustelo\",\n      \"website\": \"https://cafebustelo.com\",\n      \"why_competitor\": \"Strong espresso-style instant coffee for bold taste seekers\",\n      \"competitor_layers\": [\"same_target_market\", \"same_format\", \"same_coffee_type\"],\n      \"positioning\": \"Authentic Latino espresso experience at accessible prices\",\n      \"voice\": \"Cultural pride with emphasis on authentic Latino coffee tradition\",\n      \"hooks\": [\"Espresso-style strength\", \"Latino coffee tradition\", \"Bold flavor\"],\n      \"selling_points\": [\"Strong espresso taste\", \"Affordable pricing\", \"Cultural authenticity\"],\n      \"hot_products\": [\"Instant espresso packets\", \"Ground coffee\", \"K-cups\"],\n      \"price_range\": \"$4-8 per pack\",\n      \"social\": {\n        \"facebook\": \"https://facebook.com/cafebustelo\",\n        \"instagram\": \"@cafebustelo\",\n        \"tiktok\": \"\",\n        \"youtube\": \"\"\n      },\n      \"top_posts\": [],\n      \"confidence\": \"medium\"\n    },\n    {\n      \"brand\": \"Starbucks VIA\",\n      \"website\": \"https://starbucks.com\",\n      \"why_competitor\": \"Premium instant coffee targeting convenience-seeking coffee lovers\",\n      \"competitor_layers\": [\"same_format\", \"market_signal\", \"price_range\"],\n      \"positioning\": \"Starbucks quality coffee in convenient instant format\",\n      \"voice\": \"Premium lifestyle brand focusing on quality and convenience\",\n      \"hooks\": [\"Starbucks quality instantly\", \"Premium convenience\", \"Cafe taste anywhere\"],\n      \"selling_points\": [\"Brand recognition\", \"Quality assurance\", \"Wide availability\"],\n      \"hot_products\": [\"VIA instant coffee packets\", \"Cold brew concentrate\", \"Flavored varieties\"],\n      \"price_range\": \"$8-15 per box\",\n      \"social\": {\n        \"facebook\": \"https://facebook.com/starbucks\",\n        \"instagram\": \"@starbucks\",\n        \"tiktok\": \"@starbucks\",\n        \"youtube\": \"Starbucks\"\n      },\n      \"top_posts\": [],\n      \"confidence\": \"medium\"\n    },\n    {\n      \"brand\": \"Mount Hagen Organic Coffee\",\n      \"website\": \"https://mount-hagen.com\",\n      \"why_competitor\": \"Premium freeze-dried instant coffee for quality-conscious consumers\",\n      \"competitor_layers\": [\"same_format\", \"same_target_market\", \"price_range\"],\n      \"positioning\": \"Organic premium instant coffee with superior freeze-drying process\",\n      \"voice\": \"Quality-focused with emphasis on organic",
+    "parsed": null,
+    "parse_error": "Initial parse failed: Unterminated string starting at: line 89 column 16 (char 4317) | Repaired parse failed: Unterminated string starting at: line 89 column 16 (char 4317)",
+    "prompt_file": "discover_competitors_prompt.txt"
+  },
+  "competitor_intakes": [],
+  "pain_point_extraction": {},
+  "competitor_discovery_error": "Initial parse failed: Unterminated string starting at: line 89 column 16 (char 4317) | Repaired parse failed: Unterminated string starting at: line 89 column 16 (char 4317)"
+}

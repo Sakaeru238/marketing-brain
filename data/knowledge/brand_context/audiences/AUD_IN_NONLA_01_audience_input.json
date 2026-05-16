@@ -1,0 +1,11 @@
+{
+  "audience_id": "AUD_IN_NONLA_01",
+  "brand_id": "NONLA",
+  "audience_name": "Customers in the US",
+  "source_type": "user_input",
+  "pain_point_input": null,
+  "desired_outcome_input": null,
+  "pain_point_required": false,
+  "desired_outcome_required": false,
+  "notes": "Broad initial audience seed; AI can expand after research"
+}

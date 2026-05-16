@@ -1,0 +1,49 @@
+You are running RESEARCH STAGE 1: CORE RESEARCH.
+
+Use:
+1. The current brand context
+2. Website excerpts
+3. Manual overrides if present
+4. The research direction, especially selling_orientation and occasion
+5. Seed competitors if provided
+
+Your task:
+Produce the core market understanding for this brand, focused on the selected selling orientation and occasion.
+
+If selling_orientation is "gift", prioritize giftable products, gift boxes, bundles, samplers, subscriptions, and occasion-based gifting behavior over generic category research.
+If occasion is provided, explain how that occasion changes buying motivation, urgency, emotional trigger, and offer expectations.
+
+Return EXACTLY ONE valid JSON object.
+Do NOT wrap the JSON in markdown.
+Do NOT use ```json fences.
+Do NOT add commentary before or after the JSON.
+
+Schema:
+
+{
+  "research_summary": {
+    "overview": "string",
+    "top_findings": ["string"],
+    "key_risks": ["string"],
+    "key_opportunities": ["string"]
+  },
+  "trend_findings": ["string"],
+  "note_findings": ["string"]
+}
+
+Rules:
+- Keep all outputs concise but complete.
+- top_findings: max 6
+- key_risks: max 5
+- key_opportunities: max 5
+- trend_findings: max 6
+- note_findings: max 6
+- Do not invent unsupported facts.
+- You may use general market reasoning, but label uncertain points cautiously.
+- Focus on useful research for downstream ad strategy, not broad academic analysis.
+
+RUN ID:
+{{RUN_ID}}
+
+INPUT BUNDLE:
+{{INPUT_BUNDLE}}

@@ -1,0 +1,108 @@
+{
+  "product": {
+    "product_id": "NONLA_CACAO_8",
+    "brand_id": "NONLA",
+    "product_name": "Nonla Cacao Coffee 8 Pods",
+    "product_line": "Nonla Flavor",
+    "product_type": "flavored coffee",
+    "format": "instant pod",
+    "pack_size": "8 pods",
+    "sku": "NON-8-cacao",
+    "list_price_usd": 19.99,
+    "priority_market": "US; CA",
+    "status": "active",
+    "notes": "Flavor SKU"
+  },
+  "brand": {
+    "brand_id": "NONLA",
+    "brand_name": "Nonla Coffee",
+    "brand_positioning": "Vietnamese coffee with flavor-forward convenience lines",
+    "brand_type": "mix/flavor + selected pure SKUs",
+    "origin": "Buon Ma Thuot, Dak Lak, Vietnam",
+    "Brand Type": "Ecommerce",
+    "default_market": "US; CA",
+    "brand_story_short": "Convenient Vietnamese coffee with flavored and lifestyle-friendly variants.",
+    "website": "https://nonlacafe.com/",
+    "notes": "Need clear separation between flavor lines and pure lines."
+  },
+  "benefits": [
+    {
+      "benefit_id": "BEN_NCA_01",
+      "product_id": "NONLA_CACAO_8",
+      "brand_id": "NONLA",
+      "benefit_type": "flavor",
+      "benefit_text": "Cacao flavor profile",
+      "priority": "high"
+    }
+  ],
+  "usage": [],
+  "brand_guardrails": [
+    {
+      "guardrail_id": "GR_NONLA_01",
+      "brand_id": "NONLA",
+      "guardrail_text": "Do not present all Nonla products as pure coffee.",
+      "severity": "critical",
+      "applies_to": "all outputs"
+    },
+    {
+      "guardrail_id": "GR_NONLA_02",
+      "brand_id": "NONLA",
+      "guardrail_text": "For flavored SKUs, clearly mention the flavor variant.",
+      "severity": "high",
+      "applies_to": "product-level outputs"
+    },
+    {
+      "guardrail_id": "GR_NONLA_03",
+      "brand_id": "NONLA",
+      "guardrail_text": "For pure Nonla SKUs, do not inherit flavor claims from coconut/lemon lines.",
+      "severity": "high",
+      "applies_to": "pure SKU outputs"
+    }
+  ],
+  "brand_core_truth": [
+    {
+      "truth_id": "TRUTH_NONLA_01",
+      "brand_id": "NONLA",
+      "truth_type": "positioning",
+      "truth_text": "Vietnamese coffee brand with flavor-forward product lines",
+      "priority": "high",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_NONLA_02",
+      "brand_id": "NONLA",
+      "truth_type": "benefit",
+      "truth_text": "Convenient instant coffee format",
+      "priority": "high",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_NONLA_03",
+      "brand_id": "NONLA",
+      "truth_type": "usage",
+      "truth_text": "Works in hot or cold water",
+      "priority": "medium",
+      "source": "brand"
+    },
+    {
+      "truth_id": "TRUTH_NONLA_04",
+      "brand_id": "NONLA",
+      "truth_type": "product_scope",
+      "truth_text": "Includes flavored lines and selected pure lines",
+      "priority": "high",
+      "source": "brand"
+    }
+  ],
+  "offers": [
+    {
+      "offer_id": "OFF_NONLA_35",
+      "brand_id": "NONLA",
+      "product_id": "ALL",
+      "offer_text": "35% OFF first order",
+      "offer_type": "discount",
+      "market": "US; CA",
+      "status": "active",
+      "notes": "Brand-level new customer offer"
+    }
+  ]
+}

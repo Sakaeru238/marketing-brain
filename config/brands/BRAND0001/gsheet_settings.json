@@ -1,0 +1,31 @@
+{
+  "brand_id": "BRAND0001",
+  "brand_intake": {
+    "source_type": "google_sheet",
+    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1oBUlZJTPR5irx1_9LjyUx-X6UMswzMqSFaVa0VtWwwI/edit?gid=12404976#gid=12404976",
+    "worksheet_name": "01_POD_Brand_Intake",
+    "alternative_worksheet_names": [
+      "01_Universal_Brand_Intake",
+      "01_Brand_Intake"
+    ],
+    "notes": "Paste the brand-specific Universal Brand Intake Google Sheet URL here when ready."
+  },
+  "routes": [
+    {
+      "brand_id": "AODAI",
+      "page_id": "939132909282363",
+      "page_url": "https://web.facebook.com/profile.php?id=61585442436771",
+      "platform_id": "facebook",
+      "google_sheet_url": "https://docs.google.com/spreadsheets/d/1SMe5qFEsshSCn_yyIr_olBkc4DDTGFVrz3ygZaI17gs/edit?gid=468694069#gid=468694069",
+      "tabs": {
+        "brand_config": "Brand_Config",
+        "pages": "Page_Channel_Library",
+        "posts": "Organic_Posts",
+        "results": "Organic_Results",
+        "learning": "Daily_Learning_Log"
+      },
+      "status": "active",
+      "notes": "Migrated from config/google_sheet_routing.json."
+    }
+  ]
+}

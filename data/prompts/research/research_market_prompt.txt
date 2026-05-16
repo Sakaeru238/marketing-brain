@@ -1,0 +1,229 @@
+You are running RESEARCH STAGE 3: MARKET AND COMPETITOR INTELLIGENCE.
+
+You are NOT doing academic research.
+You are extracting HIGH-CONVERTING AD INTELLIGENCE.
+
+INPUTS:
+- The current brand context
+- Website excerpts if present
+- Manual overrides if present
+- The research direction, especially selling_orientation and occasion
+- Seed competitors if provided
+
+Your task:
+Extract competitor/market intelligence with structured outputs.
+
+Focus on:
+- What actually sells
+- What hooks attention
+- What converts in ads
+- What emotional triggers are used
+
+Every output must be USEFUL for writing ads immediately.
+
+---
+
+COMPETITOR SELECTION LOGIC:
+
+Competitors should be selected by selling orientation FIRST, product category SECOND.
+
+If selling_orientation is "gift":
+- Include brands that sell coffee as a gift
+- Coffee gift boxes, samplers, bundles, subscription gifts
+- Occasion-based coffee gifts, such as Mother's Day
+
+If occasion is provided:
+- Prefer competitors/examples that directly target that occasion
+- Prefer messaging that matches that moment, such as Mother’s Day emotion, gifting pressure, last-minute gifting, practical gifts, or daily-use gifts
+
+It is acceptable to include indirect competitors IF they teach a strong selling angle.
+
+---
+
+OUTPUT REQUIREMENTS:
+
+Return EXACTLY ONE valid JSON object.
+
+STRICT RULES:
+- Output MUST be valid JSON
+- Use DOUBLE QUOTES for all keys and string values
+- NO trailing commas
+- NO explanation text
+- NO text before or after JSON
+- DO NOT wrap JSON in markdown or code fences
+
+---
+
+SCHEMA:
+
+{
+  "competitor_findings": [
+    {
+      "brand_name": "string",
+      "main_product": "string",
+      "price_range": "string",
+      "positioning": "string",
+      "key_hook": "string",
+      "why_relevant": "string",
+      "website": "string",
+      "social_links": {
+        "facebook": "string",
+        "instagram": "string",
+        "tiktok": "string",
+        "x": "string",
+        "youtube": "string"
+      }
+    }
+  ],
+  "ad_findings": [
+    {
+      "brand_name": "string",
+      "source_type": "website | facebook | instagram | tiktok | x | youtube | inferred_from_positioning",
+      "source_url": "string",
+      "observed_or_inferred": "observed | inferred",
+      "hook": "string",
+      "angle": "string",
+      "emotional_trigger": "string",
+      "why_it_converts": "string"
+    }
+  ],
+  "sources": [
+    {
+      "brand_name": "string",
+      "source_type": "website | facebook | instagram | tiktok | x | youtube | other",
+      "url": "string",
+      "what_it_supports": "string"
+    }
+  ]
+}
+
+---
+
+COMPETITOR_FINDINGS INSTRUCTIONS:
+
+For each competitor, extract:
+
+- brand_name: name
+- main_product: what exactly they sell, especially gift format
+- price_range: if visible or reasonably known from input; otherwise use "unknown"
+- positioning: how they frame the product as a gift
+- key_hook: the strongest selling line, rewritten into an ad-ready hook if needed
+- why_relevant: why this brand is dangerous/useful as an ad reference, based on angle, psychology, offer model, or audience fit
+- website: official domain or URL
+- social_links:
+  - Put platform-specific URLs when reasonably known
+  - If unknown, use an empty string
+  - Do NOT put all social links into one vague string
+
+---
+
+AD_FINDINGS INSTRUCTIONS (CRITICAL):
+
+Return ad_findings as OBJECTS, not plain strings.
+
+Each ad finding MUST clearly identify:
+- which brand it came from
+- whether it was observed or inferred
+- source type
+- source URL if available
+- hook
+- angle
+- emotional trigger
+- why it converts
+
+Rewrite weak market observations into HIGH-CONVERTING DIRECT RESPONSE hooks.
+
+Each hook MUST:
+
+1. Start with a SPECIFIC PERSON or SCENARIO
+   Example: "For sons buying Mother’s Day gifts", "If you’re still guessing what to get Mom"
+
+2. Include a REAL-LIFE MOMENT or TENSION
+   Example: guessing gifts, last-minute panic, buying useless gifts, flowers dying, gift cards feeling lazy
+
+3. Reveal an INSIGHT or TRUTH
+   Example: "she uses coffee every day", "flowers don’t last", "gift cards feel lazy"
+
+4. End with a NATURAL PRODUCT BRIDGE
+   The product bridge should feel natural, not forced or overly salesy
+
+---
+
+STRUCTURE GUIDE:
+
+[WHO] + [REAL SITUATION] + [INSIGHT] + [SOFT PRODUCT SHIFT]
+
+---
+
+BAD:
+
+{
+  "brand_name": "Bean Box",
+  "hook": "Give Mom the gift of coffee"
+}
+
+GOOD:
+
+{
+  "brand_name": "Bean Box",
+  "source_type": "website",
+  "source_url": "https://beanbox.com",
+  "observed_or_inferred": "inferred",
+  "hook": "For sons who don’t know what to get Mom — this is the kind of gift she actually uses",
+  "angle": "practical daily-use gift instead of decorative gift",
+  "emotional_trigger": "fear of giving another forgettable gift",
+  "why_it_converts": "It reframes coffee from a normal household item into a thoughtful Mother’s Day gift."
+}
+
+GOOD:
+
+{
+  "brand_name": "Atlas Coffee Club",
+  "source_type": "website",
+  "source_url": "https://atlascoffeeclub.com",
+  "observed_or_inferred": "inferred",
+  "hook": "You’ve seen her drink coffee every morning. You just never thought of it as a gift",
+  "angle": "daily ritual as gift insight",
+  "emotional_trigger": "recognition and thoughtfulness",
+  "why_it_converts": "It makes the buyer feel observant instead of generic."
+}
+
+---
+
+QUALITY CONSTRAINTS:
+
+- NO generic lines
+- NO vague positioning
+- NO brand-style slogans
+- NO "premium", "quality", or "world-class" language unless it is tied to a direct-response reason to buy
+- Hooks must feel scroll-stopping
+- Prefer emotional + situational angles over descriptive ones
+- If the output sounds like a brand slogan, rewrite it into a direct-response hook
+
+---
+
+SOURCE RULES:
+
+- sources must be structured objects
+- each source must include brand_name, source_type, url, and what_it_supports
+- if exact social URLs are unknown, leave them as empty strings
+- do not invent fake social URLs
+- if a hook is inferred from positioning instead of directly observed, set observed_or_inferred to "inferred"
+
+---
+
+LIMITS:
+
+- MAX 5 competitors
+- MAX 8 ad_findings
+- MAX 8 sources
+
+Keep outputs concise but powerful.
+
+---
+
+RUN ID:
+{{RUN_ID}}
+
+INPUT BUNDLE:
+{{INPUT_BUNDLE}}

@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0",
+  "max_items_per_category": 10,
+  "max_total_items": 60,
+  "prefer_high_confidence": true,
+  "auto_queue_context_candidates": true,
+  "notes": "Global defaults for brand learning summary synthesis."
+}

@@ -1,0 +1,39 @@
+You are running BRAND INTAKE STAGE 1: CORE BRAND.
+
+Use ONLY:
+1. The structured seed brand data below
+2. The fetched public website excerpts below
+
+Your task:
+Extract the core brand foundation clearly and concisely.
+
+Return EXACTLY ONE valid JSON object.
+Do NOT wrap the JSON in markdown.
+Do NOT use ```json fences.
+Do NOT add commentary before or after the JSON.
+
+Return JSON only with this schema:
+
+{
+  "positioning_summary": "string",
+  "audience_core": {
+    "audience_name": "string",
+    "pain_point": "string",
+    "desired_outcome": "string"
+  },
+  "differentiation": ["string"],
+  "message_pillars": ["string"]
+}
+
+Rules:
+- differentiation: max 6 items
+- message_pillars: max 6 items
+- Keep outputs practical and useful for downstream ads/strategy.
+- Respect existing guardrails.
+- Do not invent unsupported claims.
+
+SEED BRAND DATA:
+{{SEED_BRAND_DATA}}
+
+FETCHED WEBSITE EXCERPTS:
+{{FETCHED_WEBSITE_EXCERPTS}}

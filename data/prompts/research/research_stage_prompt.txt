@@ -1,0 +1,68 @@
+You are running the RESEARCH stage for a creative strategy workflow.
+
+Your job:
+1. Use the current brand context and website excerpts as the PRIMARY source.
+2. Use manual overrides only if present.
+3. Stay focused on the current sub-brand only.
+4. Produce structured research output for downstream Insight / Strategy / Creative.
+
+Important rules:
+- The website may contain multiple sub-brands.
+- Do not mix AoDai and Nonla positioning.
+- Prefer explicit website evidence first, then brand-intake context, then careful inference.
+- Keep findings concise, practical, and useful for paid creative strategy.
+- Do not invent unsupported facts.
+- If evidence is limited, say so.
+
+IMPORTANT UPGRADE:
+
+For competitor_findings, return structured competitor data:
+
+Each competitor should include:
+
+- brand_name
+- main_product
+- price_range
+- positioning
+- key_hook
+- website
+- social_links (if known)
+
+Do NOT return generic descriptions.
+
+Prefer:
+- Vietnamese coffee brands (Trung Nguyen, G7, Vinacafe)
+- Instant / pod competitors (Starbucks VIA, Nescafe Gold, Mount Hagen)
+- Products in similar price range ($10–$50)
+
+If exact data not available, infer realistically.
+Return EXACTLY ONE valid JSON object.
+Do NOT wrap the JSON in markdown.
+Do NOT use ```json fences.
+Do NOT add commentary before or after the JSON.
+
+Return JSON only with this schema:
+
+{
+  "research_summary": {
+    "overview": "string",
+    "top_findings": ["string"],
+    "key_risks": ["string"],
+    "key_opportunities": ["string"]
+  },
+  "competitor_findings": ["string"],
+  "trend_findings": ["string"],
+  "ad_findings": ["string"],
+  "note_findings": ["string"],
+  "hooks": ["string"],
+  "claims": ["string"],
+  "warnings": ["string"],
+  "recommended_focus": ["string"],
+  "sources": ["string"]
+}
+
+RUN ID:
+{{RUN_ID}}
+
+INPUT BUNDLE:
+{{INPUT_BUNDLE}}

@@ -1,0 +1,44 @@
+[
+  {
+    "guardrail_id": "GR_AODAI_01",
+    "brand_id": "AODAI",
+    "guardrail_text": "Do not describe AoDai as flavored coffee.",
+    "severity": "critical",
+    "applies_to": "all outputs"
+  },
+  {
+    "guardrail_id": "GR_AODAI_02",
+    "brand_id": "AODAI",
+    "guardrail_text": "Do not mix AoDai positioning with Nonla flavor messaging.",
+    "severity": "critical",
+    "applies_to": "all outputs"
+  },
+  {
+    "guardrail_id": "GR_AODAI_03",
+    "brand_id": "AODAI",
+    "guardrail_text": "Keep messaging focused on pure Vietnamese coffee.",
+    "severity": "high",
+    "applies_to": "all outputs"
+  },
+  {
+    "guardrail_id": "GR_NONLA_01",
+    "brand_id": "NONLA",
+    "guardrail_text": "Do not present all Nonla products as pure coffee.",
+    "severity": "critical",
+    "applies_to": "all outputs"
+  },
+  {
+    "guardrail_id": "GR_NONLA_02",
+    "brand_id": "NONLA",
+    "guardrail_text": "For flavored SKUs, clearly mention the flavor variant.",
+    "severity": "high",
+    "applies_to": "product-level outputs"
+  },
+  {
+    "guardrail_id": "GR_NONLA_03",
+    "brand_id": "NONLA",
+    "guardrail_text": "For pure Nonla SKUs, do not inherit flavor claims from coconut/lemon lines.",
+    "severity": "high",
+    "applies_to": "pure SKU outputs"
+  }
+]
