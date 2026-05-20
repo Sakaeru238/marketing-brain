@@ -2,7 +2,7 @@
   "brand_id": "BRAND0001",
   "source": {
     "source_type": "google_sheet",
-    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1oBUlZJTPR5irx1_9LjyUx-X6UMswzMqSFaVa0VtWwwI/edit?gid=12404976#gid=12404976",
+    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1oBUlZJTPR5irx1_9LjyUx-X6UMswzMqSFaVa0VtWwwI/edit?gid=1134876557#gid=1134876557",
     "worksheet_name": "01_POD_Brand_Intake",
     "config_file": "/Users/Sakaeru/Source/marketing-brain/config/brands/BRAND0001/gsheet_settings.json"
   },

@@ -3,7 +3,7 @@
 ## Scheduler entry point
 
 ```bash
-python -m core.jobs.daily_schedule_facebook_job
+python -m core.jobs.publish_ready_organic_posts_to_facebook_job
 ```
 
 ## Responsibility
@@ -66,7 +66,7 @@ The real Facebook/Meta page ID is taken from routing config, not invented from s
 
 Scheduling must use:
 ```text
-Page_Channel_Library.target_timezone
+Campaign_Config.target_timezone
 ```
 
 For example:
@@ -115,7 +115,7 @@ FACEBOOK_PUBLISH_DRY_RUN=true
 
 Expected result:
 ```text
-scheduled_dry_run
+dry_run
 ```
 
 Dry run should not create a real Facebook post.

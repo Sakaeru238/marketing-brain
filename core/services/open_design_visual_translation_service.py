@@ -6,6 +6,7 @@ from typing import Any, Dict, Tuple
 
 from core.engines.claude_api_adapter import ClaudeAPIAdapter
 from core.prompts.prompt_loader import PromptLoader
+from core.services.pod_cache_service import PodLLMOutputCache
 
 
 class OpenDesignVisualTranslationService:
@@ -33,6 +34,9 @@ class OpenDesignVisualTranslationService:
         self.prompt_file = prompt_file
         self.prompt_loader = PromptLoader()
         self.claude = ClaudeAPIAdapter()
+
+    def usage_summary(self, reset=False):
+        return self.claude.usage_summary(reset=reset)
 
     def _clean_str(self, value: Any) -> str:
         return str(value or "").strip()
@@ -200,15 +204,40 @@ class OpenDesignVisualTranslationService:
 
         for post in posts:
             visual_input = self._visual_input_for_post(post, organic_output, organic_strategy_output, skill_context)
-            prompt = self.prompt_loader.render(
-                self.prompt_file,
-                {"OPEN_DESIGN_VISUAL_INPUT": json.dumps(visual_input, ensure_ascii=False, indent=2)},
-            )
+            brand_id = self._clean_str(organic_output.get("brand_id"))
+            cache = PodLLMOutputCache(brand_id=brand_id, namespace="organic_open_design_visual_translation")
+            cache_input = {
+                "prompt_file": self.prompt_file,
+                "visual_input": visual_input,
+            }
+            input_hash = cache.input_hash(cache_input)
+            cached = cache.get(input_hash)
             try:
-                parsed, raw = self._parse_json_response(self._call_claude(prompt))
-                package = parsed
+                if cached:
+                    cached_output = cached.get("output") or {}
+                    package = cached_output.get("package") or {}
+                    raw = cached_output.get("raw_response") or json.dumps(package, ensure_ascii=False)
+                    package["translation_status"] = package.get("translation_status") or "cache_hit"
+                else:
+                    prompt = self.prompt_loader.render(
+                        self.prompt_file,
+                        {"OPEN_DESIGN_VISUAL_INPUT": json.dumps(visual_input, ensure_ascii=False, indent=2)},
+                    )
+                    parsed, raw = self._parse_json_response(self._call_claude(prompt))
+                    package = parsed
+                    cache.set(
+                        input_hash=input_hash,
+                        output={"package": package, "raw_response": raw},
+                        api_meta={"provider": "claude", "stage": "organic_open_design_visual_translation"},
+                        cache_input=cache_input,
+                    )
                 package["translation_status"] = package.get("translation_status") or "ok"
                 package["raw_response_excerpt"] = raw[:1200]
+                package["cache"] = {
+                    "status": "hit" if cached else "stored",
+                    "input_hash": input_hash,
+                    "namespace": "organic_open_design_visual_translation",
+                }
             except Exception as exc:
                 package = self._fallback_package(post)
                 package["translation_error"] = str(exc)

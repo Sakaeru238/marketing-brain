@@ -5,13 +5,14 @@ PAGE_CHANNEL_LIBRARY_TIMEFRAME_COLUMNS_V7 = [
 ]
 
 PAGE_CHANNEL_LIBRARY_HEADERS_V7 = [
-    "page_id",
+    "public_page_id",
+    "private_page_id",
+    "token",
     "brand_id",
     "niche_id",
     "platform_id",
     "page_name",
     "page_url",
-    "meta_page_id",
     "market",
     "language",
     "target_timezone",
@@ -26,6 +27,7 @@ PAGE_CHANNEL_LIBRARY_HEADERS_V7 = [
     "end_day",
     "duration",
     "default_content_goal",
+    "campaign_macro_direction",
     "default_tone",
     "default_product_mention_level",
     "posting_frequency_target",

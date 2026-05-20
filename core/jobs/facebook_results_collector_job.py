@@ -16,7 +16,7 @@ class FacebookResultsCollectorJob:
     def run(self, brand_id="AODAI", page_id="AODAI_FB_US", platform_id="facebook"):
         route = self.exporter._find_route(brand_id, page_id, platform_id)
         spreadsheet = self.exporter._open_spreadsheet_for_route(route)
-        posts_tab = self.exporter._tab_name(route, "posts", "Organic_Posts")
+        posts_tab = self.exporter._organic_tab_name(route, "posts")
         ws = spreadsheet.worksheet(posts_tab)
         rows = ws.get_all_records()
 
@@ -53,7 +53,7 @@ class FacebookResultsCollectorJob:
                     }
                 )
 
-        results_tab = self.exporter._tab_name(route, "results", "Organic_Results")
+        results_tab = self.exporter._organic_tab_name(route, "results")
         results_ws = spreadsheet.worksheet(results_tab)
 
         records_to_write = [

@@ -73,12 +73,12 @@ data/templates/comfyui/organic_social_image_template.json
 ### Facebook scheduling / publishing
 
 ```text
-core/jobs/daily_schedule_facebook_job.py
+core/jobs/publish_ready_organic_posts_to_facebook_job.py
 ```
 Reads `Organic_Posts`, filters `ready`, schedules/publishes Facebook posts, writes job-control fields.
 
 ```text
-core/publishers/facebook_page_publisher.py
+core/services/facebook_page_publisher_service.py
 ```
 Schedules a feed post or photo post.  
 Also appends `content_tags` as Facebook hashtags.
@@ -89,7 +89,7 @@ core/publishers/facebook_graph_client.py
 Graph API client used by scheduler and collector.
 
 ```text
-core/publishers/facebook_publish_validator.py
+core/utils/facebook_publish_validator.py
 ```
 Validates publishable rows and scheduling constraints.
 
@@ -108,7 +108,7 @@ Sheet read/write helpers and output upserts.
 ```text
 core/campaign/page_campaign_context_loader.py
 ```
-Loads `Page_Channel_Library` row and campaign/page context.
+Loads `Campaign_Config` row and campaign/page context.
 
 ```text
 core/campaign/campaign_kpi_calculator.py

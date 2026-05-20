@@ -1,0 +1,37 @@
+{
+  "llm": {
+    "provider": "anthropic_messages",
+    "model": "claude-sonnet-4-6",
+    "timeout_seconds": 300
+  },
+  "brief_eval": {
+    "threshold": 0.85,
+    "max_brief_revisions": 4
+  },
+  "visual_eval": {
+    "threshold": 0.85,
+    "max_visual_regenerations": 2
+  },
+  "comfyui": {
+    "mode": "dry_run",
+    "render_endpoint_url": "",
+    "timeout_seconds": 600
+  },
+  "pricing": {
+    "pricebook": {
+      "claude-sonnet-4-6": {
+        "input_usd_per_million_tokens": 3.0,
+        "output_usd_per_million_tokens": 15.0
+      },
+      "default": {
+        "input_usd_per_million_tokens": 0.0,
+        "output_usd_per_million_tokens": 0.0
+      }
+    }
+  },
+  "official_output_groups": [
+    "flat_mockup",
+    "worn_mockup",
+    "lifestyle_scene"
+  ]
+}

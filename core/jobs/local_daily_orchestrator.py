@@ -13,7 +13,7 @@ class LocalDailyOrchestrator:
 
     def run_daily(self):
         commands = [
-            "python -m core.jobs.daily_schedule_facebook_job",
+            "python -m core.jobs.publish_ready_organic_posts_to_facebook_job",
             "python -m test.collect_facebook_post_results",
             "python -m test.run_page_assessment_only",
             "python -m test.export_page_assessment_to_gsheet",

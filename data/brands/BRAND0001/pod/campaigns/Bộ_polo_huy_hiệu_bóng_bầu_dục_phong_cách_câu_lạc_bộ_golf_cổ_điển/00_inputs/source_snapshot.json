@@ -1,0 +1,71 @@
+{
+  "snapshot_type": "campaign_source_snapshot",
+  "brand_id": "BRAND0001",
+  "campaign_id": "Bộ_polo_huy_hiệu_bóng_bầu_dục_phong_cách_câu_lạc_bộ_golf_cổ_điển",
+  "created_at": "2026-05-18T09:46:47.201728+00:00",
+  "source": {
+    "spreadsheet_title": "sportivestyle_Campaign",
+    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1-oQoETR2XLrCXsAzAW6sQEawisiBESeplAP53fIsCHc/edit?gid=2005019794#gid=2005019794",
+    "campaign_tab": "01_POD_Campaign_Intake",
+    "campaign_row_number": 4,
+    "product_catalog_tab": "02_Product_Catalog"
+  },
+  "brand_snapshot_files": {
+    "brand_source_snapshot_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/cache/source/brand_source_snapshot.json",
+    "brand_context_snapshot_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/cache/source/brand_context_snapshot.json",
+    "brand_learning_snapshot_file": ""
+  },
+  "hash_inputs": {
+    "campaign_hash_fields": [
+      "campaign_name",
+      "campaign_goal",
+      "campaign_type",
+      "target_market",
+      "sport_or_league_focus",
+      "team_or_fanbase_focus",
+      "sku_product_type",
+      "product_ref_id",
+      "input ảnh mẫu"
+    ],
+    "campaign_intake_hash_payload": {
+      "campaign_name": "Bộ polo huy hiệu bóng bầu dục phong cách câu lạc bộ golf cổ điển",
+      "campaign_goal": "Thử nghiệm một SKU fanwear cao cấp, tinh tế hơn merchandise thể thao đại trà",
+      "campaign_type": "evergreen",
+      "target_market": "US",
+      "sport_or_league_focus": "NFL",
+      "team_or_fanbase_focus": "Cộng đồng fan bóng bầu dục Kansas City",
+      "sku_product_type": "polo",
+      "product_ref_id": "PROD_POLO_PATCH_001",
+      "input ảnh mẫu": "https://drive.google.com/file/d/1Qqkd4OFTy8yrIFt-MNc-OwPXJUDFe3oF/view?usp=sharing"
+    },
+    "product_hash_fields": [
+      "product_id",
+      "product_name",
+      "product_type",
+      "product_variant",
+      "default_base_color",
+      "print_area",
+      "personalization_supported",
+      "price_tier",
+      "mockup_required",
+      "product_notes"
+    ],
+    "product_hash_payload": {
+      "product_id": "PROD_POLO_PATCH_001",
+      "product_name": "Polo premium có huy hiệu nhỏ",
+      "product_type": "polo",
+      "product_variant": "crest / badge ở ngực trái",
+      "default_base_color": "trắng / xanh navy",
+      "print_area": "ngực trái",
+      "personalization_supported": "no",
+      "price_tier": "premium",
+      "mockup_required": "flat_mockup,worn_mockup",
+      "product_notes": "Phù hợp với thiết kế fanwear kiểu heritage, câu lạc bộ, tinh tế."
+    }
+  },
+  "fingerprints": {
+    "campaign_intake_hash": "dddd586f20bf1bec7f004262c8fc8111d53e28fcb1952f40c7db7b5037917c54",
+    "product_catalog_entry_hash": "4fea41a86a26dd41253fb3038cde07afdb0b001fbc22673cfa75f4a3da573fc0",
+    "campaign_source_hash": "83dc28c69e9c4c1479b40d5025c5e5fe9703f2d84caa9d9ce4b297f7b2252ab3"
+  }
+}

@@ -44,7 +44,7 @@ The fix:
 ## Evergreen vs event-aware logic
 
 ### Evergreen
-Used when `Page_Channel_Library.notes` is blank or not prefixed with `event:`.
+Used when `Campaign_Config.notes` is blank or not prefixed with `event:`.
 
 Example:
 ```text

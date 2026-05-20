@@ -1,31 +1,42 @@
 {
   "brand_id": "BRAND0001",
-  "brand_intake": {
-    "source_type": "google_sheet",
-    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1oBUlZJTPR5irx1_9LjyUx-X6UMswzMqSFaVa0VtWwwI/edit?gid=12404976#gid=12404976",
-    "worksheet_name": "01_POD_Brand_Intake",
-    "alternative_worksheet_names": [
-      "01_Universal_Brand_Intake",
-      "01_Brand_Intake"
-    ],
-    "notes": "Paste the brand-specific Universal Brand Intake Google Sheet URL here when ready."
+  "modules": {
+    "brand_intake": {
+      "google_sheet_url": "https://docs.google.com/spreadsheets/d/1oBUlZJTPR5irx1_9LjyUx-X6UMswzMqSFaVa0VtWwwI/edit?gid=1134876557#gid=1134876557",
+      "schema_key": "brand_intake"
+    },
+    "pod": {
+      "google_sheet_url": "https://docs.google.com/spreadsheets/d/1-oQoETR2XLrCXsAzAW6sQEawisiBESeplAP53fIsCHc/edit?gid=2005019794#gid=2005019794",
+      "schema_key": "pod_campaign",
+      "campaign": {
+        "google_sheet_url": "https://docs.google.com/spreadsheets/d/1-oQoETR2XLrCXsAzAW6sQEawisiBESeplAP53fIsCHc/edit?gid=2005019794#gid=2005019794",
+        "schema_key": "pod_campaign"
+      }
+    },
+    "organic": {
+      "google_sheet_url": "https://docs.google.com/spreadsheets/d/1b9QPINgUnJj-tyDS5pajZbiUoQzevwaCCsgy6s05Arg/edit?gid=357993215#gid=357993215",
+      "schema_key": "organic_posts",
+      "notes": "Paste the BRAND0001 organic Google Sheet URL here. This sheet should contain Campaign_Config, Organic_Posts, Organic_Results, and Daily_Learning_Log tabs."
+    }
   },
   "routes": [
     {
-      "brand_id": "AODAI",
-      "page_id": "939132909282363",
-      "page_url": "https://web.facebook.com/profile.php?id=61585442436771",
+      "brand_id": "BRAND0001",
       "platform_id": "facebook",
-      "google_sheet_url": "https://docs.google.com/spreadsheets/d/1SMe5qFEsshSCn_yyIr_olBkc4DDTGFVrz3ygZaI17gs/edit?gid=468694069#gid=468694069",
+      "google_sheet_url": "https://docs.google.com/spreadsheets/d/1b9QPINgUnJj-tyDS5pajZbiUoQzevwaCCsgy6s05Arg/edit?gid=357993215#gid=357993215",
       "tabs": {
         "brand_config": "Brand_Config",
-        "pages": "Page_Channel_Library",
+        "pages": "Campaign_Config",
         "posts": "Organic_Posts",
         "results": "Organic_Results",
-        "learning": "Daily_Learning_Log"
+        "learning": "Daily_Learning_Log",
+        "campaign_direction_library": "Campaign_Direction_Library",
+        "how_to_use": "How_To_Use",
+        "selection_matrix": "Selection_Matrix",
+        "lists": "99_Lists"
       },
-      "status": "active",
-      "notes": "Migrated from config/google_sheet_routing.json."
+      "status": "inactive",
+      "notes": "Set google_sheet_url and status=active when BRAND0001 organic posting sheet is ready. Page and campaign rows are read from the Campaign_Config tab."
     }
   ]
 }

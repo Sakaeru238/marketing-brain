@@ -1,3 +1,4 @@
+import copy
 import hashlib
 import json
 import os
@@ -8,6 +9,8 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from core.engines.claude_api_adapter import ClaudeAPIAdapter
 from core.prompts.prompt_loader import PromptLoader
+from core.services.brand_registry_service import BrandRegistryService
+from core.services.pod_cache_service import PodLLMOutputCache
 
 
 class OrganicAlyshaSourceService:
@@ -70,11 +73,12 @@ class OrganicAlyshaSourceService:
         self,
         prompt_file: str = "data/prompts/organic/organic_alysha_source_prompt.txt",
         reference_strategy_file: str = "data/output/strategy_output.json",
-        output_root: str = "data/output",
+        output_root: Optional[str] = None,
     ):
         self.prompt_file = prompt_file
         self.reference_strategy_file = Path(reference_strategy_file)
-        self.output_root = Path(output_root)
+        self.output_root = Path(output_root) if output_root else None
+        self.registry = BrandRegistryService()
         self.prompt_loader = PromptLoader()
         self.claude = ClaudeAPIAdapter()
 
@@ -114,12 +118,25 @@ class OrganicAlyshaSourceService:
         return "event_aware" if self._event_note_from_notes(page_context.get("notes")) else "evergreen_growth"
 
     def _base_output_dir(self, page_context: Dict[str, Any]) -> Path:
+        brand_id = self._required_identifier(page_context, "brand_id")
+        page_id = self._required_identifier(page_context, "page_id")
+        campaign_id = self._required_identifier(page_context, "campaign_id")
+        if self.output_root:
+            return (
+                self.output_root
+                / self._safe_component(brand_id)
+                / self._safe_component(page_id)
+                / self._safe_component(campaign_id)
+                / "organic_posts"
+            )
         return (
-            self.output_root
-            / self._safe_component(self._required_identifier(page_context, "brand_id"))
-            / self._safe_component(self._required_identifier(page_context, "page_id"))
-            / self._safe_component(self._required_identifier(page_context, "campaign_id"))
-            / "organic_posts"
+            self.registry.brand_data_root(brand_id)
+            / "organic"
+            / "pages"
+            / self._safe_component(page_id)
+            / "campaigns"
+            / self._safe_component(campaign_id)
+            / "01_alysha_source"
         )
 
     def source_output_path(self, page_context: Dict[str, Any]) -> Path:
@@ -141,13 +158,57 @@ class OrganicAlyshaSourceService:
     # -------------------------
     # Input / refresh logic
     # -------------------------
-    def _load_reference_strategy(self) -> Dict[str, Any]:
-        return self._load_json(self.reference_strategy_file, default={}) or {}
+    def _brand_context_source_file(self, page_context: Dict[str, Any]) -> Path:
+        brand_id = self._required_identifier(page_context, "brand_id")
+        return (
+            self.registry.brand_data_root(brand_id)
+            / "brand_context"
+            / "alysha"
+            / "brand_context_source_of_truth.json"
+        )
+
+    def _load_reference_strategy(self, page_context: Dict[str, Any]) -> Tuple[Dict[str, Any], Path, str]:
+        brand_context_file = self._brand_context_source_file(page_context)
+        if brand_context_file.exists():
+            return self._load_json(brand_context_file, default={}) or {}, brand_context_file, "brand_context_source_of_truth"
+        return self._load_json(self.reference_strategy_file, default={}) or {}, self.reference_strategy_file, "legacy_strategy_output"
 
     def _strategy_data(self, strategy_output: Dict[str, Any]) -> Dict[str, Any]:
         data = strategy_output.get("data")
         if isinstance(data, dict):
             return data
+        brand_context = strategy_output.get("brand_context_source_of_truth")
+        if isinstance(brand_context, dict):
+            return {
+                "campaign_direction_alignment": {
+                    "brand_overview": brand_context.get("brand_overview"),
+                    "what_makes_them_different": brand_context.get("what_makes_them_different"),
+                    "the_alternative_solution": brand_context.get("the_alternative_solution"),
+                },
+                "target_persona": brand_context.get("core_audiences") or {},
+                "customer_psychology": {
+                    "core_audiences": brand_context.get("core_audiences") or {},
+                    "competitor_landscape": brand_context.get("competitor_landscape") or {},
+                    "brand_story_and_origin": brand_context.get("brand_story_and_origin"),
+                },
+                "strategy_map": {
+                    "brand_positioning": brand_context.get("brand_overview"),
+                    "differentiators": brand_context.get("what_makes_them_different"),
+                    "alternative_solution": brand_context.get("the_alternative_solution"),
+                },
+                "priority_angles": brand_context.get("content_angles") or brand_context.get("organic_content_angles") or [],
+                "hook_guidance": brand_context.get("hook_guidance") or brand_context.get("brand_voice_and_tone") or {},
+                "core_message": brand_context.get("core_message") or brand_context.get("brand_overview"),
+                "offer_strategy": brand_context.get("offer_strategy") or brand_context.get("product_catalog") or {},
+                "reason_to_believe": brand_context.get("reason_to_believe") or brand_context.get("what_makes_them_different"),
+                "mechanism": brand_context.get("mechanism") or brand_context.get("product_catalog") or {},
+                "voc_summary": brand_context.get("voc_summary") or brand_context.get("brand_voice_and_tone") or {},
+                "creative_mechanics": brand_context.get("creative_mechanics") or brand_context.get("creative_constraints") or [],
+                "visual_formats": brand_context.get("visual_formats") or brand_context.get("product_catalog") or {},
+                "creative_direction": brand_context.get("creative_direction") or brand_context.get("brand_voice_and_tone") or {},
+                "do_not_do": brand_context.get("do_not_do") or brand_context.get("creative_constraints") or [],
+                "brand_context_source": brand_context,
+            }
         return strategy_output
 
     def _structured_reference(self, reference_strategy: Dict[str, Any]) -> Dict[str, Any]:
@@ -169,6 +230,7 @@ class OrganicAlyshaSourceService:
         self,
         page_context: Dict[str, Any],
         campaign_kpi_context: Dict[str, Any],
+        campaign_direction_context: Optional[Dict[str, Any]],
         structured_reference: Dict[str, Any],
         reference_event_markers: List[str],
     ) -> str:
@@ -192,6 +254,8 @@ class OrganicAlyshaSourceService:
             },
             "reference_strategy_hash": self._stable_hash(structured_reference),
             "reference_event_markers": reference_event_markers,
+            "campaign_macro_direction": page_context.get("campaign_macro_direction"),
+            "campaign_direction_context_hash": self._stable_hash(campaign_direction_context or {}),
         }
         return self._stable_hash(stable_input)
 
@@ -243,6 +307,7 @@ class OrganicAlyshaSourceService:
         self,
         page_context: Dict[str, Any],
         campaign_kpi_context: Dict[str, Any],
+        campaign_direction_context: Optional[Dict[str, Any]],
         source_mode: str,
         structured_reference: Dict[str, Any],
         reference_event_markers: List[str],
@@ -266,6 +331,7 @@ class OrganicAlyshaSourceService:
                 "evergreen_rule": "Empty or ordinary notes must produce an evergreen organic growth strategy with no expired event urgency.",
             },
             "campaign_kpi_context": campaign_kpi_context,
+            "campaign_direction_context": campaign_direction_context or {},
             "reference_alysha_strategy": structured_reference,
             "reference_event_markers_to_remove_when_evergreen": reference_event_markers,
             "required_alysha_sections": list(self.ALYSHA_REQUIRED_SECTIONS),
@@ -292,16 +358,41 @@ class OrganicAlyshaSourceService:
                     f"{leaked}. Regenerate the source before creating organic posts."
                 )
 
-    def resolve(self, page_context: Dict[str, Any], campaign_kpi_context: Dict[str, Any]) -> Dict[str, Any]:
+    def usage_summary(self, reset=False):
+        return self.claude.usage_summary(reset=reset)
+
+    def _cache_input_for_reusable_source(self, prompt_input: Dict[str, Any]) -> Dict[str, Any]:
+        """Build a cache key that safely reuses equivalent Alysha organic source calls.
+
+        campaign_id is an execution identifier, not a strategic signal. Removing it from
+        the cache key allows multiple campaigns with otherwise identical source inputs to
+        reuse the same Claude result instead of paying for an equivalent regeneration.
+        Any strategic difference (direction library record, KPI brief, notes, macro direction,
+        page context values, reference strategy hash) remains in the key.
+        """
+        cacheable = copy.deepcopy(prompt_input or {})
+        identifiers = cacheable.get("identifiers") or {}
+        identifiers.pop("campaign_id", None)
+        page_context = cacheable.get("page_context") or {}
+        page_context.pop("campaign_id", None)
+        return cacheable
+
+    def resolve(
+        self,
+        page_context: Dict[str, Any],
+        campaign_kpi_context: Dict[str, Any],
+        campaign_direction_context: Optional[Dict[str, Any]] = None,
+    ) -> Dict[str, Any]:
         output_path = self.source_output_path(page_context)
         existing = self._load_json(output_path, default=None)
-        reference_strategy = self._load_reference_strategy()
+        reference_strategy, reference_strategy_file, reference_source_type = self._load_reference_strategy(page_context)
         structured_reference = self._structured_reference(reference_strategy)
         reference_event_markers = self._reference_event_markers(structured_reference)
         source_mode = self._source_mode(page_context)
         input_hash = self._source_input_hash(
             page_context=page_context,
             campaign_kpi_context=campaign_kpi_context,
+            campaign_direction_context=campaign_direction_context,
             structured_reference=structured_reference,
             reference_event_markers=reference_event_markers,
         )
@@ -331,6 +422,7 @@ class OrganicAlyshaSourceService:
         prompt_input = self._build_prompt_input(
             page_context=page_context,
             campaign_kpi_context=campaign_kpi_context,
+            campaign_direction_context=campaign_direction_context,
             source_mode=source_mode,
             structured_reference=structured_reference,
             reference_event_markers=reference_event_markers,
@@ -339,7 +431,26 @@ class OrganicAlyshaSourceService:
             self.prompt_file,
             {"ORGANIC_ALYSHA_SOURCE_INPUT": json.dumps(prompt_input, ensure_ascii=False, indent=2)},
         )
-        parsed = self._parse_json_response(self._call_claude(prompt))
+        brand_id = self._required_identifier(page_context, "brand_id")
+        cache = PodLLMOutputCache(brand_id=brand_id, namespace="organic_alysha_source")
+        cache_input = {
+            "prompt_file": self.prompt_file,
+            "prompt_input": self._cache_input_for_reusable_source(prompt_input),
+        }
+        cache_hash = cache.input_hash(cache_input)
+        cached = cache.get(cache_hash)
+        if cached:
+            parsed = (cached.get("output") or {}).get("parsed") or {}
+            source_cache_status = "hit"
+        else:
+            parsed = self._parse_json_response(self._call_claude(prompt))
+            cache.set(
+                input_hash=cache_hash,
+                output={"parsed": parsed},
+                api_meta={"provider": "claude", "stage": "organic_alysha_source"},
+                cache_input=cache_input,
+            )
+            source_cache_status = "stored"
         self._validate_sections(parsed, source_mode=source_mode, reference_event_markers=reference_event_markers)
 
         event_note = self._event_note_from_notes(page_context.get("notes"))
@@ -363,9 +474,13 @@ class OrganicAlyshaSourceService:
             "source_resolution": {
                 "input_hash": input_hash,
                 "refresh_reason": refresh_reason,
-                "reference_strategy_file": str(self.reference_strategy_file),
+                "reference_strategy_file": str(reference_strategy_file),
+                "reference_source_type": reference_source_type,
                 "reference_strategy_hash": self._stable_hash(structured_reference),
                 "reference_event_markers": reference_event_markers,
+                "campaign_direction_context": campaign_direction_context or {},
+                "cache_status": source_cache_status,
+                "cache_hash": cache_hash,
             },
             "data": parsed,
         }

@@ -15,7 +15,7 @@ def main():
     )
 
     spreadsheet = exporter._open_spreadsheet_for_route(route)
-    tab = exporter._tab_name(route, "pages", "Page_Channel_Library")
+    tab = exporter._organic_tab_name(route, "pages")
     ws = spreadsheet.worksheet(tab)
 
     rows = ws.get_all_records()

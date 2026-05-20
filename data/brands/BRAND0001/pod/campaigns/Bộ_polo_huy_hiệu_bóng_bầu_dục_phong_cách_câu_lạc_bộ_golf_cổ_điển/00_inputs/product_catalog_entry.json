@@ -1,0 +1,17 @@
+{
+  "product_id": "PROD_POLO_PATCH_001",
+  "product_name": "Polo premium có huy hiệu nhỏ",
+  "product_type": "polo",
+  "product_variant": "crest / badge ở ngực trái",
+  "default_base_color": "trắng / xanh navy",
+  "print_area": "ngực trái",
+  "personalization_supported": "no",
+  "price_tier": "premium",
+  "default_market": "US,UK",
+  "league_fit": "NFL,EPL,golf-inspired",
+  "mockup_required": "flat_mockup,worn_mockup",
+  "asset_source_path_or_url": "",
+  "product_notes": "Phù hợp với thiết kế fanwear kiểu heritage, câu lạc bộ, tinh tế.",
+  "active": "yes",
+  "last_updated": ""
+}

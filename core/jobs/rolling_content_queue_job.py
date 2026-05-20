@@ -13,7 +13,7 @@ class RollingContentQueueJob:
     def run(self, brand_id="AODAI", page_id="AODAI_FB_US", platform_id="facebook"):
         route = self.exporter._find_route(brand_id, page_id, platform_id)
         spreadsheet = self.exporter._open_spreadsheet_for_route(route)
-        tab = self.exporter._tab_name(route, "posts", "Organic_Posts")
+        tab = self.exporter._organic_tab_name(route, "posts")
         ws = spreadsheet.worksheet(tab)
         rows = ws.get_all_records()
         now = datetime.now(timezone.utc)

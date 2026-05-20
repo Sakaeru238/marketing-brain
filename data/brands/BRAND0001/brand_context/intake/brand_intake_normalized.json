@@ -1,9 +1,9 @@
 {
   "brand_id": "BRAND0001",
-  "loaded_at": "2026-05-14T11:07:17.434196+00:00",
+  "loaded_at": "2026-05-16T08:31:20.625096+00:00",
   "source": {
     "source_type": "google_sheet",
-    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1oBUlZJTPR5irx1_9LjyUx-X6UMswzMqSFaVa0VtWwwI/edit?gid=12404976#gid=12404976",
+    "google_sheet_url": "https://docs.google.com/spreadsheets/d/1oBUlZJTPR5irx1_9LjyUx-X6UMswzMqSFaVa0VtWwwI/edit?gid=1134876557#gid=1134876557",
     "worksheet_name": "01_POD_Brand_Intake",
     "config_file": "/Users/Sakaeru/Source/marketing-brain/config/brands/BRAND0001/gsheet_settings.json"
   },

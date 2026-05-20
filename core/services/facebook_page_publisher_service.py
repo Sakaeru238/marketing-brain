@@ -4,7 +4,7 @@ import unicodedata
 from typing import Dict, List
 
 from core.publishers.facebook_graph_client import FacebookGraphClient
-from core.publishers.facebook_publish_validator import FacebookPublishValidator
+from core.utils.facebook_publish_validator import FacebookPublishValidator
 from core.publishers.facebook_publish_logger import FacebookPublishLogger
 
 
@@ -106,32 +106,36 @@ def _append_content_hashtags(message: str, content_tags) -> str:
     return f"{message}\n\n{' '.join(hashtag_tokens)}"
 
 
-class FacebookPagePublisher:
+class FacebookPagePublisherService:
     """
     High-level Facebook Page publisher.
 
-    Default mode is dry-run. It only publishes real posts when:
-      FACEBOOK_PUBLISH_DRY_RUN=false
+    Default mode publishes real posts. Set FACEBOOK_PUBLISH_DRY_RUN=true only
+    for an explicit local safety check.
 
     Required for real publish:
-      META_PAGE_ID
-      META_PAGE_ACCESS_TOKEN
+      page_id and page_access_token, normally resolved from Campaign_Config
+      private_page_id and token.
     """
 
     def __init__(
         self,
         page_id: str = None,
+        page_access_token: str = None,
         graph_client: FacebookGraphClient = None,
         validator: FacebookPublishValidator = None,
         logger: FacebookPublishLogger = None,
         dry_run: bool = None,
     ):
-        self.graph_client = graph_client or FacebookGraphClient(page_id=page_id)
+        self.graph_client = graph_client or FacebookGraphClient(
+            page_id=page_id,
+            page_access_token=page_access_token,
+        )
         self.validator = validator or FacebookPublishValidator()
         self.logger = logger or FacebookPublishLogger()
 
         if dry_run is None:
-            dry_run = os.getenv("FACEBOOK_PUBLISH_DRY_RUN", "true").lower() != "false"
+            dry_run = os.getenv("FACEBOOK_PUBLISH_DRY_RUN", "false").lower() == "true"
         self.dry_run = dry_run
 
     def schedule_from_row(self, row: Dict) -> Dict:
@@ -139,6 +143,7 @@ class FacebookPagePublisher:
 
         post_id = row.get("post_id", "")
         page_id = row.get("page_id", "")
+        public_page_id = row.get("public_page_id", "")
         image_url = str(row.get("image_url", "") or "").strip()
         message = str(row.get("post_text", "") or "").strip()
         message = _append_content_hashtags(message, row.get("content_tags", ""))
@@ -149,6 +154,7 @@ class FacebookPagePublisher:
                 "status": "validation_error",
                 "post_id": post_id,
                 "page_id": page_id,
+                "public_page_id": public_page_id,
                 "errors": errors,
             }
             self.logger.log({"action": "validate", **result})
@@ -159,10 +165,11 @@ class FacebookPagePublisher:
         if self.dry_run:
             endpoint = "photos" if image_url else "feed"
             result = {
-                "status": "scheduled_dry_run",
+                "status": "dry_run",
                 "dry_run": True,
                 "post_id": post_id,
                 "page_id": page_id,
+                "public_page_id": public_page_id,
                 "endpoint": endpoint,
                 "scheduled_datetime_utc": scheduled_utc,
                 "image_url_present": bool(image_url),
@@ -192,6 +199,7 @@ class FacebookPagePublisher:
                 "dry_run": False,
                 "post_id": post_id,
                 "page_id": page_id,
+                "public_page_id": public_page_id,
                 "scheduled_datetime_utc": scheduled_utc,
                 "image_url_present": bool(image_url),
                 "content_hashtags": _parse_content_tags(row.get("content_tags", "")),
@@ -205,6 +213,7 @@ class FacebookPagePublisher:
                 "status": "error",
                 "post_id": post_id,
                 "page_id": page_id,
+                "public_page_id": public_page_id,
                 "error": str(e),
             }
             self.logger.log({"action": "schedule_error", **result})

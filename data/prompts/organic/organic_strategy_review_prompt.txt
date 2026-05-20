@@ -48,6 +48,14 @@ EVENT SWITCH RULE FROM Page_Channel_Library.notes:
 - `event_transition`: the event has passed or urgency is no longer valid; only bridge into relevant post-event execution if that remains compatible with Alysha strategy truth.
 - Never invent an event when notes is empty.
 
+CAMPAIGN OPERATING CONTEXT RULES:
+- You MUST explicitly use `campaign_operating_context` when forming the organic strategy.
+- It includes: page_stage, current_followers, current_likes, target_followers, target_likes, primary_growth_metric, growth_goal, start_day, end_day, default_content_goal, posting_frequency_target, posting_frequency_target_count, and campaign_macro_direction.
+- `campaign_direction_context` is mapped from Campaign_Config.campaign_macro_direction to Campaign_Direction_Library.macro_direction_name.
+- Use the matched library record to filter, reason about, and select the most suitable organic content/data directions for the specific campaign.
+- If the mapping is missing or not found, operate conservatively and mention it in execution guardrails/review reasoning.
+- Do not treat `default_tone` as a strategic authority. Tone must be derived from strategy, macro direction, context, KPI pressure, and learning.
+
 LAYER REQUIREMENTS:
 You must explicitly build these layers:
 

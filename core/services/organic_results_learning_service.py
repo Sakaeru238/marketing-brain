@@ -187,7 +187,7 @@ class OrganicResultsLearningService:
             "next_day_content_pillars_ai": self._safe_join([best.get("content_pillar", "")]),
             "next_day_post_format_mix_ai": self._safe_join([best.get("post_format", "")]),
             "next_day_product_mention_level_ai": self._safe_join([best.get("product_mention_level", "")]),
-            "next_day_tone_ai": f"Giữ tone của các bài đang hoạt động tốt; tone mặc định hiện tại: {page_context.get('default_tone') or 'không có dữ liệu rõ' }.",
+            "next_day_tone_ai": "Giữ hoặc điều chỉnh tone dựa trên các bài đang hoạt động tốt, strategy hiện tại và context campaign; không dùng default_tone làm nguồn quyết định.",
             "next_day_notes_ai": f"Ưu tiên pattern mạnh nhất từ {best.get('post_id', '')}; cải thiện hoặc tránh pattern yếu từ {worst.get('post_id', '')}.",
         }
         return {"per_post": per_post, "daily_learning_vi": daily_vi}
@@ -228,7 +228,6 @@ class OrganicResultsLearningService:
                 "platform_id": page_context.get("platform_id"),
                 "growth_goal": page_context.get("growth_goal"),
                 "default_content_goal": page_context.get("default_content_goal"),
-                "default_tone": page_context.get("default_tone"),
                 "default_product_mention_level": page_context.get("default_product_mention_level"),
                 "posting_frequency_target": page_context.get("posting_frequency_target"),
             },

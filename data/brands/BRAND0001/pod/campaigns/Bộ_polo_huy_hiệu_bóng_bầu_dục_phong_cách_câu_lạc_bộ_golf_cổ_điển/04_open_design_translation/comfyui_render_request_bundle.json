@@ -1,0 +1,108 @@
+{
+  "stage": "open_design_generative_media_translation",
+  "translation_version": "test_v001",
+  "brand_id": "BRAND0001",
+  "campaign_id": "Bộ_polo_huy_hiệu_bóng_bầu_dục_phong_cách_câu_lạc_bộ_golf_cổ_điển",
+  "source": {
+    "source_column": "final prompt ( bao gồm phần giữ của mẫu gốc và thêm các điểm cải tiến",
+    "final_prompt_hash": "48dbd7eac80012e7f6a2d3b0b362a024bfb0b79910fc43b1bb57af4f3938ac3b",
+    "sample_image_url": "https://drive.google.com/file/d/1Qqkd4OFTy8yrIFt-MNc-OwPXJUDFe3oF/view?usp=sharing"
+  },
+  "chatgpt_image_prompts": [
+    {
+      "request_id": "front_flat_mockup",
+      "view": "front",
+      "output_group": "flat_mockup",
+      "prompt": "Flat lay product mockup, front view, premium men's short-sleeve polo shirt. Base color: white (#FFFFFF) piqué cotton fabric, clean and uninterrupted body. Collar: classic ribbed polo collar, 3-button placket (approx 11 cm), white with a single 2mm Heritage Gold (#C9A84C) stripe along the outer collar edge. Sleeves: short set-in sleeves (not raglan), clean hem with a single 2mm Heritage Gold stripe at cuff edge. No bold color blocking, no raglan banding. Left chest placement: a custom heritage crest badge, center point approx 11 cm from left shoulder seam and 9 cm below collar base, approx 6 cm wide × 7.5 cm tall. Crest shape: classic heraldic shield with pointed base. Crest fill: Crimson (#A6192E) primary, Heritage Gold (#C9A84C) accent lines and inner detail, Navy (#1B2A4A) outer border outline. Interior symbol: a stylized 5-pointed star in gold, centered in the shield. Surrounding the star: thin inner border ring and an outer border ring with micro serif text arc reading 'KANSAS CITY' along the top inner ring in small Garamond-style serif font. Directly below the crest (4mm clearance), one line of small serif text reading 'EST. 1960' in Heritage Gold, approx 7pt, centered on crest axis. No large wordmark on shirt body. No right-chest logo. No printed pattern on body. Shirt laid flat on a neutral linen or light wood-grain surface. Studio lighting, sharp detail, high resolution, premium product photography aesthetic."
+    },
+    {
+      "request_id": "back_flat_mockup",
+      "view": "back",
+      "output_group": "flat_mockup",
+      "prompt": "Flat lay product mockup, back view, premium men's short-sleeve polo shirt. Base color: white (#FFFFFF) piqué cotton fabric. Back body is entirely clean — no graphic, no number, no name block, no large logo. Collar: classic ribbed polo collar, back collar sits flat and clean, single 2mm Heritage Gold (#C9A84C) contrast stripe continuing along the outer collar edge from front, consistent trim. Sleeves: short set-in sleeves, single 2mm Heritage Gold stripe at sleeve cuff hem, matching front. No back yoke color blocking. No raglan construction. Optional detail: a miniature secondary crest or simple brand identifier approx 2.5 cm wide, centered at back collar seam, 1.5 cm below collar base, in Heritage Gold — one line, thin serif font, maximum 8pt equivalent. Back body otherwise completely free of print. No pattern overlays. Shirt laid flat on a neutral linen or light wood-grain surface. Studio lighting, sharp detail, high resolution, premium product photography aesthetic."
+    }
+  ],
+  "comfyui_render_requests": [
+    {
+      "request_id": "front_flat_mockup",
+      "brand_id": "BRAND0001",
+      "campaign_id": "Bộ_polo_huy_hiệu_bóng_bầu_dục_phong_cách_câu_lạc_bộ_golf_cổ_điển",
+      "job_id": "JOB_BRAND0001_POLO_PATCH_001_FRONT_FLAT_001",
+      "view": "front",
+      "output_group": "flat_mockup",
+      "workflow_id_hint": "pod_apparel_flat_mockup_front",
+      "generation_payload": {
+        "positive_prompt": "flat lay product photo, front view, premium men's short-sleeve polo shirt, white piqué cotton fabric (#FFFFFF), clean uninterrupted shirt body, classic ribbed polo collar, 3-button placket, single 2mm Heritage Gold (#C9A84C) stripe along outer collar edge, short set-in sleeves (not raglan), single 2mm Heritage Gold stripe at sleeve cuff hem, no bold color blocking, custom heritage heraldic shield crest at upper left chest (center 11cm from left shoulder seam, 9cm below collar base, 6cm wide x 7.5cm tall), shield crest: crimson (#A6192E) primary fill, Heritage Gold (#C9A84C) accent lines and inner detail, navy (#1B2A4A) outer border, interior stylized 5-pointed star in gold, thin inner and outer border rings, micro serif text arc 'KANSAS CITY' along top inner ring in Garamond-style font, small serif text 'EST. 1960' in Heritage Gold directly below crest (4mm clearance, centered), no large wordmark on body, no right-chest logo, no printed pattern on body, neutral linen surface background, studio lighting, sharp detail, high resolution, premium apparel product photography",
+        "negative_prompt": "NFL shield, official Chiefs arrowhead logo, official team wordmark, trademarked sports logo, Green Bay Packers colors, forest green, bright yellow, raglan sleeves, bold raglan color blocking, soccer jersey collar, V-split collar, large chest wordmark, jersey number, player name, back view, worn mockup, low quality, blurry, distorted fabric, warped polo, unreadable text, pixelated crest, stock badge clipart, animal mascot, official licensed merchandise mark, watermark, mannequin, dark background, busy background",
+        "reference_image_url": "https://drive.google.com/file/d/1Qqkd4OFTy8yrIFt-MNc-OwPXJUDFe3oF/view?usp=sharing",
+        "seed": null,
+        "width": 1024,
+        "height": 1024,
+        "steps": 30,
+        "cfg": 7,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras",
+        "checkpoint": "realisticVisionV60B1_v51VAE.safetensors"
+      },
+      "metadata": {
+        "product_ref_id": "PROD_POLO_PATCH_001",
+        "product_name_or_scope": "Premium Heritage Polo — Kansas City Fan-Inspired — White Base — Front Flat Mockup",
+        "attempt_no": 1
+      }
+    },
+    {
+      "request_id": "back_flat_mockup",
+      "brand_id": "BRAND0001",
+      "campaign_id": "Bộ_polo_huy_hiệu_bóng_bầu_dục_phong_cách_câu_lạc_bộ_golf_cổ_điển",
+      "job_id": "JOB_BRAND0001_POLO_PATCH_001_BACK_FLAT_001",
+      "view": "back",
+      "output_group": "flat_mockup",
+      "workflow_id_hint": "pod_apparel_flat_mockup_back",
+      "generation_payload": {
+        "positive_prompt": "flat lay product photo, back view, premium men's short-sleeve polo shirt, white piqué cotton fabric (#FFFFFF), completely clean back body with no graphic, no number, no name block, no large logo, classic ribbed polo collar back view sitting flat and clean, single 2mm Heritage Gold (#C9A84C) contrast stripe along outer back collar edge continuous from front, short set-in sleeves (not raglan), single 2mm Heritage Gold stripe at sleeve cuff hem, no back yoke color blocking, miniature brand identifier centered at back collar seam 1.5cm below collar base approx 2.5cm wide in Heritage Gold thin serif font, back body entirely free of print, no pattern overlays, neutral linen surface background, studio lighting, sharp detail, high resolution, premium apparel product photography",
+        "negative_prompt": "NFL shield, official Chiefs arrowhead logo, official team wordmark, trademarked sports logo, Green Bay Packers colors, forest green, bright yellow, raglan sleeves, bold raglan color blocking, soccer jersey collar, large back graphic, jersey number, player name, name block, front view, worn mockup, low quality, blurry, distorted fabric, warped polo, pixelated text, stock badge clipart, animal mascot, official licensed merchandise mark, watermark, mannequin, dark background, busy background, back yoke color block",
+        "reference_image_url": "https://drive.google.com/file/d/1Qqkd4OFTy8yrIFt-MNc-OwPXJUDFe3oF/view?usp=sharing",
+        "seed": null,
+        "width": 1024,
+        "height": 1024,
+        "steps": 30,
+        "cfg": 7,
+        "sampler": "dpmpp_2m",
+        "scheduler": "karras",
+        "checkpoint": "realisticVisionV60B1_v51VAE.safetensors"
+      },
+      "metadata": {
+        "product_ref_id": "PROD_POLO_PATCH_001",
+        "product_name_or_scope": "Premium Heritage Polo — Kansas City Fan-Inspired — White Base — Back Flat Mockup",
+        "attempt_no": 1
+      }
+    }
+  ],
+  "translation_notes": {
+    "workflow_assumptions": [
+      "Checkpoint 'realisticVisionV60B1_v51VAE.safetensors' is assumed as a reasonable default for photorealistic apparel flat mockup rendering; render worker should override with their preferred apparel-optimized checkpoint if a more suitable model is available in their node library.",
+      "Reference image URL is a Google Drive share link and may require authentication or direct CDN conversion before ComfyUI LoadImage node can fetch it; render worker must convert to a publicly accessible direct image URL or pre-load the reference image into the ComfyUI input directory.",
+      "Both render requests target the white base colorway (Option A) as the primary variant per PROD_POLO_PATCH_001 default_base_color listing. A separate render pass for the navy base (Option B) is deferred to a future iteration.",
+      "The miniature back-neck brand identifier in the back mockup prompt is included as an optional element; if the render worker's workflow does not support fine text rendering at that scale, the element may be omitted and the back body should remain fully clean.",
+      "Crest interior text arc ('KANSAS CITY') and 'EST. 1960' sub-text are included in prompts as design intent descriptors; actual legibility of micro-text at 1024×1024 resolution will depend on model capability — a ControlNet or inpainting pass may be required in a subsequent iteration to achieve legible crest text.",
+      "No rendering has occurred. This bundle is a translation output only — all generation is deferred to the render worker pipeline."
+    ],
+    "items_for_render_worker_configuration": [
+      "Convert Google Drive reference image URL to a direct publicly accessible CDN URL before passing to ComfyUI LoadImage node.",
+      "If using ControlNet for apparel structure, recommend using a polo shirt depth or openpose reference to maintain correct flat-lay garment geometry.",
+      "For crest legibility: consider a two-pass workflow — base garment render first, then inpaint the left chest crest zone with a higher CFG and more steps to sharpen badge detail.",
+      "Assign unique seeds per render job and log them back to the job_id record for reproducibility.",
+      "Output format: PNG, minimum 1024×1024, sRGB color profile. Deliver both renders to the campaign asset folder before mockup review stage.",
+      "Color accuracy check: verify that rendered crimson reads close to #A6192E and Heritage Gold reads close to #C9A84C before approving outputs — adjust prompt color descriptors or use color correction post-process if drift is significant."
+    ],
+    "items_for_future_iteration": [
+      "Navy base colorway (Option B, #1B2A4A) render pass for both front and back flat mockups — separate render bundle to be created.",
+      "worn_mockup render requests (front and back) for both white and navy base colorways — requires male model LoRA or virtual try-on workflow.",
+      "High-resolution crest artwork isolation render (transparent background, 300 DPI equivalent) for DTG/embroidery file preparation.",
+      "Navy base variant: positive prompts will need updated collar stripe color logic (gold or crimson on navy) and crest outline color swap (white outline instead of navy).",
+      "Campaign banner and ad copy asset generation referencing 'Kansas City fan-inspired', 'Heritage fan polo', 'Made for KC fans', 'Made to Order' messaging — separate creative brief required.",
+      "Legal/brand review of final crest artwork before production approval — confirm 100% original design with no derivative elements from registered trademarks.",
+      "Embroidery digitization file preparation for left-chest crest if POD supplier supports embroidery on PROD_POLO_PATCH_001 blank."
+    ]
+  }
+}

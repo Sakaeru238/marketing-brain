@@ -23,7 +23,7 @@ Expected:
 
 ## B. Validate evergreen strategy
 
-If `Page_Channel_Library.notes` is blank/non-event:
+If `Campaign_Config.notes` is blank/non-event:
 ```text
 strategy_mode = evergreen_growth
 ```
@@ -54,12 +54,12 @@ FACEBOOK_PUBLISH_DRY_RUN=true
 
 Command:
 ```bash
-python -m core.jobs.daily_schedule_facebook_job
+python -m core.jobs.publish_ready_organic_posts_to_facebook_job
 ```
 
 Expected for processable rows:
 ```text
-scheduled_dry_run
+dry_run
 ```
 
 If:
@@ -80,7 +80,7 @@ FACEBOOK_PUBLISH_DRY_RUN=false
 
 Command:
 ```bash
-python -m core.jobs.daily_schedule_facebook_job
+python -m core.jobs.publish_ready_organic_posts_to_facebook_job
 ```
 
 Expected:
@@ -136,7 +136,7 @@ Check:
 
 ### 2. Strategy still uses old event messaging
 Check:
-- `Page_Channel_Library.notes`
+- `Campaign_Config.notes`
 - `organic_alysha_source_output.json`
 - `source_mode`
 - whether source was refreshed.
@@ -169,7 +169,7 @@ Check:
 - terminal output,
 - one affected Organic_Posts row,
 - `.env` publish mode,
-- current `facebook_page_publisher.py`.
+- current `facebook_page_publisher_service.py`.
 
 ### Results issue
 - terminal output,

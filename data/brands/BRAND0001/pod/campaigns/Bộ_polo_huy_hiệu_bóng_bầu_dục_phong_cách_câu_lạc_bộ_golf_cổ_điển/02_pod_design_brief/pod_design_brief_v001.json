@@ -1,0 +1,209 @@
+{
+  "stage": "pod_design_brief",
+  "brief_version": "v001",
+  "design_objective": {
+    "core_message": "Your team loyalty, refined. A Kansas City polo built for the fan who wears their fandom like a club member — not a crowd.",
+    "why_this_design_exists": "Style-conscious Kansas City football fans aged 28–45 are underserved by mass-market NFL merchandise. Official gear reads as stadium costume, not personal style. This polo occupies a white space between generic fan merch and elevated lifestyle apparel — a heritage-inspired, badge-driven garment that signals deep team loyalty without sacrificing sartorial credibility. It is sportivestyle's test of whether premium heritage fanwear converts better than generic merchandise for fans who refuse to choose between their team and their taste.",
+    "target_emotion": [
+      "Pride without performance — quiet confidence in one's fandom",
+      "Belonging to an exclusive club, not a mass crowd",
+      "Nostalgia for the tradition and heritage of Kansas City football culture",
+      "Satisfaction of owning something considered, rare, and worth the price",
+      "Identity alignment — this garment feels like me, not like merchandise"
+    ],
+    "desired_customer_reaction": "This is exactly what I've been looking for — fan gear I can actually wear everywhere. It looks like it belongs at a golf club, not a team store. I want this."
+  },
+  "strategy_alignment": {
+    "persona_alignment": "Designed for The Style-Conscious Kansas City Fan — male, 28–45, US-based, professional lifestyle. He shops Bonobos, Rhone, or Peter Millar for everyday wear. He is a genuine football fan who refuses merchandise that looks cheap or costume-like. He wants to rep his team at weekend brunch, a casual Friday, or a golf round — not just at the stadium. Secondary persona: The Nostalgic Heritage Fan (38–52) who connects emotionally to imagery evoking the romance of classic American sports culture and views fandom as tradition rather than trend.",
+    "priority_angle_alignment": "All four priority angles from strategy must be embedded in the design execution: (1) The Club Member, Not the Crowd — the crest badge is the literal visual execution of club membership signaling; (2) Heritage Over Hype — vintage golf club aesthetic gives the design evergreen emotional resonance beyond any single season; (3) Wear It Everywhere — polo format and subtle badge placement prove versatility across lifestyle contexts; (4) Subtle Signal, Strong Identity — the small, refined crest communicates to those who know and says nothing to those who don't, making subtlety the feature.",
+    "brand_fit_alignment": "sportivestyle differentiates through creative, fashion-forward fan merchandise that goes beyond generic official gear. This polo is a direct expression of that positioning — it blends sports fandom with lifestyle and heritage aesthetics, mirrors the brand's cross-cultural design approach, and targets the exact audience the brand is built for. The non-personalized, premium-tier, made-to-order model aligns with the brand's operational strengths and quality-first messaging.",
+    "sku_fit_alignment": "The polo format is inherently elevated — smart-casual, not athletic. A small left-chest crest badge is the signature design language of private clubs, prep institutions, and heritage sportswear, which perfectly executes the vintage golf club aesthetic. No personalization simplifies production and preserves design integrity. White and navy base colors are versatile, seasonless, and evoke Kansas City's color palette without replicating official marks. Premium price tier is justified by the concept's sophistication."
+  },
+  "text_to_visual_alignment": {
+    "strategy_message": "Fan loyalty expressed as club membership — heritage, restraint, and identity coded into a single small crest on a premium polo.",
+    "visual_translation": "A small, original crest badge on the left chest of a premium polo shirt. The crest uses a classic shield or oval form with arched serif or slab-serif typography, muted color palette (navy, cream/white, muted gold or muted red-gold), and abstract iconography that evokes Kansas City football heritage without replicating any official mark. The garment itself — white or navy base — must read as country club quality, not team store inventory. All mockup contexts reinforce smart-casual lifestyle, not stadium or athletic use.",
+    "why_this_visual_matches_strategy": "The visual language of private clubs and athletic heritage institutions — shield crests, arched text, restrained color, quality fabric — is the exact sartorial code that the style-conscious fan reads as 'intentional and exclusive.' It communicates fandom as identity rather than costume. The restraint of a single small badge on a clean polo is the visual proof of the core message: this fan's loyalty is refined, not loud. The lifestyle mockup contexts (golf course, smart-casual setting) complete the translation by showing the garment in the world the persona actually inhabits."
+  },
+  "design_direction": {
+    "primary_style": "Vintage American golf club / athletic heritage institution — think classic country club crests, Ivy League athletic department insignia, and 1950s–1970s American sporting club aesthetics. Clean, restrained, quality-first.",
+    "secondary_style_notes": "Subtle preppy heritage — not streetwear, not athleisure, not stadium sportswear. References: Peter Millar Crown Sport, Polo Ralph Lauren athletic crest, classic Augusta National aesthetic. The design should feel like it has existed for decades, not like it was designed for a current season.",
+    "design_archetype": "The Heritage Club Crest — an original badge that functions as a fictional private athletic club insignia. It should feel earned, institutional, and exclusive. Not a replica of any existing team badge or official mark.",
+    "composition_system": "Single focal element: small crest badge on left chest only. No secondary graphics, no back print, no sleeve elements. The entire design lives in one refined, well-executed badge. Restraint is the composition system — negative space is intentional and premium.",
+    "visual_hierarchy": "1st: Crest badge shape and silhouette — immediately readable as a club insignia. 2nd: Typography within the crest — city or club reference in arched serif letterforms. 3rd: Iconographic element within the crest — abstract, heritage-coded symbol (not a mascot, not an official team symbol). 4th: Color palette — muted, sophisticated, Kansas City-adjacent without being official."
+  },
+  "must_show": [
+    "A single small original crest/badge on the left chest — this is the only design element",
+    "Classic shield, oval, or pennant crest form — heritage athletic institution shape language",
+    "Arched or curved serif or slab-serif typography within the crest referencing Kansas City identity abstractly (e.g., city initials 'KC' in a heritage typographic style, or a fictional club name)",
+    "Muted, sophisticated color palette within the crest: navy, cream or white, and muted gold or muted red-gold — no bright saturated colors",
+    "Premium polo shirt construction — visible fabric quality, clean collar, refined silhouette",
+    "White or navy base color for the polo — both colorways must feel elevated and country-club appropriate",
+    "In worn and lifestyle outputs: smart-casual lifestyle context — golf course, well-appointed outdoor social setting, or casual professional environment",
+    "In worn and lifestyle outputs: male model, apparent age 30s, styled in chinos, tailored shorts, or smart-casual trousers — not athletic wear",
+    "Badge detail clarity — the crest must be legible and show craft, not clip-art quality"
+  ],
+  "must_feel": [
+    "Premium and worth the price — this should never look like a POD product",
+    "Exclusive and considered — like something from a private club pro shop, not a team store",
+    "Heritage and tradition — the design should feel like it has existed for decades",
+    "Quietly confident — the fandom is present but not shouting",
+    "Versatile and wearable — appropriate for golf, brunch, casual office, watch party",
+    "Authentically Kansas City — legible to a fan, deniable to a non-fan",
+    "Aspirational but accessible — premium without being intimidating"
+  ],
+  "must_avoid": [
+    "Any official NFL team logos, wordmarks, or trademarked symbols in any form",
+    "Kansas City Chiefs official marks: arrowhead symbol, official helmet imagery, official team wordmark",
+    "Any text or imagery that could be construed as official licensing or team endorsement",
+    "Cheap clipart mascot imagery or low-resolution badge designs",
+    "Oversized or loud graphic placement — the crest must remain small and refined",
+    "Bright, saturated color palettes that read as official team merchandise",
+    "Stadium, game-day, or sports action imagery in any mockup or lifestyle context",
+    "Streetwear or athleisure aesthetic — this is heritage preppy, not urban athletic",
+    "Overly literal Kansas City references that distract from the clean badge concept (skyline, barbecue imagery, etc.)",
+    "Personalization elements — this SKU is intentionally non-personalized",
+    "Aggressive sales language or hype copy in any accompanying text",
+    "Full-chest or back graphic placement — single left-chest badge only",
+    "Any design element that directly replicates or closely mimics official NFL or Kansas City Chiefs visual identity"
+  ],
+  "brand_and_ip_rules": {
+    "logo_usage": "No official logos of any kind. sportivestyle brand mark may appear only in mockup context (hang tag, label) if standard for the brand's product presentation — never as part of the garment design itself.",
+    "symbol_reinterpretation_allowed": false,
+    "copyright_safety_notes": [
+      "Do not use 'Chiefs,' 'Kansas City Chiefs,' or any official team name in product copy, design text, or crest typography",
+      "Do not replicate the arrowhead logo or any trademarked Kansas City Chiefs symbol in any form, including abstracted or stylized versions",
+      "Kansas City identity must be expressed through abstract or generic visual cues only: city initials in a heritage typographic style, color palette inspired by but not identical to official team colors, or a fictional club/institution name",
+      "The crest design must be entirely original — it should feel like a fictional private athletic club or heritage institution, not a replica or derivative of any existing team badge",
+      "Avoid any copy claiming official affiliation, licensing, or team endorsement",
+      "The phrase 'Kansas City' as a geographic reference (not team name) requires human legal/IP review before use in product copy — flag for confirmation",
+      "Final crest design must be reviewed against NFL and Kansas City Chiefs trademark databases before production approval"
+    ],
+    "forbidden_elements": [
+      "NFL shield logo",
+      "Kansas City Chiefs arrowhead symbol",
+      "Official Kansas City Chiefs wordmark or team name",
+      "Any official team helmet imagery",
+      "Any player name, number, or likeness",
+      "Any text implying official licensing or team affiliation",
+      "Direct color match to official Kansas City Chiefs red (#E31837) — use muted, desaturated red-gold variants instead"
+    ]
+  },
+  "product_application": {
+    "product_ref_id": "PROD_POLO_PATCH_001",
+    "product_name_or_scope": "Premium polo with small heritage crest badge — 1 SKU concept for Kansas City football fan community, US market",
+    "placement": "Left chest only — small crest/badge, approximately 2.5–3 inches in height, centered on the left chest panel above the pocket line",
+    "front_back_system": "Front only — single left-chest badge placement. No back print. No sleeve print. Restraint is intentional and premium.",
+    "print_area_notes": "Left chest print area only. Badge must be sized to read as a club crest, not a large graphic — scale is critical to the premium aesthetic. Embroidery-style or woven-badge visual rendering preferred in artwork to reinforce quality perception, even if final production method is print.",
+    "personalization_notes": "No personalization. This SKU is intentionally non-personalized. Design integrity and production simplicity are both served by a fixed, non-customizable crest design."
+  },
+  "visual_spec": {
+    "palette_direction": "Two colorway options must be developed: (A) Navy base polo — crest in white/cream, muted gold, and a desaturated red-gold accent; (B) White base polo — crest in navy, muted gold, and a desaturated red-gold accent. Both palettes must feel country-club appropriate — no bright, saturated, or neon tones. Muted gold should reference heritage athletic institutions (think classic university gold, not bright yellow). The red-gold accent, if used, must be clearly desaturated from official Kansas City Chiefs red to avoid trademark proximity.",
+    "typography_direction": "Serif or slab-serif letterforms only within the crest. Arched text layout — text curves along the top or bottom arc of the crest shape. Classic American athletic institution references: think vintage university athletic department lettering, classic club insignia typography. No sans-serif, no script, no modern geometric typefaces. If city initials are used ('KC' or similar), they should be rendered in a bold, heritage serif style as the crest centerpiece.",
+    "texture_direction": "The crest should have a tactile, crafted quality — subtle texture within the badge (aged linen, worn fabric, or fine line engraving effect) to reinforce heritage and premium feel. The polo fabric itself should appear smooth, fine-knit, and quality — not athletic mesh or casual jersey. If flat mockup is photographic, fabric texture must be clearly visible and premium.",
+    "illustration_direction": "The crest iconographic element (if used beyond typography) must be abstract and original — a classic athletic motif such as a laurel wreath, crossed implements (non-sport-specific), a star, a compass rose, or a simple geometric device. No mascots, no animals that reference team mascots, no helmets, no footballs, no direct sport-specific imagery that could be read as team symbolism. The overall crest illustration style should reference vintage engraving or fine line illustration — not flat vector clip art.",
+    "mockup_direction": "All mockups must prioritize premium product presentation. Flat mockup: clean, well-lit, neutral background (white, light grey, or warm cream), polo folded or laid flat with badge clearly visible — include a close-up detail crop of the crest as a secondary asset. Worn mockup: male model, apparent age 30s, smart-casual styling (chinos or tailored shorts, no athletic wear), natural outdoor or interior lifestyle setting — not a studio white background. Lifestyle scene: golf course, well-appointed home exterior, or casual outdoor social setting — model interacting naturally with the environment, not posed as a product model."
+  },
+  "output_groups": {
+    "flat_mockup": {
+      "required": true,
+      "brief_vi": "Mockup phẳng polo trên nền trung tính (trắng, xám nhạt hoặc kem ấm). Polo gấp hoặc trải phẳng, huy hiệu ngực trái rõ ràng. Bao gồm ảnh cận cảnh chi tiết huy hiệu như asset phụ. Ánh sáng sạch, chuyên nghiệp, thể hiện chất lượng vải và độ tinh xảo của huy hiệu.",
+      "generation_objective": "Produce a clean, premium product flat mockup that communicates quality and design sophistication. The crest badge must be the hero detail — legible, refined, and clearly original. A secondary close-up crop of the badge alone should be generated as an additional asset to support product detail pages and social content.",
+      "must_show": [
+        "Full polo garment — white or navy base, both colorways if possible",
+        "Left-chest crest badge clearly visible and in correct scale",
+        "Premium fabric texture — fine-knit polo construction",
+        "Clean collar and garment silhouette",
+        "Close-up detail crop of crest badge as secondary asset",
+        "Neutral, elevated background — white, light grey, or warm cream"
+      ],
+      "must_avoid": [
+        "Busy or distracting backgrounds",
+        "Athletic or sportswear styling context",
+        "Any official team marks or colors in the environment",
+        "Low-resolution or pixelated badge rendering",
+        "Oversized badge placement or incorrect scale",
+        "Generic POD mockup template aesthetic — must feel custom and premium"
+      ]
+    },
+    "worn_mockup": {
+      "required": true,
+      "brief_vi": "Polo mặc trên người mẫu nam, khoảng 30 tuổi, phong cách smart-casual (quần chinos hoặc short may đo). Bối cảnh ngoài trời tự nhiên hoặc không gian nội thất sang trọng — không phải studio trắng. Huy hiệu ngực trái rõ ràng trong khung hình. Cảm giác tự nhiên, tự tin, không phải pose quảng cáo cứng nhắc.",
+      "generation_objective": "Show the polo as a lifestyle garment worn by the target persona in a smart-casual context. The worn mockup must prove the garment's versatility and premium positioning — it should look like a real person wearing a real club polo, not a product model in a studio. The Kansas City fan identity should be present but understated.",
+      "must_show": [
+        "Male model, apparent age 30–38, confident and natural posture",
+        "Smart-casual styling: chinos, tailored shorts, or similar — no athletic wear, no jeans",
+        "Left-chest crest badge visible and legible in the frame",
+        "Natural outdoor or well-appointed interior setting — not a white studio background",
+        "Polo fitting well — not oversized, not athletic-cut tight",
+        "Overall impression: this person belongs at a golf club or a smart casual social setting"
+      ],
+      "must_avoid": [
+        "Stadium, sports field, or game-day context",
+        "Athletic wear styling (sneakers as hero, athletic shorts, sports accessories)",
+        "Stiff, catalog-style product modeling poses",
+        "Any official team merchandise visible in the frame",
+        "Overly young or overly old model — target apparent age 30–38",
+        "Female model — primary persona is male for this SKU",
+        "Urban streetwear aesthetic or setting"
+      ]
+    },
+    "lifestyle_scene": {
+      "required": true,
+      "brief_vi": "Cảnh sinh hoạt thực tế: sân golf, sân hiên nhà sang trọng, hoặc buổi tụ họp ngoài trời thân mật. Người mặc polo tương tác tự nhiên với môi trường — không phải pose sản phẩm. Huy hiệu có thể thấy nhưng không cần là điểm nhấn chính. Mục tiêu: truyền tải cảm giác 'đây là cuộc sống của fan thực sự' — tinh tế, tự tin, có phong cách.",
+      "generation_objective": "Create an aspirational lifestyle scene that places the polo in the world of the target persona — a smart-casual, quality-conscious Kansas City fan who lives a full life outside the stadium. The scene should sell the lifestyle, not the product. The polo should appear as a natural part of the scene, not the obvious subject of a product shoot. This asset is intended for social media, paid social, and brand storytelling contexts.",
+      "must_show": [
+        "Lifestyle setting: golf course (on the green or at the clubhouse), well-appointed home exterior or patio, or a small casual outdoor social gathering",
+        "Male figure wearing the polo naturally — interacting with the environment (holding a golf club, in conversation, relaxed outdoor setting)",
+        "Smart-casual overall scene aesthetic — elevated, not casual-mass-market",
+        "Warm, natural lighting — golden hour or bright natural daylight preferred",
+        "Scene details that reinforce heritage and quality: well-maintained green, quality outdoor furniture, natural materials",
+        "Polo and crest badge visible but not the forced focal point — the scene tells the story"
+      ],
+      "must_avoid": [
+        "Stadium, arena, or game-day crowd context",
+        "Any official NFL or Kansas City Chiefs merchandise, signage, or imagery in the scene",
+        "Overly commercial or staged product photography feel",
+        "Athletic or sportswear context — no running, no training, no sport action",
+        "Urban or streetwear environment",
+        "Overly literal Kansas City references (skyline as backdrop, barbecue setting, etc.) that distract from the premium lifestyle narrative",
+        "Any text overlays, logos, or promotional graphics within the scene image itself"
+      ]
+    }
+  },
+  "self_review_checklist": [
+    "Does the crest badge feel like an original, fictional private athletic club insignia — not a derivative of any official team mark?",
+    "Is the crest sized correctly — small and refined, not oversized or dominant?",
+    "Does the color palette in the crest feel muted and heritage-appropriate — not bright or officially team-colored?",
+    "Is the typography within the crest serif or slab-serif, arched, and heritage-coded — not modern or sans-serif?",
+    "Does the polo base color (white or navy) read as premium and country-club appropriate — not casual or athletic?",
+    "Are all mockup and lifestyle contexts smart-casual and lifestyle-appropriate — no stadium, no sports field, no athletic context?",
+    "Is the male model in worn and lifestyle outputs styled in chinos or tailored shorts — not athletic wear?",
+    "Does the flat mockup include a close-up detail crop of the crest badge as a secondary asset?",
+    "Is the overall impression of all outputs 'club member' not 'crowd member' — exclusive, refined, intentional?",
+    "Has every element been checked against the forbidden elements list — no official marks, no arrowhead, no Chiefs wordmark, no NFL shield?",
+    "Does the design solve the creative tension: Kansas City identity legible to a fan, deniable to a non-fan?",
+    "Does the overall execution justify a $65–$85 premium price point visually — would a style-conscious buyer feel this is worth the price?",
+    "Is there zero personalization in the design — fixed crest, no name or number fields?",
+    "Does the lifestyle scene sell the lifestyle first and the product second?"
+  ],
+  "human_review_focus": [
+    "IP/Legal review: Confirm whether 'Kansas City' as a geographic reference (not team name) is permissible in product copy and design text before finalizing any typography within the crest",
+    "Crest design approval: Human creative director must approve the specific crest iconography, typography, and color palette before production — the brief defines direction but the final badge requires human sign-off",
+    "Trademark proximity check: Final crest design must be reviewed against NFL and Kansas City Chiefs trademark databases — flag any element that could be construed as a derivative mark",
+    "Price point confirmation: Exact retail price for this polo SKU must be confirmed to align copy, perceived value messaging, and free shipping threshold communication ($99+ free shipping policy may affect conversion if polo is priced below threshold)",
+    "Colorway prioritization: Confirm whether both white and navy colorways should be developed simultaneously or if one should be prioritized for initial launch",
+    "Production method confirmation: Confirm whether the crest will be produced as a print, embroidery, or woven badge — this affects the artwork file specifications and the visual rendering direction in mockups",
+    "Channel confirmation: Confirm whether campaign will run paid social, organic, or both — affects copy length, aspect ratio requirements, and whether lifestyle scene needs platform-specific crops",
+    "Model casting approval: Human review of model selection for worn and lifestyle mockups to confirm alignment with target persona age, styling, and setting"
+  ],
+  "open_questions": [
+    "What is the confirmed retail price for PROD_POLO_PATCH_001? (Inferred $65–$85 from premium tier — needs confirmation for copy and value messaging)",
+    "Is 'Kansas City' as a geographic reference permissible in product copy and crest typography, or must all geographic references be avoided? (Needs legal/IP review)",
+    "What specific crest iconographic element should anchor the badge design — city initials only, an abstract device, or a fictional club name? (Needs human creative direction before designer execution)",
+    "Will the crest be produced as a print, embroidery, or woven badge? (Affects artwork file format, resolution requirements, and mockup rendering style)",
+    "Should both white and navy colorways be developed simultaneously for launch, or is one colorway the priority? (Affects scope of artwork and mockup deliverables)",
+    "Will this campaign run on paid social, organic social, or both? (Affects lifestyle scene aspect ratio, copy length, and platform-specific creative requirements)",
+    "Is there an existing POD supplier relationship for polo shirts at this quality tier, or does this SKU require a new vendor evaluation? (Affects production timeline and quality assurance messaging)",
+    "Should the free shipping threshold ($99+) be addressed in product copy given the likely sub-$99 price point of this polo? (Affects conversion copy strategy)"
+  ]
+}

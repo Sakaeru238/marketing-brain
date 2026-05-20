@@ -1,0 +1,65 @@
+{
+  "status": "success",
+  "brand_id": "BRAND0001",
+  "campaign_id": "Bộ_polo_huy_hiệu_bóng_bầu_dục_phong_cách_câu_lạc_bộ_golf_cổ_điển",
+  "row_number": 4,
+  "source_column": "final prompt ( bao gồm phần giữ của mẫu gốc và thêm các điểm cải tiến",
+  "api_meta": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-6",
+    "response_id": "msg_01VWVkoQFapaaoxQgf3S9Cvz",
+    "usage": {
+      "input_tokens": 5998,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 0,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 3462,
+      "service_tier": "standard",
+      "inference_geo": "global"
+    },
+    "cache_status": "miss_stored",
+    "cache_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/cache/llm/final_prompt_to_comfyui_bundle/042953a4fb90f7b6b650a4c9ddd7b077ee56b3c219b3862fe8e41567827d7d49.json",
+    "input_hash": "042953a4fb90f7b6b650a4c9ddd7b077ee56b3c219b3862fe8e41567827d7d49"
+  },
+  "cost_estimate": {
+    "input_tokens": 5998,
+    "output_tokens": 3462,
+    "total_tokens": 9460,
+    "total_cost_usd": 0.069924,
+    "cache_hit": false
+  },
+  "outputs": {
+    "pod_open_design_translation": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/pod/campaigns/Bộ_polo_huy_hiệu_bóng_bầu_dục_phong_cách_câu_lạc_bộ_golf_cổ_điển/04_open_design_translation/pod_open_design_translation.json",
+    "chatgpt_image_prompts": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/pod/campaigns/Bộ_polo_huy_hiệu_bóng_bầu_dục_phong_cách_câu_lạc_bộ_golf_cổ_điển/04_open_design_translation/chatgpt_image_prompts.json",
+    "comfyui_render_request_bundle": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/pod/campaigns/Bộ_polo_huy_hiệu_bóng_bầu_dục_phong_cách_câu_lạc_bộ_golf_cổ_điển/04_open_design_translation/comfyui_render_request_bundle.json",
+    "api_meta": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/pod/campaigns/Bộ_polo_huy_hiệu_bóng_bầu_dục_phong_cách_câu_lạc_bộ_golf_cổ_điển/04_open_design_translation/pod_open_design_translation_api_meta.json"
+  },
+  "telegram_notification": {
+    "status_code": 200,
+    "ok": true,
+    "data": {
+      "ok": true,
+      "result": {
+        "message_id": 127,
+        "from": {
+          "id": 8677276026,
+          "is_bot": true,
+          "first_name": "reportAIBot",
+          "username": "reportMarkettingBot"
+        },
+        "chat": {
+          "id": 1038303982,
+          "first_name": "Vinh",
+          "last_name": "Tống Bá",
+          "username": "Sakaeru",
+          "type": "private"
+        },
+        "date": 1779098407,
+        "text": "POD Step [4] ComfyUI bundle test completed\nBrand: BRAND0001\nRow: 4\nCache: miss_stored\nTotal tokens: 9460\nEstimated cost: $0.069924\nOutput: /Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/pod/campaigns/Bộ_polo_huy_hiệu_bóng_bầu_dục_phong_cách_câu_lạc_bộ_golf_cổ_điển/04_open_design_translation/comfyui_render_request_bundle.json"
+      }
+    }
+  }
+}

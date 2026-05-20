@@ -3,10 +3,11 @@ import os
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 import gspread
 
+from core.config.paths import GLOBAL_CONFIG_DIR
 from core.services.brand_registry_service import BrandRegistryService
 
 
@@ -160,13 +161,14 @@ class GoogleSheetsExporter:
 
     PAGE_CHANNEL_HEADERS = [
         "campaign_id",
-        "page_id",
+        "public_page_id",
+        "private_page_id",
+        "token",
         "brand_id",
         "niche_id",
         "platform_id",
         "page_name",
         "page_url",
-        "meta_page_id",
         "market",
         "language",
         "target_timezone",
@@ -181,6 +183,7 @@ class GoogleSheetsExporter:
         "end_day",
         "duration",
         "default_content_goal",
+        "campaign_macro_direction",
         "default_tone",
         "default_product_mention_level",
         "posting_frequency_target",
@@ -192,12 +195,15 @@ class GoogleSheetsExporter:
         "brand_id",
         "brand_name",
         "niche_id",
-        "brand_context_folder",
-        "brand_intake_file",
+        "page_public_id",
         "default_language",
         "default_market",
         "notes",
     ]
+
+    PAGE_CHANNEL_FIELD_MAPPINGS = {
+        "page_id": "public_page_id",
+    }
 
     def __init__(
         self,
@@ -216,8 +222,46 @@ class GoogleSheetsExporter:
             or os.getenv("GOOGLE_OAUTH_TOKEN_FILE")
             or "secrets/google_oauth_token.json"
         )
+        self._load_headers_from_global_schema()
         self.routes = self._load_routes()
         self.client = self._authorize()
+
+    def _load_headers_from_global_schema(self) -> None:
+        schema_file = GLOBAL_CONFIG_DIR / "gsheet_schema.json"
+        if not schema_file.exists():
+            return
+        try:
+            schema = json.loads(schema_file.read_text(encoding="utf-8"))
+        except Exception:
+            return
+        organic_schema = ((schema.get("modules") or {}).get("organic") or {})
+        header_map = {
+            "BRAND_CONFIG_HEADERS": ("brand_config", self.BRAND_CONFIG_HEADERS),
+            "PAGE_CHANNEL_HEADERS": ("pages", self.PAGE_CHANNEL_HEADERS),
+            "ORGANIC_POSTS_HEADERS": ("posts", self.ORGANIC_POSTS_HEADERS),
+            "ORGANIC_RESULTS_HEADERS": ("results", self.ORGANIC_RESULTS_HEADERS),
+            "DAILY_LEARNING_HEADERS": ("learning", self.DAILY_LEARNING_HEADERS),
+        }
+        for attr, (section, fallback) in header_map.items():
+            headers = (organic_schema.get(section) or {}).get("header_required_columns")
+            if isinstance(headers, list) and headers:
+                setattr(self, attr, [str(header).strip() for header in headers if str(header).strip()])
+            else:
+                setattr(self, attr, list(fallback))
+        pages_schema = organic_schema.get("pages") or {}
+        field_mappings = pages_schema.get("field_mappings") or self.PAGE_CHANNEL_FIELD_MAPPINGS
+        self.PAGE_CHANNEL_FIELD_MAPPINGS = {
+            str(logical).strip(): str(sheet_field).strip()
+            for logical, sheet_field in field_mappings.items()
+            if str(logical).strip() and str(sheet_field).strip()
+        }
+
+    def normalize_page_channel_record(self, record: Dict) -> Dict:
+        normalized = dict(record or {})
+        for logical_name, sheet_field in self.PAGE_CHANNEL_FIELD_MAPPINGS.items():
+            if not normalized.get(logical_name) and normalized.get(sheet_field):
+                normalized[logical_name] = normalized.get(sheet_field)
+        return normalized
 
     def _load_routes(self) -> List[Dict]:
         """Load Google Sheet routes.
@@ -354,10 +398,7 @@ class GoogleSheetsExporter:
             return spreadsheet.add_worksheet(title=title, rows=rows, cols=cols)
 
     def _ensure_headers(self, worksheet, headers: List[str]):
-        existing = worksheet.row_values(1)
-        if existing[: len(headers)] == headers:
-            return
-        worksheet.update("A1", [headers])
+        self._ensure_headers_safe(worksheet, headers)
 
     def _tab_name(self, route: Dict, key: str, default: str) -> str:
         return (route.get("tabs", {}) or {}).get(key) or default
@@ -423,6 +464,36 @@ class GoogleSheetsExporter:
 
     def _worksheet_records(self, worksheet) -> List[Dict]:
         return self._rows_to_records(worksheet.get_all_values())
+
+    def _last_data_row(self, worksheet) -> int:
+        values = worksheet.get_all_values()
+        if not values:
+            return 1
+        last = 1
+        for row_number, row in enumerate(values, start=1):
+            if any(str(cell or "").strip() for cell in row):
+                last = row_number
+        return max(last, 1)
+
+    def _a1_col(self, col_number: int) -> str:
+        return gspread.utils.rowcol_to_a1(1, max(col_number, 1)).rstrip("1")
+
+    def _write_rows_after_last_data_row(self, worksheet, rows: List[List[Any]], header_count: int) -> Dict:
+        if not rows:
+            return {"start_row": None, "end_row": None, "rows_written": 0}
+        start_row = self._last_data_row(worksheet) + 1
+        end_row = start_row + len(rows) - 1
+        end_col = self._a1_col(header_count)
+        target_range = f"A{start_row}:{end_col}{end_row}"
+        worksheet.update(target_range, rows, value_input_option="USER_ENTERED")
+        try:
+            worksheet.format(
+                target_range,
+                {"backgroundColor": {"red": 0.88, "green": 0.96, "blue": 0.90}},
+            )
+        except Exception:
+            pass
+        return {"start_row": start_row, "end_row": end_row, "rows_written": len(rows), "range": target_range}
 
     def _index_existing_rows(self, worksheet, headers: List[str], key_fields: List[str]) -> Dict:
         rows = self._worksheet_records(worksheet)
@@ -788,13 +859,11 @@ class GoogleSheetsExporter:
             [record.get(header, "") for header in current_headers] for record in records
         ]
 
-        if rows:
-            if rows:
-                posts_ws.append_rows(
-                    rows,
-                    value_input_option="USER_ENTERED",
-                    table_range="A1",
-                )
+        append_result = self._write_rows_after_last_data_row(
+            posts_ws,
+            rows,
+            header_count=len(current_headers),
+        )
 
         return {
             "spreadsheet_title": spreadsheet.title,
@@ -802,6 +871,10 @@ class GoogleSheetsExporter:
             "posts_tab": posts_tab,
             "rows_exported": len(rows),
             "rows_appended": len(rows),
+            "append_start_row": append_result.get("start_row"),
+            "append_end_row": append_result.get("end_row"),
+            "append_range": append_result.get("range"),
+            "new_rows_highlighted": bool(append_result.get("rows_written")),
             "organic_run_id": organic_output.get("organic_run_id"),
             "brand_id": brand_id,
             "page_id": page_id or route.get("page_id"),

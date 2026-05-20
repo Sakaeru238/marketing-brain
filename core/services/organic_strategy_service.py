@@ -12,6 +12,8 @@ from core.services.organic_alysha_source_service import OrganicAlyshaSourceServi
 from core.learning.organic_learning_memory_store import OrganicLearningMemoryStore
 from core.notifications.telegram_notifier import TelegramNotifier
 from core.prompts.prompt_loader import PromptLoader
+from core.services.brand_registry_service import BrandRegistryService
+from core.services.pod_cache_service import PodLLMOutputCache
 
 
 class OrganicStrategyService:
@@ -83,18 +85,19 @@ class OrganicStrategyService:
         self,
         strategy_prompt_file: str = "data/prompts/organic/organic_strategy_review_prompt.txt",
         alysha_strategy_file: str = "data/output/strategy_output.json",
-        output_root: str = "data/output",
+        output_root: Optional[str] = None,
     ):
         self.strategy_prompt_file = strategy_prompt_file
         self.alysha_strategy_file = Path(alysha_strategy_file)
-        self.output_root = Path(output_root)
+        self.output_root = Path(output_root) if output_root else None
+        self.registry = BrandRegistryService()
         self.prompt_loader = PromptLoader()
         self.claude = ClaudeAPIAdapter()
         self.learning_memory = OrganicLearningMemoryStore()
         self.notifier = TelegramNotifier()
         self.organic_alysha_source_service = OrganicAlyshaSourceService(
             reference_strategy_file=str(self.alysha_strategy_file),
-            output_root=str(self.output_root),
+            output_root=str(self.output_root) if self.output_root else None,
         )
 
     # -------------------------
@@ -133,6 +136,15 @@ class OrganicStrategyService:
         brand_id = self._required_identifier(page_context, "brand_id")
         page_id = self._required_identifier(page_context, "page_id")
         campaign_id = self._required_identifier(page_context, "campaign_id")
+        if not self.output_root:
+            return (
+                self.registry.brand_data_root(brand_id)
+                / "organic"
+                / "pages"
+                / self._safe_component(page_id)
+                / "campaigns"
+                / self._safe_component(campaign_id)
+            )
         return (
             self.output_root
             / self._safe_component(brand_id)
@@ -162,6 +174,23 @@ class OrganicStrategyService:
 
     def _deep_equal(self, left: Any, right: Any) -> bool:
         return self._stable_hash(left) == self._stable_hash(right)
+
+    def _strategy_review_cache_input(self, strategy_input: Dict[str, Any]) -> Dict[str, Any]:
+        cache_input = copy.deepcopy(strategy_input)
+        existing = cache_input.get("existing_organic_strategy")
+        if isinstance(existing, dict):
+            for key in [
+                "created_at",
+                "last_reviewed_at",
+                "last_updated_at",
+                "last_stable_execution_revision_at",
+                "strategy_update_history",
+            ]:
+                existing.pop(key, None)
+        return {
+            "prompt_file": self.strategy_prompt_file,
+            "strategy_input": cache_input,
+        }
 
     # -------------------------
     # Alysha Strategy handling
@@ -342,6 +371,7 @@ class OrganicStrategyService:
         self,
         page_context: Dict[str, Any],
         campaign_kpi_context: Dict[str, Any],
+        campaign_direction_context: Optional[Dict[str, Any]],
         existing_strategy: Optional[Dict[str, Any]],
         recent_learning: List[Dict[str, Any]],
         review_policy: Dict[str, Any],
@@ -363,6 +393,22 @@ class OrganicStrategyService:
                 "platform_id": self._required_identifier(page_context, "platform_id"),
             },
             "page_context": page_context,
+            "campaign_operating_context": {
+                "page_stage": page_context.get("page_stage"),
+                "current_followers": campaign_kpi_context.get("current_followers"),
+                "current_likes": campaign_kpi_context.get("current_likes"),
+                "target_followers": campaign_kpi_context.get("target_followers"),
+                "target_likes": campaign_kpi_context.get("target_likes"),
+                "primary_growth_metric": campaign_kpi_context.get("primary_growth_metric"),
+                "growth_goal": page_context.get("growth_goal"),
+                "start_day": campaign_kpi_context.get("start_day"),
+                "end_day": campaign_kpi_context.get("end_day"),
+                "default_content_goal": page_context.get("default_content_goal"),
+                "posting_frequency_target": page_context.get("posting_frequency_target"),
+                "posting_frequency_target_count": campaign_kpi_context.get("posting_frequency_target_count"),
+                "campaign_macro_direction": page_context.get("campaign_macro_direction"),
+            },
+            "campaign_direction_context": campaign_direction_context or {},
             "event_switch": {
                 "notes_value": notes,
                 "event_note": event_note,
@@ -586,6 +632,7 @@ class OrganicStrategyService:
         self,
         page_context: Dict[str, Any],
         campaign_kpi_context: Dict[str, Any],
+        campaign_direction_context: Optional[Dict[str, Any]],
         response: Dict[str, Any],
         existing_strategy: Optional[Dict[str, Any]],
         recent_learning: List[Dict[str, Any]],
@@ -650,6 +697,7 @@ class OrganicStrategyService:
             "review_decision": decision,
             "strategy_update_history": copy.deepcopy((existing_strategy or {}).get("strategy_update_history") or []),
             "campaign_kpi_context_snapshot": campaign_kpi_context,
+            "campaign_direction_context_snapshot": campaign_direction_context or {},
         }
 
         if update_type != "no_change":
@@ -683,9 +731,25 @@ class OrganicStrategyService:
             f"Update type: {decision.get('update_type', '')}\n\n"
             "Thay đổi:\n"
             f"{changed_lines}\n\n"
-            f"Lý do: {decision.get('reason_vi', '')}"
+            f"Lý do: {decision.get('reason_vi', '')}\n"
+            f"Claude tokens: {self.usage_summary().get('total_tokens', 0)} "
+            f"(in {self.usage_summary().get('input_tokens', 0)} / out {self.usage_summary().get('output_tokens', 0)})\n"
+            f"Claude cost: ${self.usage_summary().get('total_cost_usd', 0.0):.6f}"
         )
         self.notifier.send(message)
+
+    def usage_summary(self, reset=False):
+        own = self.claude.usage_summary(reset=reset)
+        source = self.organic_alysha_source_service.usage_summary(reset=reset)
+        return {
+            "calls": own.get("calls", 0) + source.get("calls", 0),
+            "input_tokens": own.get("input_tokens", 0) + source.get("input_tokens", 0),
+            "output_tokens": own.get("output_tokens", 0) + source.get("output_tokens", 0),
+            "total_tokens": own.get("total_tokens", 0) + source.get("total_tokens", 0),
+            "total_cost_usd": round(float(own.get("total_cost_usd", 0.0)) + float(source.get("total_cost_usd", 0.0)), 8),
+            "organic_strategy_review": own,
+            "organic_alysha_source": source,
+        }
 
     # -------------------------
     # Public API
@@ -694,6 +758,7 @@ class OrganicStrategyService:
         self,
         page_context: Dict[str, Any],
         campaign_kpi_context: Dict[str, Any],
+        campaign_direction_context: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         strategy_path = self.strategy_output_path(page_context)
         organic_output_path = self.organic_output_path(page_context)
@@ -702,6 +767,7 @@ class OrganicStrategyService:
         alysha_source_resolution = self.organic_alysha_source_service.resolve(
             page_context=page_context,
             campaign_kpi_context=campaign_kpi_context,
+            campaign_direction_context=campaign_direction_context,
         )
         alysha_strategy_output = alysha_source_resolution["source_output"]
         structured_alysha_source = self._select_structured_alysha_source(alysha_strategy_output)
@@ -724,6 +790,7 @@ class OrganicStrategyService:
         strategy_input = self._strategy_input(
             page_context=page_context,
             campaign_kpi_context=campaign_kpi_context,
+            campaign_direction_context=campaign_direction_context,
             existing_strategy=existing_strategy,
             recent_learning=recent_learning,
             review_policy=review_policy,
@@ -738,13 +805,27 @@ class OrganicStrategyService:
             },
         )
 
+        brand_id = self._required_identifier(page_context, "brand_id")
+        cache = PodLLMOutputCache(brand_id=brand_id, namespace="organic_strategy_review")
+        cache_input = self._strategy_review_cache_input(strategy_input)
+        input_hash = cache.input_hash(cache_input)
+        cached = cache.get(input_hash)
+
         readiness = self.claude.readiness()
-        if readiness.get("ready"):
+        if cached:
+            response = (cached.get("output") or {}).get("response") or {}
+        elif readiness.get("ready"):
             prompt = self.prompt_loader.render(
                 self.strategy_prompt_file,
                 {"ORGANIC_STRATEGY_INPUT": json.dumps(strategy_input, ensure_ascii=False, indent=2)},
             )
             response = self._parse_json_response(self._call_claude(prompt))
+            cache.set(
+                input_hash=input_hash,
+                output={"response": response},
+                api_meta={"provider": "claude", "stage": "organic_strategy_review"},
+                cache_input=cache_input,
+            )
         else:
             response = self._fallback_response(
                 page_context=page_context,
@@ -758,6 +839,7 @@ class OrganicStrategyService:
         final_strategy = self._build_final_strategy_output(
             page_context=page_context,
             campaign_kpi_context=campaign_kpi_context,
+            campaign_direction_context=campaign_direction_context,
             response=response,
             existing_strategy=existing_strategy,
             recent_learning=recent_learning,

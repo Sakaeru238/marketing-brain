@@ -60,6 +60,12 @@ def _success_message(args: argparse.Namespace, result: Dict[str, Any]) -> str:
     ]
     if not args.dry_run:
         lines.append(f"Alysha compliance: {compliance.get('status', 'unknown')}")
+    usage = result.get("llm_usage") or {}
+    lines.append(
+        f"Claude tokens: {usage.get('total_tokens', 0)} "
+        f"(in {usage.get('input_tokens', 0)} / out {usage.get('output_tokens', 0)})"
+    )
+    lines.append(f"Claude cost: ${float(usage.get('total_cost_usd', 0.0) or 0.0):.6f}")
     return "\n".join(lines)
 
 

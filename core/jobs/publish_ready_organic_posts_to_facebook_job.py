@@ -1,12 +1,12 @@
 """
-Production job: schedule Facebook posts from Google Sheet Organic_Posts.
+Production job: publish ready organic posts to Facebook from Google Sheet Organic_Posts.
 
 Rules:
   - Process only rows where post_status == "ready".
-  - Map google_sheet_routing.json to Page_Channel_Library by brand_id + page_url.
-    The real Facebook page_id is taken from google_sheet_routing.json.page_id.
+  - Map Organic_Posts to Campaign_Config by brand_id + public page id/page_url.
+    The real Facebook Page ID used by Meta API is Campaign_Config.private_page_id.
   - If scheduled_datetime_utc is blank, compute a schedule time from the target
-    audience timezone in Page_Channel_Library.target_timezone.
+    audience timezone in Campaign_Config.target_timezone.
   - The machine can run in any timezone, including Vietnam; all scheduling math
     uses timezone-aware UTC + the target market timezone, never local machine time.
   - After successful scheduling/publishing, update post_status -> "posted".
@@ -34,80 +34,55 @@ from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from core.exporters.google_sheets_exporter import GoogleSheetsExporter
 from core.notifications.telegram_notifier import TelegramNotifier
-from core.publishers.facebook_page_publisher import FacebookPagePublisher
+from core.services.facebook_page_publisher_service import FacebookPagePublisherService
+from core.utils.organic_gsheet_schema import (
+    organic_post_status_values,
+    organic_publish_job_config,
+    organic_status_list,
+)
 
 
-REQUIRED_POST_COLUMNS = [
-    "post_id",
-    "brand_id",
-    "page_id",
-    "platform_id",
-    "post_text",
-    "image_url",
-    "post_status",
-    "publisher_status",
-    "facebook_post_id",
-    "publisher_error",
-    "scheduled_datetime_utc",
-    "published_or_scheduled_at",
-]
-
-REQUIRED_PAGE_COLUMNS = [
-    "brand_id",
-    "page_id",
-    "page_url",
-    "platform_id",
-    "market",
-    "language",
-    "target_timezone",
-]
-
-READY_POST_STATUS = "ready"
-SUCCESS_POST_STATUS = "posted"
-ERROR_POST_STATUS = "error"
-
-SUCCESS_PUBLISHER_STATUSES = {"scheduled", "scheduled_dry_run", "published"}
-ERROR_PUBLISHER_STATUSES = {"validation_error", "error"}
-
-# Guardrail: only these fields can be written by this job.
-# Do not add content/planning columns here.
-ALLOWED_UPDATE_COLUMNS = {
-    "post_status",
-    "publisher_status",
-    "facebook_post_id",
-    "publisher_error",
-    "published_or_scheduled_at",
-    "scheduled_datetime_utc",
-}
-
-# Practical engagement windows in TARGET-AUDIENCE LOCAL TIME.
-# Theory behind this heuristic:
-# - morning commute / first phone check
-# - lunch break
-# - after-work decompression
-# - evening leisure scroll
-# Weekends start later and avoid too many low-intent working-hour slots.
-WEEKDAY_ENGAGEMENT_SLOTS = [time(9, 0), time(12, 30), time(18, 30), time(20, 30)]
-WEEKEND_ENGAGEMENT_SLOTS = [time(10, 0), time(14, 0), time(19, 30)]
-
-DEFAULT_MIN_FUTURE_MINUTES = 20
-DEFAULT_SLOT_SPACING_MINUTES = 30
+def _required_config_list(config: Dict[str, Any], key: str) -> List[str]:
+    values = config.get(key)
+    if not isinstance(values, list) or not values:
+        raise ValueError(f"Missing organic publish job config list: {key}")
+    return [str(value).strip() for value in values if str(value).strip()]
 
 
+def _parse_time_slots(values: List[str]) -> List[time]:
+    slots = []
+    for value in values:
+        hour, minute = str(value).strip().split(":", 1)
+        slots.append(time(int(hour), int(minute)))
+    return slots
+
+
+PUBLISH_JOB_CONFIG = organic_publish_job_config()
+SCHEDULE_POLICY = PUBLISH_JOB_CONFIG.get("schedule_policy") or {}
+
+REQUIRED_POST_COLUMNS = _required_config_list(PUBLISH_JOB_CONFIG, "required_post_columns")
+REQUIRED_PAGE_COLUMNS = _required_config_list(PUBLISH_JOB_CONFIG, "required_page_columns")
+
+ORGANIC_STATUS_VALUES = organic_post_status_values()
+TARGET_PLATFORM_ID = str(PUBLISH_JOB_CONFIG["target_platform_id"])
+READY_POST_STATUS = str(ORGANIC_STATUS_VALUES["ready_post_status"])
+SUCCESS_POST_STATUS = str(ORGANIC_STATUS_VALUES["success_post_status"])
+ERROR_POST_STATUS = str(ORGANIC_STATUS_VALUES["error_post_status"])
+JOB_ERROR_PUBLISHER_STATUS = str(ORGANIC_STATUS_VALUES["job_error_publisher_status"])
+
+SUCCESS_PUBLISHER_STATUSES = set(organic_status_list("success_publisher_statuses"))
+ERROR_PUBLISHER_STATUSES = set(organic_status_list("error_publisher_statuses"))
+
+ALLOWED_UPDATE_COLUMNS = set(_required_config_list(PUBLISH_JOB_CONFIG, "allowed_update_columns"))
+WEEKDAY_ENGAGEMENT_SLOTS = _parse_time_slots(_required_config_list(SCHEDULE_POLICY, "weekday_engagement_slots"))
+WEEKEND_ENGAGEMENT_SLOTS = _parse_time_slots(_required_config_list(SCHEDULE_POLICY, "weekend_engagement_slots"))
+MIN_FUTURE_MINUTES = int(SCHEDULE_POLICY["min_future_minutes"])
+SLOT_SPACING_MINUTES = int(SCHEDULE_POLICY["slot_spacing_minutes"])
+MAX_SEARCH_DAYS = int(SCHEDULE_POLICY["max_search_days"])
 MARKET_TIMEZONE_FALLBACKS = {
-    "us": "America/New_York",
-    "usa": "America/New_York",
-    "united states": "America/New_York",
-    "uk": "Europe/London",
-    "gb": "Europe/London",
-    "united kingdom": "Europe/London",
-    "au": "Australia/Sydney",
-    "australia": "Australia/Sydney",
-    "ca": "America/Toronto",
-    "canada": "America/Toronto",
-    "vn": "Asia/Ho_Chi_Minh",
-    "vietnam": "Asia/Ho_Chi_Minh",
-    "việt nam": "Asia/Ho_Chi_Minh",
+    str(key).strip().lower(): str(value).strip()
+    for key, value in (PUBLISH_JOB_CONFIG.get("market_timezone_fallbacks") or {}).items()
+    if str(key).strip() and str(value).strip()
 }
 
 
@@ -193,7 +168,7 @@ def _normalize_market(value: str) -> str:
 
 
 def _normalize_url(value: str) -> str:
-    """Normalize page URLs enough for routing/Page_Channel_Library matching."""
+    """Normalize page URLs enough for route/Campaign_Config matching."""
     raw = str(value or "").strip()
     if not raw:
         return ""
@@ -225,9 +200,8 @@ def _find_route_by_brand_page_url(exporter: GoogleSheetsExporter, *, brand_id: s
     """
     Prefer route matching by brand_id + page_url + platform_id.
 
-    google_sheet_routing.json owns the real Meta/Facebook page_id.
-    Page_Channel_Library owns audience metadata. The stable bridge between them
-    is brand_id + page_url, not page_id.
+    Brand route owns the Google Sheet. Campaign_Config owns page metadata and
+    the private Facebook Page ID used for publishing.
     """
     active_routes = [
         r for r in exporter.routes
@@ -250,7 +224,7 @@ def _find_route_by_brand_page_url(exporter: GoogleSheetsExporter, *, brand_id: s
             )
 
     # Fallback: allow the existing exporter logic only when it can resolve a unique
-    # route by brand/platform. Do not default to symbolic page keys like AODAI_FB_US.
+    # route by brand/platform.
     return exporter._find_route(brand_id=brand_id, page_id=None, platform_id=platform_id)
 
 
@@ -262,7 +236,7 @@ def _resolve_target_timezone(page_context: Dict[str, Any]) -> ZoneInfo:
 
     if not tz_name:
         raise ValueError(
-            "target_timezone is required in Page_Channel_Library. "
+            "target_timezone is required in Campaign_Config. "
             "Use an IANA timezone such as America/New_York, Europe/London, Asia/Ho_Chi_Minh."
         )
 
@@ -270,7 +244,7 @@ def _resolve_target_timezone(page_context: Dict[str, Any]) -> ZoneInfo:
         return ZoneInfo(tz_name)
     except ZoneInfoNotFoundError as exc:
         raise ValueError(
-            f"Invalid target_timezone '{tz_name}' in Page_Channel_Library. "
+            f"Invalid target_timezone '{tz_name}' in Campaign_Config. "
             "Use an IANA timezone such as America/New_York, Europe/London, Asia/Ho_Chi_Minh."
         ) from exc
 
@@ -280,6 +254,7 @@ def _load_page_context(
     pages_tab: str,
     *,
     brand_id: str,
+    page_id: str,
     page_url: str,
     platform_id: str,
 ) -> Dict[str, Any]:
@@ -294,18 +269,21 @@ def _load_page_context(
 
     rows = _rows_to_records(values, headers)
     for _, row in rows:
+        if not row.get("page_id") and row.get("public_page_id"):
+            row["page_id"] = row.get("public_page_id")
         same_brand = str(row.get("brand_id", "")).strip() == str(brand_id).strip()
-        same_page_url = _urls_match(str(row.get("page_url", "")), page_url)
+        same_page_id = bool(page_id) and str(row.get("public_page_id", "")).strip() == str(page_id).strip()
+        same_page_url = bool(page_url) and _urls_match(str(row.get("page_url", "")), page_url)
         same_platform = str(row.get("platform_id", "")).strip().lower() == str(platform_id).strip().lower()
-        if same_brand and same_page_url and same_platform:
+        if same_brand and same_platform and (same_page_id or same_page_url):
             return row
 
     raise ValueError(
         f"{pages_tab} row not found for brand_id={brand_id}, "
-        f"page_url={page_url}, platform_id={platform_id}. "
-        "Mapping rule: Page_Channel_Library.brand_id + Page_Channel_Library.page_url "
-        "must match google_sheet_routing.json.brand_id + google_sheet_routing.json.page_url. "
-        "The real Facebook page_id is then taken from google_sheet_routing.json.page_id."
+        f"page_id={page_id}, page_url={page_url}, platform_id={platform_id}. "
+        "Mapping rule: Organic_Posts.brand_id + Organic_Posts.page_id/page_url "
+        "must match Campaign_Config.brand_id + Campaign_Config.public_page_id/page_url. "
+        "The real Facebook Page ID is then taken from Campaign_Config.private_page_id."
     )
 
 def _collect_reserved_schedule_times(records: List[Tuple[int, Dict[str, Any]]]) -> set[str]:
@@ -327,14 +305,14 @@ def _next_best_engagement_time_utc(
     target_tz: ZoneInfo,
     reserved_utc: set[str],
     now_utc: Optional[datetime] = None,
-    min_future_minutes: int = DEFAULT_MIN_FUTURE_MINUTES,
-    slot_spacing_minutes: int = DEFAULT_SLOT_SPACING_MINUTES,
+    min_future_minutes: int = MIN_FUTURE_MINUTES,
+    slot_spacing_minutes: int = SLOT_SPACING_MINUTES,
 ) -> datetime:
     now_utc = now_utc or datetime.now(timezone.utc)
     earliest_utc = now_utc + timedelta(minutes=min_future_minutes)
     local_cursor = earliest_utc.astimezone(target_tz)
 
-    for day_offset in range(0, 21):
+    for day_offset in range(0, MAX_SEARCH_DAYS):
         local_day = local_cursor.date() + timedelta(days=day_offset)
         for slot_time in _slot_times_for_date(local_day):
             candidate_local = datetime.combine(local_day, slot_time, tzinfo=target_tz)
@@ -348,7 +326,7 @@ def _next_best_engagement_time_utc(
 
             return candidate_utc
 
-    raise ValueError("Could not calculate a valid posting slot within the next 21 days.")
+    raise ValueError(f"Could not calculate a valid posting slot within the next {MAX_SEARCH_DAYS} days.")
 
 
 def _with_scheduled_time_if_needed(
@@ -431,7 +409,7 @@ def _updates_for_exception(exc: Exception, pre_updates: Optional[Dict[str, str]]
     updates: Dict[str, str] = dict(pre_updates or {})
     updates.update({
         "post_status": ERROR_POST_STATUS,
-        "publisher_status": "error",
+        "publisher_status": JOB_ERROR_PUBLISHER_STATUS,
         "publisher_error": str(exc),
     })
     return updates
@@ -441,7 +419,7 @@ def _assert_allowed_updates(updates: Dict[str, str]) -> None:
     invalid = sorted(set(updates) - ALLOWED_UPDATE_COLUMNS)
     if invalid:
         raise ValueError(
-            "daily_schedule_facebook_job attempted to update disallowed columns: "
+            "publish_ready_organic_posts_to_facebook_job attempted to update disallowed columns: "
             + ", ".join(invalid)
         )
 
@@ -485,7 +463,7 @@ def _format_telegram_message(
 
     icon = "✅" if post_status == SUCCESS_POST_STATUS else "❌"
     lines = [
-        f"{icon} Facebook schedule job",
+        f"{icon} Facebook organic publish job",
         f"Brand: {brand_id}",
         f"Page: {page_id}",
         f"Market: {page_context.get('market', '')}",
@@ -538,7 +516,7 @@ def _notify_row_result(
     return notifier.send(message)
 
 
-def run_daily_schedule_facebook_job(
+def run_publish_ready_organic_posts_to_facebook_job(
     brand_id: Optional[str] = None,
     page_id: Optional[str] = None,
     platform_id: Optional[str] = None,
@@ -546,7 +524,7 @@ def run_daily_schedule_facebook_job(
     max_posts: Optional[int] = None,
 ) -> Dict[str, Any]:
     brand_id = brand_id or os.getenv("PUBLISH_BRAND_ID", "AODAI")
-    platform_id = platform_id or os.getenv("PUBLISH_PLATFORM_ID", "facebook")
+    platform_id = platform_id or os.getenv("PUBLISH_PLATFORM_ID", TARGET_PLATFORM_ID)
     page_url = page_url or os.getenv("PUBLISH_PAGE_URL")
 
     if max_posts is None:
@@ -564,32 +542,10 @@ def run_daily_schedule_facebook_job(
     brand_id = str(route.get("brand_id") or brand_id).strip()
     platform_id = str(route.get("platform_id") or platform_id).strip()
     route_page_url = _route_page_url(route)
-    if not route_page_url:
-        raise ValueError(
-            "google_sheet_routing.json route is missing page_url. "
-            "Add page_url to the active route, and make it match "
-            "Page_Channel_Library.page_url for the same brand_id/platform_id."
-        )
-
-    meta_page_id = str(route.get("page_id") or "").strip()
-    if not meta_page_id:
-        raise ValueError("google_sheet_routing.json route is missing page_id / real Facebook Page ID.")
-
-    # From here, page_id always means the real Facebook/Meta page ID from routing.
-    page_id = meta_page_id
 
     spreadsheet = exporter._open_spreadsheet_for_route(route)
-    posts_tab = exporter._tab_name(route, "posts", "Organic_Posts")
-    pages_tab = exporter._tab_name(route, "pages", "Page_Channel_Library")
-
-    page_context = _load_page_context(
-        spreadsheet,
-        pages_tab,
-        brand_id=brand_id,
-        page_url=route_page_url,
-        platform_id=platform_id,
-    )
-    target_tz = _resolve_target_timezone(page_context)
+    posts_tab = exporter._organic_tab_name(route, "posts")
+    pages_tab = exporter._organic_tab_name(route, "pages")
 
     ws = spreadsheet.worksheet(posts_tab)
     values = ws.get_all_values()
@@ -603,8 +559,8 @@ def run_daily_schedule_facebook_job(
     records = _rows_to_records(values, headers)
     reserved_utc = _collect_reserved_schedule_times(records)
 
-    publisher = FacebookPagePublisher(page_id=meta_page_id)
     notifier = TelegramNotifier()
+    publishers: Dict[str, FacebookPagePublisherService] = {}
 
     results = []
     skipped = 0
@@ -622,23 +578,61 @@ def run_daily_schedule_facebook_job(
         schedule_meta: Dict[str, str] = {}
         sheet_update_ok = False
         telegram_result: Dict[str, Any] = {}
+        page_context: Dict[str, Any] = {}
+        private_page_id = ""
 
         try:
+            row_brand_id = str(row.get("brand_id") or brand_id).strip()
+            row_platform_id = str(row.get("platform_id") or platform_id).strip()
+            row_public_page_id = str(row.get("page_id") or page_id or "").strip()
+            row_page_url = str(row.get("page_url") or route_page_url or "").strip()
+            page_context = _load_page_context(
+                spreadsheet,
+                pages_tab,
+                brand_id=row_brand_id,
+                page_id=row_public_page_id,
+                page_url=row_page_url,
+                platform_id=row_platform_id,
+            )
+            private_page_id = str(page_context.get("private_page_id") or "").strip()
+            page_access_token = str(page_context.get("token") or "").strip()
+            if not private_page_id:
+                raise ValueError(
+                    "Campaign_Config.private_page_id is required for Facebook scheduling. "
+                    f"brand_id={row_brand_id}, public_page_id={row_public_page_id}, page_url={row_page_url}"
+                )
+            if not page_access_token:
+                raise ValueError(
+                    "Campaign_Config.token is required for Facebook scheduling. "
+                    f"brand_id={row_brand_id}, public_page_id={row_public_page_id}, page_url={row_page_url}"
+                )
+            target_tz = _resolve_target_timezone(page_context)
+            publisher_key = f"{private_page_id}|{page_access_token}"
+            publisher = publishers.setdefault(
+                publisher_key,
+                FacebookPagePublisherService(page_id=private_page_id, page_access_token=page_access_token),
+            )
             row_for_publish, schedule_updates, schedule_meta = _with_scheduled_time_if_needed(
                 row,
                 target_tz=target_tz,
                 reserved_utc=reserved_utc,
             )
-            result = publisher.schedule_from_row(row_for_publish)
+            publish_payload = dict(row_for_publish)
+            publish_payload["public_page_id"] = row_public_page_id
+            publish_payload["page_id"] = private_page_id
+            result = publisher.schedule_from_row(publish_payload)
+            result["public_page_id"] = row_public_page_id
+            result["private_page_id"] = private_page_id
             result.update(schedule_meta)
             updates = _updates_for_result(result, schedule_updates)
             _update_row_fields(ws, row_number, column_map, updates)
             sheet_update_ok = True
         except Exception as exc:
             result = {
-                "status": "error",
+                "status": JOB_ERROR_PUBLISHER_STATUS,
                 "post_id": row.get("post_id"),
                 "page_id": row.get("page_id"),
+                "private_page_id": private_page_id,
                 "error": str(exc),
             }
             updates = _updates_for_exception(exc)
@@ -653,7 +647,7 @@ def run_daily_schedule_facebook_job(
             telegram_result = _notify_row_result(
                 notifier,
                 brand_id=brand_id,
-                page_id=str(meta_page_id or page_id),
+                page_id=str(private_page_id or row.get("page_id") or page_id or ""),
                 posts_tab=posts_tab,
                 row_number=row_number,
                 row=row,
@@ -663,7 +657,7 @@ def run_daily_schedule_facebook_job(
                 schedule_meta=schedule_meta,
             )
         except Exception as notify_exc:
-            telegram_result = {"status": "error", "error": str(notify_exc)}
+            telegram_result = {"status": JOB_ERROR_PUBLISHER_STATUS, "error": str(notify_exc)}
 
         results.append({
             "row": row_number,
@@ -672,6 +666,7 @@ def run_daily_schedule_facebook_job(
             "post_status": updates.get("post_status"),
             "publisher_status": updates.get("publisher_status"),
             "dry_run": result.get("dry_run", None),
+            "private_page_id": private_page_id,
             "schedule": schedule_meta,
             "sheet_update_ok": sheet_update_ok,
             "telegram": telegram_result,
@@ -679,18 +674,15 @@ def run_daily_schedule_facebook_job(
         })
 
     return {
-        "job": "daily_schedule_facebook_job",
+        "job": "publish_ready_organic_posts_to_facebook_job",
         "brand_id": brand_id,
         "page_id": page_id,
         "page_url": route_page_url,
         "platform_id": platform_id,
-        "meta_page_id": meta_page_id,
+        "facebook_page_id_source": "Campaign_Config.private_page_id",
         "posts_tab": posts_tab,
         "pages_tab": pages_tab,
-        "market": page_context.get("market"),
-        "language": page_context.get("language"),
-        "target_timezone": str(target_tz),
-        "dry_run": os.getenv("FACEBOOK_PUBLISH_DRY_RUN", "true").lower() != "false",
+        "dry_run": os.getenv("FACEBOOK_PUBLISH_DRY_RUN", "false").lower() == "true",
         "ready_status": READY_POST_STATUS,
         "success_status": SUCCESS_POST_STATUS,
         "error_status": ERROR_POST_STATUS,
@@ -702,7 +694,7 @@ def run_daily_schedule_facebook_job(
 
 
 def main() -> None:
-    result = run_daily_schedule_facebook_job()
+    result = run_publish_ready_organic_posts_to_facebook_job()
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 

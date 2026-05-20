@@ -1,4 +1,5 @@
 from datetime import datetime, date
+import re
 
 
 class CampaignKPICalculator:
@@ -18,6 +19,35 @@ class CampaignKPICalculator:
             return int(float(value))
         except Exception:
             return default
+
+    def _normalize_growth_metric(self, value):
+        raw = str(value or "followers").strip().lower()
+        normalized = re.sub(r"[^a-z]+", "_", raw).strip("_")
+        aliases = {
+            "follower": "followers",
+            "followers": "followers",
+            "follow": "followers",
+            "page_follower": "followers",
+            "page_followers": "followers",
+            "like": "likes",
+            "likes": "likes",
+            "page_like": "likes",
+            "page_likes": "likes",
+        }
+        return aliases.get(normalized, normalized or "followers")
+
+    def _posting_frequency_count(self, value, default=1):
+        raw = str(value or "").strip().lower()
+        if not raw:
+            return default
+        match = re.search(r"(\d+(?:\.\d+)?)", raw)
+        if not match:
+            return default
+        try:
+            count = int(float(match.group(1)))
+        except Exception:
+            return default
+        return max(count, 1)
 
     def calculate(self, page_row, today=None):
         today = today or date.today()
@@ -64,7 +94,10 @@ class CampaignKPICalculator:
             round(like_gap / days_remaining, 2) if days_remaining else like_gap
         )
 
-        primary_growth_metric = str(page_row.get("primary_growth_metric") or "followers").lower()
+        primary_growth_metric_raw = page_row.get("primary_growth_metric") or "followers"
+        primary_growth_metric = self._normalize_growth_metric(primary_growth_metric_raw)
+        posting_frequency_target_raw = page_row.get("posting_frequency_target") or ""
+        posting_frequency_target_count = self._posting_frequency_count(posting_frequency_target_raw, default=1)
 
         if days_remaining <= 0:
             kpi_status = "ended"
@@ -116,7 +149,10 @@ class CampaignKPICalculator:
             "like_progress_percent": like_progress_percent,
             "required_followers_per_day": required_followers_per_day,
             "required_likes_per_day": required_likes_per_day,
+            "primary_growth_metric_raw": primary_growth_metric_raw,
             "primary_growth_metric": primary_growth_metric,
+            "posting_frequency_target": posting_frequency_target_raw,
+            "posting_frequency_target_count": posting_frequency_target_count,
             "kpi_status": kpi_status,
             "content_intensity": content_intensity,
             "recommended_daily_post_count": recommended_daily_post_count,

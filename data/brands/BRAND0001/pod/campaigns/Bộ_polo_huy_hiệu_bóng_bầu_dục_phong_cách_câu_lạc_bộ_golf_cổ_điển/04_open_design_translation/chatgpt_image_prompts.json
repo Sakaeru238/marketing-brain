@@ -1,0 +1,18 @@
+{
+  "brand_id": "BRAND0001",
+  "campaign_id": "Bộ_polo_huy_hiệu_bóng_bầu_dục_phong_cách_câu_lạc_bộ_golf_cổ_điển",
+  "prompts": [
+    {
+      "request_id": "front_flat_mockup",
+      "view": "front",
+      "output_group": "flat_mockup",
+      "prompt": "Flat lay product mockup, front view, premium men's short-sleeve polo shirt. Base color: white (#FFFFFF) piqué cotton fabric, clean and uninterrupted body. Collar: classic ribbed polo collar, 3-button placket (approx 11 cm), white with a single 2mm Heritage Gold (#C9A84C) stripe along the outer collar edge. Sleeves: short set-in sleeves (not raglan), clean hem with a single 2mm Heritage Gold stripe at cuff edge. No bold color blocking, no raglan banding. Left chest placement: a custom heritage crest badge, center point approx 11 cm from left shoulder seam and 9 cm below collar base, approx 6 cm wide × 7.5 cm tall. Crest shape: classic heraldic shield with pointed base. Crest fill: Crimson (#A6192E) primary, Heritage Gold (#C9A84C) accent lines and inner detail, Navy (#1B2A4A) outer border outline. Interior symbol: a stylized 5-pointed star in gold, centered in the shield. Surrounding the star: thin inner border ring and an outer border ring with micro serif text arc reading 'KANSAS CITY' along the top inner ring in small Garamond-style serif font. Directly below the crest (4mm clearance), one line of small serif text reading 'EST. 1960' in Heritage Gold, approx 7pt, centered on crest axis. No large wordmark on shirt body. No right-chest logo. No printed pattern on body. Shirt laid flat on a neutral linen or light wood-grain surface. Studio lighting, sharp detail, high resolution, premium product photography aesthetic."
+    },
+    {
+      "request_id": "back_flat_mockup",
+      "view": "back",
+      "output_group": "flat_mockup",
+      "prompt": "Flat lay product mockup, back view, premium men's short-sleeve polo shirt. Base color: white (#FFFFFF) piqué cotton fabric. Back body is entirely clean — no graphic, no number, no name block, no large logo. Collar: classic ribbed polo collar, back collar sits flat and clean, single 2mm Heritage Gold (#C9A84C) contrast stripe continuing along the outer collar edge from front, consistent trim. Sleeves: short set-in sleeves, single 2mm Heritage Gold stripe at sleeve cuff hem, matching front. No back yoke color blocking. No raglan construction. Optional detail: a miniature secondary crest or simple brand identifier approx 2.5 cm wide, centered at back collar seam, 1.5 cm below collar base, in Heritage Gold — one line, thin serif font, maximum 8pt equivalent. Back body otherwise completely free of print. No pattern overlays. Shirt laid flat on a neutral linen or light wood-grain surface. Studio lighting, sharp detail, high resolution, premium product photography aesthetic."
+    }
+  ]
+}

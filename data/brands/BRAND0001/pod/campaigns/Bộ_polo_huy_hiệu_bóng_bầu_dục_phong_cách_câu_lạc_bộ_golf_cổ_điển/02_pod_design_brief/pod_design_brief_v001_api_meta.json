@@ -1,0 +1,22 @@
+{
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "response_id": "msg_01DaTYQcus3a8pxtAy4BPE35",
+  "stop_reason": "end_turn",
+  "usage_event": {
+    "step": "02_designer_skills_design_brief",
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-6",
+    "input_tokens": 8807,
+    "output_tokens": 6093,
+    "input_cost_usd": 0.026421,
+    "output_cost_usd": 0.091395,
+    "total_cost_usd": 0.117816,
+    "status": "available",
+    "created_at": "2026-05-16T08:53:48.479078+00:00",
+    "metadata": {
+      "job": "pod_design_brief",
+      "is_revision": false
+    }
+  }
+}

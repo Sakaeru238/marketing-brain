@@ -61,6 +61,7 @@ class UniversalBrandIntakeEngine:
                 "paths": self._stringify_paths(paths),
                 "validation": validation,
                 "fetched_sources": fetched_sources,
+                "llm_usage": self.claude.usage_summary(),
                 "notes": "Dry run completed. Brand context generation was not sent to Claude.",
             }
             self._write_json(paths["brand_intake_run_file"], run_payload)
@@ -100,6 +101,7 @@ class UniversalBrandIntakeEngine:
             "validation": validation,
             "fetched_sources": fetched_sources,
             "alysha_compliance": compliance,
+            "llm_usage": self.claude.usage_summary(),
         }
         self._write_json(paths["brand_intake_run_file"], run_payload)
         return run_payload

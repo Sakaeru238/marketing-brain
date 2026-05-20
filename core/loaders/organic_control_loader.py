@@ -227,7 +227,7 @@ class OrganicControlLoader:
             "num_posts": int(self._resolve_final(organic, "final_num_posts", "num_posts_requested", "num_posts_ai_suggested", 5)),
             "post_format_mix": self._split_csv(self._resolve_final(organic, "final_post_format_mix", "post_format_mix_user", "post_format_mix_ai_suggested", "text_post,question_post,soft_story,educational,relatable")),
             "product_mention_level": organic.get("product_mention_level") or page.get("default_product_mention_level") or "soft",
-            "tone": self._resolve_final(organic, "final_tone", "tone_user", "tone_ai_suggested", page.get("default_tone") or "warm, relatable, conversational"),
+            "tone": self._resolve_final(organic, "final_tone", "tone_user", "tone_ai_suggested", "strategy-determined"),
             "must_use_topics": self._split_csv(organic.get("must_use_topics")),
             "avoid_topics": self._split_csv(organic.get("avoid_topics")),
             "language": organic.get("language") or page.get("language") or "en",

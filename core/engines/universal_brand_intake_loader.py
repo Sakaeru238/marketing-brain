@@ -11,6 +11,7 @@ except Exception:  # pragma: no cover - handled at runtime
     gspread = None
 
 from core.services.brand_registry_service import BrandRegistryService
+from core.config.paths import GLOBAL_CONFIG_DIR
 
 
 class UniversalBrandIntakeLoader:
@@ -74,6 +75,7 @@ class UniversalBrandIntakeLoader:
             or os.getenv("GOOGLE_OAUTH_TOKEN_FILE")
             or "secrets/google_oauth_token.json"
         )
+        self.gsheet_schema_file = GLOBAL_CONFIG_DIR / "gsheet_schema.json"
 
     # ------------------------------------------------------------------
     # Public API
@@ -120,9 +122,9 @@ class UniversalBrandIntakeLoader:
         if not gsheet_file.exists():
             raise FileNotFoundError(f"Brand GSheet settings not found: {gsheet_file}")
         payload = json.loads(gsheet_file.read_text(encoding="utf-8"))
-        intake = payload.get("brand_intake") or {}
+        intake = self._resolve_module_settings(payload, "brand_intake")
         if not intake:
-            raise ValueError(f"Missing brand_intake block in {gsheet_file}")
+            raise ValueError(f"Missing modules.brand_intake block in {gsheet_file}")
         source_type = str(intake.get("source_type") or "google_sheet").strip().lower()
         if source_type == "excel":
             excel_path = intake.get("excel_path")
@@ -148,6 +150,34 @@ class UniversalBrandIntakeLoader:
             "alternative_worksheet_names": intake.get("alternative_worksheet_names") or [],
             "config_file": str(gsheet_file),
         }
+
+    def _resolve_module_settings(self, payload: Dict[str, Any], module_name: str) -> Dict[str, Any]:
+        modules = payload.get("modules") or {}
+        module_settings = modules.get(module_name) or {}
+        if module_settings:
+            schema_key = str(module_settings.get("schema_key") or module_name).strip()
+            schema = self._load_module_schema(schema_key)
+            tabs = schema.get("tabs") or {}
+            return {
+                "source_type": module_settings.get("source_type") or "google_sheet",
+                "google_sheet_url": module_settings.get("google_sheet_url"),
+                "excel_path": module_settings.get("excel_path"),
+                "worksheet_name": self.worksheet_name or module_settings.get("worksheet_name") or tabs.get("intake"),
+                "alternative_worksheet_names": module_settings.get("alternative_worksheet_names") or [],
+                "schema_key": schema_key,
+            }
+
+        # Temporary fallback for brands not yet migrated to modules.* config.
+        legacy = payload.get(module_name) or {}
+        return legacy if isinstance(legacy, dict) else {}
+
+    def _load_module_schema(self, schema_key: str) -> Dict[str, Any]:
+        if not self.gsheet_schema_file.exists():
+            return {}
+        payload = json.loads(self.gsheet_schema_file.read_text(encoding="utf-8"))
+        modules = payload.get("modules") or {}
+        schema = modules.get(schema_key) or {}
+        return schema if isinstance(schema, dict) else {}
 
     # ------------------------------------------------------------------
     # Source readers

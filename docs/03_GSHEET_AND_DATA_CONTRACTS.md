@@ -5,13 +5,13 @@
 The current organic flow depends on these sheet tabs:
 
 ```text
-Page_Channel_Library
+Campaign_Config
 Organic_Posts
 Organic_Results
 Daily_Learning_Log
 ```
 
-## 1. Page_Channel_Library
+## 1. Campaign_Config
 
 ### Purpose
 This is the page-level operating context and the main per-page strategy router.
@@ -113,7 +113,7 @@ On success, scheduler updates:
 
 ```text
 post_status = posted
-publisher_status = scheduled or scheduled_dry_run or published
+publisher_status = scheduled or published
 facebook_post_id = API returned ID
 ```
 

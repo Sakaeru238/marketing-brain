@@ -45,6 +45,7 @@ def load_active_page_tasks():
         rows = _records_safe(ws)
 
         for row in rows:
+            row = exporter.normalize_page_channel_record(row)
             if not is_active(row.get("status")):
                 continue
 
@@ -90,6 +91,7 @@ def main():
                 brand_id=task["brand_id"],
                 page_id=task["page_id"],
                 platform_id=task["platform_id"],
+                campaign_id=task["campaign_id"],
             )
             results.append({
                 "brand_id": task["brand_id"],
@@ -104,6 +106,7 @@ def main():
                 "organic_strategy_review_decision": result.get("organic_strategy_review_decision", {}),
                 "organic_strategy_output_file": result.get("organic_strategy_output_file"),
                 "organic_output_file": result.get("output_file"),
+                "llm_usage": result.get("llm_usage", {}),
             })
         except Exception as exc:
             print(traceback.format_exc())

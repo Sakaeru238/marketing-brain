@@ -173,7 +173,7 @@ def _is_next_calendar_day_for_results(row: Dict, page_context_by_key: Dict[Tuple
     Collect only after the calendar day of the post has passed.
 
     Rule:
-    - Prefer the target market timezone from Page_Channel_Library.target_timezone.
+    - Prefer the target market timezone from Campaign_Config.target_timezone.
     - Fall back to UTC if the page timezone is unavailable/invalid.
     - A post published/scheduled on local date D is collectable once current local date > D.
 
@@ -209,11 +209,12 @@ def _is_collectable_post(row: Dict, page_context_by_key: Dict[Tuple[str, str, st
 
 
 def _page_context_index(exporter: GoogleSheetsExporter, spreadsheet, route: Dict) -> Dict[Tuple[str, str, str], Dict]:
-    pages_tab = exporter._tab_name(route, "pages", "Page_Channel_Library")
+    pages_tab = exporter._organic_tab_name(route, "pages")
     ws = spreadsheet.worksheet(pages_tab)
     rows = exporter._worksheet_records(ws)
     indexed = {}
     for row in rows:
+        row = exporter.normalize_page_channel_record(row)
         brand_id = _clean_str(row.get("brand_id"))
         page_id = _clean_str(row.get("page_id"))
         page_url = _clean_str(row.get("page_url"))
@@ -333,7 +334,7 @@ def _build_result_record(row: Dict, content: Dict, insights: Dict[str, int]) -> 
 
 def _collect_route(exporter: GoogleSheetsExporter, route: Dict) -> Dict:
     spreadsheet = exporter._open_spreadsheet_for_route(route)
-    posts_tab = exporter._tab_name(route, "posts", "Organic_Posts")
+    posts_tab = exporter._organic_tab_name(route, "posts")
     posts_ws = spreadsheet.worksheet(posts_tab)
     post_rows = exporter._worksheet_records(posts_ws)
     page_context_by_key = _page_context_index(exporter, spreadsheet, route)
@@ -345,13 +346,38 @@ def _collect_route(exporter: GoogleSheetsExporter, route: Dict) -> Dict:
     if max_posts is not None:
         candidates = candidates[:max_posts]
 
-    graph_client = FacebookGraphClient(page_id=route.get("page_id"))
+    graph_clients: Dict[str, FacebookGraphClient] = {}
     collected = []
     row_errors = []
 
     for row in candidates:
         facebook_post_id = _clean_str(row.get("facebook_post_id"))
         try:
+            brand_id = _clean_str(row.get("brand_id"))
+            page_id = _clean_str(row.get("page_id"))
+            platform_id = _clean_str(row.get("platform_id"))
+            page_context = (
+                page_context_by_key.get((brand_id, page_id, platform_id))
+                or page_context_by_key.get((brand_id, page_id, ""))
+                or {}
+            )
+            private_page_id = _clean_str(page_context.get("private_page_id"))
+            page_access_token = _clean_str(page_context.get("token"))
+            if not private_page_id:
+                raise ValueError(
+                    "Campaign_Config.private_page_id is required for organic result collection. "
+                    f"brand_id={brand_id}, page_id={page_id}, platform_id={platform_id}"
+                )
+            if not page_access_token:
+                raise ValueError(
+                    "Campaign_Config.token is required for organic result collection. "
+                    f"brand_id={brand_id}, page_id={page_id}, platform_id={platform_id}"
+                )
+            graph_key = f"{private_page_id}|{page_access_token}"
+            graph_client = graph_clients.setdefault(
+                graph_key,
+                FacebookGraphClient(page_id=private_page_id, page_access_token=page_access_token),
+            )
             content = graph_client.get_content_details(facebook_post_id)
             insights_object_id = _clean_str(content.get("_insights_object_id")) or facebook_post_id
             try:

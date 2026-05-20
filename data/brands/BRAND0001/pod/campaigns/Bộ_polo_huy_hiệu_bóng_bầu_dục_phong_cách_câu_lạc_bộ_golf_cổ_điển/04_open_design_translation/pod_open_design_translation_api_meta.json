@@ -1,0 +1,20 @@
+{
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "response_id": "msg_01VWVkoQFapaaoxQgf3S9Cvz",
+  "usage": {
+    "input_tokens": 5998,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 3462,
+    "service_tier": "standard",
+    "inference_geo": "global"
+  },
+  "cache_status": "miss_stored",
+  "cache_file": "/Users/Sakaeru/Source/marketing-brain/data/brands/BRAND0001/cache/llm/final_prompt_to_comfyui_bundle/042953a4fb90f7b6b650a4c9ddd7b077ee56b3c219b3862fe8e41567827d7d49.json",
+  "input_hash": "042953a4fb90f7b6b650a4c9ddd7b077ee56b3c219b3862fe8e41567827d7d49"
+}

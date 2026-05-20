@@ -17,7 +17,7 @@ Marketing Brain is an AI-assisted organic content pipeline designed to:
 ```text
 1. Input / Context
    ├─ config/google_sheet_routing.json
-   ├─ Page_Channel_Library
+   ├─ Campaign_Config
    ├─ campaign KPI fields
    ├─ brand/product/campaign context
    └─ recent organic learning memory
@@ -63,7 +63,7 @@ Marketing Brain is an AI-assisted organic content pipeline designed to:
       └─ runtime JSON keeps full Open Design + ComfyUI structures
 
 8. Facebook Scheduling / Publishing
-   └─ daily_schedule_facebook_job
+   └─ publish_ready_organic_posts_to_facebook_job
       ├─ processes only `post_status = ready`
       ├─ computes future schedule in target audience timezone
       ├─ appends hashtags to message

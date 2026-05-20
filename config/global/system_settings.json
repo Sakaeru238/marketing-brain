@@ -3,5 +3,17 @@
   "project_root": "marketing-brain",
   "brand_context_source_of_truth_root": "data/brands",
   "brand_registry_file": "config/brands/brand_registry.json",
+  "evaluation_limits": {
+    "brief_eval": {
+      "min_score": 0.85,
+      "max_cost_usd": 0.1,
+      "max_attempts": 5
+    },
+    "visual_eval": {
+      "min_score": 0.85,
+      "max_cost_usd": 0.1,
+      "max_attempts": 5
+    }
+  },
   "notes": "Global settings for the brand-centric Marketing-Brain architecture."
 }

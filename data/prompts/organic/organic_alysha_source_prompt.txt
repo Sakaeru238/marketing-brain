@@ -6,6 +6,12 @@ This is a true Strategy Layer task. It must follow Alysha Strategy Engine standa
 INPUT:
 {{ORGANIC_ALYSHA_SOURCE_INPUT}}
 
+CAMPAIGN MACRO DIRECTION RULE:
+- Read `campaign_direction_context` carefully.
+- It is mapped from `Campaign_Config.campaign_macro_direction` to `Campaign_Direction_Library.macro_direction_name`.
+- Use the matched direction record to filter, reason about, and define the most appropriate strategic content/data direction for this organic campaign.
+- If the mapping is missing/not found, stay conservative and do not invent a macro direction.
+
 SOURCE-MODE RULE:
 - If `source_mode` is `evergreen_growth`, create an organic page-growth strategy that is independent of expired events.
 - If `source_mode` is `event_aware`, create an event-aware organic strategy using only the event explicitly supplied in `event_switch.event_note`.

@@ -14,7 +14,7 @@ It is written so that:
 The currently integrated flow is:
 
 ```text
-Page_Channel_Library + routing + KPI context
+Campaign_Config + routing + KPI context
 → Organic Alysha Source Strategy
 → Organic Strategy Review / Translation
 → Organic Post Generation
@@ -84,10 +84,10 @@ core/services/organic_generation_service.py
 core/services/open_design_visual_translation_service.py
 core/services/comfyui_preparation_service.py
 
-core/jobs/daily_schedule_facebook_job.py
-core/publishers/facebook_page_publisher.py
+core/jobs/publish_ready_organic_posts_to_facebook_job.py
+core/services/facebook_page_publisher_service.py
 core/publishers/facebook_graph_client.py
-core/publishers/facebook_publish_validator.py
+core/utils/facebook_publish_validator.py
 
 core/jobs/daily_collect_organic_results_job.py
 core/services/organic_results_learning_service.py
